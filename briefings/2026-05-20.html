@@ -5,279 +5,307 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Morning Briefing — 2026-05-20</title>
 <style>
-body{margin:0;padding:0;background-color:#f2f3f5;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1a1a1a;}
-table{border-collapse:collapse;}
-a{color:#2563eb;text-decoration:none;}
-a:hover{text-decoration:underline;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:Arial,Helvetica,sans-serif;font-size:14px;background:#f4f5f7;color:#1a202c;line-height:1.5}
+  .page{max-width:900px;margin:0 auto;padding:16px}
+  h1{font-size:20px;font-weight:700;color:#1a202c;margin-bottom:2px}
+  h2{font-size:15px;font-weight:700;color:#1a202c;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .run-meta{font-size:11px;color:#718096;margin-bottom:16px;font-family:monospace}
+  .badge{display:inline-block;padding:2px 7px;border-radius:10px;font-size:11px;font-weight:700;color:#fff}
+  .badge-urgent{background:#c53030}
+  .badge-asap{background:#c05621}
+  .badge-standard{background:#2c5282}
+  .badge-none{background:#718096}
+  .section{background:#fff;border-radius:6px;padding:14px 16px;margin-bottom:14px;border:1px solid #e2e8f0}
+  .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+  .count-badge{background:#e2e8f0;color:#4a5568;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:700}
+  .item{padding:8px 0;border-bottom:1px solid #f0f0f0}
+  .item:last-child{border-bottom:none}
+  .item-title{font-weight:600;color:#1a202c}
+  .item-meta{font-size:12px;color:#718096;font-family:monospace}
+  .item-body{font-size:13px;color:#4a5568;margin-top:3px}
+  .tag-urgent{background:#fff5f5;color:#c53030;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:700;border:1px solid #fed7d7}
+  .tag-asap{background:#fffaf0;color:#c05621;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:700;border:1px solid #fbd38d}
+  .tag-std{background:#ebf4ff;color:#2c5282;padding:1px 6px;border-radius:3px;font-size:11px;font-weight:700;border:1px solid #bee3f8}
+  .none-text{color:#a0aec0;font-style:italic;font-size:13px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{background:#f7fafc;text-align:left;padding:7px 10px;font-weight:600;color:#4a5568;border-bottom:2px solid #e2e8f0}
+  td{padding:7px 10px;border-bottom:1px solid #f0f0f0;vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .must{color:#c53030;font-weight:700}
+  .should{color:#c05621;font-weight:700}
+  .could{color:#2b6cb0;font-weight:700}
+  .te-card{border-left:4px solid #ccc;background:#fafafa;padding:10px 12px;margin-bottom:10px;border-radius:0 4px 4px 0}
+  .te-card-afterhours{border-left-color:#c53030}
+  .te-card-project{border-left-color:#276749}
+  .te-card-ongoing{border-left-color:#2b6cb0}
+  .te-pre{font-family:monospace;font-size:12px;white-space:pre;background:#f7f7f7;padding:8px 10px;border-radius:3px;color:#1a202c;line-height:1.7}
+  a{color:#2b6cb0;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .chart-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:12px}
+  .chart-bar-wrap{flex:1;background:#edf2f7;border-radius:3px;height:14px;overflow:hidden}
+  .chart-bar{height:14px;border-radius:3px}
+  .chart-label{width:90px;text-align:right;color:#4a5568;font-family:monospace}
+  .chart-val{width:30px;font-weight:700;color:#1a202c}
+  .overview-row{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-bottom:4px}
+  .ov-item{display:flex;align-items:center;gap:5px;font-size:12px}
+  .ov-swatch{width:12px;height:12px;border-radius:2px;flex-shrink:0}
 </style>
 </head>
 <body>
-<div style="background-color:#f2f3f5;padding:24px 0;">
-<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f2f3f5;">
-<tr><td align="center" style="padding:24px 0;">
-<table width="860" cellpadding="0" cellspacing="0" border="0" style="max-width:860px;width:100%;background-color:#ffffff;border-radius:6px;overflow:hidden;">
+<div class="page">
 
-<!-- HEADER -->
-<tr><td style="background-color:#1c2a3a;padding:24px 32px;">
-  <div style="font-family:Arial,Helvetica,sans-serif;font-size:20px;color:#ffffff;font-weight:bold;letter-spacing:0.5px;">Morning Briefing</div>
-  <div style="font-family:'Courier New',monospace;font-size:12px;color:#8da0b3;margin-top:6px;">2026-05-20 &nbsp;|&nbsp; Run: 07:30 CDT &nbsp;|&nbsp; Window: 2026-05-19 15:30 CDT &rarr; 2026-05-20 07:30 CDT</div>
-  <div style="font-family:'Courier New',monospace;font-size:11px;color:#5f7a8e;margin-top:4px;">Scanned: 22 emails &nbsp;|&nbsp; 0 Teams messages &nbsp;|&nbsp; Classified: Urgent 1 &bull; ASAP 1 &bull; Standard 7 &bull; Time Entries 1</div>
-</td></tr>
+<h1>Morning Briefing</h1>
+<div class="run-meta">2026-05-20 &nbsp;|&nbsp; Run: 07:30 CDT &nbsp;|&nbsp; Window: 2026-05-19 15:30 CDT &rarr; 2026-05-20 07:30 CDT &nbsp;|&nbsp; Scanned: 139 emails &middot; 33 Teams msgs</div>
 
-<!-- SEVERITY OVERVIEW -->
-<tr><td style="padding:20px 32px 16px;border-bottom:1px solid #e8eaed;">
-  <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:bold;color:#374151;margin-bottom:12px;">Severity Overview</div>
-  <table cellpadding="0" cellspacing="0" border="0">
-  <tr>
-    <td style="width:70px;padding-right:8px;font-family:'Courier New',monospace;font-size:11px;color:#dc2626;white-space:nowrap;">URGENT</td>
-    <td style="vertical-align:middle;">
-      <table cellpadding="0" cellspacing="0" border="0"><tr>
-        <td style="background-color:#dc2626;width:44px;height:16px;border-radius:3px;"></td>
-      </tr></table>
-    </td>
-    <td style="padding-left:8px;font-family:'Courier New',monospace;font-size:11px;color:#374151;">1</td>
-  </tr>
-  <tr><td colspan="3" style="height:5px;"></td></tr>
-  <tr>
-    <td style="width:70px;padding-right:8px;font-family:'Courier New',monospace;font-size:11px;color:#ea580c;white-space:nowrap;">ASAP</td>
-    <td style="vertical-align:middle;">
-      <table cellpadding="0" cellspacing="0" border="0"><tr>
-        <td style="background-color:#ea580c;width:44px;height:16px;border-radius:3px;"></td>
-      </tr></table>
-    </td>
-    <td style="padding-left:8px;font-family:'Courier New',monospace;font-size:11px;color:#374151;">1</td>
-  </tr>
-  <tr><td colspan="3" style="height:5px;"></td></tr>
-  <tr>
-    <td style="width:70px;padding-right:8px;font-family:'Courier New',monospace;font-size:11px;color:#6b7280;white-space:nowrap;">STANDARD</td>
-    <td style="vertical-align:middle;">
-      <table cellpadding="0" cellspacing="0" border="0"><tr>
-        <td style="background-color:#6b7280;width:308px;height:16px;border-radius:3px;"></td>
-      </tr></table>
-    </td>
-    <td style="padding-left:8px;font-family:'Courier New',monospace;font-size:11px;color:#374151;">7</td>
-  </tr>
-  </table>
-</td></tr>
+<!-- Severity Overview -->
+<div class="section">
+  <div class="section-header"><h2>Severity Overview</h2></div>
+  <div class="overview-row">
+    <div class="ov-item"><div class="ov-swatch" style="background:#c53030"></div><strong>Urgent: 2</strong></div>
+    <div class="ov-item"><div class="ov-swatch" style="background:#c05621"></div><strong>ASAP: 1</strong></div>
+    <div class="ov-item"><div class="ov-swatch" style="background:#2c5282"></div><strong>Standard: 9</strong></div>
+    <div class="ov-item"><div class="ov-swatch" style="background:#276749"></div><strong>Time Entries: 1</strong></div>
+  </div>
+  <svg width="400" height="26" viewBox="0 0 400 26" style="margin-top:8px;display:block">
+    <rect x="0" y="4" width="67" height="18" rx="2" fill="#c53030"/>
+    <rect x="69" y="4" width="33" height="18" rx="2" fill="#c05621"/>
+    <rect x="104" y="4" width="296" height="18" rx="2" fill="#2c5282"/>
+    <text x="33" y="17" fill="#fff" font-size="10" text-anchor="middle" font-family="Arial">Urgent 2</text>
+    <text x="85" y="17" fill="#fff" font-size="10" text-anchor="middle" font-family="Arial">ASAP 1</text>
+    <text x="252" y="17" fill="#fff" font-size="10" text-anchor="middle" font-family="Arial">Standard 9</text>
+  </svg>
+</div>
 
-<!-- SECTION 1: URGENT -->
-<tr><td style="padding:24px 32px;border-bottom:1px solid #e8eaed;">
-  <div style="font-family:Arial,sans-serif;font-size:15px;font-weight:bold;color:#1c2a3a;margin-bottom:16px;">
-    Urgent &nbsp;<span style="display:inline-block;background-color:#dc2626;color:#fff;font-size:11px;font-weight:bold;padding:2px 8px;border-radius:10px;vertical-align:middle;">1</span>
+<div class="section">
+  <div class="section-header">
+    <h2>Urgent <span class="count-badge" style="background:#fed7d7;color:#c53030">2</span></h2>
   </div>
 
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #dc2626;background-color:#fef2f2;border-radius:0 4px 4px 0;">
-  <tr><td style="padding:14px 16px;">
-    <div style="font-weight:bold;font-size:13px;margin-bottom:6px;">
-      <a href="https://n157.dashboard.meraki.com/CPC-Switches/n/z9KXAbdc/manage/nodes/list" style="color:#dc2626;font-family:Arial,sans-serif;">CPC Network Outage &mdash; Switches, Firewall Uplink, and APs Offline (Not Recovered)</a>
+  <div class="item">
+    <div class="item-title"><span class="tag-urgent">URGENT</span> &nbsp;CPC — Georgetown Campus APs offline, no recovery confirmed</div>
+    <div class="item-meta">Source: Meraki alert &nbsp;|&nbsp; Meraki network: Georgetown &nbsp;|&nbsp; Went down: 2026-05-19 22:37 CDT (03:37 UTC May 20)</div>
+    <div class="item-body">
+      Meraki alert at 10:37pm CDT reported APs down for the Georgetown campus network. 139+ subsequent inbox emails contain zero "Georgetown - APs came up" recovery alert. All later AP recovery alerts name "CPC-Wireless" only. Georgetown may be a separately tracked Meraki network. Status unconfirmed as of run time. Verify immediately.
+      <br><a href="https://n364.dashboard.meraki.com/" target="_blank">Meraki Dashboard</a>
     </div>
-    <div style="font-family:'Courier New',monospace;font-size:11px;color:#9b1c1c;margin-bottom:8px;">First alert: 2026-05-19 21:35 CDT &nbsp;|&nbsp; ~10h offline as of briefing time &nbsp;|&nbsp; No recovery alert in window</div>
-    <table cellpadding="0" cellspacing="0" border="0" style="font-size:12px;color:#374151;line-height:1.7;">
-    <tr>
-      <td style="vertical-align:top;padding-right:12px;font-weight:bold;white-space:nowrap;">CPC Switches</td>
-      <td>3 alerts from 21:35&ndash;21:40 CDT. Offline: Eaton Hall (6c:c3:b2:19:85:ca), Sanctuary Streaming 1 (00:18:0a:87:74:e0), Sanctuary Usher Room (88:15:44:1a:ac:6b).</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top;padding-right:12px;font-weight:bold;white-space:nowrap;">CPC-Firewall</td>
-      <td>Primary uplink failed over to Internet&nbsp;1 backup at 22:22 CDT May&nbsp;19.</td>
-    </tr>
-    <tr>
-      <td style="vertical-align:top;padding-right:12px;font-weight:bold;white-space:nowrap;">CPC-Wireless</td>
-      <td>3 APs offline by 22:35 CDT &mdash; Eaton Hall 4 and Sanctuary APs unreachable.</td>
-    </tr>
-    </table>
-    <div style="font-size:12px;color:#374151;margin-top:8px;">Pattern: primary ISP circuit failure cascading through switches and wireless. No recovery within the 16-hour window. Alert links: <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSiAAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Switches</a> &nbsp;|&nbsp; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSiBAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Firewall</a> &nbsp;|&nbsp; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSiEAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Wireless</a></div>
-  </td></tr>
-  </table>
-</td></tr>
-
-<!-- SECTION 2: FOLLOW-UPS -->
-<tr><td style="padding:24px 32px;border-bottom:1px solid #e8eaed;">
-  <div style="font-family:Arial,sans-serif;font-size:15px;font-weight:bold;color:#1c2a3a;margin-bottom:16px;">
-    Follow-ups &nbsp;<span style="display:inline-block;background-color:#e8eaed;color:#444;font-size:11px;font-weight:bold;padding:2px 8px;border-radius:10px;vertical-align:middle;">2</span>
   </div>
 
-  <!-- ASAP: Meraki consent -->
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #ea580c;background-color:#fff7ed;border-radius:0 4px 4px 0;margin-bottom:12px;">
-  <tr><td style="padding:12px 14px;">
-    <div style="font-weight:bold;font-size:13px;margin-bottom:4px;">
-      <span style="display:inline-block;background-color:#ea580c;color:#fff;font-size:10px;font-weight:bold;padding:1px 7px;border-radius:3px;vertical-align:middle;margin-right:6px;">ASAP</span>
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqSAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1c2a3a;">Meraki Case 14273993 &mdash; Reply required to unblock AutoVPN troubleshooting</a>
+  <div class="item">
+    <div class="item-title"><span class="tag-urgent">URGENT</span> &nbsp;CPC — Sustained network outage/cycling (~8.5 hrs), root cause unknown</div>
+    <div class="item-meta">Source: Meraki alerts &nbsp;|&nbsp; Affected: CPC Switches, CPC-Firewall, CPC-Wireless APs &nbsp;|&nbsp; Started: 2026-05-19 21:35 CDT &nbsp;|&nbsp; Last known state: UP at ~06:05 CDT</div>
+    <div class="item-body">
+      CPC switches, firewall uplinks, and wireless APs cycled offline/online repeatedly for 8.5+ hours. Timeline:
+      <ul style="margin:4px 0 4px 18px;font-size:12px">
+        <li>21:35 CDT May 19 — CPC Switches first went down</li>
+        <li>22:22–22:37 CDT — Firewall uplink changed; CPC-Wireless APs and Georgetown APs went down</li>
+        <li>00:40–06:05 CDT May 20 — Repeated cycling in ~15–30 min intervals (10+ down/up events)</li>
+        <li>05:49 CDT — <strong>New DHCP server detected on CPC Switches</strong> (primary root cause lead)</li>
+        <li>06:05–06:08 CDT — Switches and APs came up; no further alerts before run time</li>
+      </ul>
+      CPC backup CRITICAL ERRORs for CPCDC01, CPCDC02, and Technik appeared at 07:00 CDT immediately after. Investigate the new DHCP server event; check for STP loop, rogue DHCP, or WAN failover issue.
+      <br><a href="https://n364.dashboard.meraki.com/" target="_blank">Meraki Dashboard</a>
     </div>
-    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-bottom:6px;">From: Justin Chen, Meraki Support &nbsp;|&nbsp; 2026-05-19 15:50 CDT &nbsp;|&nbsp; Blocked on Marshall reply</div>
-    <div style="font-size:13px;color:#374151;">Engineer requesting written consent to run packet captures on Kidd-Roof Denver network. Reply with <strong>&ldquo;I consent&rdquo;</strong> to case email (ref: 00D6006uBw / 500Kf0u8pIC). Severity 3.</div>
-  </td></tr>
-  </table>
-
-  <!-- Standard: Kidd Roof static IP -->
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #6b7280;background-color:#f9fafb;border-radius:0 4px 4px 0;">
-  <tr><td style="padding:12px 14px;">
-    <div style="font-weight:bold;font-size:13px;margin-bottom:4px;">
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqXAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1c2a3a;">Kidd Roofing (Denver) &mdash; Comcast static IP details received, awaiting configuration</a>
-    </div>
-    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-bottom:6px;">From: George Streno, GM (gstreno@kiddroof.com) &nbsp;|&nbsp; 2026-05-19 17:17 CDT</div>
-    <table cellpadding="4" cellspacing="0" border="0" style="font-family:'Courier New',monospace;font-size:12px;color:#374151;line-height:1.7;">
-    <tr><td>Usable IP</td><td style="padding-left:12px;">50.190.127.201</td></tr>
-    <tr><td>Gateway</td><td style="padding-left:12px;">50.190.127.202</td></tr>
-    <tr><td>Subnet</td><td style="padding-left:12px;">255.255.255.252</td></tr>
-    <tr><td>DNS</td><td style="padding-left:12px;">75.75.75.75 (primary) &nbsp; 75.75.76.76 (secondary)</td></tr>
-    <tr><td>Acct</td><td style="padding-left:12px;">...8191</td></tr>
-    </table>
-  </td></tr>
-  </table>
-</td></tr>
-
-<!-- SECTION 3: TODAY TO-DOS -->
-<tr><td style="padding:24px 32px;border-bottom:1px solid #e8eaed;">
-  <div style="font-family:Arial,sans-serif;font-size:15px;font-weight:bold;color:#1c2a3a;margin-bottom:16px;">
-    Today To-Dos &nbsp;<span style="display:inline-block;background-color:#e8eaed;color:#444;font-size:11px;font-weight:bold;padding:2px 8px;border-radius:10px;vertical-align:middle;">6</span>
   </div>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-size:13px;">
-  <tr style="background-color:#f1f5f9;">
-    <td style="padding:8px 10px;font-weight:bold;color:#374151;border-bottom:2px solid #d1d5db;width:85px;">Priority</td>
-    <td style="padding:8px 10px;font-weight:bold;color:#374151;border-bottom:2px solid #d1d5db;">Task</td>
-    <td style="padding:8px 10px;font-weight:bold;color:#374151;border-bottom:2px solid #d1d5db;width:110px;">Source</td>
-  </tr>
-  <tr>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-weight:bold;color:#dc2626;font-size:11px;">MUST</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSiAAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Restore CPC network</a> &mdash; Switches, firewall, and APs offline since 21:35 CDT last night. Start with ISP/WAN circuit check; review Meraki dashboard for upstream connectivity.</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;">Meraki Alerts</td>
-  </tr>
-  <tr>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-weight:bold;color:#dc2626;font-size:11px;">MUST</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQFQAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Resolve CelLink Datto backup failure</a> &mdash; CEL-SC-DATABROKER-01 (172.16.130.235) on CelLinkSC throwing BK103 since 16:31 PDT May&nbsp;19. Second alert fired at 22:31 CDT. Restart Datto agent or check service on host.</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;">Datto</td>
-  </tr>
-  <tr>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-weight:bold;color:#ea580c;font-size:11px;">SHOULD</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqSAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Reply to Meraki case 14273993</a> &mdash; Send &ldquo;I consent&rdquo; to allow engineer Justin Chen to proceed with packet capture on Kidd-Roof Denver. Unblocks AutoVPN resolution.</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;">Inbox</td>
-  </tr>
-  <tr>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-weight:bold;color:#ea580c;font-size:11px;">SHOULD</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqXAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Configure Kidd-Roof Denver static IP</a> &mdash; Apply Comcast static (50.190.127.201/30, GW 50.190.127.202) to Meraki firewall WAN settings for Denver location. Received from George Streno.</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;">Inbox</td>
-  </tr>
-  <tr>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-size:11px;color:#6b7280;">COULD</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqWAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Confirm updated Dell appointment time</a> &mdash; Latitude 5450, SvcTag C191Q74 (Case 226616751). Appointment rescheduled by Dell overnight; verify new date/time in support portal.</td>
-    <td style="padding:9px 10px;border-bottom:1px solid #e8eaed;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;">Inbox</td>
-  </tr>
-  <tr>
-    <td style="padding:9px 10px;vertical-align:top;font-size:11px;color:#6b7280;">COULD</td>
-    <td style="padding:9px 10px;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSiFAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Check Georgetown AP (CelLink) recovery</a> &mdash; GT-AP-IDF07-09 went offline at 22:37 CDT May&nbsp;19. No recovery alert in window. Check Meraki dashboard; CelLink contacts already notified.</td>
-    <td style="padding:9px 10px;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;">Inbox</td>
-  </tr>
-  </table>
-</td></tr>
+</div>
 
-<!-- SECTION 4: BACKUPS -->
-<tr><td style="padding:24px 32px;border-bottom:1px solid #e8eaed;">
-  <div style="font-family:Arial,sans-serif;font-size:15px;font-weight:bold;color:#1c2a3a;margin-bottom:16px;">
-    Backups &nbsp;<span style="display:inline-block;background-color:#e8eaed;color:#444;font-size:11px;font-weight:bold;padding:2px 8px;border-radius:10px;vertical-align:middle;">2 devices</span>
+<div class="section">
+  <div class="section-header">
+    <h2>Follow-ups <span class="count-badge">3</span></h2>
   </div>
 
-  <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:bold;color:#dc2626;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Failed (1)</div>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #dc2626;background-color:#fef2f2;border-radius:0 4px 4px 0;margin-bottom:18px;">
-  <tr><td style="padding:12px 14px;">
-    <div style="font-weight:bold;font-size:13px;margin-bottom:4px;">
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQFQAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#dc2626;">CelLinkSC &mdash; CEL-SC-DATABROKER-01</a>
+  <div class="item">
+    <div class="item-title"><span class="tag-asap">ASAP</span> &nbsp;Meraki Case 14273993 — Kidd Denver AutoVPN (open Sev 3)</div>
+    <div class="item-meta">Source: Inbox &nbsp;|&nbsp; support@meraki.com &nbsp;|&nbsp; Opened: 2026-05-19 15:46 CDT &nbsp;|&nbsp; 4 updates received, all read</div>
+    <div class="item-body">
+      Severity 3 case opened for AutoVPN not working at Kidd-Roof Denver. Root cause (Comcast bridge mode / static IP) resolved by ~18:43 CDT per Teams. Case not confirmed closed. Update with resolution and request closure to prevent follow-up calls.
+      <br><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqRAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" target="_blank">Case email</a>
     </div>
-    <div style="font-family:'Courier New',monospace;font-size:11px;color:#9b1c1c;margin-bottom:6px;">BK103 &mdash; Agent unable to initiate backup &nbsp;|&nbsp; Agent: 172.16.130.235 &nbsp;|&nbsp; SIRIS S5-24 (84160C323B48)</div>
-    <div style="font-size:12px;color:#374151;">First alert: 16:31 PDT (18:31 CDT) May 19. Second alert at 22:31 CDT &mdash; still failing 4+ hours later. Alerts suppressed 60 min between fires; actual failure window is continuous.</div>
-  </td></tr>
-  </table>
-
-  <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:bold;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">Warning (0)</div>
-  <div style="color:#9ca3af;font-style:italic;font-size:13px;margin-bottom:16px;">None</div>
-
-  <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:bold;color:#6b7280;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;">No Result (0)</div>
-  <div style="color:#9ca3af;font-style:italic;font-size:13px;margin-bottom:16px;">None</div>
-
-  <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:bold;color:#16a34a;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;">Successful (1)</div>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #16a34a;background-color:#f0fdf4;border-radius:0 4px 4px 0;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-size:13px;color:#374151;">
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAT4OMPUAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLinkSC &mdash; CEL-APPSERVER</a> &mdash; Bootable screenshot SUCCEEDED at 15:00 PDT (17:00 CDT) May&nbsp;19.
-    </div>
-  </td></tr>
-  </table>
-</td></tr>
-
-<!-- SECTION 5: ALERTS -->
-<tr><td style="padding:24px 32px;border-bottom:1px solid #e8eaed;">
-  <div style="font-family:Arial,sans-serif;font-size:15px;font-weight:bold;color:#1c2a3a;margin-bottom:4px;">
-    Alerts &nbsp;<span style="display:inline-block;background-color:#e8eaed;color:#444;font-size:11px;font-weight:bold;padding:2px 8px;border-radius:10px;vertical-align:middle;">Top 3</span>
   </div>
-  <div style="font-size:11px;color:#9ca3af;font-style:italic;margin-bottom:16px;">Most non-recurring or unusual alerts in window</div>
 
-  <!-- Alert 1 -->
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #374151;background-color:#f9fafb;border-radius:0 4px 4px 0;margin-bottom:10px;">
-  <tr><td style="padding:12px 14px;">
-    <div style="font-weight:bold;font-size:13px;margin-bottom:4px;">1. CPC cascade failure &mdash; switches, firewall, and APs simultaneously offline</div>
-    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-bottom:6px;">alerts-noreply@meraki.com &nbsp;|&nbsp; 21:35&ndash;22:37 CDT May 19 &nbsp;|&nbsp; 6 alert emails &nbsp;|&nbsp; No recovery</div>
-    <div style="font-size:13px;color:#374151;">Multiple network layers failed in sequence with no recovery across the window. Scale and persistence distinguish this from routine device blips. Likely ISP circuit failure at CPC site.</div>
-  </td></tr>
-  </table>
-
-  <!-- Alert 2 -->
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #374151;background-color:#f9fafb;border-radius:0 4px 4px 0;margin-bottom:10px;">
-  <tr><td style="padding:12px 14px;">
-    <div style="font-weight:bold;font-size:13px;margin-bottom:4px;">
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSiGAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1c2a3a;">2. GitHub 2FA sign-in attempt on marshall-ariatsystems account</a>
+  <div class="item">
+    <div class="item-title">CPC Azure reporting integration — Matt rebuilding</div>
+    <div class="item-meta">Source: Teams (Matt Kerker) &nbsp;|&nbsp; 2026-05-19 ~17:18 CDT</div>
+    <div class="item-body">
+      CPC Azure reporting integration broken (testing correctly, failing in production). Matt may rebuild the integration. No action from Marshall currently; monitor for escalation.
     </div>
-    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-bottom:6px;">noreply@github.com &nbsp;|&nbsp; 2026-05-19 22:43 CDT</div>
-    <div style="font-size:13px;color:#374151;">GitHub notified of a failed 2FA attempt on the marshall-ariatsystems account. Potential unauthorized access attempt. Verify no suspicious sessions in GitHub Security Log.</div>
-  </td></tr>
-  </table>
-
-  <!-- Alert 3 -->
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:3px solid #374151;background-color:#f9fafb;border-radius:0 4px 4px 0;">
-  <tr><td style="padding:12px 14px;">
-    <div style="font-weight:bold;font-size:13px;margin-bottom:4px;">
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSiFAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1c2a3a;">3. Georgetown network AP offline (CelLink)</a>
-    </div>
-    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-bottom:6px;">alerts-noreply@meraki.com &nbsp;|&nbsp; 2026-05-19 22:37 CDT</div>
-    <div style="font-size:13px;color:#374151;">GT-AP-IDF07-09 unreachable in CelLink Georgetown network. Timing coincides with CelLink backup agent failure. CelLink contacts (nghi.nguyen, chaitanya.patel) also alerted. No recovery in window.</div>
-  </td></tr>
-  </table>
-</td></tr>
-
-<!-- SECTION 6: TIME ENTRIES -->
-<tr><td style="padding:24px 32px;">
-  <div style="font-family:Arial,sans-serif;font-size:15px;font-weight:bold;color:#1c2a3a;margin-bottom:4px;">
-    Time Entries &nbsp;<span style="display:inline-block;background-color:#e8eaed;color:#444;font-size:11px;font-weight:bold;padding:2px 8px;border-radius:10px;vertical-align:middle;">1</span>
   </div>
-  <div style="font-size:11px;color:#9ca3af;font-style:italic;margin-bottom:16px;">Generated via ariat-time-entry skill &mdash; gitmarsh/ai_skills. Fields below 80% confidence marked MISSING.</div>
 
-  <!-- Kidd Roofing: Project = green border -->
-  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:2px solid #16a34a;border-radius:4px;overflow:hidden;">
-  <tr><td style="background-color:#16a34a;padding:4px 12px;">
-    <span style="font-family:'Courier New',monospace;font-size:11px;color:#ffffff;font-weight:bold;">Project (Green)</span>
-  </td></tr>
-  <tr><td style="background-color:#f0fdf4;padding:14px 16px;">
-    <pre style="margin:0;font-family:'Courier New',Courier,monospace;font-size:12px;color:#1a1a1a;line-height:1.9;white-space:pre-wrap;">Subject:     Kidd Roofing
+  <div class="item">
+    <div class="item-title">Beehive Specialty — ATR exclusions went live today</div>
+    <div class="item-meta">Source: Teams (Matt Kerker) &nbsp;|&nbsp; 2026-05-19 17:17 CDT</div>
+    <div class="item-body">
+      Exclusions confirmed in dashboard. ATR goes into effect today (May 20). Confirm no unexpected blocks when Beehive opens this morning.
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <h2>Today To-Dos <span class="count-badge">8</span></h2>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="width:70px">Priority</th>
+        <th>Task</th>
+        <th style="width:130px">Source / Client</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="must">MUST</span></td>
+        <td><strong>Verify Georgetown campus AP status</strong> — check Meraki dashboard now. If still offline, on-site response likely needed.</td>
+        <td>Meraki<br><em>Covenant Presbyterian</em></td>
+      </tr>
+      <tr>
+        <td><span class="must">MUST</span></td>
+        <td><strong>Investigate CPC overnight outage root cause</strong> — new DHCP server detected at 05:49 CDT is primary lead. Check switch event logs for STP issues, port changes, unauthorized DHCP; check firewall for WAN failover events.</td>
+        <td>Meraki/RMM<br><em>Covenant Presbyterian</em></td>
+      </tr>
+      <tr>
+        <td><span class="must">MUST</span></td>
+        <td><strong>CPCDatto2 backup decryption failure</strong> — CPCDC01, CPCDC02, Technik failed at 07:00 CDT: "backup image files have not been decrypted." Device: CPCDatto2 (S5-2, D0C1B500D44E). Likely related to overnight cycling. May need Datto support. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQFfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" target="_blank">Alert</a></td>
+        <td>Datto<br><em>Covenant Presbyterian</em></td>
+      </tr>
+      <tr>
+        <td><span class="must">MUST</span></td>
+        <td><strong>CelLink DATABROKER-01 persistent backup failure</strong> — BK103 "agent unable to initiate backup job" every ~4 hrs since 16:31 CDT May 19 (4 alerts, 16+ hrs). Device: CelLinkSC (S5-24, 84160C323B48). All other CelLink agents succeeding. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQFeAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" target="_blank">Alert</a></td>
+        <td>Datto<br><em>CelLink</em></td>
+      </tr>
+      <tr>
+        <td><span class="should">SHOULD</span></td>
+        <td><strong>Update/close Meraki Case 14273993</strong> — Kidd Denver AutoVPN resolved. Update with fix details and request closure.</td>
+        <td>Inbox/Meraki<br><em>Kidd Roofing</em></td>
+      </tr>
+      <tr>
+        <td><span class="should">SHOULD</span></td>
+        <td><strong>MEJ-DATA backup warning</strong> — "Unknown filesystem type" at 02:04 CDT on MEJDatto2025 (S5-8, 6C92CFEA8770). Non-critical but isolated to MEJ-DATA; MEJ-DC1 clean. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQFaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" target="_blank">Alert</a></td>
+        <td>Datto<br><em>MEJ &amp; Associates</em></td>
+      </tr>
+      <tr>
+        <td><span class="should">SHOULD</span></td>
+        <td><strong>FortiGate-50G firmware update notification</strong> — received 03:18 CDT from fortinet-notifications.com. Review whether update is scheduled/approved or requires action.</td>
+        <td>Inbox<br><em>Client TBD</em></td>
+      </tr>
+      <tr>
+        <td><span class="could">COULD</span></td>
+        <td><strong>Confirm Beehive ATR exclusions are working</strong> — went live today; spot-check no legitimate traffic blocked.</td>
+        <td>Teams<br><em>Beehive Specialty</em></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <h2>Backups <span class="count-badge">Failed 4 &middot; Warning 1 &middot; No Result 0</span></h2>
+  </div>
+  <div style="margin-bottom:12px">
+    <div class="chart-row">
+      <div class="chart-label">Failed</div>
+      <div class="chart-bar-wrap"><div class="chart-bar" style="width:80%;background:#c53030"></div></div>
+      <div class="chart-val">4</div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-label">Warning</div>
+      <div class="chart-bar-wrap"><div class="chart-bar" style="width:20%;background:#c05621"></div></div>
+      <div class="chart-val">1</div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-label">No Result</div>
+      <div class="chart-bar-wrap"><div class="chart-bar" style="width:1%;background:#718096"></div></div>
+      <div class="chart-val">0</div>
+    </div>
+  </div>
+
+  <p style="font-size:12px;font-weight:700;color:#c53030;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">Failed</p>
+  <table style="margin-bottom:12px">
+    <thead><tr><th>Datto Device</th><th>Client</th><th>Error</th><th>Agents / Count</th><th>Latest</th></tr></thead>
+    <tbody>
+      <tr>
+        <td style="font-family:monospace">CPCDatto2 (D0C1B500D44E)</td>
+        <td>Covenant Presbyterian</td>
+        <td>Backup image files not decrypted</td>
+        <td>CPCDC01, CPCDC02, Technik (3 agents)</td>
+        <td style="font-family:monospace"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQFfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">07:00 CDT May 20</a></td>
+      </tr>
+      <tr>
+        <td style="font-family:monospace">CelLinkSC (84160C323B48)</td>
+        <td>CelLink</td>
+        <td>BK103 — agent unable to initiate backup</td>
+        <td>CEL-SC-DATABROKER-01 (4 alerts, 16 hrs)</td>
+        <td style="font-family:monospace"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQFeAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">06:31 CDT May 20</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:12px;font-weight:700;color:#c05621;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">Warning</p>
+  <table style="margin-bottom:12px">
+    <thead><tr><th>Datto Device</th><th>Client</th><th>Warning</th><th>Time</th></tr></thead>
+    <tbody>
+      <tr>
+        <td style="font-family:monospace">MEJDatto2025 (6C92CFEA8770) — MEJ-DATA</td>
+        <td>MEJ &amp; Associates</td>
+        <td>Unknown filesystem type</td>
+        <td style="font-family:monospace"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQFaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">02:04 CDT May 20</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:12px;font-weight:700;color:#718096;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">No Result</p>
+  <div class="none-text">None in window.</div>
+  <p style="font-size:11px;color:#718096;margin-top:10px">Backup Radar folder: no emails in scan window. CelLink succeeded: CEL-APPSERVER (x2), Henry, CEL-SC-UVIS-01, FaradayDEV, CEL-SC-DEPLOY, Volta, CEL-SC-DC-01, Joule, CEL-SC-RADIUS, Faraday. MEJDatto2025 alert summary: MEJ-DC1 no alerts.</p>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <h2>Alerts — Top 3 Most Uncommon <span class="count-badge">3</span></h2>
+  </div>
+
+  <div class="item">
+    <div class="item-title">1. New DHCP server detected on CPC Switches</div>
+    <div class="item-meta">Source: Meraki &nbsp;|&nbsp; 2026-05-20 05:49 CDT</div>
+    <div class="item-body">An unexpected DHCP server was detected on the CPC switch fabric mid-outage. Primary root cause candidate for the 8.5-hour cycling event. Could indicate rogue DHCP device, STP failure causing a topology loop, or an unintended device connected overnight.</div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">2. Georgetown campus APs went down — no recovery alert found</div>
+    <div class="item-meta">Source: Meraki &nbsp;|&nbsp; 2026-05-19 22:37 CDT</div>
+    <div class="item-body">
+      The "Georgetown" Meraki network reported APs offline at 10:37pm CDT. No "Georgetown - APs came up" alert appeared in any of the 139 scanned inbox emails through 07:08 CDT. Recovery status unknown. Warrants immediate verification separate from the general CPC-Wireless recovery.
+      <br><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VrFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" target="_blank">Alert email</a>
+    </div>
+  </div>
+
+  <div class="item">
+    <div class="item-title">3. EZ Heat — EZSERVER1 activity notification (came back online, 8:14pm CDT)</div>
+    <div class="item-meta">Source: RMM (noreply@rmmservice.com) &nbsp;|&nbsp; 2026-05-19 20:14 CDT &nbsp;|&nbsp; EZ Heat, Marble Falls TX</div>
+    <div class="item-body">EZSERVER1 at EZ Heat came back online at 8:14pm CDT. No corresponding "offline" alert found in the scan window, suggesting the outage started before the window or was resolved by automated means. Monitor for recurrence.</div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <h2>Time Entries <span class="count-badge">1</span></h2>
+  </div>
+  <p style="font-size:12px;color:#718096;margin-bottom:10px">Qualifying source: Teams group chat (Marshall, Matt Kerker, Michael Statham). Marshall coordinated Comcast static IP fix for Kidd Roofing Denver ~16:45–18:45 CDT on 2026-05-19. Work extended past 18:00 CDT (resolution confirmed at 18:43 CDT).</p>
+
+  <div class="te-card te-card-afterhours">
+    <div style="font-size:11px;font-weight:700;color:#c53030;text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px">After-Hours (Red)</div>
+    <div class="te-pre">Subject:     Kidd Roofing
 Location:    Remote
-Description: Configured Meraki AutoVPN and static IP for new Denver location.
-             Opened Meraki support case 14273993 for AutoVPN not working;
-             received Comcast static IP from client (50.190.127.201/30,
-             GW 50.190.127.202). Worked with Meraki engineer Justin Chen.
-Category:    Project (Green)
-Time:        &lt;MISSING: exact start/end not determinable; email activity
-             spans 15:46&#x2013;17:42 CDT 2026-05-19&gt;</pre>
-    <div style="margin-top:10px;font-size:11px;color:#6b7280;border-top:1px solid #bbf7d0;padding-top:8px;">Sources: <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqRAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Meraki case 14273993 opened</a> &nbsp;|&nbsp; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqXAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Comcast static IP from Streno</a> &nbsp;|&nbsp; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAT40VqYAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Meraki authorization for Kidd-Roof Denver</a></div>
-  </td></tr>
-  </table>
-</td></tr>
+Description: Coordinated with Comcast support to resolve static IP provisioning
+             issue at the Denver location. Modem was in bridge mode; got static
+             IP assigned and connection restored.
+Category:    After-Hours (Red)
+Time:        2026-05-19 16:45 - 18:45</div>
+    <div style="font-size:11px;color:#718096;margin-top:6px">
+      Source: Teams (Marshall &#8596; Matt &#8596; Michael Statham) &nbsp;|&nbsp; "Kidd Denver is good finally" at 18:43 CDT &nbsp;|&nbsp; Meraki Case 14273993 opened for same issue
+    </div>
+  </div>
+</div>
 
-<!-- FOOTER -->
-<tr><td style="background-color:#f8fafc;padding:12px 32px;border-top:1px solid #e8eaed;">
-  <div style="font-family:'Courier New',monospace;font-size:10px;color:#9ca3af;">Generated by morning-briefing routine &nbsp;|&nbsp; gitmarsh/routines &nbsp;|&nbsp; 2026-05-20T07:30:00-05:00 CDT</div>
-</td></tr>
-
-</table>
-</td></tr>
-</table>
 </div>
 </body>
 </html>
