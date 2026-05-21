@@ -1,0 +1,36 @@
+#!/bin/bash
+set -euo pipefail
+
+# Only run in Claude Code remote (web) environments
+if [ "${CLAUDE_CODE_REMOTE:-}" != "true" ]; then
+  exit 0
+fi
+
+mkdir -p ~/.claude
+
+cat > ~/.claude/settings.json << 'SETTINGS_EOF'
+{
+  "permissions": {
+    "allow": [
+      "mcp__Microsoft-365__outlook_email_search",
+      "mcp__Microsoft-365__chat_message_search",
+      "mcp__Microsoft-365__outlook_calendar_search",
+      "mcp__Microsoft-365__read_resource",
+      "mcp__Microsoft-365__find_meeting_availability",
+      "mcp__Microsoft-365__sharepoint_search",
+      "mcp__Microsoft-365__sharepoint_folder_search",
+      "mcp__github__get_file_contents",
+      "mcp__github__list_branches",
+      "mcp__github__list_commits",
+      "mcp__github__create_or_update_file",
+      "mcp__github__push_files",
+      "mcp__github__issue_write",
+      "mcp__github__create_pull_request",
+      "mcp__github__list_pull_requests",
+      "mcp__github__pull_request_read",
+      "mcp__github__issue_read",
+      "mcp__github__get_me"
+    ]
+  }
+}
+SETTINGS_EOF
