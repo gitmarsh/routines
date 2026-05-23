@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing — 2026-05-23</title>
+<style>
+body,table,td,th{margin:0;padding:0;border-collapse:collapse;}
+body{font-family:Arial,Helvetica,sans-serif;font-size:14px;background-color:#f0f2f5;color:#1a1a2e;line-height:1.5;}
+.wrapper{width:100%;max-width:880px;margin:0 auto;padding:24px 12px;}
+.header-cell{background:#1a1a2e;border-radius:8px;padding:20px 24px;}
+.header-cell h1{font-size:22px;font-weight:700;color:#fff;margin:0 0 4px;}
+.header-meta{font-size:12px;color:#aab0c0;font-family:'Courier New',monospace;}
+.section{background:#fff;border-radius:8px;margin-bottom:20px;box-shadow:0 1px 3px rgba(0,0,0,.08);}
+.sec-hdr{padding:14px 20px;border-bottom:2px solid #f0f2f5;}
+.sec-hdr h2{font-size:15px;font-weight:700;margin:0;display:inline;color:#1a1a2e;}
+.badge{display:inline-block;background:#e8eaf0;color:#4a5568;font-size:12px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:8px;vertical-align:middle;}
+.badge-u{background:#fee2e2;color:#991b1b;}
+.badge-a{background:#fef3c7;color:#92400e;}
+.sec-body{padding:16px 20px;}
+.item{padding:12px 0;border-bottom:1px solid #f0f2f5;}
+.item:last-child{border-bottom:none;}
+.item-title{font-weight:700;font-size:14px;}
+.item-title a{color:#1a1a2e;text-decoration:none;}
+.item-title a:hover{text-decoration:underline;}
+.item-meta{font-size:11px;color:#6b7280;font-family:'Courier New',monospace;margin-top:3px;}
+.item-body{font-size:13px;color:#374151;margin-top:6px;}
+.tag-u{display:inline-block;background:#dc2626;color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:5px;vertical-align:middle;}
+.tag-a{display:inline-block;background:#d97706;color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:5px;vertical-align:middle;}
+.tag-s{display:inline-block;background:#4b5563;color:#fff;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:5px;vertical-align:middle;}
+.none{color:#9ca3af;font-style:italic;padding:8px 0;}
+.todo-t{width:100%;border-collapse:collapse;margin-top:8px;}
+.todo-t th{background:#f8fafc;text-align:left;padding:8px 12px;font-size:12px;color:#6b7280;border-bottom:2px solid #e5e7eb;}
+.todo-t td{padding:10px 12px;border-bottom:1px solid #f0f2f5;font-size:13px;vertical-align:top;}
+.todo-t tr:last-child td{border-bottom:none;}
+.p-must{font-weight:700;color:#dc2626;font-size:11px;}
+.p-should{font-weight:700;color:#d97706;font-size:11px;}
+.p-could{font-weight:700;color:#2563eb;font-size:11px;}
+.bk-t{width:100%;border-collapse:collapse;margin-top:14px;}
+.bk-t th{background:#f8fafc;text-align:left;padding:8px 12px;font-size:12px;color:#6b7280;border-bottom:2px solid #e5e7eb;}
+.bk-t td{padding:10px 12px;border-bottom:1px solid #f0f2f5;font-size:13px;vertical-align:top;}
+.bk-t tr:last-child td{border-bottom:none;}
+.sf{color:#dc2626;font-weight:700;}
+.sw{color:#d97706;font-weight:700;}
+.sok{color:#059669;font-weight:700;}
+.mono{font-family:'Courier New',monospace;font-size:12px;}
+.te-card{border-left:4px solid #ccc;background:#f8fafc;border-radius:4px;padding:12px 16px;margin-bottom:12px;font-family:'Courier New',monospace;font-size:12px;line-height:1.7;}
+.te-card.project{border-left-color:#16a34a;}
+.te-card.support{border-left-color:#2563eb;}
+.te-card.afterhours{border-left-color:#dc2626;}
+</style>
+</head>
+<body>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f2f5;">
+<tr><td>
+<div class="wrapper">
+
+<!-- HEADER -->
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;">
+<tr>
+  <td class="header-cell" style="border-radius:8px;">
+    <table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+      <td style="vertical-align:top;">
+        <h1 style="font-size:22px;font-weight:700;color:#fff;margin:0 0 4px;">Morning Briefing</h1>
+        <div class="header-meta">2026-05-23 &nbsp;|&nbsp; Run: 07:30 CDT &nbsp;|&nbsp; Window: 2026-05-22 15:30 CDT &rarr; 2026-05-23 07:30 CDT</div>
+        <div class="header-meta" style="margin-top:4px;">Scanned: 41 emails (Inbox 4, Alerts 20, Datto 15, Backup Radar 2), 6 Teams messages</div>
+      </td>
+      <td style="text-align:right;vertical-align:middle;padding-left:20px;">
+        <!-- Severity overview bar chart -->
+        <svg width="180" height="90" viewBox="0 0 180 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Severity overview: Urgent 2, ASAP 1, Standard 6">
+          <rect x="8" y="15" width="44" height="55" fill="#dc2626" rx="4"/>
+          <text x="30" y="42" text-anchor="middle" font-size="20" fill="#fff" font-family="Arial" font-weight="bold">2</text>
+          <text x="30" y="82" text-anchor="middle" font-size="10" fill="#aab0c0" font-family="Arial">Urgent</text>
+          <rect x="68" y="37" width="44" height="33" fill="#d97706" rx="4"/>
+          <text x="90" y="59" text-anchor="middle" font-size="20" fill="#fff" font-family="Arial" font-weight="bold">1</text>
+          <text x="90" y="82" text-anchor="middle" font-size="10" fill="#aab0c0" font-family="Arial">ASAP</text>
+          <rect x="128" y="10" width="44" height="60" fill="#2563eb" rx="4"/>
+          <text x="150" y="42" text-anchor="middle" font-size="20" fill="#fff" font-family="Arial" font-weight="bold">6</text>
+          <text x="150" y="82" text-anchor="middle" font-size="10" fill="#aab0c0" font-family="Arial">Standard</text>
+        </svg>
+      </td>
+    </tr>
+    </table>
+  </td>
+</tr>
+</table>
+
+<!-- SECTION 1: URGENT -->
+<div class="section">
+  <div class="sec-hdr"><h2>1. Urgent</h2><span class="badge badge-u">2</span></div>
+  <div class="sec-body">
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag-u">URGENT</span>
+        <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSmUAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">SentinelOne — Active UNMITIGATED threat on clapointe121</a>
+      </div>
+      <div class="item-meta">Inbox &nbsp;|&nbsp; 2026-05-22 15:09 CDT &nbsp;|&nbsp; noreply@mailsender.sentinelone.net</div>
+      <div class="item-body">
+        Threat detected on <strong>clapointe121</strong> — threat was <strong>NOT mitigated</strong>.<br>
+        File: <span class="mono">9D82074379DC85139878FF5BF2011396722E15E7.exe</span><br>
+        External IP: <span class="mono">173.11.227.210</span> &nbsp;|&nbsp; Internal IP: <span class="mono">192.168.112.58</span><br>
+        Console: <span class="mono">usea1-ninjaone2.sentinelone.net/analyze/threats/2485140218852563631/overview</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag-u">URGENT</span>
+        Michael Statham (Teams) — Meraki ceiling mount / purchase source request
+      </div>
+      <div class="item-meta">MS Teams &nbsp;|&nbsp; 2026-05-22 15:54 CDT &nbsp;|&nbsp; From: Michael Statham (late-afternoon request)</div>
+      <div class="item-body">
+        Statham asked: <em>&ldquo;Amazon or Meraki web site&rdquo;</em> in response to Matt Kerker flagging that Chris Bradley wants a ceiling mount for a Meraki AP he has at home. Matt is waiting for direction on whether to send a purchase link to Chris directly. Matt also confirmed with Stewart that payment went through for Meraki equipment.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 2: FOLLOW-UPS -->
+<div class="section">
+  <div class="sec-hdr"><h2>2. Follow-ups</h2><span class="badge badge-a">2</span></div>
+  <div class="sec-body">
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag-a">ASAP</span>
+        <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUKcLAOAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Meraki Case 14273993 — AutoVPN not working (reply expected, notice 1 of 3)</a>
+      </div>
+      <div class="item-meta">Inbox &nbsp;|&nbsp; 2026-05-22 17:46 CDT &nbsp;|&nbsp; support@meraki.com</div>
+      <div class="item-body">
+        Meraki automation sent first of 3 follow-up notices. Case assigned to Justin at Cisco Meraki Support. Case will escalate through 2 more notices if no reply. Meraki customer number: <span class="mono">4908-0243</span>. Reference: <span class="mono">ref:!00D6006uBw.!500Kf0u8pIC:ref</span>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag-s">STD</span>
+        Matt Kerker (Teams) — Ceiling mount link for Chris Bradley (awaiting direction)
+      </div>
+      <div class="item-meta">MS Teams &nbsp;|&nbsp; 2026-05-22 15:56 CDT &nbsp;|&nbsp; From: Matt Kerker</div>
+      <div class="item-body">
+        Matt asked: <em>&ldquo;Gotcha, want me to just send the link to Chris?&rdquo;</em> &mdash; awaiting Marshall&rsquo;s reply on whether Matt should forward the Meraki/Amazon link to Chris Bradley.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 3: TODAY TO-DOS -->
+<div class="section">
+  <div class="sec-hdr"><h2>3. Today To-Dos</h2><span class="badge">9</span></div>
+  <div class="sec-body">
+    <table class="todo-t" cellpadding="0" cellspacing="0">
+      <tr>
+        <th style="width:72px;">Priority</th>
+        <th>Task</th>
+        <th style="width:130px;">Source</th>
+      </tr>
+      <tr>
+        <td><span class="p-must">MUST</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSmUAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Investigate and contain unmitigated SentinelOne threat on clapointe121 — identify client, isolate machine, review console</a></td>
+        <td class="mono">Inbox / SentinelOne</td>
+      </tr>
+      <tr>
+        <td><span class="p-must">MUST</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUKcLAOAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Reply to Meraki Case 14273993 (AutoVPN) before notice 2 of 3 fires</a></td>
+        <td class="mono">Inbox / Meraki</td>
+      </tr>
+      <tr>
+        <td><span class="p-must">MUST</span></td>
+        <td>Respond to Michael Statham re: Meraki ceiling mount purchase source; direct Matt Kerker on whether to send link to Chris Bradley</td>
+        <td class="mono">MS Teams</td>
+      </tr>
+      <tr>
+        <td><span class="p-should">SHOULD</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUMLU9GAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Investigate MEJ-DATA backup failure on MEJDatto2025 (bootable screenshot FAILED + FSC0013 &ldquo;Unknown filesystem type&rdquo; warnings)</a></td>
+        <td class="mono">Datto</td>
+      </tr>
+      <tr>
+        <td><span class="p-should">SHOULD</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUB6CPcAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Fix CelLink CELAZUPRDSSH01 — BitDefender installation failure (CRITICAL/HIGH, firing hourly since 2026-05-22 15:46 CDT)</a></td>
+        <td class="mono">Alerts / RMM</td>
+      </tr>
+      <tr>
+        <td><span class="p-should">SHOULD</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUD0GrCAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Review Beehive Specialty weekly backup report (PDF, period ending 2026-05-15)</a></td>
+        <td class="mono">Backup Radar</td>
+      </tr>
+      <tr>
+        <td><span class="p-should">SHOULD</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUD0GrDAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Review MEJ &amp; Associates weekly backup report (PDF, period ending 2026-05-15)</a></td>
+        <td class="mono">Backup Radar</td>
+      </tr>
+      <tr>
+        <td><span class="p-could">COULD</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUOOp5yAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Verify Burnett &amp; Turner LAW-APPS01 1:00am CDT reboot was planned/expected</a></td>
+        <td class="mono">Alerts / RMM</td>
+      </tr>
+      <tr>
+        <td><span class="p-could">COULD</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUOOp53AAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Verify Capital Excavation server reboots (CXAHEAVYBID, CXREMOTE, CXDATAENTRY) at 05:00 CDT were planned</a></td>
+        <td class="mono">Alerts / RMM</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- SECTION 4: BACKUPS -->
+<div class="section">
+  <div class="sec-hdr"><h2>4. Backups</h2><span class="badge">Failed: 1 &nbsp;|&nbsp; Warning: 1 &nbsp;|&nbsp; No Result: 0</span></div>
+  <div class="sec-body">
+
+    <!-- SVG backup bar chart -->
+    <svg width="210" height="90" viewBox="0 0 210 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Backup counts: Failed 1, Warning 1, No Result 0" style="margin-bottom:16px;display:block;">
+      <rect x="8" y="20" width="55" height="50" fill="#dc2626" rx="4"/>
+      <text x="35" y="50" text-anchor="middle" font-size="22" fill="#fff" font-family="Arial" font-weight="bold">1</text>
+      <text x="35" y="80" text-anchor="middle" font-size="10" fill="#6b7280" font-family="Arial">Failed</text>
+      <rect x="78" y="20" width="55" height="50" fill="#d97706" rx="4"/>
+      <text x="105" y="50" text-anchor="middle" font-size="22" fill="#fff" font-family="Arial" font-weight="bold">1</text>
+      <text x="105" y="80" text-anchor="middle" font-size="10" fill="#6b7280" font-family="Arial">Warning</text>
+      <rect x="148" y="58" width="55" height="12" fill="#9ca3af" rx="3"/>
+      <text x="175" y="68" text-anchor="middle" font-size="10" fill="#fff" font-family="Arial">0</text>
+      <text x="175" y="80" text-anchor="middle" font-size="10" fill="#6b7280" font-family="Arial">No Result</text>
+    </svg>
+
+    <table class="bk-t" cellpadding="0" cellspacing="0">
+      <tr>
+        <th>Status</th>
+        <th>Device</th>
+        <th>Appliance</th>
+        <th>Time (CDT)</th>
+        <th>Detail</th>
+      </tr>
+      <tr>
+        <td><span class="sf">FAILED</span></td>
+        <td class="mono">MEJ-DATA</td>
+        <td class="mono">MEJDatto2025</td>
+        <td class="mono">2026-05-22 20:00</td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUMLU9GAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Bootable screenshot failed (SeaBIOS error — VM cannot boot OS). Try switching storage controller SCSI&harr;IDE or check boot order.</a></td>
+      </tr>
+      <tr>
+        <td><span class="sw">WARNING</span></td>
+        <td class="mono">MEJ-DATA</td>
+        <td class="mono">MEJDatto2025</td>
+        <td class="mono">2026-05-22 02:02–20:05</td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUN3xDuAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">FSC0013 &ldquo;Unknown filesystem type&rdquo; — 4 occurrences in 24h. Alert suppressed for 60 min after each event.</a></td>
+      </tr>
+      <tr>
+        <td><span class="sok">OK (11)</span></td>
+        <td class="mono">CelLink agents</td>
+        <td class="mono">CelLinkSC</td>
+        <td class="mono">2026-05-22 20:00–23:00 PDT</td>
+        <td>All bootable screenshots succeeded: CEL-APPSERVER, CEL-SC-DATABROKER-01, CEL-SC-DC-01, CEL-SC-RADIUS, Joule, FaradayDEV, CEL-SC-DEPLOY, Volta, CEL-SC-UVIS-01, Faraday, Henry.</td>
+      </tr>
+    </table>
+
+    <p style="font-size:12px;color:#6b7280;margin-top:14px;">
+      Backup Radar weekly reports received (PDF attachments, period ending 2026-05-15):
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUD0GrCAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Beehive Specialty</a> &amp;
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUD0GrDAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">MEJ &amp; Associates</a> — PDFs not parsed in this run.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 5: ALERTS -->
+<div class="section">
+  <div class="sec-hdr"><h2>5. Alerts</h2><span class="badge">Top 3 uncommon</span></div>
+  <div class="sec-body">
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag-u">URGENT</span>
+        <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSmUAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">SentinelOne — Unmitigated active threat on clapointe121</a>
+      </div>
+      <div class="item-meta">Inbox &nbsp;|&nbsp; 2026-05-22 15:09 CDT &nbsp;|&nbsp; noreply@mailsender.sentinelone.net</div>
+      <div class="item-body">
+        Most anomalous event in window. Active malware <span class="mono">9D82074379DC85139878FF5BF2011396722E15E7.exe</span> was not auto-mitigated. SentinelOne typically auto-mitigates; manual intervention required.
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag-s">STD</span>
+        <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUOOp5yAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Burnett &amp; Turner LAW-APPS01 — Server rebooted at 1:00am CDT (off-hours)</a>
+      </div>
+      <div class="item-meta">Alerts / RMM &nbsp;|&nbsp; 2026-05-23 01:23 CDT &nbsp;|&nbsp; noreply@rmmservice.com</div>
+      <div class="item-body">
+        Windows Server <span class="mono">LAW-APPS01</span> rebooted at <span class="mono">2026-05-23T06:00:23Z</span>. Off-hours reboot with no known maintenance window. Unique event — no other B&amp;T alerts in window. Verify with client.
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">
+        <span class="tag-s">STD</span>
+        <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUOOp53AAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Capital Excavation — 3 servers rebooted within 1 minute at 5:00am CDT</a>
+      </div>
+      <div class="item-meta">Alerts / RMM &nbsp;|&nbsp; 2026-05-23 05:00–05:01 CDT &nbsp;|&nbsp; noreply@rmmservice.com</div>
+      <div class="item-body">
+        <span class="mono">CXAHEAVYBID</span>, <span class="mono">CXREMOTE</span>, and <span class="mono">CXDATAENTRY</span> all rebooted at <span class="mono">2026-05-23T10:00Z</span>. Likely a coordinated Windows Update cycle but unusual to fire simultaneously. Confirm no production impact with Capital Excavation.
+      </div>
+    </div>
+
+    <p style="font-size:12px;color:#6b7280;margin-top:12px;border-top:1px solid #f0f2f5;padding-top:12px;">
+      <strong>Note (recurring, not listed above):</strong> CelLink <span class="mono">CELAZUPRDSSH01</span> — BitDefender installation failure (CRITICAL, hourly since 2026-05-22 15:46 CDT, 12+ alerts in window). Recurring, not uncommon for this run.
+    </p>
+  </div>
+</div>
+
+<!-- SECTION 6: TIME ENTRIES -->
+<div class="section">
+  <div class="sec-hdr"><h2>6. Time Entries</h2><span class="badge">0</span></div>
+  <div class="sec-body">
+    <p class="none">No qualifying time entries in this window. The Teams conversation about Meraki ceiling mount sourcing involved Marshall but the client could not be identified with &ge;80% confidence from available context. The open Meraki case 14273993 had no specific work event logged in this window &mdash; only Meraki&rsquo;s automated follow-up.</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<table width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px;">
+<tr><td style="padding:10px 0;font-size:11px;color:#9ca3af;font-family:'Courier New',monospace;text-align:center;">
+  Generated: 2026-05-23T07:30:00-05:00 &nbsp;|&nbsp; gitmarsh/routines &nbsp;|&nbsp; briefings/2026-05-23.html
+</td></tr>
+</table>
+
+</div>
+</td></tr>
+</table>
+</body>
+</html>
