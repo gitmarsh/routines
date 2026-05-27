@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing — 2026-05-27</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #f4f5f7; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #1a1a1a; line-height: 1.5; }
+a { color: #2563eb; text-decoration: none; }
+a:hover { text-decoration: underline; }
+code { font-family: 'Courier New', monospace; background: #f0f2f5; padding: 1px 5px; border-radius: 2px; font-size: 12px; }
+</style>
+</head>
+<body>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f4f5f7">
+<tr><td align="center">
+<table width="860" cellpadding="0" cellspacing="0" border="0" style="max-width:860px;">
+<tr><td style="padding:24px 16px;">
+
+<!-- ===== HEADER ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#1e2233;border-radius:6px;margin-bottom:16px;">
+<tr><td style="padding:22px 28px;">
+  <div style="color:#ffffff;font-family:Arial,sans-serif;font-size:22px;font-weight:700;letter-spacing:0.3px;">Morning Briefing</div>
+  <div style="color:#c9cfe0;font-family:Arial,sans-serif;font-size:14px;margin-top:3px;">Wednesday, May 27, 2026</div>
+  <div style="color:#8b95b0;font-family:'Courier New',monospace;font-size:11px;margin-top:10px;line-height:1.8;">
+    Run: 07:30 CDT &nbsp;|&nbsp; Window: 2026-05-26T15:30 CDT &rarr; 2026-05-27T07:30 CDT<br>
+    Scanned: 65 emails (Inbox 12, Help Desk 2, Alerts 32, Datto 19, Backup Radar 0) &nbsp;|&nbsp; ~53 Teams messages<br>
+    Classified: Urgent <strong style="color:#f87171;">1</strong> &nbsp;|&nbsp; ASAP <strong style="color:#fb923c;">3</strong> &nbsp;|&nbsp; Standard <strong style="color:#94a3b8;">5</strong> &nbsp;|&nbsp; Time Entries <strong style="color:#86efac;">1</strong>
+  </div>
+</td></tr>
+</table>
+
+<!-- ===== SEVERITY OVERVIEW ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:6px;border:1px solid #e0e4eb;margin-bottom:16px;">
+<tr><td style="padding:16px 24px;">
+  <table cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td valign="middle" style="padding-right:28px;">
+      <!-- Donut: total=9, circumference=2*pi*38=238.8 -->
+      <!-- Urgent 1/9=26.5, ASAP 3/9=79.6, Standard 5/9=132.7 -->
+      <svg width="96" height="96" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="48" cy="48" r="38" fill="none" stroke="#e5e7eb" stroke-width="13"/>
+        <!-- Standard (starts at 0) -->
+        <circle cx="48" cy="48" r="38" fill="none" stroke="#94a3b8" stroke-width="13"
+          stroke-dasharray="132.7 106.1" stroke-dashoffset="0" transform="rotate(-90 48 48)"/>
+        <!-- ASAP (starts after Standard) -->
+        <circle cx="48" cy="48" r="38" fill="none" stroke="#f97316" stroke-width="13"
+          stroke-dasharray="79.6 159.2" stroke-dashoffset="-132.7" transform="rotate(-90 48 48)"/>
+        <!-- Urgent (starts after Standard+ASAP) -->
+        <circle cx="48" cy="48" r="38" fill="none" stroke="#dc2626" stroke-width="13"
+          stroke-dasharray="26.5 212.3" stroke-dashoffset="-212.3" transform="rotate(-90 48 48)"/>
+        <text x="48" y="53" text-anchor="middle" font-family="Arial" font-size="17" font-weight="700" fill="#1a1a1a">9</text>
+      </svg>
+    </td>
+    <td valign="middle">
+      <div style="font-family:Arial,sans-serif;font-size:13px;line-height:2;">
+        <div><span style="display:inline-block;width:11px;height:11px;background:#dc2626;border-radius:2px;margin-right:7px;vertical-align:middle;"></span><strong>Urgent:</strong> 1 &mdash; unmitigated endpoint threat</div>
+        <div><span style="display:inline-block;width:11px;height:11px;background:#f97316;border-radius:2px;margin-right:7px;vertical-align:middle;"></span><strong>ASAP:</strong> 3 &mdash; site visit reply, disk full, backup failures</div>
+        <div><span style="display:inline-block;width:11px;height:11px;background:#94a3b8;border-radius:2px;margin-right:7px;vertical-align:middle;"></span><strong>Standard:</strong> 5 &mdash; maintenance, invoices, test artifacts</div>
+      </div>
+    </td>
+  </tr>
+  </table>
+</td></tr>
+</table>
+
+<!-- ===== SECTION 1: URGENT ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:6px;border:1px solid #e0e4eb;margin-bottom:16px;">
+<tr><td style="padding:12px 24px;background:#fff1f2;border-bottom:2px solid #fecdd3;border-radius:6px 6px 0 0;">
+  <span style="font-family:Arial,sans-serif;font-size:15px;font-weight:700;color:#1a1a1a;">Urgent</span>
+  <span style="display:inline-block;background:#fecdd3;color:#dc2626;font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:9px;">1</span>
+</td></tr>
+<tr><td style="padding:18px 24px;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td style="border-left:3px solid #dc2626;padding-left:14px;">
+      <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;">
+        <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbrtAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#dc2626;">SentinelOne &mdash; Active threat NOT mitigated &mdash; machine clapointe121</a>
+      </div>
+      <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:4px;">
+        2026-05-27 03:51 CDT &nbsp;|&nbsp; Source: Inbox (AriatAlerts) &nbsp;|&nbsp; Sender: noreply@mailsender.sentinelone.net
+      </div>
+      <div style="font-family:Arial,sans-serif;font-size:13px;color:#374151;margin-top:8px;line-height:1.6;">
+        <strong style="color:#dc2626;">The threat was NOT mitigated.</strong> SentinelOne typically auto-mitigates &mdash; manual investigation required.<br>
+        Machine: <code>clapointe121</code> &nbsp; External IP: <code>173.11.227.210</code> &nbsp; Internal IP: <code>192.168.112.58</code><br>
+        Threat file: <code>9D82074379DC85139878FF5BF2011396722E15E7.exe</code><br>
+        Client assignment not determinable from available data. Check SentinelOne console immediately to identify client and isolate if still active.
+      </div>
+    </td>
+  </tr>
+  </table>
+
+</td></tr>
+</table>
+
+<!-- ===== SECTION 2: FOLLOW-UPS ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:6px;border:1px solid #e0e4eb;margin-bottom:16px;">
+<tr><td style="padding:12px 24px;background:#f9fafb;border-bottom:1px solid #e0e4eb;border-radius:6px 6px 0 0;">
+  <span style="font-family:Arial,sans-serif;font-size:15px;font-weight:700;color:#1a1a1a;">Follow-ups</span>
+  <span style="display:inline-block;background:#e5e7eb;color:#374151;font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:9px;">2</span>
+</td></tr>
+<tr><td style="padding:18px 24px;">
+
+  <!-- Beehive -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid #f3f4f6;">
+  <tr><td>
+    <span style="display:inline-block;background:#fff7ed;color:#ea580c;font-size:10px;font-weight:700;padding:1px 7px;border-radius:3px;text-transform:uppercase;letter-spacing:0.5px;margin-right:7px;">ASAP</span>
+    <span style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;">
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbroAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1a1a1a;">Beehive Specialty &mdash; Kristie Wright awaiting reply (blocked on Marshall)</a>
+    </span>
+    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:3px;">2026-05-26 17:42 CDT &nbsp;|&nbsp; From: Kristie Wright &lt;Kristie@Specialbee.com&gt; &nbsp;|&nbsp; Importance: High</div>
+    <div style="font-family:Arial,sans-serif;font-size:13px;color:#374151;margin-top:7px;line-height:1.6;">
+      Asking what time Marshall plans to be on site today and what to have ready in the server room. Also confirming whether Marshall will use existing monitors, mice, and keyboards.<br>
+      <strong>Marshall stated via Teams (18:38 CDT Tue):</strong> &ldquo;9 is my plan.&rdquo; Reply not yet sent &mdash; Kristie is blocked.
+    </div>
+  </td></tr>
+  </table>
+
+  <!-- CEL-SC-UVIS-01 -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr><td>
+    <span style="display:inline-block;background:#fff7ed;color:#ea580c;font-size:10px;font-weight:700;padding:1px 7px;border-radius:3px;text-transform:uppercase;letter-spacing:0.5px;margin-right:7px;">ASAP</span>
+    <span style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;">
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUfm6lAAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1a1a1a;">CelLink &mdash; CEL-SC-UVIS-01 Datto backup still failing post-patching (&times;4 critical errors)</a>
+    </span>
+    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:3px;">Last error: 2026-05-27 04:01 CDT &nbsp;|&nbsp; Source: Datto (SIRIS CelLinkSC)</div>
+    <div style="font-family:Arial,sans-serif;font-size:13px;color:#374151;margin-top:7px;line-height:1.6;">
+      Error: <code>Cannot connect to the host - aborting backup</code><br>
+      Errors at: 16:01 Tue, 20:01 Tue, 00:32 Wed, 04:01 Wed (CDT). Server was confirmed online at 22:40 CDT by Stefan Munoz post-patching, but Datto agent is still not connecting. Likely: agent service did not recover after reboot. Needs manual restart of Datto agent on CEL-SC-UVIS-01.
+    </div>
+  </td></tr>
+  </table>
+
+</td></tr>
+</table>
+
+<!-- ===== SECTION 3: TODAY TO-DOS ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:6px;border:1px solid #e0e4eb;margin-bottom:16px;">
+<tr><td style="padding:12px 24px;background:#f9fafb;border-bottom:1px solid #e0e4eb;border-radius:6px 6px 0 0;">
+  <span style="font-family:Arial,sans-serif;font-size:15px;font-weight:700;color:#1a1a1a;">Today To-Dos</span>
+  <span style="display:inline-block;background:#e5e7eb;color:#374151;font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:9px;">8</span>
+</td></tr>
+<tr><td style="padding:0;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;font-size:13px;font-family:Arial,sans-serif;">
+    <tr style="background:#f0f2f5;">
+      <th style="padding:9px 16px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#6b7280;border-bottom:2px solid #e0e4eb;width:90px;">Priority</th>
+      <th style="padding:9px 16px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#6b7280;border-bottom:2px solid #e0e4eb;">Task</th>
+      <th style="padding:9px 16px;text-align:left;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.4px;color:#6b7280;border-bottom:2px solid #e0e4eb;width:140px;">Source</th>
+    </tr>
+    <tr>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;border-left:3px solid #dc2626;"><span style="font-weight:700;color:#dc2626;">MUST</span></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbroAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Reply to Kristie Wright (Beehive Specialty) &mdash; confirm 9 AM arrival; confirm existing monitors/mice/keyboards in server room</a></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;color:#6b7280;">Inbox (high)</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;border-left:3px solid #dc2626;"><span style="font-weight:700;color:#dc2626;">MUST</span></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbrtAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Investigate unmitigated SentinelOne threat on <code>clapointe121</code> &mdash; identify client, verify active status, isolate and remediate</a></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;color:#6b7280;">Inbox (Alert)</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;border-left:3px solid #dc2626;"><span style="font-weight:700;color:#dc2626;">MUST</span></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUYMzaWAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLink &mdash; CELAZUPRDFILE01 (Azure) E: drive at &le;5% free &mdash; clean up or expand disk immediately</a></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;color:#6b7280;">Alerts</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;border-left:3px solid #ea580c;"><span style="font-weight:700;color:#ea580c;">SHOULD</span></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUfm6lAAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLink &mdash; CEL-SC-UVIS-01 Datto: restart agent post-reboot; confirm backups resume</a></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;color:#6b7280;">Datto</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;border-left:3px solid #ea580c;"><span style="font-weight:700;color:#ea580c;">SHOULD</span></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbrsAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLink &mdash; SYSPRO vendor maintenance tonight 23:00 PDT (01:00 CDT 5/28) &mdash; confirm Nghi is aware; no Ariat action required unless asked</a></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;color:#6b7280;">Inbox</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;border-left:3px solid #ea580c;"><span style="font-weight:700;color:#ea580c;">SHOULD</span></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUXII1HAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">McElroy, Sullivan, Miller &amp; Weber &mdash; MEJ-DATA: bootable screenshot FAILED (SeaBIOS) + backup warning &ldquo;Unknown filesystem type&rdquo; &mdash; investigate SCSI/IDE controller or boot order</a></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;color:#6b7280;">Datto</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;border-left:3px solid #3b82f6;"><span style="font-weight:700;color:#3b82f6;">COULD</span></td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;">CelLink &mdash; Open decommission ticket for CEL-SC-UVIS-01 (10-year-old OS, no known function; per Teams discussion with Nghi Nguyen)</td>
+      <td style="padding:10px 16px;border-bottom:1px solid #f3f4f6;color:#6b7280;">Teams</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 16px;border-left:3px solid #3b82f6;"><span style="font-weight:700;color:#3b82f6;">COULD</span></td>
+      <td style="padding:10px 16px;">Review 2 new Microsoft 365 Teams Phone billing invoices</td>
+      <td style="padding:10px 16px;color:#6b7280;">Inbox</td>
+    </tr>
+  </table>
+</td></tr>
+</table>
+
+<!-- ===== SECTION 4: BACKUPS ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:6px;border:1px solid #e0e4eb;margin-bottom:16px;">
+<tr><td style="padding:12px 24px;background:#f9fafb;border-bottom:1px solid #e0e4eb;border-radius:6px 6px 0 0;">
+  <span style="font-family:Arial,sans-serif;font-size:15px;font-weight:700;color:#1a1a1a;">Backups</span>
+  <span style="display:inline-block;background:#fecdd3;color:#dc2626;font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:9px;">Failed: 1</span>
+  <span style="display:inline-block;background:#fed7aa;color:#ea580c;font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:6px;">Warning: 2</span>
+  <span style="display:inline-block;background:#e5e7eb;color:#6b7280;font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:6px;">No Result: 0</span>
+</td></tr>
+<tr><td style="padding:18px 24px;">
+
+  <!-- Bar chart -->
+  <table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+  <tr>
+    <td valign="bottom" style="padding-right:20px;">
+      <svg width="160" height="75" viewBox="0 0 160 75" xmlns="http://www.w3.org/2000/svg">
+        <!-- Axes -->
+        <line x1="20" y1="5" x2="20" y2="55" stroke="#e0e4eb" stroke-width="1"/>
+        <line x1="20" y1="55" x2="155" y2="55" stroke="#e0e4eb" stroke-width="1"/>
+        <!-- Failed: 1 (bar height proportional to max=2, so 50% of 46px = 23px) -->
+        <rect x="30" y="32" width="28" height="23" fill="#dc2626" rx="2"/>
+        <text x="44" y="28" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#dc2626">1</text>
+        <text x="44" y="68" text-anchor="middle" font-family="Arial" font-size="10" fill="#6b7280">Failed</text>
+        <!-- Warning: 2 (100% of 46px = 46px) -->
+        <rect x="66" y="9" width="28" height="46" fill="#f97316" rx="2"/>
+        <text x="80" y="5" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#f97316">2</text>
+        <text x="80" y="68" text-anchor="middle" font-family="Arial" font-size="10" fill="#6b7280">Warning</text>
+        <!-- No Result: 0 -->
+        <rect x="102" y="55" width="28" height="0" fill="#94a3b8" rx="2"/>
+        <text x="116" y="28" text-anchor="middle" font-family="Arial" font-size="11" font-weight="700" fill="#d1d5db">0</text>
+        <text x="116" y="68" text-anchor="middle" font-family="Arial" font-size="10" fill="#6b7280">No Result</text>
+      </svg>
+    </td>
+    <td valign="middle" style="font-family:Arial,sans-serif;font-size:12px;color:#374151;line-height:2;">
+      <div><span style="display:inline-block;width:10px;height:10px;background:#dc2626;border-radius:2px;margin-right:6px;vertical-align:middle;"></span>Failed &mdash; 1 device (MEJ-DATA)</div>
+      <div><span style="display:inline-block;width:10px;height:10px;background:#f97316;border-radius:2px;margin-right:6px;vertical-align:middle;"></span>Warning &mdash; 2 devices (CelLink UVIS, MEJ-DATA)</div>
+      <div><span style="display:inline-block;width:10px;height:10px;background:#94a3b8;border-radius:2px;margin-right:6px;vertical-align:middle;"></span>No Result &mdash; 0</div>
+    </td>
+  </tr>
+  </table>
+
+  <!-- FAILED -->
+  <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#dc2626;margin-bottom:8px;">Failed</div>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fff1f2;border-radius:4px;margin-bottom:16px;">
+  <tr><td style="padding:12px 14px;">
+    <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;">
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUXII1HAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">McElroy, Sullivan, Miller &amp; Weber &mdash; MEJ-DATA &mdash; Bootable Screenshot FAILED</a>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:3px;">2026-05-26 20:00 CDT &nbsp;|&nbsp; SIRIS MEJDatto2025 (S5-8) &nbsp;|&nbsp; Agent: 192.168.1.7</div>
+    <div style="font-family:Arial,sans-serif;font-size:12px;color:#374151;margin-top:5px;">SeaBIOS screen captured &mdash; VM failed to boot into OS during HIR. Try switching storage controller (SCSI &harr; IDE) or correcting drive boot order in Datto Advanced Options.</div>
+  </td></tr>
+  </table>
+
+  <!-- WARNING -->
+  <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#ea580c;margin-bottom:8px;">Warning</div>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#fff7ed;border-radius:4px;margin-bottom:16px;">
+  <tr><td style="padding:12px 14px;border-bottom:1px solid #fed7aa;">
+    <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;">
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUfm6lAAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLink &mdash; CEL-SC-UVIS-01 &mdash; Critical Error &times;4 (Cannot connect to host)</a>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:3px;">Errors: 16:01 &amp; 20:01 Tue, 00:32 &amp; 04:01 Wed CDT &nbsp;|&nbsp; SIRIS CelLinkSC (S5-24) &nbsp;|&nbsp; 172.16.130.253</div>
+    <div style="font-family:Arial,sans-serif;font-size:12px;color:#374151;margin-top:5px;">Datto agent not reconnecting post-patching reboot. Server is online per Stefan Munoz (22:40 CDT). Error suppression active (60 min intervals). Restart Datto agent on UVIS.</div>
+  </td></tr>
+  <tr><td style="padding:12px 14px;">
+    <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;">
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUXII1NAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">McElroy, Sullivan, Miller &amp; Weber &mdash; MEJ-DATA &mdash; Backup Warning</a>
+    </div>
+    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:3px;">2026-05-27 02:03 CDT &nbsp;|&nbsp; SIRIS MEJDatto2025 (S5-8) &nbsp;|&nbsp; 192.168.1.7</div>
+    <div style="font-family:Arial,sans-serif;font-size:12px;color:#374151;margin-top:5px;">Error: <code>Unknown filesystem type</code>. Non-critical per Datto; may be transient. Combined with the bootable screenshot failure, this device warrants investigation.</div>
+  </td></tr>
+  </table>
+
+  <!-- NO RESULT -->
+  <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#9ca3af;margin-bottom:8px;">No Result</div>
+  <div style="font-family:Arial,sans-serif;font-size:13px;color:#9ca3af;font-style:italic;">None in window</div>
+
+  <!-- Note: CelLink succeeded -->
+  <div style="font-family:Arial,sans-serif;font-size:11px;color:#6b7280;margin-top:14px;padding-top:12px;border-top:1px solid #f3f4f6;">
+    <strong>Succeeded (&times;11 CelLink):</strong> CEL-APPSERVER (&times;2), CEL-SC-DC-01, CEL-SC-DATABROKER-01, CEL-SC-RADIUS, Volta, Faraday, Joule, Henry, FaradayDEV, CEL-SC-DEPLOY &mdash; all via SIRIS CelLinkSC
+  </div>
+
+</td></tr>
+</table>
+
+<!-- ===== SECTION 5: ALERTS ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:6px;border:1px solid #e0e4eb;margin-bottom:16px;">
+<tr><td style="padding:12px 24px;background:#f9fafb;border-bottom:1px solid #e0e4eb;border-radius:6px 6px 0 0;">
+  <span style="font-family:Arial,sans-serif;font-size:15px;font-weight:700;color:#1a1a1a;">Alerts</span>
+  <span style="display:inline-block;background:#e5e7eb;color:#374151;font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:9px;">3</span>
+  <span style="font-family:Arial,sans-serif;font-size:11px;color:#9ca3af;margin-left:8px;">top 3 most uncommon</span>
+</td></tr>
+<tr><td style="padding:18px 24px;">
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #f3f4f6;">
+  <tr><td>
+    <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;color:#374151;">1. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbrtAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">SentinelOne &mdash; Active unmitigated threat on <code>clapointe121</code></a></div>
+    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:3px;">03:51 CDT &nbsp;|&nbsp; noreply@mailsender.sentinelone.net</div>
+    <div style="font-family:Arial,sans-serif;font-size:12px;color:#374151;margin-top:5px;">Uncommon: SentinelOne normally auto-mitigates. The threat remaining unmitigated signals either policy misconfiguration or an active evasion technique.</div>
+  </td></tr>
+  </table>
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid #f3f4f6;">
+  <tr><td>
+    <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;color:#374151;">2. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUYMzaWAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLink &mdash; CELAZUPRDFILE01 (Azure) &mdash; E: drive at &le;5% free space</a></div>
+    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:3px;">03:13 CDT &nbsp;|&nbsp; noreply@rmmservice.com &nbsp;|&nbsp; Device: CELAZUPRDFILE01 (Azure)</div>
+    <div style="font-family:Arial,sans-serif;font-size:12px;color:#374151;margin-top:5px;">Uncommon: production Azure file server at critical disk capacity. Two duplicate alerts fired simultaneously (duplicate delivery). Risk of write failures if not resolved today.</div>
+  </td></tr>
+  </table>
+
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr><td>
+    <div style="font-family:Arial,sans-serif;font-size:13px;font-weight:700;color:#374151;">3. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUf2LJJAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Office 365 &mdash; Malicious URL removed after delivery (msmtx.com recipients)</a></div>
+    <div style="font-family:'Courier New',monospace;font-size:11px;color:#6b7280;margin-top:3px;">07:30 CDT &nbsp;|&nbsp; Office365Alerts@microsoft.com &nbsp;|&nbsp; Severity: Informational</div>
+    <div style="font-family:Arial,sans-serif;font-size:12px;color:#374151;margin-top:5px;">Uncommon: post-delivery removal of a malicious URL from msmtx.com mailboxes (Admin@msmtx.com, mpaluso@msmtx.com). Ariat was notified as CC. No action needed unless client reports issues; worth monitoring for a follow-on phishing campaign.</div>
+  </td></tr>
+  </table>
+
+</td></tr>
+</table>
+
+<!-- ===== SECTION 6: TIME ENTRIES ===== -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background:#ffffff;border-radius:6px;border:1px solid #e0e4eb;margin-bottom:16px;">
+<tr><td style="padding:12px 24px;background:#f9fafb;border-bottom:1px solid #e0e4eb;border-radius:6px 6px 0 0;">
+  <span style="font-family:Arial,sans-serif;font-size:15px;font-weight:700;color:#1a1a1a;">Time Entries</span>
+  <span style="display:inline-block;background:#e5e7eb;color:#374151;font-size:11px;font-weight:700;padding:2px 9px;border-radius:12px;margin-left:9px;">1</span>
+</td></tr>
+<tr><td style="padding:18px 24px;">
+
+  <!-- Date label -->
+  <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#6b7280;margin-bottom:12px;">2026-05-26</div>
+
+  <!-- CelLink After-Hours card -->
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-left:4px solid #dc2626;background:#fafafa;border-radius:0 4px 4px 0;">
+  <tr><td style="padding:14px 18px;">
+    <div style="font-family:Arial,sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#dc2626;margin-bottom:10px;">After-Hours (Red)</div>
+    <pre style="font-family:'Courier New',monospace;font-size:12px;color:#1a1a1a;white-space:pre-wrap;line-height:1.8;background:none;border:none;padding:0;margin:0;">Subject:     CelLink
+Location:    Remote
+Description: Patched Windows servers across Azure and Georgetown TX environments overnight with CelLink team. Completed: CELAZUPRDDC1, CELAZUPRDFILE01, CELAZUPRDMGMT, CEL-GT-DC2, CELDEPLOY, CEL-GT-DATABROK. CELASRCONF left pending reboot at session close per Nghi Nguyen.
+Category:    After-Hours (Red)
+Time:        2026-05-26 20:00 - 22:48</pre>
+    <div style="font-family:Arial,sans-serif;font-size:11px;color:#9ca3af;margin-top:10px;">Source: Teams group chat (Nghi Nguyen, Matt Kerker, Stefan Munoz) &mdash; Session concluded 22:48 CDT</div>
+  </td></tr>
+  </table>
+
+</td></tr>
+</table>
+
+<!-- FOOTER -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td style="padding:8px 0 4px;font-family:'Courier New',monospace;font-size:10px;color:#9ca3af;text-align:center;">
+  Generated 2026-05-27T07:30 CDT &nbsp;|&nbsp; gitmarsh/routines &nbsp;|&nbsp; briefings/2026-05-27.html
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>
