@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing — 2026-05-29</title>
+<style>
+  body{margin:0;padding:20px;background:#f4f5f7;font-family:Arial,sans-serif;font-size:14px;color:#1a1a2e;}
+  .wrapper{max-width:900px;margin:0 auto;background:#fff;border:1px solid #dde1e7;border-radius:4px;overflow:hidden;}
+  .hdr{background:#1a1a2e;color:#fff;padding:20px 28px;}
+  .hdr h1{margin:0 0 4px;font-size:20px;letter-spacing:.5px;}
+  .hdr .meta{font-size:11px;color:#8fa0b4;font-family:'Courier New',monospace;}
+  .sec{padding:18px 28px;border-bottom:1px solid #eaecef;}
+  .sec:last-child{border-bottom:none;}
+  h2{font-size:15px;margin:0 0 14px;color:#1a1a2e;letter-spacing:.3px;}
+  .badge{display:inline-block;background:#e8ecf0;color:#444;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;vertical-align:middle;}
+  .badge.urg{background:#c0392b;color:#fff;}
+  .badge.asp{background:#e67e22;color:#fff;}
+  .badge.std{background:#2980b9;color:#fff;}
+  .item{margin-bottom:10px;padding:10px 12px;background:#f8f9fa;border-left:3px solid #ccc;border-radius:2px;font-size:13px;line-height:1.5;}
+  .item.u{border-left-color:#c0392b;}
+  .item.a{border-left-color:#e67e22;}
+  .item.s{border-left-color:#95a5a6;}
+  .item.ok{border-left-color:#27ae60;}
+  .ititle{font-weight:700;margin-bottom:3px;}
+  .imeta{font-size:11px;color:#666;font-family:'Courier New',monospace;margin-top:4px;}
+  a{color:#2980b9;text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  table.todo{width:100%;border-collapse:collapse;font-size:13px;}
+  table.todo th{background:#f0f2f5;text-align:left;padding:6px 10px;font-size:12px;color:#555;border-bottom:1px solid #dde1e7;}
+  table.todo td{padding:7px 10px;border-bottom:1px solid #eaecef;vertical-align:top;}
+  table.todo tr:last-child td{border-bottom:none;}
+  .pr{font-size:10px;font-weight:700;padding:2px 5px;border-radius:3px;white-space:nowrap;}
+  .must{background:#c0392b;color:#fff;}
+  .should{background:#e67e22;color:#fff;}
+  .could{background:#7f8c8d;color:#fff;}
+  .te-card{margin-bottom:14px;border:2px solid #ccc;border-radius:4px;overflow:hidden;}
+  .te-card.sup{border-color:#2980b9;}
+  .te-card.proj{border-color:#27ae60;}
+  .te-card.ah{border-color:#c0392b;}
+  .te-hdr{font-size:11px;font-weight:700;padding:5px 10px;}
+  .te-card.sup .te-hdr{background:#eaf4fb;color:#1a5276;}
+  .te-card.proj .te-hdr{background:#eafaf1;color:#1e8449;}
+  .te-card.ah .te-hdr{background:#fdedec;color:#922b21;}
+  .te-body{padding:10px;background:#fafafa;}
+  .te-body pre{margin:0;font-family:'Courier New',monospace;font-size:12px;line-height:1.75;white-space:pre-wrap;color:#1a1a2e;}
+  .ftr{padding:12px 28px;background:#f4f5f7;font-size:11px;color:#888;border-top:1px solid #dde1e7;font-family:'Courier New',monospace;}
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<!-- HEADER -->
+<div class="hdr">
+  <h1>Morning Briefing &mdash; 2026-05-29 (Friday)</h1>
+  <div class="meta">
+    Run: 2026-05-29 07:30 CDT &nbsp;|&nbsp; Window: 2026-05-28 15:30 CDT &rarr; 2026-05-29 07:30 CDT &nbsp;|&nbsp; Scanned: 47 emails &nbsp;|&nbsp; 13 Teams messages
+  </div>
+</div>
+
+<!-- SEVERITY OVERVIEW -->
+<div class="sec">
+  <h2>Severity Overview</h2>
+  <svg width="500" height="50" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+    <!-- Urgent 2 -->
+    <rect x="0" y="8" width="44" height="26" rx="3" fill="#c0392b"/>
+    <text x="22" y="25" text-anchor="middle" fill="#fff" font-family="Arial" font-size="12" font-weight="bold">2</text>
+    <text x="22" y="44" text-anchor="middle" fill="#c0392b" font-family="Arial" font-size="10">Urgent</text>
+    <!-- ASAP 4 -->
+    <rect x="54" y="8" width="88" height="26" rx="3" fill="#e67e22"/>
+    <text x="98" y="25" text-anchor="middle" fill="#fff" font-family="Arial" font-size="12" font-weight="bold">4</text>
+    <text x="98" y="44" text-anchor="middle" fill="#e67e22" font-family="Arial" font-size="10">ASAP</text>
+    <!-- Standard 12 -->
+    <rect x="152" y="8" width="264" height="26" rx="3" fill="#2980b9"/>
+    <text x="284" y="25" text-anchor="middle" fill="#fff" font-family="Arial" font-size="12" font-weight="bold">12</text>
+    <text x="284" y="44" text-anchor="middle" fill="#2980b9" font-family="Arial" font-size="10">Standard</text>
+  </svg>
+</div>
+
+<!-- 1. URGENT -->
+<div class="sec">
+  <h2>Urgent <span class="badge urg">2</span></h2>
+
+  <div class="item u">
+    <div class="ititle">Whitehead Wilson &mdash; Michael Statham: WiFi SSID needed for AP config (Teams, 5:34 PM CDT)</div>
+    <div>Late-afternoon Teams request from Michael Statham: &ldquo;Was a name decided on for WiFi? Adding the AP&rsquo;s to Meraki.&rdquo; Matt responded &ldquo;PhoenixGroup&rdquo; (stealth mode, subject to change). Marshall needs to confirm SSID and verify Meraki AP configuration is correct &mdash; this buildout is active onsite today with Telco Data finishing rack and cabling.</div>
+    <div class="imeta">Teams group chat (thread.v2) &bull; 2026-05-28T22:34 UTC &bull; Onsite today: Michael + Telco Data, monitors/TVs arriving</div>
+  </div>
+
+  <div class="item u">
+    <div class="ititle">Kidd Roofing &mdash; Sage server unresolved, CEO Chris Lowe involved</div>
+    <div>Marshall applied fixes and rebooted Sage server (~5:08 PM CDT). Chris reported &ldquo;Still not working.&rdquo; Marshall asked Chris to re-login to Sage; Chris said &ldquo;Let me log back in&rdquo; at 5:55 PM CDT &mdash; no confirmation of resolution. CEO was unable to use Sage at end of day. Sage support access requires Chris&rsquo;s active session.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUf2LJ%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Inbox: Re: Sage Reboot</a> &bull; Last message 2026-05-28T22:56 UTC (Chris: &ldquo;Let me log back in&rdquo;)</div>
+  </div>
+</div>
+
+<!-- 2. FOLLOW-UPS -->
+<div class="sec">
+  <h2>Follow-ups <span class="badge">6</span></h2>
+
+  <div class="item a">
+    <div class="ititle">[ASAP] Meraki Case 14273993 &mdash; AutoVPN not working (Notice 3 of 3)</div>
+    <div>Cisco Meraki sent their final automated outreach. Case may auto-close if no reply. Confirm current AutoVPN status and respond to keep open or mark resolved.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUf2LKAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Inbox: Meraki Case 14273993</a> &bull; 2026-05-28T22:56 UTC &bull; Case #: 14273993, Customer #: 4908-0243</div>
+  </div>
+
+  <div class="item a">
+    <div class="ititle">[ASAP] BurnettTurner #10297 &mdash; Scott Nyitray, Word/Excel not responding</div>
+    <div>Marshall remoted into SCOTT-LT at 2:13 PM CDT 5/28 to diagnose. Resolution not confirmed. Follow up with Scott to verify workstation is fully operational.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUg%2BqFnAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Help Desk: #10297</a> &bull; Work done 2026-05-28 14:13 CST</div>
+  </div>
+
+  <div class="item a">
+    <div class="ititle">[ASAP] CelLink &mdash; CELAZUPRDFILE01 E: drive at &#x2264;5% free (Azure)</div>
+    <div>Active disk threshold alert on Azure production file server. Two simultaneous alert emails fired at 3:50 AM CDT. Disk must be expanded or cleaned before it fills and impacts file services.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUfbeMBAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Alerts: Disk Alert</a> &bull; 2026-05-29T08:50 UTC &bull; Azure &bull; CELAZUPRDFILE01</div>
+  </div>
+
+  <div class="item a">
+    <div class="ititle">[ASAP] Planner: M365 Security Policy Plan Debrief &mdash; due 6/5 (7 days)</div>
+    <div>Task due next Friday. Debrief on M365 Security Policies plan. Expiration within 7 days &mdash; schedule or begin preparation this week.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUf2LKFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Inbox: Planner Reminder</a> &bull; 2026-05-29T11:08 UTC &bull; Plan: M365 Security Policies</div>
+  </div>
+
+  <div class="item s">
+    <div class="ititle">Kidd Roofing SA #10204 &mdash; Office move (TODAY 5/29)</div>
+    <div>Ticket marked Resolved by Michael Statham. Move is today &mdash; Meraki appliances recovered last night (came back online after going offline during transition). Confirm SA network at 3690 Highpoint is stable. Static IP info provided: GW 24.242.162.117, Spectrum account last 4: 9233.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUg%2BqFlAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Help Desk: #10204</a> &bull; Status: Resolved &bull; 2026-05-29T00:27 UTC</div>
+  </div>
+
+  <div class="item s">
+    <div class="ititle">Buda Fire #10282 &mdash; M34 modem / Station 2 connectivity</div>
+    <div>Marshall committed 5/27 to visit Station 2 today to diagnose internet drop issues. &ldquo;It might not be a modem problem after all.&rdquo; Unit reports internet dropping when pulling out of station.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUg%2BqFpAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Help Desk: #10282</a> &bull; 2026-05-29T12:19 UTC</div>
+  </div>
+</div>
+
+<!-- 3. TODAY TO-DOS -->
+<div class="sec">
+  <h2>Today To-Dos <span class="badge">10</span></h2>
+  <table class="todo">
+    <tr>
+      <th style="width:68px;">Priority</th>
+      <th>Item</th>
+      <th style="width:140px;">Source</th>
+    </tr>
+    <tr>
+      <td><span class="pr must">MUST</span></td>
+      <td>Kidd Roofing &mdash; Call or email Chris Lowe: confirm Sage is working or contact Sage support using his account. This was unresolved EOD yesterday.</td>
+      <td>Inbox / Teams</td>
+    </tr>
+    <tr>
+      <td><span class="pr must">MUST</span></td>
+      <td>CelLink &mdash; Investigate CELAZUPRDFILE01 E: drive &#x2264;5% free. Expand Azure volume or clean disk before service impact.</td>
+      <td>Alerts</td>
+    </tr>
+    <tr>
+      <td><span class="pr must">MUST</span></td>
+      <td>Whitehead Wilson &mdash; Confirm &ldquo;PhoenixGroup&rdquo; WiFi SSID with Michael and verify Meraki AP config for today&rsquo;s live site work.</td>
+      <td>Teams</td>
+    </tr>
+    <tr>
+      <td><span class="pr should">SHOULD</span></td>
+      <td>Reply to Meraki Case 14273993 (AutoVPN) &mdash; Notice 3/3. Respond to prevent auto-close. Confirm if still an issue.</td>
+      <td>Inbox</td>
+    </tr>
+    <tr>
+      <td><span class="pr should">SHOULD</span></td>
+      <td>Buda Fire #10282 &mdash; Visit Station 2 to diagnose internet drop / M34 modem issue (committed yesterday).</td>
+      <td>Help Desk</td>
+    </tr>
+    <tr>
+      <td><span class="pr should">SHOULD</span></td>
+      <td>MEJ-DATA Datto &mdash; Investigate boot failure on MEJDatto2025. Try SCSI&rarr;IDE storage controller switch per Datto guidance. Clear warning condition.</td>
+      <td>Datto</td>
+    </tr>
+    <tr>
+      <td><span class="pr should">SHOULD</span></td>
+      <td>BurnettTurner #10297 &mdash; Verify Scott Nyitray&rsquo;s Word/Excel issue is resolved. Close ticket if confirmed.</td>
+      <td>Help Desk</td>
+    </tr>
+    <tr>
+      <td><span class="pr could">COULD</span></td>
+      <td>Process 4 Microsoft M365 invoices received overnight (F3, Apps for Enterprise, Audio Conferencing, Exchange on-premises add-on).</td>
+      <td>Inbox</td>
+    </tr>
+    <tr>
+      <td><span class="pr could">COULD</span></td>
+      <td>#9753 Cyber Security Implementations &mdash; Review update, advance if capacity allows.</td>
+      <td>Help Desk</td>
+    </tr>
+    <tr>
+      <td><span class="pr could">COULD</span></td>
+      <td>M365 Security Policy Plan Debrief &mdash; Begin prep (due 6/5, 7 days out). Plan in &ldquo;M365 Security Policies.&rdquo;</td>
+      <td>Planner</td>
+    </tr>
+  </table>
+</div>
+
+<!-- 4. BACKUPS -->
+<div class="sec">
+  <h2>Backups <span class="badge">16 results</span></h2>
+  <svg width="440" height="55" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:12px;">
+    <text x="0" y="11" font-family="Arial" font-size="11" fill="#555">Datto results &mdash; scan window</text>
+    <rect x="0" y="18" width="22" height="18" rx="2" fill="#c0392b"/>
+    <text x="27" y="31" font-family="Arial" font-size="12" fill="#333">1 Failed</text>
+    <rect x="110" y="18" width="22" height="18" rx="2" fill="#e67e22"/>
+    <text x="137" y="31" font-family="Arial" font-size="12" fill="#333">1 Warning</text>
+    <rect x="240" y="18" width="22" height="18" rx="2" fill="#95a5a6"/>
+    <text x="267" y="31" font-family="Arial" font-size="12" fill="#333">0 No Result</text>
+    <rect x="370" y="18" width="22" height="18" rx="2" fill="#27ae60"/>
+    <text x="397" y="31" font-family="Arial" font-size="12" fill="#333">14 OK</text>
+  </svg>
+
+  <div class="item u">
+    <div class="ititle">FAILED &mdash; MEJ-DATA on MEJDatto2025 (McElroy, Sullivan, Miller &amp; Weber)</div>
+    <div>Bootable screenshot verification failed at 8:00 PM CDT 5/28. Machine failed to fully boot into OS &mdash; SeaBIOS displayed. Likely storage controller mismatch (SCSI vs IDE) or incorrect boot order. Datto recommends switching controller type or contacting support. Serial: 6C92CFEA8770, Model: S5-8.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUfm6ldAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Datto: FAILED notification</a> &bull; 192.168.1.7 &bull; 2026-05-29T03:08 UTC</div>
+  </div>
+
+  <div class="item a">
+    <div class="ititle">WARNING &mdash; MEJ-DATA on MEJDatto2025 (McElroy, Sullivan, Miller &amp; Weber)</div>
+    <div>Backup warning at 2:03 AM CDT 5/29: &ldquo;Unknown filesystem type.&rdquo; Non-critical per Datto, but combined with the prior boot failure this signals a persistent issue requiring investigation today.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUfm6lnAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Datto: Warning</a> &bull; 2026-05-29T07:03 UTC</div>
+  </div>
+
+  <div class="item ok">
+    <div class="ititle">OK &mdash; CelLink: 12 machines all SUCCEEDED (CelLinkSC SIRIS 84160c323b48)</div>
+    <div>All passed: CEL-APPSERVER (x2 runs), CEL-SC-DC-01, CEL-SC-DATABROKER-01, CEL-SC-DEPLOY, CEL-SC-RADIUS, CEL-SC-UVIS-01, Faraday, FaradayDEV, Henry, Joule, Volta.</div>
+    <div class="imeta">Datto: CelLinkSC &bull; Verification window: Thu/Fri 28&ndash;29 May 2026</div>
+  </div>
+
+  <div class="item s">
+    <div class="ititle">Backup Radar &mdash; No messages in scan window</div>
+    <div>Backup Radar folder returned no results for this period.</div>
+    <div class="imeta">Backup Radar &bull; Window: 2026-05-28T15:30 CDT &rarr; 2026-05-29T07:30 CDT</div>
+  </div>
+</div>
+
+<!-- 5. ALERTS -->
+<div class="sec">
+  <h2>Alerts <span class="badge">Top 3 notable</span></h2>
+
+  <div class="item u">
+    <div class="ititle">[1] CelLink &mdash; CELAZUPRDFILE01 (Azure) E: drive &#x2264;5% free &mdash; 3:50 AM CDT</div>
+    <div>Azure production file server hit the &#x2264;5% disk threshold on volume E:. Two duplicate alerts fired simultaneously. This is an atypical double-fire event, and the device also generated two duplicate Activity Notifications at 3:32 AM CDT. Disk must be addressed before it fills completely.</div>
+    <div class="imeta">Alerts folder &bull; 2026-05-29T08:50 UTC (x2) &bull; Device: CELAZUPRDFILE01 &bull; Role: WINDOWS_SERVER &bull; Azure</div>
+  </div>
+
+  <div class="item s">
+    <div class="ititle">[2] Kidd Roofing San Antonio &mdash; Meraki appliance recovered at 10:12 PM CDT</div>
+    <div>Meraki cloud sent a recovery alert: 1 security appliance in the Kidd Roofing-San Antonio network regained contact. Implies the appliance went offline, then recovered &mdash; notable on the eve of their office move day (5/29). No further alerts; monitor for stability as move completes today.</div>
+    <div class="imeta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUf2LJ8AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Inbox: Meraki Alert</a> &bull; 2026-05-28T21:12 UTC &bull; alerts-noreply@meraki.com</div>
+  </div>
+
+  <div class="item s">
+    <div class="ititle">[3] Capital Excavation &mdash; 7 devices generated activity events 10 AM&ndash;12 PM CDT</div>
+    <div>Devices CXAHEAVYBID, AUSCX4, CXREMOTE, CXDC02, CXTIMBERSCAN, CXAACCOUNTING, CXDC01 all fired Activity Notifications within a 2-hour window. Mass simultaneous reconnects may indicate a domain controller restart, patch reboot cycle, or brief network interruption. No tickets received yet; monitor.</div>
+    <div class="imeta">Alerts folder &bull; 2026-05-29T10:03&ndash;11:55 UTC &bull; Capital Excavation &bull; Main Office / Buda TX</div>
+  </div>
+</div>
+
+<!-- 6. TIME ENTRIES -->
+<div class="sec">
+  <h2>Time Entries <span class="badge">3</span></h2>
+  <p style="font-size:12px;color:#666;margin:0 0 14px;">Qualifying client work from 2026-05-28. Generated per ariat-time-entry skill. Fields marked &lt;MISSING&gt; require manual completion.</p>
+
+  <div class="te-card sup">
+    <div class="te-hdr">On-Going Support (Blue) &mdash; Kidd Roofing &mdash; 2026-05-28</div>
+    <div class="te-body">
+      <pre>Subject:     Kidd Roofing
+Location:    Remote
+Description: Troubleshot Sage server connectivity issue with Matt. Applied fixes
+             and rebooted server remotely. Coordinated with Chris Lowe to re-login
+             to Sage for vendor support account access. Issue unconfirmed resolved
+             at end of shift.
+Category:    On-Going Support (Blue)
+Time:        2026-05-28 15:31 - 17:31</pre>
+    </div>
+  </div>
+
+  <div class="te-card sup">
+    <div class="te-hdr">On-Going Support (Blue) &mdash; CelLink &mdash; 2026-05-28</div>
+    <div class="te-body">
+      <pre>Subject:     CelLink
+Location:    Remote
+Description: Drafted and submitted change control request for temporary takedown
+             of site-to-site VPN (Georgetown to San Carlos) and permanent client
+             VPN ingress reroute from San Carlos to Georgetown.
+Category:    On-Going Support (Blue)
+Time:        2026-05-28 16:14 - &lt;MISSING: end time&gt;</pre>
+    </div>
+  </div>
+
+  <div class="te-card sup">
+    <div class="te-hdr">On-Going Support (Blue) &mdash; Burnett &amp; Turner Law &mdash; 2026-05-28</div>
+    <div class="te-body">
+      <pre>Subject:     Burnett &amp; Turner Law
+Location:    Remote
+Description: Remoted into SCOTT-LT to diagnose Word and Excel not responding.
+             Performed workstation diagnostics on SCOTT-LT (LAWFIRM domain).
+Category:    On-Going Support (Blue)
+Time:        2026-05-28 14:13 - &lt;MISSING: end time&gt;</pre>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="ftr">
+  Generated: 2026-05-29T07:30 CDT &nbsp;|&nbsp; gitmarsh/routines &nbsp;|&nbsp; briefings/2026-05-29.html
+</div>
+
+</div>
+</body>
+</html>
