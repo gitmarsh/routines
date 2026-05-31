@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Morning Briefing &mdash; 2026-05-31</title>
+<style>
+body{margin:0;padding:0;background:#f0f2f5;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1a1a2e;}
+table.wrap{max-width:820px;margin:0 auto;background:#fff;border:1px solid #d0d3da;border-collapse:collapse;}
+.hdr{background:#1e2233;color:#fff;padding:18px 24px;}
+.hdr h1{margin:0 0 4px;font-size:18px;}
+.hdr .meta{font-size:11px;color:#8899aa;font-family:'Courier New',monospace;}
+.pf{padding:10px 24px;background:#f8f9fa;border-bottom:1px solid #e2e4e8;font-family:'Courier New',monospace;font-size:12px;line-height:1.9;}
+.sec{padding:18px 24px;border-bottom:1px solid #e2e4e8;}
+h2{margin:0 0 14px;font-size:15px;color:#1e2233;padding-bottom:6px;border-bottom:2px solid #e2e4e8;}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;color:#fff;margin-left:6px;font-weight:bold;vertical-align:middle;}
+.bu{background:#c0392b;} .ba{background:#d35400;} .bs{background:#2471a3;} .bn{background:#7f8c8d;}
+.item{margin-bottom:10px;padding:10px 13px;border-left:4px solid #ccc;background:#fafafa;}
+.iu{border-left-color:#c0392b;background:#fdf2f1;}
+.ia{border-left-color:#d35400;background:#fdf5ee;}
+.is{border-left-color:#2471a3;background:#eaf2fb;}
+.ititle{font-size:13px;font-weight:bold;margin-bottom:3px;}
+.imeta{font-size:11px;color:#777;font-family:'Courier New',monospace;}
+.ibody{font-size:13px;margin-top:5px;line-height:1.5;}
+.mono{font-family:'Courier New',monospace;font-size:12px;}
+.none{color:#999;font-style:italic;font-size:13px;}
+.ttbl{width:100%;border-collapse:collapse;font-size:13px;}
+.ttbl th{background:#f0f2f5;text-align:left;padding:7px 10px;font-size:12px;border-bottom:2px solid #d0d3da;}
+.ttbl td{padding:7px 10px;border-bottom:1px solid #eee;vertical-align:top;}
+.ttbl tr.must td{background:#fdf2f1;} .ttbl tr.sho td{background:#fdf5ee;} .ttbl tr.cld td{background:#f9f9f9;}
+.pl{font-size:10px;font-weight:bold;text-transform:uppercase;padding:2px 6px;border-radius:3px;}
+.pm{background:#c0392b;color:#fff;} .ps{background:#d35400;color:#fff;} .pc{background:#7f8c8d;color:#fff;}
+.btbl{width:100%;border-collapse:collapse;font-size:13px;}
+.btbl th{background:#f0f2f5;text-align:left;padding:7px 10px;font-size:12px;border-bottom:2px solid #d0d3da;}
+.btbl td{padding:7px 10px;border-bottom:1px solid #eee;}
+.sf{color:#c0392b;font-weight:bold;} .sw{color:#d35400;font-weight:bold;} .sn{color:#7f8c8d;font-weight:bold;} .so{color:#27ae60;}
+.te{border:2px solid #ccc;border-radius:5px;margin-bottom:12px;overflow:hidden;}
+.te.project{border-color:#27ae60;} .te.support{border-color:#2980b9;} .te.after{border-color:#c0392b;}
+.te-hdr{padding:6px 12px;font-size:11px;font-weight:bold;text-transform:uppercase;letter-spacing:.5px;}
+.te.project .te-hdr{background:#eafaf1;color:#1e8449;} .te.support .te-hdr{background:#ebf5fb;color:#1a5276;} .te.after .te-hdr{background:#fdedec;color:#922b21;}
+.te-body{padding:10px 14px;font-family:'Courier New',monospace;font-size:12px;line-height:1.9;background:#fff;}
+.miss{color:#c0392b;font-style:italic;}
+.dg{font-size:11px;font-weight:bold;font-family:'Courier New',monospace;color:#555;text-transform:uppercase;letter-spacing:1px;margin:14px 0 8px;}
+.dg:first-of-type{margin-top:0;}
+a{color:#1a5276;}
+</style>
+</head>
+<body>
+<table class="wrap" width="820" cellpadding="0" cellspacing="0" align="center">
+<tr><td>
+
+<!-- HEADER -->
+<div class="hdr">
+  <h1>Morning Briefing &mdash; Sunday, 2026-05-31</h1>
+  <div class="meta">Run: 2026-05-31 07:30 CT (manual trigger &mdash; Sunday) &nbsp;|&nbsp; Window: 2026-05-29T16:00 CT &rarr; 2026-05-31T07:30 CT</div>
+</div>
+
+<!-- PREFLIGHT / RUN STATUS -->
+<div class="pf">
+  &#9989; Preflight: GitHub + M365 + skill OK<br>
+  &#9989; Window: 2026-05-29T16:00:00-05:00 &rarr; 2026-05-31T07:30:00-05:00 (holiday rule: prior business day &gt;24h back)<br>
+  &#9989; Scanned: ~100 emails (Inbox 24 &bull; Help Desk 15 &bull; Alerts 27 &bull; Datto 29 &bull; Backup Radar 5) &bull; 16 Teams messages<br>
+  &#9989; Classified: Urgent 1 | ASAP 3 | Standard 12 | Time Entries 4
+</div>
+
+<!-- SEVERITY OVERVIEW -->
+<div class="sec">
+  <h2>Severity Overview</h2>
+  <table cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+      <td width="150" align="center" valign="middle">
+        <!-- Donut: total=16, Urgent=1, ASAP=3, Standard=12. r=45, circ=282.74 -->
+        <!-- Urgent: 17.67, ASAP: 53.01, Std: 212.06. Start at top: dashoffset=-70.69 -->
+        <svg width="120" height="120" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#e8eaed" stroke-width="20"/>
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#c0392b" stroke-width="20" stroke-dasharray="17.67 265.07" stroke-dashoffset="-70.69"/>
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#d35400" stroke-width="20" stroke-dasharray="53.01 229.73" stroke-dashoffset="-88.36"/>
+          <circle cx="60" cy="60" r="45" fill="none" stroke="#2471a3" stroke-width="20" stroke-dasharray="212.06 70.68" stroke-dashoffset="-141.37"/>
+          <text x="60" y="55" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#1e2233">16</text>
+          <text x="60" y="70" text-anchor="middle" font-family="Arial" font-size="10" fill="#888">items</text>
+        </svg>
+      </td>
+      <td valign="middle" style="padding-left:20px;">
+        <table cellpadding="5" cellspacing="0">
+          <tr>
+            <td><span style="display:inline-block;width:14px;height:14px;background:#c0392b;border-radius:2px;vertical-align:middle;"></span></td>
+            <td style="padding-left:8px;font-size:13px;"><b>Urgent</b></td>
+            <td style="padding-left:20px;" class="mono"><b>1</b></td>
+          </tr>
+          <tr>
+            <td><span style="display:inline-block;width:14px;height:14px;background:#d35400;border-radius:2px;vertical-align:middle;"></span></td>
+            <td style="padding-left:8px;font-size:13px;"><b>ASAP</b></td>
+            <td style="padding-left:20px;" class="mono"><b>3</b></td>
+          </tr>
+          <tr>
+            <td><span style="display:inline-block;width:14px;height:14px;background:#2471a3;border-radius:2px;vertical-align:middle;"></span></td>
+            <td style="padding-left:8px;font-size:13px;"><b>Standard</b></td>
+            <td style="padding-left:20px;" class="mono"><b>12</b></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- 1. URGENT -->
+<div class="sec">
+  <h2>Urgent <span class="badge bu">1</span></h2>
+
+  <div class="item iu">
+    <div class="ititle">CelLink &mdash; Production Azure File Server E: Drive at 100% (Writes Blocked)</div>
+    <div class="imeta">Source: Alerts (RMM) + Teams (Michael Statham) &bull; 2026-05-30 09:11 CT</div>
+    <div class="ibody">
+      Michael Statham flagged three CelLink Azure production servers with drives at or near capacity Saturday morning. <b>CELAZUPRDFILE01 E: is at 100%</b> &mdash; writes to this Azure production file server are blocked. CELAZUPRDBRK01 E: at 97%, JOULE D: at 95% (see ASAP). GT-ETL-01 C: also at &le;15% (Georgetown TX, first alerted Fri 5:41 PM CT). RMM alerts corroborate all four. No resolution confirmed as of run time &mdash; this has been unaddressed since Saturday morning.<br><br>
+      <span class="mono">CELAZUPRDFILE01 (Azure) &bull; CELAZUPRDBRK01 (Azure) &bull; JOULE (San Carlos CA) &bull; GT-ETL-01 (Georgetown TX)</span><br>
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">JOULE alert</a> &bull; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FEAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CELAZUPRDFILE01 alert</a>
+    </div>
+  </div>
+</div>
+
+<!-- 2. FOLLOW-UPS -->
+<div class="sec">
+  <h2>Follow-ups <span class="badge bs">5</span></h2>
+
+  <div class="item ia">
+    <div class="ititle">ASAP &mdash; MEJ &amp; Associates: MEJ-DATA Backup Failing 2+ Days</div>
+    <div class="imeta">Source: Datto (MEJDatto2025) + Backup Radar &bull; 2026-05-30 &rarr; 2026-05-31</div>
+    <div class="ibody">
+      Bootable screenshot for MEJ-DATA <b>FAILED</b> Sat 03:27 CT (SeaBIOS virtualization failure &mdash; possible SCSI/IDE controller mismatch or boot order issue). Backup Radar reports No Result for MEJ-DATA on 05/30. Warning alerts generated both <b>Sat 02:03 CT and Sun 02:03 CT</b> &mdash; 2 consecutive days. Requires investigation and remediation before Monday night backup window.<br>
+      <span class="mono">Device: 192.168.1.7 &bull; SIRIS: MEJDatto2025 (6c92cfea8770)</span><br>
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUrGVzAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">FAILED screenshot</a> &bull; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUrGVzMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Sun warning</a>
+    </div>
+  </div>
+
+  <div class="item ia">
+    <div class="ititle">ASAP &mdash; CelLink: CELAZUPRDBRK01 E: 97% &amp; JOULE D: 95% Near-Critical</div>
+    <div class="imeta">Source: Alerts (RMM) + Teams &bull; 2026-05-30</div>
+    <div class="ibody">
+      Beyond the 100%-full CELAZUPRDFILE01 (Urgent above): CELAZUPRDBRK01 E: at 97% and JOULE D: at 95% are imminent. GT-ETL-01 C: at &le;15% since Friday. Remediate all four drives in the same work session. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUocdaFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">GT-ETL-01 alert</a>
+    </div>
+  </div>
+
+  <div class="item ia">
+    <div class="ititle">ASAP &mdash; #10295: Can&rsquo;t Open Adobe Attachment &mdash; Assigned to Marshall, No Reply Yet</div>
+    <div class="imeta">Source: Help Desk &bull; Assigned Sat 09:21 CT &bull; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWOAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View ticket</a></div>
+    <div class="ibody">Ticket #10295 was assigned to Marshall on Saturday morning. Client is blocked waiting on response.</div>
+  </div>
+
+  <div class="item is">
+    <div class="ititle">Michael Statham &mdash; Time Entry Reminder: Project Work (Fri 5:35 PM CT)</div>
+    <div class="imeta">Source: Teams &bull; 2026-05-29 22:35 UTC</div>
+    <div class="ibody">
+      Statham listed items that must be logged as Project (Green): Buda Fire new HQ work + office setups, Whitehead Wilson New Office setup, Beehive new Server Setup, Capital Excavation rack clean-up + new printer installs, Kidd office moves, XDR work. Time entries for items within this scan window are in the Time Entries section. Remaining items predate the window.
+    </div>
+  </div>
+
+  <div class="item is">
+    <div class="ititle">GitHub &mdash; Repo Transfer Request: gitmarsh/ariat-mcp &rarr; Ariat-Systems Org</div>
+    <div class="imeta">Source: Inbox (noreply@github.com) &bull; 2026-05-31 01:49 CT &bull; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUpQFZNAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View email</a></div>
+    <div class="ibody">@gitmarsh initiated transfer of the <em>ariat-mcp</em> repository to the AriatSystems organization. Transfer must be accepted by the org owner. Requires decision.</div>
+  </div>
+</div>
+
+<!-- 3. TODAY TO-DOS -->
+<div class="sec">
+  <h2>Today To-Dos <span class="badge bs">13</span></h2>
+  <table class="ttbl" cellpadding="0" cellspacing="0">
+    <thead>
+      <tr>
+        <th width="72">Priority</th>
+        <th width="130">Client / Ticket</th>
+        <th>Item</th>
+        <th width="110">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="must">
+        <td><span class="pl pm">MUST</span></td>
+        <td>CelLink</td>
+        <td>Remediate CELAZUPRDFILE01 E: (100% full, writes blocked). Triage CELAZUPRDBRK01 E: (97%), JOULE D: (95%), and GT-ETL-01 C: (&le;15%) in same session.</td>
+        <td>Alerts / Teams</td>
+      </tr>
+      <tr class="must">
+        <td><span class="pl pm">MUST</span></td>
+        <td>MEJ &amp; Assoc.</td>
+        <td>Investigate MEJ-DATA backup failure (SeaBIOS / storage controller issue). Try SCSI&rarr;IDE switch on agent advanced options. Contact Datto support if needed. Ensure job runs tonight.</td>
+        <td>Datto / BR</td>
+      </tr>
+      <tr class="must">
+        <td><span class="pl pm">MUST</span></td>
+        <td>#10295</td>
+        <td>Can&rsquo;t open Adobe attachment &mdash; respond to newly assigned ticket.</td>
+        <td>Help Desk</td>
+      </tr>
+      <tr class="must">
+        <td><span class="pl pm">MUST</span></td>
+        <td>Multiple</td>
+        <td>Log Project time entries per Statham: Kidd SA office, Whitehead Wilson setup, Sage PEACHTREE (see Time Entries section).</td>
+        <td>Teams</td>
+      </tr>
+      <tr class="sho">
+        <td><span class="pl ps">SHOULD</span></td>
+        <td>CPC / #10318</td>
+        <td>Converting Publisher files &mdash; multiple updates over weekend, unresolved. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWQAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+        <td>Help Desk</td>
+      </tr>
+      <tr class="sho">
+        <td><span class="pl ps">SHOULD</span></td>
+        <td>#10319</td>
+        <td>Logitech BRIO 4k Camera setup &mdash; updated after hours Fri 9:32 PM CT. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWZAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+        <td>Help Desk</td>
+      </tr>
+      <tr class="sho">
+        <td><span class="pl ps">SHOULD</span></td>
+        <td>#10317</td>
+        <td>ZZ Folder &mdash; updated Sat afternoon, no close. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWVAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+        <td>Help Desk</td>
+      </tr>
+      <tr class="sho">
+        <td><span class="pl ps">SHOULD</span></td>
+        <td>#10315</td>
+        <td>kevin barron computer &mdash; updated Sat 4:29 PM CT. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWXAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+        <td>Help Desk</td>
+      </tr>
+      <tr class="sho">
+        <td><span class="pl ps">SHOULD</span></td>
+        <td>Capital Excav.</td>
+        <td>Rescue-cxfile01 No Result on 05/30 (Backup Radar). Confirm backup status.</td>
+        <td>Backup Radar</td>
+      </tr>
+      <tr class="cld">
+        <td><span class="pl pc">COULD</span></td>
+        <td>#10310</td>
+        <td>Printer Not Working &mdash; updated Sat PM. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWWAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+        <td>Help Desk</td>
+      </tr>
+      <tr class="cld">
+        <td><span class="pl pc">COULD</span></td>
+        <td>#10312</td>
+        <td>Casey&rsquo;s Computer Cwalls 152 &mdash; updated Sat 9:44 AM CT. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWRAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+        <td>Help Desk</td>
+      </tr>
+      <tr class="cld">
+        <td><span class="pl pc">COULD</span></td>
+        <td>#10297 / B&amp;T</td>
+        <td>BurnettTurner &mdash; updated Sat noon. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWUAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+        <td>Help Desk</td>
+      </tr>
+      <tr class="cld">
+        <td><span class="pl pc">COULD</span></td>
+        <td>CPC</td>
+        <td>DattoSaasProtection No Result 05/30 &mdash; verify M365 SaaS backup status.</td>
+        <td>Backup Radar</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 4. BACKUPS -->
+<div class="sec">
+  <h2>Backups <span class="badge bu">1 fail</span> <span class="badge ba">2 warn</span> <span class="badge bn">3 no result</span></h2>
+
+  <!-- SVG bar chart: Failed=1, Warning=2, No Result=3. Scale: 40px/unit, baseline y=135, bars grow up -->
+  <svg width="280" height="160" viewBox="0 0 280 160" style="display:block;margin-bottom:16px;">
+    <!-- Baseline -->
+    <line x1="15" y1="135" x2="265" y2="135" stroke="#ccc" stroke-width="1"/>
+    <!-- Failed bar (1 unit = 40px) -->
+    <rect x="25" y="95" width="50" height="40" fill="#c0392b" rx="2"/>
+    <text x="50" y="90" text-anchor="middle" font-family="Arial" font-size="12" fill="#c0392b" font-weight="bold">1</text>
+    <text x="50" y="152" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Failed</text>
+    <!-- Warning bar (2 units = 80px) -->
+    <rect x="115" y="55" width="50" height="80" fill="#d35400" rx="2"/>
+    <text x="140" y="50" text-anchor="middle" font-family="Arial" font-size="12" fill="#d35400" font-weight="bold">2</text>
+    <text x="140" y="152" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">Warning</text>
+    <!-- No Result bar (3 units = 120px) -->
+    <rect x="205" y="15" width="50" height="120" fill="#7f8c8d" rx="2"/>
+    <text x="230" y="10" text-anchor="middle" font-family="Arial" font-size="12" fill="#7f8c8d" font-weight="bold">3</text>
+    <text x="230" y="152" text-anchor="middle" font-family="Arial" font-size="11" fill="#555">No Result</text>
+  </svg>
+
+  <table class="btbl" cellpadding="0" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Client</th>
+        <th>Device / Job</th>
+        <th>Status</th>
+        <th>Last Event (CT)</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>MEJ &amp; Associates</td>
+        <td class="mono">MEJ-DATA</td>
+        <td class="sf">FAILED</td>
+        <td class="mono">2026-05-30 03:27</td>
+        <td>Bootable screenshot FAILED (SeaBIOS). <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUrGVzAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+      </tr>
+      <tr>
+        <td>MEJ &amp; Associates</td>
+        <td class="mono">MEJ-DATA</td>
+        <td class="sw">WARNING</td>
+        <td class="mono">2026-05-31 02:03</td>
+        <td>Agent warning MEJDatto2025. Repeated Sat + Sun. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUrGVzMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Sun warning</a></td>
+      </tr>
+      <tr>
+        <td>Capital Excavation</td>
+        <td class="mono">Rescue-cxfile01</td>
+        <td class="sn">NO RESULT</td>
+        <td class="mono">2026-05-30</td>
+        <td>No result on Datto API (Backup Radar). <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUrChpsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+      </tr>
+      <tr>
+        <td>Covenant Presbyterian</td>
+        <td class="mono">DattoSaasProtection</td>
+        <td class="sn">NO RESULT</td>
+        <td class="mono">2026-05-30</td>
+        <td>No result &mdash; M365 SaaS backup. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUrChprAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+      </tr>
+      <tr>
+        <td>MEJ &amp; Associates</td>
+        <td class="mono">MEJ-DATA (BR)</td>
+        <td class="sn">NO RESULT</td>
+        <td class="mono">2026-05-30</td>
+        <td>Backup Radar No Result &mdash; correlates with FAILED/WARNING above. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUrChpqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a></td>
+      </tr>
+      <tr>
+        <td>CelLink</td>
+        <td class="mono">9 SIRIS agents</td>
+        <td class="so">SUCCEEDED</td>
+        <td class="mono">2026-05-31</td>
+        <td>All CelLink bootable screenshots passed this cycle (CEL-APPSERVER, Faraday, CEL-SC-RADIUS, DC-01, Volta, FaradayDEV, DEPLOY, UVIS-01, Joule, Henry, DATABROKER-01).</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 5. ALERTS (TOP 3) -->
+<div class="sec">
+  <h2>Alerts &mdash; Top 3 Uncommon <span class="badge bs">3</span></h2>
+
+  <div class="item iu">
+    <div class="ititle">#1 &mdash; CelLink: 4 Disk Volume Alerts Across 2 Locations in 16 Hours</div>
+    <div class="imeta">Source: Alerts (RMM) &bull; 2026-05-29 17:41 CT &rarr; 2026-05-30 09:11 CT</div>
+    <div class="ibody">
+      Unusual pattern: GT-ETL-01 C: &le;15% fired Fri 5:41 PM CT (Georgetown TX), then CELAZUPRDFILE01 E: &le;5% fired Sat 4:09 AM CT (Azure), JOULE D: &le;7% fired Sat 9:06 AM CT (San Carlos CA). Michael Statham then confirmed via Teams that E: drives are at 100% and 97% &mdash; indicating the initial &le;5% alert was already trailing the real condition. Not a recurring pattern for this client. All four devices appear to be in the same storage growth crisis simultaneously.
+    </div>
+  </div>
+
+  <div class="item ia">
+    <div class="ititle">#2 &mdash; Covenant Presbyterian Church: 3 Targeted Phishing Incident Responses in 14 Hours</div>
+    <div class="imeta">Source: Alerts (Barracuda) &bull; 2026-05-29 22:07 UTC, 2026-05-30 10:07 UTC, 2026-05-30 20:09 UTC</div>
+    <div class="ibody">
+      Barracuda Impersonation Protection auto-remediated three separate phishing incidents targeting CPC users (mray@covenant.org, mgarcia@covenant.org) across a 22-hour window. Three Incident Response summaries in a single day is atypical &mdash; suggests an ongoing targeted campaign against the covenant.org domain. Emails were moved to junk; no user action required unless legitimate mail is missing. Consider informing CPC staff Monday. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FQAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Incident 1</a> &bull; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FPAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Incident 2</a> &bull; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FOAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Incident 3</a>
+    </div>
+  </div>
+
+  <div class="item is">
+    <div class="ititle">#3 &mdash; Burnett &amp; Turner Law: LAW-APPS01 Windows Server Unexpected Overnight Reboot</div>
+    <div class="imeta">Source: Alerts (RMM) &bull; 2026-05-31 01:02 CT &bull; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View alert</a></div>
+    <div class="ibody">
+      LAW-APPS01 (Windows Server, Main Office) rebooted at 01:02 CT Saturday (05:38 UTC). A second reboot was also detected at 00:04 CT Saturday morning. Most likely Patch Tuesday automatic update reboots. No offline alert followed &mdash; server appears to have recovered. No user impact expected but worth verifying Monday if client reports issues.
+    </div>
+  </div>
+</div>
+
+<!-- 6. TIME ENTRIES -->
+<div class="sec">
+  <h2>Time Entries <span class="badge bs">4</span></h2>
+
+  <div class="dg">Friday &mdash; 2026-05-29</div>
+
+  <div class="te project">
+    <div class="te-hdr">Project (Green) &mdash; Kidd Roofing &mdash; New Office Setup (San Antonio)</div>
+    <div class="te-body">Subject:      Kidd Roofing
+Location:     Remote
+Description:  Verified internet connectivity and network at new San Antonio
+              office (3690 Highpoint, SA 78217). Confirmed AMORGAN113
+              domain-joined and connected to file share. Began printer
+              setup at new location. Ticket #10313.
+Category:     Project (Green)
+Time:         2026-05-29 09:30 - 10:00</div>
+  </div>
+
+  <div class="te support">
+    <div class="te-hdr">On-Going Support (Blue) &mdash; Kidd Roofing &mdash; Sage 50 PEACHTREE (Working Hours)</div>
+    <div class="te-body">Subject:      Kidd Roofing
+Location:     Remote
+Description:  Escalated Sage 50 printing-via-RDP failure to Tier 2 Sage
+              support. Participated in multiple remote troubleshooting
+              sessions. Sage performed full application refresh. Isolated
+              May 2026 Patch Tuesday Microsoft update as root cause of
+              RDP print capability conflict. Ticket #10294.
+Category:     On-Going Support (Blue)
+Time:         2026-05-29 13:53 - 18:00</div>
+  </div>
+
+  <div class="te after">
+    <div class="te-hdr">After-Hours (Red) &mdash; Kidd Roofing &mdash; Sage 50 PEACHTREE (Resolution)</div>
+    <div class="te-body">Subject:      Kidd Roofing
+Location:     Remote
+Description:  Rolled back May 2026 Patch Tuesday Microsoft updates to
+              restore Sage 50 printing via RDP. Confirmed fix with client
+              (Chris Lowe / President &amp; CEO). Ticket resolved and closed.
+              Ticket #10294.
+Category:     After-Hours (Red)
+Time:         2026-05-29 18:00 - 19:40</div>
+  </div>
+
+  <div class="te project">
+    <div class="te-hdr">Project (Green) &mdash; Whitehead Wilson &mdash; New Office Setup</div>
+    <div class="te-body">Subject:      Whitehead Wilson
+Location:     &lt;MISSING: on-site travel confirmed via Teams ("we were at the
+              Whitehead") but transport mode not determinable from source&gt;
+Description:  New office setup at Whitehead Wilson. Configured systems
+              and verified connectivity. Coordinated Teams phone call flow
+              documentation; sent onboarding communication to client.
+              Worked with Matt Kerker on-site.
+Category:     Project (Green)
+Time:         &lt;MISSING: Teams activity suggests Fri late afternoon into
+              evening but exact start/end not in source data&gt;</div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div style="background:#f0f2f5;padding:12px 24px;font-size:11px;color:#888;font-family:'Courier New',monospace;text-align:center;border-top:1px solid #e2e4e8;">
+  briefing: 2026-05-31 &bull; gitmarsh/routines &bull; skill: ariat-time-entry @ e402f14 &bull; generated 2026-05-31T07:30:00-05:00
+</div>
+
+</td></tr>
+</table>
+</body>
+</html>
