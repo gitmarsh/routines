@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing — 2026-06-03</title>
+<style>
+body{margin:0;padding:20px;background:#f0f2f5;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#111827;}
+.outer{max-width:840px;margin:0 auto;background:#fff;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,.09);overflow:hidden;}
+.hd{background:#1e2233;padding:22px 28px;}
+.hd h1{margin:0 0 4px 0;color:#fff;font-size:22px;letter-spacing:.5px;}
+.hd .sub{color:#a0a8c0;font-family:'Courier New',Courier,monospace;font-size:12px;margin-top:2px;}
+.hd .sub2{color:#6b7a9e;font-family:'Courier New',Courier,monospace;font-size:11px;margin-top:1px;}
+.body{padding:10px 28px 32px 28px;}
+.sh{font-size:14px;font-weight:700;color:#111827;border-bottom:2px solid #e5e7eb;padding-bottom:6px;margin:24px 0 10px 0;letter-spacing:.3px;}
+.badge{display:inline-block;padding:1px 8px;border-radius:12px;font-size:11px;font-weight:700;margin-left:6px;vertical-align:middle;}
+.bu{background:#fee2e2;color:#991b1b;}
+.ba{background:#fef3c7;color:#92400e;}
+.bs{background:#e5e7eb;color:#374151;}
+.bg{background:#dcfce7;color:#14532d;}
+.bv{background:#ede9fe;color:#5b21b6;}
+.card{border-radius:4px;padding:9px 13px;margin:7px 0;font-size:13px;line-height:1.55;}
+.cu{background:#fef2f2;border-left:3px solid #dc2626;}
+.ca{background:#fffbeb;border-left:3px solid #d97706;}
+.cs{background:#f9fafb;border-left:3px solid #9ca3af;}
+.ct{font-weight:700;color:#111827;font-size:13px;}
+.cd{color:#4b5563;font-size:12px;margin-top:3px;}
+.cx{color:#1d4ed8;font-size:12px;margin-top:4px;font-weight:600;}
+a{color:#1d4ed8;text-decoration:none;}
+a:hover{text-decoration:underline;}
+.mono{font-family:'Courier New',Courier,monospace;font-size:11px;}
+table.dt{width:100%;border-collapse:collapse;font-size:12px;}
+table.dt th{text-align:left;padding:6px 8px;background:#f3f4f6;color:#6b7280;font-size:10px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid #e5e7eb;}
+table.dt td{padding:6px 8px;border-bottom:1px solid #f3f4f6;color:#374151;vertical-align:top;}
+table.dt tr:last-child td{border-bottom:none;}
+.sf{color:#dc2626;font-weight:700;}
+.sw{color:#d97706;font-weight:700;}
+.so{color:#16a34a;font-weight:600;}
+.tm{color:#dc2626;font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.3px;}
+.ts{color:#d97706;font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.3px;}
+.tc{color:#6b7280;font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:.3px;}
+.te{border-radius:6px;overflow:hidden;margin:8px 0;}
+.none{color:#9ca3af;font-style:italic;font-size:13px;padding:6px 0;}
+.ft{background:#f9fafb;padding:11px 28px;border-top:1px solid #e5e7eb;font-family:'Courier New',Courier,monospace;font-size:10px;color:#9ca3af;}
+.cf-tag{display:inline-block;background:#fef3c7;color:#92400e;font-size:10px;font-weight:700;padding:1px 5px;border-radius:3px;margin-right:4px;vertical-align:middle;letter-spacing:.3px;}
+</style>
+</head>
+<body>
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#f0f2f5;"><tr><td align="center" style="padding:20px 10px;">
+<table width="840" cellpadding="0" cellspacing="0" class="outer">
+
+<!-- HEADER -->
+<tr><td class="hd">
+  <h1>Morning Briefing</h1>
+  <div class="sub">Wednesday, June 3, 2026 &nbsp;&bull;&nbsp; Run: 07:30 CDT &nbsp;&bull;&nbsp; marshall@ariatsystems.com</div>
+  <div class="sub2">Window: 2026-06-02 15:30 CDT &rarr; 2026-06-03 07:30 CDT (16 h) &nbsp;&bull;&nbsp; 26 items scanned</div>
+  <div class="sub2" style="margin-top:1px;">Sources: 7 Inbox &bull; 0 Help Desk &bull; 5 Alerts &bull; 14 Datto &bull; 0 Backup Radar &bull; 0 Teams (rate-limited &mdash; data incomplete)</div>
+</td></tr>
+
+<!-- SEVERITY OVERVIEW -->
+<tr><td style="padding:16px 28px 4px 28px;background:#fff;">
+  <div style="font-family:Arial,sans-serif;font-size:10px;font-weight:700;color:#9ca3af;letter-spacing:.8px;text-transform:uppercase;margin-bottom:8px;">Severity Overview</div>
+  <svg width="500" height="56" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="0" width="80" height="32" rx="3" fill="#dc2626"/>
+    <text x="40" y="21" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#fff">1</text>
+    <text x="40" y="48" text-anchor="middle" font-family="Arial" font-size="10" fill="#dc2626">URGENT</text>
+    <rect x="90" y="4" width="80" height="28" rx="3" fill="#d97706"/>
+    <text x="130" y="23" text-anchor="middle" font-family="Arial" font-size="14" font-weight="bold" fill="#fff">3</text>
+    <text x="130" y="48" text-anchor="middle" font-family="Arial" font-size="10" fill="#d97706">ASAP carry</text>
+    <rect x="180" y="10" width="80" height="22" rx="3" fill="#6b7280"/>
+    <text x="220" y="25" text-anchor="middle" font-family="Arial" font-size="12" font-weight="bold" fill="#fff">8</text>
+    <text x="220" y="48" text-anchor="middle" font-family="Arial" font-size="10" fill="#6b7280">STANDARD</text>
+    <rect x="270" y="26" width="80" height="6" rx="2" fill="#7c3aed"/>
+    <text x="310" y="34" text-anchor="middle" font-family="Arial" font-size="10" fill="#7c3aed">0</text>
+    <text x="310" y="48" text-anchor="middle" font-family="Arial" font-size="10" fill="#7c3aed">TIME ENTRIES</text>
+  </svg>
+</td></tr>
+
+<!-- BODY -->
+<tr><td class="body">
+
+<!-- 1. URGENT -->
+<div class="sh">Urgent <span class="badge bu">1</span></div>
+
+<div class="card cu">
+  <div class="ct"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU0ivlLAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">SentinelOne &mdash; Active Threat NOT MITIGATED on machine clapointe121</a></div>
+  <div class="cd">
+    Detected <strong>2026-06-02 at 21:56 UTC (16:56 CDT)</strong>. Threat was <strong>not automatically mitigated</strong>.<br>
+    Machine: <span class="mono">clapointe121</span> &nbsp;|&nbsp; External IP: <span class="mono">173.11.227.210</span> &nbsp;|&nbsp; Internal IP: <span class="mono">192.168.112.58</span><br>
+    Threat file: <span class="mono">9D82074379DC85139878FF5BF2011396722E15E7.exe</span><br>
+    Details: <span class="mono">https://usea1-ninjaone2.sentinelone.net/analyze/threats/2493166400151211883/overview</span>
+  </div>
+  <div class="cx">Action: Identify client for machine clapointe121. Log in to SentinelOne, isolate endpoint, remediate or rollback. Confirm resolution with client.</div>
+</div>
+
+<!-- 2. FOLLOW-UPS -->
+<div class="sh">Follow-ups <span class="badge ba">3 carry-fwd</span> <span class="badge bs">1 standard</span></div>
+
+<div class="card ca">
+  <div class="ct"><span class="cf-tag">CARRY FROM 06-02 &mdash; MUST</span> <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUpQFZvAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Buda Fire &amp; EMS &mdash; Christian Bilbo Terminated Employee Offboarding</a></div>
+  <div class="cd">
+    MUST from yesterday, no completion visible in today&#39;s scan window. Request from Raymond Seyfried (Asst. Chief) received 2026-06-01 16:57 CDT.<br>
+    Samuel Schuleman confirmed removing from ESO, OPIQ, Knox, CAD, Pulsara, Active Alert, Prodigy.<br>
+    <strong>Outstanding (Marshall):</strong> Disable AD account, remove from Office 365, reply confirming completion, confirm Alta Open status.
+  </div>
+  <div class="cx">Action: Disable AD, remove O365. Reply to Schuleman: confirm AD/O365 done + Alta Open status.</div>
+</div>
+
+<div class="card ca">
+  <div class="ct"><span class="cf-tag">CARRY FROM 06-02 &mdash; MUST</span> Meraki Case 14305885 &mdash; Wireless Users Unable to Reach Gateway (Sev 3)</div>
+  <div class="cd">
+    Case opened with Cisco Meraki Enterprise Support ~15:50 CDT Jun 1. Severity 3. No resolution update in scan window today.<br>
+    Client not identified in source email. Case may have been resolved out-of-band; confirm status in Meraki dashboard.
+  </div>
+  <div class="cx">Action: Check case status. Close if resolved; escalate to Sev 2 if still impacting users.</div>
+</div>
+
+<div class="card ca">
+  <div class="ct"><span class="cf-tag">CARRY FROM 06-02 &mdash; SHOULD &rarr; ASAP</span> Kidd Roofing &mdash; Azure Backup Failure (Matt Kerker deferred to this morning)</div>
+  <div class="cd">
+    Matt worked on this 17:31&ndash;22:27 CDT Jun 1. PowerShell script crashes on password entry; must run from inside Azure environment due to disk size.<br>
+    Disk may still be mounted on another machine. Matt explicitly said he was deferring to this morning.
+  </div>
+  <div class="cx">Action: Coordinate with Matt. Unmount Kidd Data disk if still attached elsewhere, then run backup script from within Azure context.</div>
+</div>
+
+<div class="card cs">
+  <div class="ct"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEJAACcFJNx05zPTLNH4BZPylwuAAU1QhhQAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">MSM (McElroy Sullivan) &mdash; New Computer for Hailey (reply sent, on-site today)</a></div>
+  <div class="cd">
+    Mike Paluso (Paralegal, MSM) emailed at 16:07 CDT Jun 2 asking if they need to boot up a new computer or if Ariat can handle it remotely after agent install.<br>
+    Marshall replied at 16:12 CDT Jun 2: <em>&ldquo;I&#39;ll be on-site tomorrow morning working on some other things and can get this setup as well.&rdquo;</em><br>
+    Reply sent. Mike Paluso and Hailey Culhane (hculhane@msmtx.com) are expecting arrival notification.
+  </div>
+  <div class="cx">Action: Text/call Mike Paluso when en route to MSM. Set up Hailey&#39;s new computer on-site.</div>
+</div>
+
+<!-- 3. TODAY TO-DOS -->
+<div class="sh">Today To-Dos <span class="badge bs">10</span></div>
+
+<table class="dt" style="margin-top:6px;">
+<thead><tr>
+  <th style="width:72px;">Priority</th>
+  <th>Task</th>
+  <th style="width:160px;">Source</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="tm">MUST</span></td>
+  <td><strong>SentinelOne: Identify client for machine clapointe121 and remediate active threat</strong> &mdash; detected 16:56 CDT yesterday, not mitigated, threat file <span class="mono">9D82074379DC85139878FF5BF2011396722E15E7.exe</span></td>
+  <td>Inbox &mdash; SentinelOne</td>
+</tr>
+<tr>
+  <td><span class="tm">MUST</span></td>
+  <td><strong>On-site MSM: set up Hailey&#39;s new computer</strong> &mdash; committed in reply at 16:12 CDT Jun 2. Notify Mike Paluso (mpaluso@msmtx.com) when en route</td>
+  <td>Inbox &mdash; <span class="mono">mpaluso@msmtx.com</span></td>
+</tr>
+<tr>
+  <td><span class="tm">MUST</span></td>
+  <td><strong>Buda Fire: complete Christian Bilbo offboarding</strong> &mdash; disable AD account, remove from O365, reply to Schuleman confirming + Alta Open status (24h+ outstanding)</td>
+  <td>Carry-fwd 06-02</td>
+</tr>
+<tr>
+  <td><span class="tm">MUST</span></td>
+  <td><strong>Meraki Case 14305885: confirm status</strong> &mdash; wireless users unable to reach gateway, Sev 3, opened 39h ago. Check in dashboard; escalate if still open</td>
+  <td>Carry-fwd 06-02</td>
+</tr>
+<tr>
+  <td><span class="ts">SHOULD</span></td>
+  <td><strong>Kidd Roofing Azure backup</strong> &mdash; coordinate with Matt; unmount Kidd Data disk if still attached; run backup script from within Azure context</td>
+  <td>Carry-fwd 06-02</td>
+</tr>
+<tr>
+  <td><span class="ts">SHOULD</span></td>
+  <td><strong>MEJ-DATA backup warning</strong> &mdash; FSC0013 &ldquo;Unknown filesystem type&rdquo; still firing after 24+ hrs (first seen Jun-02 02:02, latest Jun-03 02:02). Bootable screenshot failure appears resolved; warning persists. Check Datto logs; contact Datto support if needed</td>
+  <td>Datto &mdash; MEJDatto2025</td>
+</tr>
+<tr>
+  <td><span class="ts">SHOULD</span></td>
+  <td><strong>Capital Excavation: verify server reboot cluster</strong> &mdash; second consecutive day: AUSCX4 + CXAHEAVYBID rebooted ~05:02 CDT, CXREMOTE + CXDATAENTRY rebooted ~06:01 CDT. Confirm scheduled patching or investigate</td>
+  <td>Alerts &mdash; RMM</td>
+</tr>
+<tr>
+  <td><span class="ts">SHOULD</span></td>
+  <td><strong>Capital Excavation: confirm AT&amp;T iPhone DEP enrollment</strong> &mdash; iPhone 17e + Speck case (order 10-154287464627946) shipped to Joshua Ealand, 2967 Business Park Dr, Buda TX 78610. Devices appeared in Apple Business Manager Jun 2. Verify DEP assignment</td>
+  <td>Inbox &mdash; AT&amp;T / Apple</td>
+</tr>
+<tr>
+  <td><span class="tc">COULD</span></td>
+  <td><strong>Notify CPC admin of ongoing phishing campaign</strong> &mdash; 3 targeted attacks across 2 days: mgarcia@covenant.org (Jun-02 15:56 + Jun-03 19:46 CDT), mray@covenant.org (Jun-02 15:56 CDT). All intercepted by Barracuda / moved to junk. Consider CPC awareness communication</td>
+  <td>Inbox &mdash; Barracuda</td>
+</tr>
+<tr>
+  <td><span class="tc">COULD</span></td>
+  <td><strong>Burnett &amp; Turner Law: verify LAW-APPS01 reboot</strong> &mdash; Windows Server rebooted at 00:38 CDT overnight. Likely patching; confirm expected with client if uncertain</td>
+  <td>Alerts &mdash; RMM</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 4. BACKUPS -->
+<div class="sh">Backups <span class="badge bu">0 Failed</span> <span class="badge ba">1 Warning</span> <span class="badge bg">11 Succeeded</span> <span class="badge bs">0 No Result</span></div>
+
+<svg width="440" height="82" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:4px 0 10px 0;">
+  <text x="0" y="11" font-family="Arial" font-size="10" fill="#9ca3af" letter-spacing="0.5">DATTO BACKUP RESULTS (window) &mdash; vs yesterday: Failed 1&#8594;0 (improved), Warning 1 (persists)</text>
+  <!-- Failed=0 -->
+  <rect x="10" y="62" width="28" height="4" rx="2" fill="#d1d5db"/>
+  <text x="24" y="58" text-anchor="middle" font-family="Arial" font-size="11" fill="#9ca3af">0</text>
+  <text x="24" y="77" text-anchor="middle" font-family="Arial" font-size="9" fill="#9ca3af">Failed</text>
+  <!-- Warning=1 -->
+  <rect x="50" y="58" width="28" height="8" rx="2" fill="#d97706"/>
+  <text x="64" y="53" text-anchor="middle" font-family="Arial" font-size="11" fill="#d97706">1</text>
+  <text x="64" y="77" text-anchor="middle" font-family="Arial" font-size="9" fill="#6b7280">Warning</text>
+  <!-- Succeeded=11 -->
+  <rect x="90" y="14" width="220" height="52" rx="3" fill="#16a34a"/>
+  <text x="200" y="45" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#fff">11</text>
+  <text x="200" y="77" text-anchor="middle" font-family="Arial" font-size="9" fill="#6b7280">Succeeded (CelLink)</text>
+  <!-- No Result=0 -->
+  <rect x="322" y="62" width="28" height="4" rx="2" fill="#d1d5db"/>
+  <text x="336" y="77" text-anchor="middle" font-family="Arial" font-size="9" fill="#9ca3af">0 No Result</text>
+</svg>
+
+<table class="dt">
+<thead><tr>
+  <th style="width:75px;">Status</th>
+  <th style="width:170px;">Device</th>
+  <th style="width:120px;">Appliance</th>
+  <th>Detail</th>
+  <th style="width:110px;">Time (CDT)</th>
+</tr></thead>
+<tbody>
+<tr>
+  <td><span class="sw">WARNING</span></td>
+  <td class="mono">MEJ-DATA</td>
+  <td class="mono">MEJDatto2025</td>
+  <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAU0qX23AAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">FSC0013 Unknown filesystem type &mdash; first Jun-02 02:02, latest Jun-03 02:02 CDT, 4+ occurrences. Bootable screenshot no longer failing.</a></td>
+  <td class="mono">02:02 Jun 3</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">CEL-APPSERVER</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded (&times;2 in window)</td>
+  <td class="mono">18:07 Jun 2</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">CEL-SC-UVIS-01</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">23:34 Jun 2</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">CEL-SC-RADIUS</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">23:53 Jun 2</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">CEL-SC-DATABROKER-01</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">00:52 Jun 3</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">FaradayDEV</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">00:34 Jun 3</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">Joule</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">01:33 Jun 3</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">CEL-SC-DC-01</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">00:14 Jun 3</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">CEL-SC-DEPLOY</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">01:12 Jun 3</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">Volta</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">01:56 Jun 3</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">Henry</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">02:17 Jun 3</td>
+</tr>
+<tr>
+  <td><span class="so">OK</span></td>
+  <td class="mono">Faraday</td>
+  <td class="mono">CelLinkSC</td>
+  <td>Bootable screenshot succeeded</td>
+  <td class="mono">02:37 Jun 3</td>
+</tr>
+</tbody>
+</table>
+
+<!-- 5. ALERTS -->
+<div class="sh">Alerts &mdash; Top 3 Unusual <span class="badge bs">3</span></div>
+
+<div class="card cu">
+  <div class="ct">[1] <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU0ivlLAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">SentinelOne &mdash; Active Unmitigated Malware on clapointe121</a></div>
+  <div class="cd">
+    Threat file <span class="mono">9D82074379DC85139878FF5BF2011396722E15E7.exe</span> detected 16:56 CDT, not auto-remediated. Endpoint remains potentially compromised overnight.<br>
+    Ext IP: <span class="mono">173.11.227.210</span> &nbsp;|&nbsp; Int IP: <span class="mono">192.168.112.58</span> &nbsp;|&nbsp; Threat ID: 2493166400151211883
+  </div>
+</div>
+
+<div class="card ca">
+  <div class="ct">[2] Capital Excavation &mdash; Second Consecutive Day of Multi-Server Reboot Cluster</div>
+  <div class="cd">
+    Today: <span class="mono">AUSCX4</span> + <span class="mono">CXAHEAVYBID</span> rebooted ~05:02 CDT, then <span class="mono">CXREMOTE</span> + <span class="mono">CXDATAENTRY</span> rebooted ~06:01 CDT.<br>
+    Yesterday (Jun 2): same four machines rebooted in same approximate window. Two-day pattern. May be scheduled patching but warrants confirmation.
+  </div>
+</div>
+
+<div class="card ca">
+  <div class="ct">[3] <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU0ivlOAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Barracuda &mdash; Covenant Presbyterian Church Phishing Campaign Ongoing (3 hits, 2 days)</a></div>
+  <div class="cd">
+    Campaign spanning two days: <span class="mono">mgarcia@covenant.org</span> targeted Jun-02 15:56 CDT + Jun-02 19:46 CDT; <span class="mono">mray@covenant.org</span> targeted Jun-02 15:56 CDT.<br>
+    Sender domain: <span class="mono">televisionspending.garden</span> &nbsp;|&nbsp; Lure: &ldquo;Kobalt 100-Piece Tool Set&rdquo; &nbsp;|&nbsp; All intercepted, moved to junk. Persistent multi-user targeting of one client is unusual.
+  </div>
+</div>
+
+<!-- 6. TIME ENTRIES -->
+<div class="sh">Time Entries <span class="badge bv">0</span></div>
+<div style="font-family:Arial,sans-serif;font-size:11px;color:#9ca3af;margin-bottom:6px;">Generated per <span class="mono">ariat-time-entry</span> skill (gitmarsh/ai_skills). Fields below 80% confidence show &lt;MISSING: reason&gt;.</div>
+<div class="none">None &mdash; no items in scan window with &ge;80% confidence of billable work performed by Marshall.</div>
+<div style="font-size:11px;color:#9ca3af;margin-top:4px;">Note: Marshall&#39;s reply scheduling an on-site MSM visit is coordination, not performed work. Teams data unavailable due to rate limit.</div>
+
+</td></tr>
+
+<!-- FOOTER -->
+<tr><td class="ft">
+  Ariat Systems Morning Briefing &bull; 2026-06-03 &bull; gitmarsh/routines/briefings/2026-06-03.html &bull; Preflight: GitHub OK &bull; M365 OK &bull; ariat-time-entry OK &bull; Teams: partial (rate-limited)
+</td></tr>
+
+</table>
+</td></tr></table>
+</body>
+</html>
