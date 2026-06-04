@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing &mdash; 2026-06-04</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #f0f2f5; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #1a1a1a; line-height: 1.4; }
+a { color: #1a5c9a; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrapper { max-width: 880px; margin: 0 auto; padding: 20px 16px; }
+
+/* Header */
+.hdr { background: #1a2233; color: #fff; padding: 18px 24px; border-radius: 6px 6px 0 0; }
+.hdr h1 { font-size: 19px; font-weight: 700; letter-spacing: 0.4px; }
+.hdr .meta { font-size: 11px; color: #8fa0b4; margin-top: 4px; font-family: 'Courier New', monospace; }
+
+/* Run stats bar */
+.run-stats { background: #fff; border: 1px solid #d8dde4; border-top: none; padding: 10px 18px; margin-bottom: 20px; border-radius: 0 0 4px 4px; font-family: 'Courier New', monospace; font-size: 11.5px; line-height: 1.9; }
+.ok { color: #2a7a2a; }
+
+/* Section card */
+.sec { background: #fff; border: 1px solid #d8dde4; border-radius: 4px; margin-bottom: 16px; overflow: hidden; }
+.sec-hdr { padding: 11px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #e8ebef; background: #fafbfc; }
+.sec-hdr h2 { font-size: 14px; font-weight: 700; color: #1a1a1a; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 11px; font-weight: 700; }
+.bu { background: #fde8e8; color: #b52020; }
+.ba { background: #fef3cd; color: #946010; }
+.bn { background: #e8edf2; color: #445; }
+
+/* Item rows */
+.item { padding: 11px 16px; border-bottom: 1px solid #f0f2f5; }
+.item:last-child { border-bottom: none; }
+.irow { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 3px; }
+.sev { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 10px; font-weight: 700; text-transform: uppercase; min-width: 60px; text-align: center; white-space: nowrap; }
+.su { background: #fde8e8; color: #b52020; border: 1px solid #e09090; }
+.sa { background: #fef3cd; color: #946010; border: 1px solid #ddb840; }
+.ss { background: #e8f2e8; color: #2a7a2a; border: 1px solid #90c090; }
+.ititle { font-size: 13px; font-weight: 600; color: #1a1a1a; flex: 1; }
+.imeta { font-size: 11px; color: #6070 80; color: #607080; font-family: 'Courier New', monospace; margin-top: 1px; }
+.idetail { font-size: 12px; color: #3a4a5a; margin-top: 4px; line-height: 1.55; }
+.mono { font-family: 'Courier New', monospace; font-size: 11px; }
+.none { padding: 13px 16px; color: #889; font-style: italic; font-size: 13px; }
+
+/* Todo table */
+table.tt { width: 100%; border-collapse: collapse; font-size: 12px; }
+table.tt th { background: #f4f5f7; text-align: left; padding: 7px 12px; font-size: 10px; text-transform: uppercase; color: #556070; border-bottom: 2px solid #d8dde4; letter-spacing: 0.4px; }
+table.tt td { padding: 8px 12px; border-bottom: 1px solid #eaedf0; vertical-align: top; }
+table.tt tr:last-child td { border-bottom: none; }
+.must { color: #b52020; font-weight: 700; font-size: 10px; text-transform: uppercase; }
+.should { color: #946010; font-weight: 700; font-size: 10px; text-transform: uppercase; }
+.could { color: #2a7a2a; font-weight: 700; font-size: 10px; text-transform: uppercase; }
+
+/* Backup rows */
+.brow { display: flex; align-items: center; gap: 12px; padding: 9px 16px; border-bottom: 1px solid #f0f2f5; font-size: 12px; }
+.brow:last-child { border-bottom: none; }
+.bstat { min-width: 64px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
+.bf { color: #b52020; }
+.bw { color: #946010; }
+.bok { color: #2a7a2a; }
+.bdetail { font-family: 'Courier New', monospace; font-size: 11px; color: #334450; flex: 1; }
+.sub-lbl { padding: 8px 16px 3px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.lbl-f { color: #b52020; }
+.lbl-w { color: #946010; }
+.lbl-ok { color: #2a7a2a; }
+.lbl-n { color: #889; }
+
+/* Time entry cards */
+.te-card { margin: 10px 16px; border-left: 4px solid #ccc; padding: 10px 14px; background: #fafbfc; border-radius: 0 4px 4px 0; }
+.te-card.green { border-left-color: #2a7a2a; }
+.te-card.blue { border-left-color: #1a5c9a; }
+.te-card.red { border-left-color: #b52020; }
+.te-card pre { font-family: 'Courier New', monospace; font-size: 11.5px; line-height: 1.75; color: #1a1a1a; white-space: pre-wrap; word-break: break-word; }
+.te-src { padding: 2px 16px 10px; font-size: 11px; color: #8090a0; }
+.chart-wrap { padding: 12px 16px 8px; }
+.date-lbl { padding: 8px 16px 2px; font-size: 11px; font-weight: 700; color: #5060 70; color: #506070; text-transform: uppercase; letter-spacing: 0.4px; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+<!-- HEADER -->
+<div class="hdr">
+  <h1>Morning Briefing &mdash; 2026-06-04</h1>
+  <div class="meta">Run: 07:30 CDT &nbsp;|&nbsp; Window: 2026-06-03 15:30 CDT &rarr; 2026-06-04 07:30 CDT (16h) &nbsp;|&nbsp; Thu</div>
+</div>
+
+<!-- RUN STATS -->
+<div class="run-stats">
+  <span class="ok">&#10003; Preflight: GitHub (gitmarsh/routines) + M365 (marshall@ariatsystems.com) + ariat-time-entry skill OK</span><br>
+  <span class="ok">&#10003; Window: 2026-06-03T20:30Z &rarr; 2026-06-04T12:30Z</span><br>
+  <span class="ok">&#10003; Scanned: 31 emails (Inbox 9, Help Desk 2, Alerts 5, Datto 15, Backup Radar 0), 25+ Teams messages</span><br>
+  <span class="ok">&#10003; Classified: Urgent 3 | ASAP 4 | Standard 6 | Time Entries 1</span>
+</div>
+
+<!-- SEVERITY OVERVIEW -->
+<div class="sec">
+  <div class="sec-hdr"><h2>Severity Overview</h2></div>
+  <div class="chart-wrap">
+    <svg width="340" height="52" viewBox="0 0 340 52" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="13" font-size="10" fill="#888" font-family="Arial">Urgent</text>
+      <rect x="56" y="2" width="38" height="14" rx="2" fill="#b52020"/>
+      <text x="98" y="13" font-size="11" fill="#b52020" font-weight="700" font-family="Arial">3</text>
+      <text x="0" y="33" font-size="10" fill="#888" font-family="Arial">ASAP</text>
+      <rect x="56" y="22" width="62" height="14" rx="2" fill="#e8a020"/>
+      <text x="122" y="33" font-size="11" fill="#946010" font-weight="700" font-family="Arial">4</text>
+      <text x="0" y="53" font-size="10" fill="#888" font-family="Arial">Standard</text>
+      <rect x="56" y="42" width="92" height="14" rx="2" fill="#3a8a3a"/>
+      <text x="152" y="53" font-size="11" fill="#2a7a2a" font-weight="700" font-family="Arial">6</text>
+    </svg>
+  </div>
+</div>
+
+<!-- SECTION 1: URGENT -->
+<div class="sec">
+  <div class="sec-hdr">
+    <h2>Urgent</h2>
+    <span class="badge bu">3</span>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="sev su">Urgent</span>
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU0ivlmAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CPC &mdash; Coordinated Phishing Campaign (3 users overnight)</a></span>
+    </div>
+    <div class="imeta">Barracuda Impersonation Protection | Inbox | 2026-06-04 01:56&ndash;02:53 CDT</div>
+    <div class="idetail">Targeted phishing intercepted for <span class="mono">mray@covenant.org</span>, <span class="mono">mgarcia@covenant.org</span>, <span class="mono">mshuman@covenant.org</span>. All three impersonating Facebook Business Manager (noreply@business.facebook.com &mdash; &ldquo;You&rsquo;ve received a Business Manager partner request&rdquo;). Barracuda moved all to Junk before delivery. Pattern indicates coordinated campaign targeting CPC. Notify CPC admin; confirm no prior clicks from users before interception.</div>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="sev su">Urgent</span>
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAU3OaLaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CPC Ticket #10349 &mdash; jharrison@covenant.org Cannot Receive Email (User Blocked)</a></span>
+    </div>
+    <div class="imeta">Help Desk | support@rmmservice.com | 2026-06-03 20:54 UTC | Ticket #10349</div>
+    <div class="idetail">Jana Harrison at CPC cannot receive email from Susan Zatopek (<span class="mono">szatopek@hotmail.com</span>). Barracuda ESS returning <span class="mono">554 5.7.0 &mdash; blocked</span> on mx-inbound21 (cudaops.com). Last successful receipt May 22; this is a recent block. Likely Barracuda over-filtering amid active phishing campaign. Diagnosed via Teams ~9:12 PM CDT Jun 3. Action: unblock/allowlist sender in Barracuda admin.</div>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="sev su">Urgent</span>
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU0ivllAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Michael Statham &mdash; CPC Cisco Switch Order (License Key + Shipping) Late Afternoon</a></span>
+    </div>
+    <div class="imeta">Michael Statham &rarr; Marshall + Matt | Inbox | 5:19 PM &amp; 6:18 PM CDT Jun 3 | High importance</div>
+    <div class="idetail">
+      Two forwarded emails from Michael (late afternoon): (1) CPC switch <span class="mono">C9300-M 48-port</span> shipment on its way (PO# DTN1392, Cisco order #120241142). (2) Meraki Enterprise License <span class="mono">LIC-C9300-48E-3Y</span> delivered &mdash; claim key <span class="mono">Z2BP-WYMT-Y6FS</span>. Ship-to: Covenant Presbyterian Church. Action: claim license in Meraki Dashboard (Organization &gt; Licensing &gt; Add Licenses).
+    </div>
+  </div>
+
+</div>
+
+<!-- SECTION 2: FOLLOW-UPS -->
+<div class="sec">
+  <div class="sec-hdr">
+    <h2>Follow-ups</h2>
+    <span class="badge ba">5</span>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="sev sa">ASAP</span>
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU0ivljAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CelLink Georgetown &mdash; Rogue AP Uncontained (Meraki Air Marshal)</a></span>
+    </div>
+    <div class="imeta">Meraki | Inbox | 2026-06-03 21:11 UTC (4:11 PM CDT)</div>
+    <div class="idetail">SSID: <span class="mono">DIRECT-TeGT-PF4M6AGBZFYU</span> &mdash; flagged &ldquo;Seen on LAN.&rdquo; Last seen 4:10 PM CDT Jun 3. 3 APs detecting, 0 containing. Rogue AP is still active and uncontained. Requires investigation in <a href="https://n798.dashboard.meraki.com/Georgetown-wirel/n/AYmt4dkg/manage/dashboard/air_marshal">Meraki Air Marshal</a>.</div>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="sev sa">ASAP</span>
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAU9UjfAAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">M365 Security Policy Plan Debrief &mdash; Due Tomorrow 6/5</a></span>
+    </div>
+    <div class="imeta">M365 Planner | Inbox | Reminder: 2026-06-04 11:58 UTC | Due: 2026-06-05</div>
+    <div class="idetail">Task due tomorrow per Planner notification. Plan: M365 Security Policies. Prep and/or schedule debrief today.</div>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="sev sa">ASAP</span>
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAU9Uje%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Toggl Track Trial Ending &mdash; Choose Plan (Expiration Within 7 Days)</a></span>
+    </div>
+    <div class="imeta">support@track.toggl.com | Inbox | 2026-06-04 11:45 UTC</div>
+    <div class="idetail">Toggl Track trial expires within 7 days. Add billing and choose a plan to avoid service interruption.</div>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="sev sa">ASAP</span>
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAU0qX28AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">MEJ-DATA Backup &mdash; Failed Screenshot + FSC0013 Warning (MEJDatto2025)</a></span>
+    </div>
+    <div class="imeta">Datto SIRIS | Datto folder | Warning: 07:03 UTC | Screenshot FAILED: 02:28 UTC Jun 4</div>
+    <div class="idetail">MEJ-DATA (<span class="mono">192.168.1.7</span>) on MEJDatto2025: FSC0013 &ldquo;Unknown filesystem type&rdquo; &mdash; first seen Jun-03 02:02, last seen Jun-03 20:02, 4 occurrences in 24h. Bootable screenshot FAILED at 8:00 PM CDT Jun 3 verification run. MEJ-DC1, MEJ-SHELL, MEJ-TENANT, MEJ-UTILITY all clean. Investigate filesystem health on MEJ-DATA.</div>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="sev ss">Standard</span>
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAU3OaLbAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CPC Ticket #10335 &mdash; Shared Contacts (Updated, Needs Response)</a></span>
+    </div>
+    <div class="imeta">Help Desk | support@rmmservice.com | 2026-06-03 22:17 UTC</div>
+    <div class="idetail">Ticket updated, status moved to Open. Review and respond.</div>
+  </div>
+
+</div>
+
+<!-- SECTION 3: TODAY TO-DOS -->
+<div class="sec">
+  <div class="sec-hdr">
+    <h2>Today To-Dos</h2>
+    <span class="badge bn">8</span>
+  </div>
+  <table class="tt">
+    <thead>
+      <tr>
+        <th style="width:68px">Priority</th>
+        <th>Task</th>
+        <th style="width:170px">Source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="must">Must</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAU3OaLaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Fix Barracuda block on szatopek@hotmail.com for CPC #10349</a> &mdash; unblock/allowlist sender so Jana Harrison can receive email</td>
+        <td class="mono">Help Desk #10349</td>
+      </tr>
+      <tr>
+        <td><span class="must">Must</span></td>
+        <td>Claim CPC Meraki switch license in Dashboard: <span class="mono">Z2BP-WYMT-Y6FS</span> (Organization &gt; Licensing &gt; Add Licenses)</td>
+        <td class="mono">Inbox / Michael Statham</td>
+      </tr>
+      <tr>
+        <td><span class="should">Should</span></td>
+        <td>Notify CPC admin of coordinated phishing campaign targeting 3 users overnight; confirm no prior user interaction before Barracuda interception</td>
+        <td class="mono">Barracuda / Inbox</td>
+      </tr>
+      <tr>
+        <td><span class="should">Should</span></td>
+        <td><a href="https://n798.dashboard.meraki.com/Georgetown-wirel/n/AYmt4dkg/manage/dashboard/air_marshal">Investigate &amp; contain CelLink Georgetown rogue AP</a> &mdash; <span class="mono">DIRECT-TeGT-PF4M6AGBZFYU</span>, 3 detecting, 0 containing</td>
+        <td class="mono">Meraki / Inbox</td>
+      </tr>
+      <tr>
+        <td><span class="should">Should</span></td>
+        <td>Investigate MEJ-DATA FSC0013 filesystem warning + failed screenshot on MEJDatto2025</td>
+        <td class="mono">Datto SIRIS</td>
+      </tr>
+      <tr>
+        <td><span class="should">Should</span></td>
+        <td>Prep / schedule M365 Security Policy Plan Debrief &mdash; due tomorrow 6/5</td>
+        <td class="mono">M365 Planner</td>
+      </tr>
+      <tr>
+        <td><span class="could">Could</span></td>
+        <td>Choose Toggl Track plan and add billing before trial expires</td>
+        <td class="mono">Inbox</td>
+      </tr>
+      <tr>
+        <td><span class="could">Could</span></td>
+        <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU0ivloAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Respond to GitHub Enterprise Trial sales follow-up</a></td>
+        <td class="mono">Inbox</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- SECTION 4: BACKUPS -->
+<div class="sec">
+  <div class="sec-hdr">
+    <h2>Backups</h2>
+    <span class="badge bn">13 devices</span>
+  </div>
+
+  <!-- SVG bar chart -->
+  <div class="chart-wrap">
+    <svg width="260" height="56" viewBox="0 0 260 56" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="12" font-size="10" fill="#888" font-family="Arial">Failed</text>
+      <rect x="52" y="1" width="12" height="13" rx="1" fill="#b52020"/>
+      <text x="68" y="12" font-size="10" fill="#b52020" font-weight="700" font-family="Arial">1</text>
+      <text x="0" y="31" font-size="10" fill="#888" font-family="Arial">Warning</text>
+      <rect x="52" y="20" width="12" height="13" rx="1" fill="#e8a020"/>
+      <text x="68" y="31" font-size="10" fill="#946010" font-weight="700" font-family="Arial">1</text>
+      <text x="0" y="51" font-size="10" fill="#888" font-family="Arial">OK</text>
+      <rect x="52" y="39" width="132" height="13" rx="1" fill="#3a8a3a"/>
+      <text x="188" y="51" font-size="10" fill="#2a7a2a" font-weight="700" font-family="Arial">11</text>
+    </svg>
+  </div>
+
+  <div class="sub-lbl lbl-f">Failed</div>
+  <div class="brow">
+    <span class="bstat bf">Failed</span>
+    <span class="bdetail">MEJ-DATA (192.168.1.7) &mdash; MEJDatto2025 &mdash; Bootable screenshot FAILED &mdash; 8:00 PM CDT Jun 3</span>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAU0qX28AAA%3D&exvsurl=1&viewmodel=ReadMessageItem" style="font-size:10px;color:#1a5c9a;white-space:nowrap;">View</a>
+  </div>
+
+  <div class="sub-lbl lbl-w">Warning</div>
+  <div class="brow">
+    <span class="bstat bw">Warning</span>
+    <span class="bdetail">MEJ-DATA (192.168.1.7) &mdash; MEJDatto2025 &mdash; FSC0013 &ldquo;Unknown filesystem type&rdquo; &mdash; 4x Jun 3, last seen 20:02 UTC &mdash; Screenshot also FAILED</span>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAU0qX3GAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" style="font-size:10px;color:#1a5c9a;white-space:nowrap;">View</a>
+  </div>
+
+  <div class="sub-lbl lbl-ok">Succeeded (CelLink / CelLinkSC)</div>
+  <div class="brow">
+    <span class="bstat bok">OK (11)</span>
+    <span class="bdetail">CEL-APPSERVER, Faraday, CEL-SC-RADIUS, Volta, CEL-SC-DEPLOY, CEL-SC-DC-01, Joule, FaradayDEV, CEL-SC-DATABROKER-01, Henry, CEL-SC-UVIS-01 &mdash; all SUCCEEDED</span>
+  </div>
+
+  <div class="sub-lbl lbl-n">No Result</div>
+  <div class="none">None in window.</div>
+
+</div>
+
+<!-- SECTION 5: ALERTS -->
+<div class="sec">
+  <div class="sec-hdr">
+    <h2>Alerts</h2>
+    <span class="badge bn">Top 3</span>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU0ivljAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Meraki: CelLink Georgetown &mdash; Rogue AP Detected on LAN</a></span>
+    </div>
+    <div class="imeta">alerts-noreply@meraki.com | 2026-06-03 21:11 UTC</div>
+    <div class="idetail">SSID <span class="mono">DIRECT-TeGT-PF4M6AGBZFYU</span> seen on LAN (not just SSID match &mdash; device is physically connected or bridging the network). 3 APs detecting, 0 containing. Uncommon: &ldquo;Seen on LAN&rdquo; rogue classification is a stronger indicator than name-match rogues. Uncontained as of alert time.</div>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAU0Te%2BvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">RMM: Burnett &amp; Turner Law &mdash; LAW-A Device Activity 11:46 PM + 1:04 AM CDT</a></span>
+    </div>
+    <div class="imeta">noreply@rmmservice.com | Alerts | 04:46 UTC &amp; 06:04 UTC Jun 4 (11:46 PM &amp; 1:04 AM CDT Jun 3&ndash;4)</div>
+    <div class="idetail">After-hours device activity on LAW-A at Burnett &amp; Turner Law (Austin, TX 78730) on two separate occasions overnight. Atypical for a law firm. No ticket opened. Worth noting given pattern.</div>
+  </div>
+
+  <div class="item">
+    <div class="irow">
+      <span class="ititle"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAU8oOlwAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">RMM: Capital Excavation &mdash; CXAHEAVYBID Active at 5:03 AM CDT</a></span>
+    </div>
+    <div class="imeta">noreply@rmmservice.com | Alerts | 10:03 UTC Jun 4 (5:03 AM CDT)</div>
+    <div class="idetail">CXAHEAVYBID (estimating workstation, Capital Excavation, Buda TX) online at 5:03 AM CDT. Also CXDATAENTRY and CXREMOTE active at 6:01 AM CDT. Early-morning activity on an estimating software workstation is atypical; no ticket opened.</div>
+  </div>
+
+</div>
+
+<!-- SECTION 6: TIME ENTRIES -->
+<div class="sec">
+  <div class="sec-hdr">
+    <h2>Time Entries</h2>
+    <span class="badge bn">1</span>
+  </div>
+
+  <div class="date-lbl">2026-06-03</div>
+
+  <div class="te-card red">
+    <pre>Subject:     Covenant Presbyterian Church
+Location:    Remote
+Description: Reviewed blocked inbound email for Jana Harrison (jharrison@covenant.org);
+             identified Barracuda ESS blocking szatopek@hotmail.com as root cause.
+             Ticket #10349.
+Category:    After-Hours (Red)
+Time:        2026-06-03 21:10 - &lt;MISSING: end time not determinable from available evidence&gt;</pre>
+  </div>
+  <div class="te-src">Source: Teams chat ~21:10 UTC Jun 3 + Help Desk #10349. Confidence: client 95%, location 85%, description 90%, category 95%, end time &lt;80% &mdash; MISSING per skill rules.</div>
+
+</div>
+
+<div style="padding:14px 0 4px;font-size:10px;color:#aab;text-align:center;">Generated 2026-06-04 07:30 CDT &nbsp;&bull;&nbsp; gitmarsh/routines/briefings/2026-06-04.html &nbsp;&bull;&nbsp; ariat-time-entry skill sha 2ae5cc40</div>
+
+</div>
+</body>
+</html>
