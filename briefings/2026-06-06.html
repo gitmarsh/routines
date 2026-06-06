@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing — 2026-06-06</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#1a1a1a;margin:0;padding:20px}
+.outer{max-width:940px;margin:0 auto}
+.wrapper{background:#fff;border-radius:6px;padding:28px 36px;box-shadow:0 2px 10px rgba(0,0,0,.09)}
+h1{font-size:22px;margin:0 0 4px;color:#0d1b2a;font-family:Arial,sans-serif}
+.run-meta{font-family:'Courier New',Courier,monospace;font-size:11px;color:#666;border-bottom:1px solid #e4e8ed;padding-bottom:12px;margin-bottom:22px}
+h2{font-size:15px;color:#0d1b2a;border-bottom:2px solid #e0e4ea;padding-bottom:6px;margin:28px 0 12px;font-family:Arial,sans-serif}
+.badge{display:inline-block;border-radius:10px;padding:2px 9px;font-size:11px;font-weight:bold;margin-left:6px;vertical-align:middle;font-family:Arial,sans-serif}
+.bg-urgent{background:#c62828;color:#fff}
+.bg-asap{background:#e65100;color:#fff}
+.bg-std{background:#2e7d32;color:#fff}
+.bg-neutral{background:#546e7a;color:#fff}
+.none-msg{color:#999;font-size:13px;font-style:italic;margin:6px 0}
+table.tbl{width:100%;border-collapse:collapse;font-size:13px;margin:8px 0 0}
+table.tbl th{background:#f0f4f8;text-align:left;padding:7px 10px;font-size:11px;color:#444;font-weight:bold;text-transform:uppercase;letter-spacing:.4px;font-family:Arial,sans-serif}
+table.tbl td{padding:8px 10px;border-bottom:1px solid #f0f0f0;vertical-align:top;font-family:Arial,sans-serif;font-size:13px}
+table.tbl tr:last-child td{border-bottom:none}
+.sev-urgent{color:#c62828;font-weight:bold;font-size:11px;white-space:nowrap;text-transform:uppercase}
+.sev-asap{color:#e65100;font-weight:bold;font-size:11px;white-space:nowrap;text-transform:uppercase}
+.sev-std{color:#2e7d32;font-size:11px;white-space:nowrap;text-transform:uppercase}
+a{color:#1565c0;text-decoration:none}
+a:hover{text-decoration:underline}
+.must{border-left:4px solid #e65100;background:#fff8f2;padding:8px 13px;margin:5px 0;font-size:13px;font-family:Arial,sans-serif}
+.should{border-left:4px solid #2e7d32;background:#f6fdf6;padding:8px 13px;margin:5px 0;font-size:13px;font-family:Arial,sans-serif}
+.could{border-left:4px solid #90a4ae;background:#f5f7f9;padding:8px 13px;margin:5px 0;font-size:13px;font-family:Arial,sans-serif}
+.group-label{font-size:11px;font-weight:bold;text-transform:uppercase;color:#555;margin:16px 0 5px;letter-spacing:.5px;font-family:Arial,sans-serif}
+.te-card-support{border-left:5px solid #1565c0;background:#f4f8ff;padding:12px 16px;margin:10px 0;border-radius:3px}
+.te-card-project{border-left:5px solid #2e7d32;background:#f5fdf5;padding:12px 16px;margin:10px 0;border-radius:3px}
+.te-card-afterhours{border-left:5px solid #c62828;background:#fff5f5;padding:12px 16px;margin:10px 0;border-radius:3px}
+.te-code{font-family:'Courier New',Courier,monospace;font-size:12px;line-height:1.8;white-space:pre;color:#1a1a1a}
+.te-label{font-size:11px;font-weight:bold;text-transform:uppercase;color:#1565c0;margin-bottom:6px;font-family:Arial,sans-serif}
+.backup-fail{color:#c62828;font-weight:bold}
+.backup-warn{color:#e65100;font-weight:bold}
+.backup-ok{color:#2e7d32}
+.backup-none{color:#888}
+.ts{font-family:'Courier New',Courier,monospace;font-size:11px;color:#777}
+.note{font-size:12px;color:#666;margin:8px 0;font-style:italic}
+.footer{margin-top:32px;font-size:11px;color:#bbb;border-top:1px solid #eee;padding-top:12px;font-family:'Courier New',Courier,monospace}
+</style>
+</head>
+<body>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#f4f6f8" style="padding:20px">
+<tr><td align="center">
+<table width="940" cellpadding="0" cellspacing="0" border="0" style="max-width:940px;background:#fff;border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,.09)">
+<tr><td style="padding:28px 36px">
+
+<h1>Morning Briefing &mdash; 2026-06-06</h1>
+<div class="run-meta">
+Run: 2026-06-06 07:30 CDT (Saturday) &nbsp;&bull;&nbsp;
+Window: Fri 2026-06-05 15:30 CDT &rarr; Sat 2026-06-06 07:30 CDT &nbsp;&bull;&nbsp;
+Scanned: 32 emails (Inbox 8 &nbsp;|&nbsp; Help Desk 2 &nbsp;|&nbsp; Alerts 5 &nbsp;|&nbsp; Datto 15 &nbsp;|&nbsp; Backup Radar 2) &nbsp;&bull;&nbsp; 25+ Teams messages
+</div>
+
+<!-- SEVERITY OVERVIEW SVG -->
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px">
+<tr><td>
+<svg width="280" height="70" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="8" width="64" height="42" fill="#c62828" rx="5"/>
+  <text x="32" y="36" text-anchor="middle" fill="#fff" font-size="20" font-family="Arial" font-weight="bold">0</text>
+  <text x="32" y="64" text-anchor="middle" fill="#c62828" font-size="9" font-family="Arial" font-weight="bold">URGENT</text>
+  <rect x="84" y="8" width="64" height="42" fill="#e65100" rx="5"/>
+  <text x="116" y="36" text-anchor="middle" fill="#fff" font-size="20" font-family="Arial" font-weight="bold">2</text>
+  <text x="116" y="64" text-anchor="middle" fill="#e65100" font-size="9" font-family="Arial" font-weight="bold">ASAP</text>
+  <rect x="168" y="8" width="64" height="42" fill="#2e7d32" rx="5"/>
+  <text x="200" y="36" text-anchor="middle" fill="#fff" font-size="20" font-family="Arial" font-weight="bold">7</text>
+  <text x="200" y="64" text-anchor="middle" fill="#2e7d32" font-size="9" font-family="Arial" font-weight="bold">STANDARD</text>
+</svg>
+</td></tr>
+</table>
+
+<!-- ===== SECTION 1: URGENT ===== -->
+<h2>1. Urgent <span class="badge bg-urgent">0</span></h2>
+<p class="none-msg">None</p>
+
+<!-- ===== SECTION 2: FOLLOW-UPS ===== -->
+<h2>2. Follow-ups <span class="badge bg-neutral">4</span></h2>
+<table class="tbl">
+<tr>
+  <th width="65">Sev</th>
+  <th>Item</th>
+  <th width="115">Source</th>
+</tr>
+<tr>
+  <td class="sev-asap">ASAP</td>
+  <td>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAU9FS7LAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem"><b>MEJ-DATA backup verification FAILED</b></a>
+    on MEJDatto2025 (192.168.1.7). Bootable screenshot failed 20:00 CDT Friday &mdash; SeaBIOS error; machine failed to boot into OS in virtual environment. Separately, FSC0013 &ldquo;Unknown filesystem type&rdquo; has been firing since Jun-05 02:02 CDT (count: 4 in 24h, last Jun-05 20:02 CDT).
+    Warning again at 02:03 CDT Saturday. Datto suggests toggling storage controller SCSI&harr;IDE on Advanced Options for the MEJ-DATA agent. Backup is currently unverifiable as restorable.
+    <br><span class="ts">[Datto &mdash; 2026-06-06 02:39 UTC]</span>
+  </td>
+  <td>Datto</td>
+</tr>
+<tr>
+  <td class="sev-asap">ASAP</td>
+  <td>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAU9vQfKAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem"><b>Fox Truck World #10368 &mdash; Josh&rsquo;s computer, potential drive failure</b></a>:
+    Workstation reports &ldquo;No operating system on hard drive.&rdquo; Megan Jones confirmed documents are not saved elsewhere and they want an on-site visit. Marshall offered to come next week. Data recovery window closing &mdash; schedule site visit early next week and assess whether specialized data retrieval is needed.
+    <br><span class="ts">[Help Desk &mdash; Megan Jones, 2026-06-05 15:38 CDT]</span>
+  </td>
+  <td>Help Desk</td>
+</tr>
+<tr>
+  <td class="sev-std">Standard</td>
+  <td>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU9UjfmAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem"><b>Whitehead Wilson &mdash; Telco Data, Tuesday 6/9</b></a>:
+    Scott Whitehead confirmed Telco can come Tuesday. Deacon Whitehead noted a printer cable may need to run through the ceiling alongside the phone line.
+    Coordinate logistics before Tuesday.
+    <br><span class="ts">[Inbox &mdash; 2026-06-05 15:44 CDT and 17:44 CDT]</span>
+  </td>
+  <td>Inbox</td>
+</tr>
+<tr>
+  <td class="sev-std">Standard</td>
+  <td>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU9UjflAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem"><b>Covenant Presbyterian &mdash; Switch arrived</b></a>:
+    Darleen Kleinhenz (dkleinhenz@covenant.org) notified switch arrived Friday afternoon and is ready for installation. Schedule install.
+    <br><span class="ts">[Inbox &mdash; Darleen Kleinhenz, 2026-06-05 15:37 CDT]</span>
+  </td>
+  <td>Inbox</td>
+</tr>
+</table>
+
+<!-- ===== SECTION 3: TODAY TO-DOS ===== -->
+<h2>3. Today To-Dos <span class="badge bg-neutral">5</span></h2>
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr><td>
+
+<div class="group-label">Must do today</div>
+<div class="must">
+  <b>Investigate MEJ-DATA backup failure (MEJDatto2025).</b>
+  Log into Datto portal and open Advanced Options for MEJ-DATA agent. Toggle storage controller between SCSI and IDE. Check for SeaBIOS boot issues and Unknown Filesystem errors. Contact Datto support if issue persists. Backup is currently unverifiable &mdash; treat as potentially non-restorable until confirmed otherwise.
+</div>
+
+<div class="group-label">Should do today</div>
+<div class="should">
+  <b>Schedule Fox Truck World on-site visit</b> for early next week. Contact Megan Jones (megan@foxtruckworld.com, 830-570-3863). Device: MEGAN-FOX (192.168.1.112). Bring tools for drive diagnostic and recovery; discuss whether a dedicated data retrieval service is warranted.
+</div>
+<div class="should">
+  <b>Prep logistics for Whitehead Wilson Telco visit, Tuesday 6/9.</b>
+  Confirm with Deacon Whitehead re: ceiling cable routing for printer alongside the phone line drop. Ensure Telco team has access and knows scope.
+</div>
+
+<div class="group-label">Could do today if time permits</div>
+<div class="could">
+  <b>Schedule Covenant Presbyterian switch installation</b> with Darleen Kleinhenz (dkleinhenz@covenant.org).
+</div>
+<div class="could">
+  <b>msmtx.com SSL certificate expires in approximately 1 month</b> (likely McElroy, Sullivan, Miller &amp; Weber). Add calendar reminder or initiate renewal.
+  <a href="https://ariatsystems.itglue.com/6840095/ssl_certificates/602135">View in ITGlue</a>.
+</div>
+
+</td></tr>
+</table>
+
+<!-- ===== SECTION 4: BACKUPS ===== -->
+<h2>4. Backups <span class="badge bg-neutral">15 Datto + 2 Backup Radar</span></h2>
+
+<!-- Backup bar chart -->
+<table cellpadding="0" cellspacing="0" border="0" style="margin-bottom:14px">
+<tr><td>
+<svg width="300" height="90" xmlns="http://www.w3.org/2000/svg">
+  <text x="0" y="11" font-size="10" font-family="Arial" fill="#666">Datto Bootable Screenshots &mdash; Scan Window</text>
+  <!-- Failed: 1 -->
+  <rect x="0" y="18" width="52" height="44" fill="#c62828" rx="4"/>
+  <text x="26" y="46" text-anchor="middle" fill="#fff" font-size="20" font-family="Arial" font-weight="bold">1</text>
+  <text x="26" y="78" text-anchor="middle" font-size="10" font-family="Arial" fill="#c62828">Failed</text>
+  <!-- Warning: 1 -->
+  <rect x="68" y="18" width="52" height="44" fill="#e65100" rx="4"/>
+  <text x="94" y="46" text-anchor="middle" fill="#fff" font-size="20" font-family="Arial" font-weight="bold">1</text>
+  <text x="94" y="78" text-anchor="middle" font-size="10" font-family="Arial" fill="#e65100">Warning</text>
+  <!-- No Result: 0 -->
+  <rect x="136" y="50" width="52" height="12" fill="#90a4ae" rx="4"/>
+  <text x="162" y="46" text-anchor="middle" font-size="20" font-family="Arial" fill="#90a4ae" font-weight="bold">0</text>
+  <text x="162" y="78" text-anchor="middle" font-size="10" font-family="Arial" fill="#888">No Result</text>
+  <!-- OK: 13 -->
+  <rect x="204" y="18" width="52" height="44" fill="#2e7d32" rx="4"/>
+  <text x="230" y="46" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" font-weight="bold">13</text>
+  <text x="230" y="78" text-anchor="middle" font-size="10" font-family="Arial" fill="#2e7d32">OK</text>
+</svg>
+</td></tr>
+</table>
+
+<table class="tbl">
+<tr>
+  <th width="90">Status</th>
+  <th>Device / Detail</th>
+  <th>Appliance</th>
+  <th width="160">Timestamp (Local)</th>
+</tr>
+<tr>
+  <td class="backup-fail">FAILED</td>
+  <td>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAU9FS7LAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">MEJ-DATA &mdash; Bootable Screenshot</a><br>
+    <span style="font-size:12px;color:#555">SeaBIOS error; failed to boot into OS in virtual environment. Toggle SCSI/IDE on Advanced Options page.</span>
+  </td>
+  <td>MEJDatto2025 (6c92cfea8770)</td>
+  <td class="ts">2026-06-05 20:00 CDT</td>
+</tr>
+<tr>
+  <td class="backup-warn">WARNING</td>
+  <td>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAU9FS7VAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">MEJ-DATA &mdash; FSC0013 Unknown filesystem type</a><br>
+    <span style="font-size:12px;color:#555">First seen: Jun-05 02:02 CDT &nbsp;&bull;&nbsp; Last seen: Jun-05 20:02 CDT &nbsp;&bull;&nbsp; Count (24h): 4. Warning also issued at 02:03 CDT Sat.</span>
+  </td>
+  <td>MEJDatto2025 (6c92cfea8770)</td>
+  <td class="ts">2026-06-06 02:03 CDT</td>
+</tr>
+<tr>
+  <td class="backup-ok">OK (13)</td>
+  <td>
+    CEL-APPSERVER (x2) &nbsp;&bull;&nbsp; CEL-SC-UVIS-01 &nbsp;&bull;&nbsp; CEL-SC-DC-01 &nbsp;&bull;&nbsp; Henry &nbsp;&bull;&nbsp; Volta &nbsp;&bull;&nbsp; FaradayDEV &nbsp;&bull;&nbsp; CEL-SC-DEPLOY &nbsp;&bull;&nbsp; Joule &nbsp;&bull;&nbsp; CEL-SC-RADIUS &nbsp;&bull;&nbsp; CEL-SC-DATABROKER-01 &nbsp;&bull;&nbsp; Faraday
+  </td>
+  <td>CelLinkSC (84160c323b48)</td>
+  <td class="ts">2026-06-05/06 overnight</td>
+</tr>
+</table>
+
+<p class="note"><b>Backup Radar:</b> Weekly reports received for MEJ &amp; Associates and Beehive Specialty (PDF attachments; period ending 2026-05-29). Review PDFs for any outstanding failures from that week.</p>
+
+<!-- ===== SECTION 5: ALERTS ===== -->
+<h2>5. Alerts &mdash; Top 3 Unusual <span class="badge bg-neutral">3</span></h2>
+<table class="tbl">
+<tr>
+  <th width="28">#</th>
+  <th>Alert</th>
+  <th width="150">Time</th>
+  <th width="110">Source</th>
+</tr>
+<tr>
+  <td style="font-weight:bold">1</td>
+  <td>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU9UjfpAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">
+      <b>Barracuda Incident Response: Phishing email detected and quarantined</b>
+    </a><br>
+    Subject: &ldquo;Bill Gates: It&rsquo;s over for Alzheimer&rsquo;s&rdquo; &nbsp;&bull;&nbsp;
+    Sender: <span class="ts">suopprt@fhoredkx.onmicrosoft.com</span> &nbsp;&bull;&nbsp;
+    1 email, 1 internal recipient, auto-remediated to junk.
+    Continuous Remediation is <b>not enabled</b> &mdash; consider enabling for future campaigns of this type.
+  </td>
+  <td class="ts">2026-06-05 22:08 UTC</td>
+  <td>Inbox / Alerts</td>
+</tr>
+<tr>
+  <td style="font-weight:bold">2</td>
+  <td>
+    <b>Capital Excavation &mdash; 4 Windows servers rebooted Saturday morning</b><br>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAU852goAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CXAHEAVYBID</a> (rebooted 10:00 UTC) &nbsp;&bull;&nbsp; AUSCX4 (10:03 UTC) &nbsp;&bull;&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAU852gqAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CXREMOTE</a> (11:00 UTC) &nbsp;&bull;&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAU852grAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CXDATAENTRY</a> (11:01 UTC).
+    All role: WINDOWS_SERVER. Four simultaneous weekend reboots &mdash; likely Windows Update, but verify these were expected and confirm all services came back clean.
+  </td>
+  <td class="ts">2026-06-06 10:00&ndash;11:02 UTC (5&ndash;6 AM CDT)</td>
+  <td>Alerts</td>
+</tr>
+<tr>
+  <td style="font-weight:bold">3</td>
+  <td>
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAU852gnAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">
+      <b>Burnett &amp; Turner &mdash; Device LAW-A (Windows Server) activity at 1:11 AM CDT Saturday</b>
+    </a><br>
+    Activity notification from RMM for device at Main Office (6034 W Courtyard Dr, Austin). After-hours activity on a Saturday for a law firm server &mdash; verify whether this was a scheduled task or unattended access.
+  </td>
+  <td class="ts">2026-06-06 06:11 UTC (1:11 AM CDT)</td>
+  <td>Alerts</td>
+</tr>
+</table>
+
+<!-- ===== SECTION 6: TIME ENTRIES ===== -->
+<h2>6. Time Entries <span class="badge bg-neutral">1</span></h2>
+<p class="note">Source: Help Desk ticket #10368. Confidence &ge;80% for client, location, description, and category. Time field below 80% confidence (discrete email exchanges, no single session block).</p>
+
+<div class="te-card-support">
+  <div class="te-label">On-Going Support (Blue)</div>
+  <div class="te-code">Subject:     Fox Truck World
+Location:    Remote
+Description: Troubleshot workstation reporting &quot;No operating system on hard drive.&quot;
+             Checked for loose cables and external storage. Assessed potential drive
+             failure, described recovery options including dedicated data retrieval
+             service, and offered on-site visit.
+Category:    On-Going Support (Blue)
+Time:        &lt;MISSING: discrete email interactions on 2026-06-05 at 09:50, 10:02,
+             10:26, and 14:49 CDT; no single continuous session block identifiable&gt;</div>
+</div>
+
+<div class="footer">
+  Generated: 2026-06-06 07:30 CDT &nbsp;|&nbsp;
+  gitmarsh/routines briefings/2026-06-06.html &nbsp;|&nbsp;
+  Skill: ariat-time-entry (gitmarsh/ai_skills)
+</div>
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>
