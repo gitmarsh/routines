@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing — 2026-06-07</title>
+<style>
+body{margin:0;padding:0;background-color:#f0f2f5;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#222;}
+table{border-collapse:collapse;}
+a{color:#1a5276;text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1{font-size:20px;margin:0 0 4px 0;color:#111;}
+h2{font-size:15px;margin:22px 0 8px 0;padding:7px 12px;border-left:4px solid #444;background:#f6f6f6;color:#111;}
+h3{font-size:12px;margin:12px 0 4px 0;color:#555;text-transform:uppercase;letter-spacing:0.07em;font-weight:bold;}
+.badge{display:inline-block;background:#777;color:#fff;border-radius:3px;padding:1px 8px;font-size:11px;margin-left:6px;font-weight:bold;vertical-align:middle;}
+.badge-urgent{background:#c0392b;}
+.badge-asap{background:#d35400;}
+.none-text{color:#aaa;font-style:italic;font-size:13px;margin:6px 0;}
+.item{margin:8px 0;padding:8px 12px;border-left:3px solid #ddd;background:#fafafa;font-size:13px;}
+.item.asap-item{border-left-color:#d35400;background:#fff8f3;}
+.item-title{font-weight:bold;margin-bottom:2px;}
+.item-meta{color:#666;font-size:12px;line-height:1.5;}
+.mono{font-family:"Courier New",Courier,monospace;font-size:12px;}
+.data-table{width:100%;font-size:13px;margin:8px 0;}
+.data-table th{background:#ecf0f1;padding:6px 10px;border:1px solid #d5d8dc;text-align:left;font-size:12px;}
+.data-table td{padding:6px 10px;border:1px solid #d5d8dc;vertical-align:top;}
+.data-table tr:nth-child(even) td{background:#fafafa;}
+.fail{color:#c0392b;font-weight:bold;}
+.warn{color:#d35400;font-weight:bold;}
+.noresult{color:#7f8c8d;}
+.ok{color:#1e8449;}
+.te-card{margin:10px 0;padding:13px 16px;border:1px solid #c8e6c9;border-left:5px solid #2e7d32;border-radius:3px;font-family:"Courier New",Courier,monospace;font-size:12px;line-height:1.8;background:#f1fff4;}
+.te-card.ongoing{border-color:#bbdefb;border-left-color:#1565c0;background:#f0f7ff;}
+.te-card.afterhours{border-color:#ffcdd2;border-left-color:#c62828;background:#fff8f8;}
+.te-date-group{font-size:13px;font-weight:bold;color:#333;margin:16px 0 4px 0;border-bottom:1px solid #eee;padding-bottom:4px;}
+.must-row td{background:#fff3e0;}
+.should-row td{background:#fafafa;}
+.could-row td{background:#f9fff9;color:#555;}
+.overview-bar{margin:14px 0 8px 0;}
+.section-note{font-size:12px;color:#777;margin:6px 0 0 0;font-style:italic;}
+.closed-tag{font-size:11px;color:#888;font-style:italic;}
+</style>
+</head>
+<body>
+<table width="100%" cellpadding="0" cellspacing="0" bgcolor="#f0f2f5">
+<tr><td align="center" style="padding:24px 12px;">
+<table width="900" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="border:1px solid #ddd;border-radius:4px;">
+<tr><td style="padding:28px 32px;">
+
+<!-- ═══ HEADER ═══ -->
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+  <td>
+    <h1>Morning Briefing</h1>
+    <div style="font-size:12px;color:#666;margin:4px 0 0 0;font-family:'Courier New',Courier,monospace;">
+      Sun Jun 7, 2026 &nbsp;|&nbsp; 07:30 CDT &nbsp;|&nbsp; Window: Fri Jun 5 16:00 CDT &mdash; Sun Jun 7 07:30 CDT
+    </div>
+    <div style="font-size:12px;color:#888;margin:3px 0 0 0;font-family:'Courier New',Courier,monospace;">
+      Scanned: 18 Inbox &middot; 15 Alerts &middot; 30 Datto &middot; 5 Backup&nbsp;Radar &middot; 8 Help&nbsp;Desk &middot; 25+ Teams msgs
+    </div>
+  </td>
+</tr>
+</table>
+
+<!-- ═══ SEVERITY OVERVIEW ═══ -->
+<div style="margin:18px 0 6px 0;padding:12px 14px;background:#f8f8f8;border:1px solid #e0e0e0;border-radius:3px;">
+  <div style="font-size:12px;color:#555;font-weight:bold;margin-bottom:8px;">SEVERITY OVERVIEW &nbsp;&nbsp; Urgent 0 &middot; ASAP 2 &middot; Standard ~20</div>
+  <svg width="420" height="28" style="display:block;">
+    <!-- Urgent -->
+    <rect x="0" y="4" width="2" height="18" fill="#c0392b" rx="2"/>
+    <text x="6" y="17" font-size="11" fill="#c0392b" font-family="Arial,sans-serif" font-weight="bold">Urgent 0</text>
+    <!-- ASAP -->
+    <rect x="72" y="4" width="16" height="18" fill="#d35400" rx="2"/>
+    <text x="92" y="17" font-size="11" fill="#d35400" font-family="Arial,sans-serif" font-weight="bold">ASAP 2</text>
+    <!-- Standard -->
+    <rect x="148" y="4" width="160" height="18" fill="#1a5276" rx="2"/>
+    <text x="312" y="17" font-size="11" fill="#1a5276" font-family="Arial,sans-serif" font-weight="bold">Standard ~20</text>
+  </svg>
+</div>
+
+<!-- ═══ 1. URGENT ═══ -->
+<h2>Urgent <span class="badge badge-urgent">0</span></h2>
+<p class="none-text">None.</p>
+
+<!-- ═══ 2. FOLLOW-UPS ═══ -->
+<h2>Follow-ups <span class="badge">8</span></h2>
+
+<h3>ASAP</h3>
+
+<div class="item asap-item">
+  <div class="item-title">
+    <a href="https://planner.cloud.microsoft/ariatsystems.com/en-US/Home/MyTasks">M365 Security Policy Plan Debrief</a>
+    &mdash; <span style="color:#c0392b;font-weight:bold;">2 days overdue</span>
+  </div>
+  <div class="item-meta">Plan: M365 Security Policies &nbsp;|&nbsp; Due 6/5/2026 &nbsp;|&nbsp; Source: <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVIpzJbAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">MS Planner (Inbox)</a></div>
+</div>
+
+<h3>Active Threads — Coordination Required</h3>
+
+<div class="item">
+  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVIpzJcAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Re: Switch — Covenant Presbyterian Church</a></div>
+  <div class="item-meta">Switch arrived. Darleen Kleinhenz (CPC Dir. of Operations) asked Technik (office@technikent.com) if they want on-site for Tuesday install. Marshall confirmed attendance. Waiting on Technik response before Tuesday schedule is locked. &nbsp;|&nbsp; Sat Jun 6, 1:28 PM CDT</div>
+</div>
+
+<div class="item">
+  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU9UjfqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Re: Telco Data — Tuesday 6/9 — Whitehead Wilson</a></div>
+  <div class="item-meta">Deacon Whitehead noted Telco may have already pre-run a phone/printer line in ceiling. Needs verification with Telco before Tuesday. Printer and phone line install coordination in play. &nbsp;|&nbsp; Fri Jun 5, 5:44 PM CDT</div>
+</div>
+
+<h3>Help Desk — Active Tickets Updated During Window</h3>
+
+<table class="data-table">
+<tr><th>Ticket</th><th>Subject</th><th>Updated</th><th>Status</th></tr>
+<tr>
+  <td class="mono"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVKIhbgAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">#10370</a></td>
+  <td>Email Issues</td><td>Sat Jun 6, 3:14 PM CDT</td><td>—</td>
+</tr>
+<tr>
+  <td class="mono"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVKIhbfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">#10374</a></td>
+  <td>FW: RRC Engagement</td><td>Sat Jun 6, 2:59 PM CDT</td><td>—</td>
+</tr>
+<tr>
+  <td class="mono"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVKIhbeAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">#10369</a></td>
+  <td>Phones, TVs, Conference Room</td><td>Sat Jun 6, 2:59 PM CDT</td><td>—</td>
+</tr>
+<tr>
+  <td class="mono"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVJTw8gAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">#10361</a></td>
+  <td>Setting Up Scanner</td><td>Sat Jun 6, 1:29 PM CDT</td><td>—</td>
+</tr>
+<tr>
+  <td class="mono"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVJTw8fAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">#10375</a></td>
+  <td>Abbigail Timeslips</td><td>Sat Jun 6, 1:14 PM CDT</td><td>—</td>
+</tr>
+<tr>
+  <td class="mono"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAU9vQfLAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">#10335</a></td>
+  <td>Shared Contacts</td><td>Fri Jun 5, 5:29 PM CDT</td><td>—</td>
+</tr>
+<tr>
+  <td class="mono" style="color:#888;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVKIhbdAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">#10371</a></td>
+  <td style="color:#888;">Emails from Covenant member Susan Zatopek not getting through (CPC) <span class="closed-tag">— hotmail block identified &amp; resolved by Marshall Jun 5</span></td>
+  <td style="color:#888;">Sat Jun 6</td><td style="color:#888;">CLOSED</td>
+</tr>
+<tr>
+  <td class="mono" style="color:#888;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVJTw8eAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">#10372</a></td>
+  <td style="color:#888;">Possible email hack (MSM — John Quinlan) <span class="closed-tag">— Marshall investigated Jun 5 morning; Barracuda auto-remediation likely cause</span></td>
+  <td style="color:#888;">Sat Jun 6</td><td style="color:#888;">CLOSED</td>
+</tr>
+</table>
+
+<!-- ═══ 3. TODAY TO-DOS ═══ -->
+<h2>Today To-Dos <span class="badge">13</span></h2>
+
+<table class="data-table" width="100%">
+<tr><th width="10%">Priority</th><th>Item</th><th width="32%">Source / Notes</th></tr>
+
+<tr class="must-row">
+  <td><strong>MUST</strong></td>
+  <td><strong><a href="https://planner.cloud.microsoft/ariatsystems.com/en-US/Home/MyTasks">M365 Security Policy Plan Debrief</a></strong> — task 2 days overdue, due 6/5/2026</td>
+  <td>MS Planner / Inbox</td>
+</tr>
+<tr class="must-row">
+  <td><strong>MUST</strong></td>
+  <td><strong><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVK972qAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Investigate MEJ-DATA backup failure</a></strong> — MEJDatto2025; FSC0013 "Unknown filesystem type"; warnings both Sat Jun 6 &amp; Sun Jun 7 02:03 AM CDT; bootable screenshot FAILED Sun Jun 7 02:00 AM CDT. &gt;2 days.</td>
+  <td>Datto + Backup Radar (ASAP)</td>
+</tr>
+
+<tr class="should-row">
+  <td><strong>SHOULD</strong></td>
+  <td>Follow up with <strong>Technik</strong> (office@technikent.com) re: CPC switch install — confirm attendance for Tuesday before install is scheduled</td>
+  <td>Re: Switch thread</td>
+</tr>
+<tr class="should-row">
+  <td><strong>SHOULD</strong></td>
+  <td>Coordinate <strong>Whitehead Wilson Telco Data</strong> Tuesday 6/9 — verify printer/phone line status with Telco before Tuesday</td>
+  <td>Re: Telco Data thread</td>
+</tr>
+<tr class="should-row">
+  <td><strong>SHOULD</strong></td>
+  <td><strong><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAVJAsPLAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CelLink JOULE D: drive free space &le;7%</a></strong> — address before disk-full event. Host in San Carlos, CA.</td>
+  <td>RMM alert, Alerts folder; Sat Jun 6, 11:04 AM CDT</td>
+</tr>
+<tr class="should-row">
+  <td><strong>SHOULD</strong></td>
+  <td>Triage 6 active Help Desk tickets: <span class="mono">#10335 #10361 #10369 #10370 #10374 #10375</span></td>
+  <td>Help Desk; updated Fri/Sat</td>
+</tr>
+<tr class="should-row">
+  <td><strong>SHOULD</strong></td>
+  <td><strong><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVH3UqpAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Capital Excavation Datto API backup failure</a></strong> — check history and remediate</td>
+  <td>Backup Radar; 06/06/2026</td>
+</tr>
+<tr class="should-row">
+  <td><strong>SHOULD</strong></td>
+  <td>Log CelLink VPN maintenance time entry for Sat Jun 6 (see Time Entries section below)</td>
+  <td>Teams / Meraki / IT Maint. email</td>
+</tr>
+
+<tr class="could-row">
+  <td>COULD</td>
+  <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVKfatHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Review Rogue AP at CelLink Georgetown</a> — SSID <span class="mono">DIRECT-KECEL-PF4MPEB6ASZk</span>; likely printer Wi-Fi Direct broadcast; verify device identity</td>
+  <td>Meraki Air Marshal; 12:17 AM Sun</td>
+</tr>
+<tr class="could-row">
+  <td>COULD</td>
+  <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU9UjfsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">SSL cert — msmtx.com</a> expiry ~1 month (approx. Jul 7, 2026)</td>
+  <td>IT Glue; Inbox Fri Jun 6</td>
+</tr>
+<tr class="could-row">
+  <td>COULD</td>
+  <td>Sharp MX MICAS unresponsive at Capital Excavation (IP 192.168.60.40) — last reported 5/29/2026</td>
+  <td>MICAS alert; Inbox Sun Jun 7</td>
+</tr>
+<tr class="could-row">
+  <td>COULD</td>
+  <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU9UjfoAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Bluebeam SSO self-serve setup</a> — vendor notification about new SSO option (&ge;10 seats)</td>
+  <td>Inbox; Fri Jun 5, 4:06 PM CDT</td>
+</tr>
+<tr class="could-row">
+  <td>COULD</td>
+  <td>Barracuda SKOUT XDR GLB.SM.UNI log monitoring degradation — Ariat &amp; MSM tenants, Sat Jun 6 3–5 PM CDT; likely resolved</td>
+  <td>Inbox; multiple alerts</td>
+</tr>
+</table>
+
+<!-- ═══ 4. BACKUPS ═══ -->
+<h2>Backups <span class="badge">4 events: 2 failed, 1 warning, 1 no result</span></h2>
+
+<!-- SVG bar chart -->
+<div style="margin:10px 0 14px 0;">
+<svg width="300" height="80" style="display:block;">
+  <text x="0" y="16" font-size="11" fill="#555" font-family="Arial,sans-serif">Failed</text>
+  <rect x="70" y="4" width="60" height="16" fill="#c0392b" rx="2"/>
+  <text x="134" y="16" font-size="11" fill="#c0392b" font-family="Arial,sans-serif" font-weight="bold">  2</text>
+
+  <text x="0" y="44" font-size="11" fill="#555" font-family="Arial,sans-serif">Warning</text>
+  <rect x="70" y="32" width="30" height="16" fill="#d35400" rx="2"/>
+  <text x="104" y="44" font-size="11" fill="#d35400" font-family="Arial,sans-serif" font-weight="bold">  1</text>
+
+  <text x="0" y="72" font-size="11" fill="#555" font-family="Arial,sans-serif">No Result</text>
+  <rect x="70" y="60" width="30" height="16" fill="#7f8c8d" rx="2"/>
+  <text x="104" y="72" font-size="11" fill="#7f8c8d" font-family="Arial,sans-serif" font-weight="bold">  1</text>
+</svg>
+</div>
+
+<h3 style="color:#c0392b;">Failed</h3>
+<table class="data-table">
+<tr><th>Client</th><th>Device</th><th>Appliance</th><th>Detail</th><th>Source</th></tr>
+<tr>
+  <td><strong>MEJ &amp; Associates</strong></td>
+  <td class="mono">MEJ-DATA</td>
+  <td class="mono">MEJDatto2025</td>
+  <td class="fail">Bootable screenshot FAILED (SeaBIOS). FSC0013 — Unknown filesystem type. Warnings recurring Sat Jun 6 &amp; Sun Jun 7 at 02:03 AM CDT. &gt;2 days.</td>
+  <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVK972qAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Datto</a> / <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVH3UqqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar</a></td>
+</tr>
+<tr>
+  <td><strong>Capital Excavation</strong></td>
+  <td class="mono">CapitalEx</td>
+  <td>Datto</td>
+  <td class="fail">Datto API failure — 06/06/2026</td>
+  <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVH3UqpAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar</a></td>
+</tr>
+</table>
+
+<h3 style="color:#d35400;margin-top:14px;">Warning</h3>
+<table class="data-table">
+<tr><th>Client</th><th>Device</th><th>Appliance</th><th>Detail</th><th>Source</th></tr>
+<tr>
+  <td>MEJ &amp; Associates</td>
+  <td class="mono">MEJ-DATA</td>
+  <td class="mono">MEJDatto2025</td>
+  <td class="warn">Agent warning — 02:03 AM CDT Sat Jun 6 and 02:03 AM CDT Sun Jun 7</td>
+  <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVK972nAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Datto</a></td>
+</tr>
+</table>
+
+<h3 style="color:#7f8c8d;margin-top:14px;">No Result</h3>
+<table class="data-table">
+<tr><th>Client</th><th>Job</th><th>Date</th><th>Source</th></tr>
+<tr>
+  <td>Covenant Presbyterian Church</td>
+  <td>DattoSaasProtection</td>
+  <td class="noresult">06/06/2026</td>
+  <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVH3UqrAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar</a></td>
+</tr>
+</table>
+
+<p class="section-note">CelLink (CelLinkSC): Bootable screenshots <strong class="ok">SUCCEEDED</strong> for 9 hosts — CEL-APPSERVER, Faraday, Henry, CEL-SC-DC-01, Volta, CEL-SC-DATABROKER-01, CEL-SC-DEPLOY, FaradayDEV, CEL-SC-RADIUS, CEL-SC-UVIS-01, Joule.</p>
+
+<!-- ═══ 5. ALERTS ═══ -->
+<h2>Alerts — Top 3 Uncommon <span class="badge">3</span></h2>
+
+<div class="item">
+  <div class="item-title">1. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVKfatHAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Meraki Air Marshal — Rogue AP detected at CelLink Georgetown</a></div>
+  <div class="item-meta">
+    SSID: <span class="mono">DIRECT-KECEL-PF4MPEB6ASZk</span> &nbsp;|&nbsp; Reason: <strong>Seen on LAN</strong> &nbsp;|&nbsp; Last seen: 12:17 AM CDT Sun Jun 7 &nbsp;|&nbsp; 2 APs detecting, 0 containing.<br>
+    SSID format is consistent with a copier or printer broadcasting Wi-Fi Direct (CEL = CelLink). Seen on LAN is notable — verify this is a known device (Sharp, Xerox, HP). Low threat probability but confirm before dismissing.
+  </div>
+</div>
+
+<div class="item">
+  <div class="item-title">2. Barracuda Incident Response — Malicious emails auto-remediated (&times;2 in window)</div>
+  <div class="item-meta">
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVKfatFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Sat Jun 6, 6:10 PM CDT</a> (AriatAlerts) &nbsp;|&nbsp; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAU9UjfpAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Fri Jun 5, 5:08 PM CDT</a> (AriatAlerts)<br>
+    Two separate auto-remediation incidents within 36 hours is elevated vs. baseline. Emails moved to users' junk. Related: John Quinlan (MSM, #10372) reported "possible email hack" on Jun 5 — Marshall investigated and resolved same day. If any client reports missing important mail, review Barracuda remediated messages.
+  </div>
+</div>
+
+<div class="item">
+  <div class="item-title">3. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAVJAsPLAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CelLink JOULE — Disk D: Free Space &le;7%</a></div>
+  <div class="item-meta">
+    Host: <span class="mono">JOULE</span> &nbsp;|&nbsp; Location: San Carlos, CA &nbsp;|&nbsp; Org: CelLink &nbsp;|&nbsp; Alerted Sat Jun 6, 11:04 AM CDT via RMM.<br>
+    D: drive approaching full — intervene before service interruption.
+  </div>
+</div>
+
+<!-- ═══ 6. TIME ENTRIES ═══ -->
+<h2>Time Entries <span class="badge">1</span></h2>
+
+<div class="te-date-group">Saturday, June 6, 2026</div>
+
+<div class="te-card">
+Subject: CelLink<br>
+Location: Remote<br>
+Description: Migrated AnyConnect VPN to new RADIUS servers and updated server certificate generation method. Adjusted client routing. Collaborated remotely with Ted Do to verify VPN connectivity and DNS propagation (TTL 4 hours).<br>
+Category: Project (Green)<br>
+Time: 2026-06-06 13:44 - 15:37
+</div>
+
+<p class="section-note">
+  Confidence notes: Start time anchored to first Meraki settings change (Client Routing, 13:44 CDT per Meraki alert).
+  End time anchored to Ted Do all-clear email ("VPN changed was successful", 15:37 CDT).
+  Location Remote — Teams-based collaboration; no on-site indicators.
+  Category Project (Green) — VPN infrastructure migration, during working hours (8 AM–6 PM), not CPC/MSM client.
+</p>
+
+<!-- ═══ FOOTER ═══ -->
+<hr style="border:none;border-top:1px solid #ececec;margin:28px 0 14px 0;">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+  <td style="font-size:11px;color:#aaa;font-family:'Courier New',Courier,monospace;">
+    Generated 2026-06-07 07:30 CDT &nbsp;|&nbsp;
+    Classified: Urgent 0 | ASAP 2 | Standard ~20 | Time Entries 1 &nbsp;|&nbsp;
+    gitmarsh/routines
+  </td>
+</tr>
+</table>
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+</body>
+</html>
