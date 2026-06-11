@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing &mdash; 2026-06-11</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:1.5;background:#f4f5f7;color:#1a1a1a;margin:0;padding:0;}
+.outer{background:#f4f5f7;padding:16px 0;}
+.wrapper{max-width:860px;margin:0 auto;background:#fff;border-radius:4px;overflow:hidden;border:1px solid #dde1e9;}
+.hdr{background:#1a2744;padding:24px 32px 18px;}
+.hdr h1{margin:0 0 4px;font-size:22px;font-weight:700;color:#fff;letter-spacing:.02em;}
+.hdr .sub{font-size:16px;color:#c8d0e0;font-weight:400;margin-bottom:8px;}
+.hdr .meta{font-size:11px;color:#8a96b0;font-family:'Courier New',monospace;}
+.overview{background:#f0f2f5;padding:10px 32px;border-bottom:1px solid #dde1e9;}
+.section{padding:20px 32px;border-bottom:1px solid #e8e8e8;}
+.section:last-child{border-bottom:none;}
+h2{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#444;margin:0 0 14px;}
+.badge{display:inline-block;background:#e0e4ef;color:#444;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;margin-left:6px;text-transform:none;letter-spacing:0;}
+.badge-asap{background:#fef3cd;color:#92400e;}
+.badge-none{background:#e8f4e8;color:#166534;}
+.item{border-left:3px solid #6b7280;padding:10px 14px;margin-bottom:8px;border-radius:0 4px 4px 0;background:#f9fafb;}
+.item-asap{border-left-color:#f59e0b;background:#fffbf0;}
+.item-title{font-weight:600;font-size:13px;margin-bottom:3px;}
+.item-title a{color:inherit;text-decoration:none;}
+.item-title a:hover{text-decoration:underline;}
+.item-meta{font-size:11px;color:#666;font-family:'Courier New',monospace;margin-bottom:3px;}
+.item-body{font-size:12px;color:#333;}
+.tag{display:inline-block;padding:1px 5px;border-radius:3px;font-size:10px;font-weight:700;text-transform:uppercase;margin-right:5px;}
+.tag-asap{background:#fef3cd;color:#92400e;}
+.tag-must{background:#fde8e8;color:#991b1b;}
+.tag-should{background:#fef3cd;color:#92400e;}
+.tag-could{background:#e8f4e8;color:#166534;}
+table.dt{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px;}
+table.dt th{background:#f0f2f5;text-align:left;padding:6px 10px;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:#555;border-bottom:2px solid #ddd;}
+table.dt td{padding:7px 10px;border-bottom:1px solid #eee;vertical-align:top;}
+table.dt tr:last-child td{border-bottom:none;}
+.te-card{border:2px solid #ccc;border-radius:6px;padding:14px;margin-bottom:10px;background:#fafafa;}
+.te-card.green{border-color:#16a34a;background:#f0fdf4;}
+.te-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#16a34a;margin-bottom:8px;}
+.te-card pre{font-family:'Courier New',Courier,monospace;font-size:12px;margin:0;white-space:pre-wrap;color:#1a1a1a;line-height:1.6;}
+.bk-warn{border-left-color:#f59e0b;background:#fffbf0;}
+.none-text{color:#888;font-style:italic;font-size:13px;}
+.sub-heading{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:12px 0 6px;}
+.sub-heading.red{color:#991b1b;}
+.sub-heading.amber{color:#92400e;}
+.sub-heading.green{color:#166534;}
+.sub-heading.gray{color:#555;}
+</style>
+</head>
+<body>
+<div class="outer">
+<div class="wrapper">
+
+<!-- HEADER -->
+<div class="hdr">
+  <h1>Morning Briefing</h1>
+  <div class="sub">Thursday, June 11, 2026</div>
+  <div class="meta">Scan window: 2026-06-10 15:30 CDT &mdash; 2026-06-11 07:30 CDT &nbsp;|&nbsp; Inbox: 10 &bull; Alerts: 22 &bull; Datto: 14 &bull; Help Desk: 0 &bull; Backup Radar: 0 &bull; Teams: 1</div>
+</div>
+
+<!-- SEVERITY OVERVIEW -->
+<div class="overview">
+  <table width="100%" cellpadding="0" cellspacing="0"><tr>
+    <td style="font-size:12px;color:#555;white-space:nowrap;padding-right:12px;font-family:Arial,sans-serif;">Severity:</td>
+    <td>
+      <svg width="340" height="32" xmlns="http://www.w3.org/2000/svg">
+        <!-- 0 Urgent, 3 ASAP, 6 Standard = 9 total -->
+        <rect x="0" y="6" width="2" height="14" fill="#dc2626" rx="1"/>
+        <rect x="4" y="6" width="111" height="14" fill="#f59e0b" rx="2"/>
+        <rect x="117" y="6" width="223" height="14" fill="#6b7280" rx="2"/>
+        <text x="0" y="30" font-family="Arial" font-size="10" fill="#b91c1c">Urgent 0</text>
+        <text x="38" y="30" font-family="Arial" font-size="10" fill="#92400e">ASAP 3</text>
+        <text x="155" y="30" font-family="Arial" font-size="10" fill="#374151">Standard 6</text>
+      </svg>
+    </td>
+  </tr></table>
+</div>
+
+<!-- SECTION 1: URGENT -->
+<div class="section">
+  <h2>Urgent <span class="badge" style="background:#fde8e8;color:#b91c1c;">(0)</span></h2>
+  <div class="none-text">None</div>
+</div>
+
+<!-- SECTION 2: FOLLOW-UPS -->
+<div class="section">
+  <h2>Follow-ups <span class="badge">(3)</span></h2>
+
+  <!-- ASAP: Barracuda XDR -->
+  <div class="item item-asap">
+    <div class="item-title">
+      <span class="tag tag-asap">ASAP</span>
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVSpaSBAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Barracuda XDR Ticket #126957603 &mdash; Windows Suspicious Scheduled Task Creation</a>
+    </div>
+    <div class="item-meta">2026-06-10 17:01 CDT &bull; soc@barracuda.com &bull; Awaiting Marshall's response &bull; TLP:AMBER</div>
+    <div class="item-body">SOC follow-up on outstanding XDR alert. Respond via <a href="https://dashboard.skoutsecure.com/react-view-ticket/126957603" style="color:#1a56db;">XDR Dashboard</a> with outcome category: True Positive, Authorized Activity, Authorized Pen Test, or False Positive.</div>
+  </div>
+
+  <!-- ASAP: Beehive Specialty -->
+  <div class="item item-asap">
+    <div class="item-title">
+      <span class="tag tag-asap">ASAP</span>
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVSpaR%2FAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Beehive Specialty &mdash; Fw: Couple of questions (via Matt Kerker)</a>
+    </div>
+    <div class="item-meta">2026-06-10 16:22 CDT &bull; Matt@ariatsystems.com &bull; Importance: High</div>
+    <div class="item-body">Kristie Wright (Beehive) waiting on: (1) Ashley P&rsquo;s photos / OneDrive sync from old laptop &mdash; Donna says it&rsquo;s on her personal OneDrive on the previous laptop; (2) Website banner on order-placement site &mdash; needs action?; (3) YubiKey rollout status. Teams context (Matt, 17:14 CDT): Kristie going slow to verify YubiKey port compatibility; will speak to Vicki about revoking Donna&rsquo;s admin access.</div>
+  </div>
+
+  <!-- Standard: Cisco Meraki Case -->
+  <div class="item">
+    <div class="item-title">
+      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVSpaR9AAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Cisco Meraki Case 14332330 &mdash; Switch Alerts (Pending Closure)</a>
+    </div>
+    <div class="item-meta">2026-06-10 15:58 CDT &bull; support@meraki.com</div>
+    <div class="item-body">Meraki believes issue is resolved and flagged for closure. Confirm or keep open.</div>
+  </div>
+</div>
+
+<!-- SECTION 3: TODAY TO-DOS -->
+<div class="section">
+  <h2>Today To-Dos <span class="badge">(6)</span></h2>
+  <table class="dt">
+    <tr>
+      <th style="width:70px;">Priority</th>
+      <th>Item</th>
+      <th style="width:100px;">Source</th>
+    </tr>
+    <tr>
+      <td><span class="tag tag-must">MUST</span></td>
+      <td><strong><a href="https://dashboard.skoutsecure.com/react-view-ticket/126957603" style="color:#1a56db;">Respond to XDR Ticket #126957603</a></strong> &mdash; Categorize Windows Suspicious Scheduled Task Creation alert (True Positive / Authorized / False Positive)</td>
+      <td style="font-family:'Courier New',monospace;font-size:11px;color:#666;">Inbox/Alerts</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-must">MUST</span></td>
+      <td><strong><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAVb7GysAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLink CELAZUPRDSYS01 &mdash; Disk F: &le;10% free</a></strong> &mdash; Check/clean/expand storage on Syspro Windows Server before failure</td>
+      <td style="font-family:'Courier New',monospace;font-size:11px;color:#666;">Alerts</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-should">SHOULD</span></td>
+      <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVSpaR%2FAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1a56db;">Reply to Beehive Specialty</a> &mdash; Ashley P OneDrive/photos; website banner; YubiKey status. Donna admin-access removal in progress via Vicki.</td>
+      <td style="font-family:'Courier New',monospace;font-size:11px;color:#666;">Inbox/Teams</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-should">SHOULD</span></td>
+      <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVSpaSDAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1a56db;">Verify PIM alert</a> &mdash; CIPP-SAM assigned Compliance Administrator outside PIM at midnight. Confirm CIPP automation is expected.</td>
+      <td style="font-family:'Courier New',monospace;font-size:11px;color:#666;">Inbox</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-should">SHOULD</span></td>
+      <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVSpaR9AAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:#1a56db;">Close Cisco Meraki Case 14332330</a> &mdash; Switch alerts case pending closure; confirm or keep open.</td>
+      <td style="font-family:'Courier New',monospace;font-size:11px;color:#666;">Inbox</td>
+    </tr>
+    <tr>
+      <td><span class="tag tag-could">COULD</span></td>
+      <td>Whitehead Wilson site visit &mdash; Matt suggests <strong>Friday</strong> to install/mount TV (WW couldn&rsquo;t give delivery window). David&rsquo;s printer is on-site but David is out of town until next week; no rush.</td>
+      <td style="font-family:'Courier New',monospace;font-size:11px;color:#666;">Teams</td>
+    </tr>
+  </table>
+</div>
+
+<!-- SECTION 4: BACKUPS -->
+<div class="section">
+  <h2>Backups <span class="badge">(12 checked)</span></h2>
+
+  <!-- SVG bar chart: Failed=0, Warning=1, Succeeded=11 -->
+  <div style="margin:0 0 16px;">
+    <svg width="300" height="52" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="12" font-family="Arial" font-size="11" fill="#555">Failed</text>
+      <rect x="58" y="1" width="3" height="12" fill="#dc2626" rx="1"/>
+      <text x="64" y="12" font-family="Arial" font-size="11" fill="#888">0</text>
+      <text x="0" y="30" font-family="Arial" font-size="11" fill="#555">Warning</text>
+      <rect x="58" y="19" width="18" height="12" fill="#f59e0b" rx="2"/>
+      <text x="80" y="30" font-family="Arial" font-size="11" fill="#92400e">1</text>
+      <text x="0" y="48" font-family="Arial" font-size="11" fill="#555">OK</text>
+      <rect x="58" y="37" width="198" height="12" fill="#16a34a" rx="2"/>
+      <text x="260" y="48" font-family="Arial" font-size="11" fill="#16a34a">11</text>
+    </svg>
+  </div>
+
+  <div class="sub-heading amber">Warning (1)</div>
+  <div class="item bk-warn">
+    <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVbr2OrAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:inherit;text-decoration:none;">MEJ-DATA on MEJDatto2025 (6c92cfea8770)</a></div>
+    <div class="item-meta">2026-06-11 02:04 CDT &bull; McElroy, Sullivan, Miller &amp; Weber &bull; Agent: 192.168.1.7</div>
+    <div class="item-body">&ldquo;Unknown filesystem type&rdquo; &mdash; Datto flags as non-critical/transient. First occurrence in window. Monitor for recurrence; no action required unless it persists.</div>
+  </div>
+
+  <div class="sub-heading red">Failed (0)</div>
+  <div class="none-text" style="margin-bottom:12px;">None</div>
+
+  <div class="sub-heading gray">No Result (0)</div>
+  <div class="none-text" style="margin-bottom:12px;">None</div>
+
+  <div class="sub-heading green">Succeeded (11 &mdash; CelLink via CelLinkSC SIRIS)</div>
+  <div style="font-size:12px;color:#333;font-family:'Courier New',monospace;line-height:1.8;margin-top:4px;">
+    CEL-APPSERVER (x2) &bull; Faraday &bull; FaradayDEV &bull; CEL-SC-UVIS-01 &bull; Henry<br>
+    CEL-SC-RADIUS &bull; CEL-SC-DATABROKER-01 &bull; CEL-SC-DEPLOY &bull; Volta &bull; Joule &bull; CEL-SC-DC-01
+  </div>
+</div>
+
+<!-- SECTION 5: ALERTS -->
+<div class="section">
+  <h2>Alerts <span class="badge">(3 uncommon)</span></h2>
+
+  <!-- Alert 1: PIM -->
+  <div class="item">
+    <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVSpaSDAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:inherit;text-decoration:none;">PIM: Compliance Administrator role assigned outside PIM &mdash; Ariat Systems tenant</a></div>
+    <div class="item-meta">2026-06-11 00:01 UTC &bull; MSSecurity-noreply@microsoft.com</div>
+    <div class="item-body">User: <strong>CIPP-SAM</strong> &bull; Role: Compliance Administrator &bull; Assigner: CIPP Service Account &bull; Tenant ID: ac196714-a2ff-45a0-b6fb-68c48ff8a316. Likely automated CIPP action, but out-of-PIM assignments require verification. <a href="https://portal.azure.com#view/Microsoft_Azure_PIMCommon/ActivationMenuBlade/~/aadroles" style="color:#1a56db;">View in Entra PIM &rarr;</a></div>
+  </div>
+
+  <!-- Alert 2: Barracuda XDR ticket (also in Follow-ups) -->
+  <div class="item">
+    <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVSpaSBAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:inherit;text-decoration:none;">Barracuda XDR Ticket #126957603 &mdash; Windows Suspicious Scheduled Task Creation</a></div>
+    <div class="item-meta">2026-06-10 17:01 CDT &bull; soc@barracuda.com &bull; TLP:AMBER &bull; Open ticket awaiting response</div>
+    <div class="item-body">Unique security event requiring classification. <a href="https://dashboard.skoutsecure.com/react-view-ticket/126957603" style="color:#1a56db;">Respond at XDR Dashboard &rarr;</a></div>
+  </div>
+
+  <!-- Alert 3: CelLink Disk -->
+  <div class="item">
+    <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAVb7GysAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem" style="color:inherit;text-decoration:none;">CelLink &mdash; CELAZUPRDSYS01 Disk Volume F: &le;10% Free</a></div>
+    <div class="item-meta">2026-06-11 07:18 CDT &bull; noreply@rmmservice.com &bull; Syspro / Windows Server</div>
+    <div class="item-body">F: drive at or below 10% free on production server CELAZUPRDSYS01. Triggered 07:17 CDT. <a href="https://ariat.rmmservice.com/#/deviceDashboard/478/overview" style="color:#1a56db;">View device &rarr;</a></div>
+  </div>
+
+  <div style="font-size:11px;color:#888;margin-top:10px;">
+    <em>Also notable (recurring, not listed above):</em> Georgetown Meraki FW (GT-FW-MDF-01-02) offline 07:17 CDT, recovered 07:29 CDT &mdash; 12-minute outage, self-resolved. Three Barracuda phishing alerts for mgarcia@covenant.org (Covenant) via Impersonation Protection.
+  </div>
+</div>
+
+<!-- SECTION 6: TIME ENTRIES -->
+<div class="section">
+  <h2>Time Entries <span class="badge">(1)</span></h2>
+  <div style="font-size:11px;color:#888;margin-bottom:12px;">Source: Meraki change-log alerts confirm Marshall modified CPC switch ports; Meraki support case 14332330 interaction corroborates session window.</div>
+
+  <!-- Card: CPC - Project (Green) -->
+  <div class="te-card green">
+    <div class="te-label">Project (Green) &mdash; Covenant Presbyterian Church</div>
+    <pre>Subject:     Covenant Presbyterian Church
+Location:    Remote
+Description: Configured switch port settings on FEB-3rd Floor Switch 4
+             (ports 1, 2, and 26) in CPC Switches network. Reviewed
+             Cisco Meraki Case 14332330 regarding switch alerts.
+Category:    Project (Green)
+Time:        2026-06-10 15:32 - 16:00</pre>
+  </div>
+
+  <div style="font-size:11px;color:#888;">Reasoning: CPC client + during working hours &rarr; Project (Green) override. Time anchored to first/last Meraki alert timestamps (15:32&ndash;15:54 CDT); rounded to 16:00 to include Meraki support case at 15:58.</div>
+</div>
+
+<!-- FOOTER -->
+<div style="background:#f0f2f5;padding:10px 32px;font-family:Arial,sans-serif;font-size:11px;color:#888;border-top:1px solid #dde1e9;">
+  Generated 2026-06-11 07:30 CDT &nbsp;&bull;&nbsp; Ariat Systems &nbsp;&bull;&nbsp; marshall@ariatsystems.com
+</div>
+
+</div>
+</div>
+</body>
+</html>
