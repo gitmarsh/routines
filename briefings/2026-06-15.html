@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Morning Briefing &mdash; 2026-06-15</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;padding:16px;background:#eef0f3;font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#1a202c}
+.wrap{max-width:880px;margin:0 auto;background:#fff;border:1px solid #d0d5dd;border-radius:4px;overflow:hidden}
+.hdr{background:#1a202c;color:#fff;padding:20px 28px}
+.hdr h1{margin:0 0 6px;font-size:20px;font-weight:700;letter-spacing:0.3px}
+.hdr .sub{font-size:11px;color:#a0aec0;margin:0}
+.body{padding:20px 28px}
+h2{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#2d3748;margin:26px 0 10px;padding-bottom:5px;border-bottom:2px solid #e2e8f0}
+.badge{display:inline-block;background:#4a5568;color:#fff;font-size:10px;font-weight:700;border-radius:9px;padding:1px 7px;margin-left:6px;vertical-align:middle}
+.ur{background:#c53030}.ap{background:#c05621}.none-bg{background:#718096}
+.card{border-left:4px solid #cbd5e0;padding:9px 13px;margin-bottom:9px;background:#f7fafc;font-size:13px;line-height:1.5}
+.card.u{border-color:#c53030;background:#fff5f5}
+.card.a{border-color:#c05621;background:#fffaf0}
+.card.s{border-color:#3182ce;background:#ebf8ff}
+.card-title{font-weight:700;margin-bottom:3px}
+.card-meta{font-size:11px;color:#718096;margin-top:4px}
+.card a{color:#2b6cb0}
+tbl{width:100%}
+table{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:10px}
+th{background:#edf2f7;padding:6px 9px;text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:0.4px;color:#4a5568;border-bottom:1px solid #cbd5e0}
+td{padding:6px 9px;border-bottom:1px solid #f0f4f8;vertical-align:top}
+tr:last-child td{border-bottom:none}
+.must-row{background:#fff5f5}
+.should-row{background:#fffaf0}
+.could-row{background:#f0fff4}
+.tag{font-weight:700;font-size:10px;letter-spacing:0.3px}
+.tag-m{color:#c53030}.tag-s{color:#c05621}.tag-c{color:#276749}
+.te-card{border:2px solid #2b6cb0;border-radius:4px;margin-bottom:12px;overflow:hidden}
+.te-card.blue{border-color:#2b6cb0}
+.te-hdr{padding:5px 12px;font-size:10px;font-weight:700;letter-spacing:0.5px;text-transform:uppercase}
+.te-hdr.blue{background:#ebf8ff;color:#2b6cb0}
+.te-body{padding:8px 12px}
+.te-body pre{font-family:"Courier New",monospace;font-size:12px;margin:0;white-space:pre-wrap;color:#2d3748}
+.te-foot{padding:3px 12px 8px;font-size:11px;color:#718096}
+.ftr{padding:10px 28px;background:#f7fafc;border-top:1px solid #e2e8f0;font-size:11px;color:#a0aec0}
+code{font-family:"Courier New",monospace;font-size:11px;background:#edf2f7;padding:1px 4px;border-radius:2px}
+.ok-note{font-size:12px;color:#276749;background:#f0fff4;border-left:3px solid #276749;padding:7px 10px;margin:6px 0}
+.section-note{font-size:12px;color:#718096;font-style:italic;margin:6px 0 4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hdr">
+  <h1>Morning Briefing &mdash; Monday, June 15, 2026</h1>
+  <p class="sub">Run: 07:30 CDT &nbsp;|&nbsp; Window: Fri 2026-06-12 16:00 CDT &rarr; Mon 2026-06-15 07:30 CDT (extended weekend window) &nbsp;|&nbsp; Inbox 32 &middot; Help Desk 11 &middot; Alerts 130+ &middot; Datto 42 &middot; Backup Radar 10 &middot; Teams 25+</p>
+</div>
+
+<div class="body">
+
+<!-- Severity Overview -->
+<div style="margin:4px 0 18px">
+  <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:#4a5568;margin-bottom:6px">Severity Overview</div>
+  <svg width="560" height="42" viewBox="0 0 560 42" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="8" width="70" height="22" rx="3" fill="#c53030"/>
+    <text x="35" y="23" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="700">URGENT 2</text>
+    <rect x="74" y="8" width="98" height="22" rx="3" fill="#c05621"/>
+    <text x="123" y="23" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="700">ASAP 3</text>
+    <rect x="176" y="8" width="384" height="22" rx="3" fill="#2b6cb0"/>
+    <text x="368" y="23" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="700">STANDARD 12</text>
+  </svg>
+</div>
+
+<!-- ===== SECTION 1: URGENT ===== -->
+<h2>Urgent <span class="badge ur">2</span></h2>
+
+<div class="card u">
+  <div class="card-title">Capital Excavation &mdash; 2 APs + 1 Switch Offline (Meraki)</div>
+  <div>Meraki reported 2 access points and 1 switch unreachable at <strong>Sun 2026-06-14 22:16 CDT</strong>. No Meraki recovery alert received as of run time. Matt Kerker messaged at 00:15 CDT Monday: <em>"Ive got an email scheduled to send to Norma at 7am about the back office equipment at CX being offline again. Ill be there in the AM to resolve. Assuming a breaker has tripped again."</em> NinjaRMM activity notifications for CX devices (CXFILE01, AUSCX5, CXAHEAVYBID) appeared at 06:15&ndash;06:21 CDT suggesting possible recovery. Confirm status with Matt before marking resolved.</div>
+  <div class="card-meta">
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVn4u2NAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Meraki: APs down</a> &middot;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVn4u2MAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Meraki: Switch down</a> &middot; Teams (Matt Kerker, Mon 00:15 CDT)
+  </div>
+</div>
+
+<div class="card u">
+  <div class="card-title">SentinelOne &mdash; Suspicious Threat on Machine rdorsey106</div>
+  <div>SentinelOne flagged suspicious activity on <code>rdorsey106</code> (external IP: 108.x.x.x) at <strong>Sun 2026-06-14 03:31 CDT</strong>. No remediation or resolution alert received. Identify the client, log into the SentinelOne console, review threat details, and confirm whether the threat was contained or requires further action.</div>
+  <div class="card-meta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVkJp0yAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">SentinelOne Alert (Inbox)</a> &middot; Received 2026-06-14 08:31 UTC</div>
+</div>
+
+<!-- ===== SECTION 2: FOLLOW-UPS ===== -->
+<h2>Follow-ups <span class="badge">8</span></h2>
+
+<div class="card a">
+  <div class="card-title">ASAP &mdash; Meraki Case #14324335: AnyConnect Users Unable to Reach [Notice 2 of 3]</div>
+  <div>Cisco sent Notice 2 of 3 on Sat 2026-06-14 14:41 CDT. Their message: <em>"We&rsquo;re reaching out to see if there&rsquo;s anything more we can do to assist with your support case."</em> Case is on auto-close track &mdash; reply to keep it open or confirm resolution. Reference number 14324335, customer# 9443-2627.</div>
+  <div class="card-meta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVn4u2JAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View Email (Inbox)</a> &middot; Reply: support@meraki.com</div>
+</div>
+
+<div class="card a">
+  <div class="card-title">ASAP &mdash; MEJ &amp; Associates: MEJ-DATA Backup Failing 3+ Days</div>
+  <div>MEJ-DATA has generated consecutive failure/warning events: No Result (Backup Radar, Sat Jun 13), Failure (Backup Radar, Sun Jun 14), Warning (Datto SIRIS, Sun Jun 14 02:08 CDT), Warning (Datto SIRIS, Mon Jun 15 02:03 CDT). Investigate agent health on MEJDatto2025, check backup chain for MEJ-DATA (192.168.1.7), and restore clean backup.</div>
+  <div class="card-meta">
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVpI2FTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Datto Warning (Mon 07:03 UTC)</a> &middot;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVoXP_bAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar Failure (Jun 14)</a>
+  </div>
+</div>
+
+<div class="card a">
+  <div class="card-title">ASAP &mdash; Capital Excavation: CapitalEx Backup Failing 2+ Days</div>
+  <div>Backup Radar reports Failure on Datto API for Capital Excavation on both Jun 13 and Jun 14. With the network outage overnight Sunday, Jun 15 will likely also fail. Investigate after confirming network is restored. May be directly related to the AP/switch outage.</div>
+  <div class="card-meta">
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVoXP_dAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar Failure (Jun 14)</a> &middot;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVjyw_NAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar Failure (Jun 13)</a>
+  </div>
+</div>
+
+<div class="card s">
+  <div class="card-title">Ticket #10417 &mdash; Offboarding for Steven Moore at 3pm 6/12 (open, unread update)</div>
+  <div>Offboarding was scheduled for 3pm Friday. Ticket updated again on Sat 6/13 16:58 CDT &mdash; unread. Confirm offboarding is fully complete: accounts disabled, devices collected or wiped, access revoked.</div>
+  <div class="card-meta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVj2lHYAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Help Desk #10417 (Sat 6/13 update)</a></div>
+</div>
+
+<div class="card s">
+  <div class="card-title">Ticket #10410 &mdash; Connect to Printer and Scan (unread update Sat 6/14)</div>
+  <div>Unread update received Sat 6/14 15:58 CDT. Client still waiting on printer/scan resolution. Previous update also on Sat 6/13.</div>
+  <div class="card-meta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVo5lgnAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Help Desk #10410 (Sat 6/14)</a></div>
+</div>
+
+<div class="card s">
+  <div class="card-title">Ticket #10425 &mdash; Access to SharePoint Folder from Client (unread)</div>
+  <div>Client awaiting SharePoint folder access provisioning. Updated Sat 6/13 15:58 CDT, unread.</div>
+  <div class="card-meta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVj2lHXAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Help Desk #10425 (Sat 6/13)</a></div>
+</div>
+
+<div class="card s">
+  <div class="card-title">Ticket #10426 &mdash; CX Training Room Calendar (Capital Excavation, unread)</div>
+  <div>Training Room calendar issue or setup at Capital Excavation. Updated Sat 6/13 14:58 CDT, unread.</div>
+  <div class="card-meta"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVj2lHUAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Help Desk #10426 (Sat 6/13)</a></div>
+</div>
+
+<div class="card s">
+  <div class="card-title">Tickets #10416, #10419, #10427 &mdash; Printer / IT Closet (unread, Sat 6/13)</div>
+  <div>#10416: File room printer add to HeavyBid (likely Capital Excavation, Sat 6/13 10:13 CDT). &nbsp;#10419: Printer issue (Sat 6/13 11:58 CDT). &nbsp;#10427: IT closet in training room (Sat 6/13 15:58 CDT). All unread.</div>
+  <div class="card-meta">Help Desk, all Sat 2026-06-13</div>
+</div>
+
+<!-- ===== SECTION 3: TODAY TO-DOS ===== -->
+<h2>Today To-Dos <span class="badge">9</span></h2>
+<table>
+  <tr><th style="width:80px">Priority</th><th>Item</th><th style="width:120px">Source</th></tr>
+  <tr class="must-row">
+    <td><span class="tag tag-m">MUST</span></td>
+    <td>Confirm Capital Excavation network is fully restored with Matt Kerker; verify APs and switch are back online in Meraki dashboard</td>
+    <td>Inbox / Teams</td>
+  </tr>
+  <tr class="must-row">
+    <td><span class="tag tag-m">MUST</span></td>
+    <td>Investigate SentinelOne suspicious threat on <code>rdorsey106</code> &mdash; identify client, review console, confirm threat status and any required remediation</td>
+    <td>Inbox (Alerts)</td>
+  </tr>
+  <tr class="must-row">
+    <td><span class="tag tag-m">MUST</span></td>
+    <td>Reply to Cisco Meraki Case #14324335 (AnyConnect) &mdash; Notice 2 of 3 sent, auto-close approaching</td>
+    <td>Inbox</td>
+  </tr>
+  <tr class="should-row">
+    <td><span class="tag tag-s">SHOULD</span></td>
+    <td>Investigate MEJ-DATA backup failure on MEJDatto2025 (3+ consecutive days: Jun 13 No Result, Jun 14 Failure, Jun 15 Warning)</td>
+    <td>Datto / Backup Radar</td>
+  </tr>
+  <tr class="should-row">
+    <td><span class="tag tag-s">SHOULD</span></td>
+    <td>Investigate Capital Excavation CapitalEx backup failure (2+ days) once network restoration is confirmed</td>
+    <td>Backup Radar</td>
+  </tr>
+  <tr class="should-row">
+    <td><span class="tag tag-s">SHOULD</span></td>
+    <td>Respond to open Help Desk tickets: #10417 (offboarding confirm), #10410 (printer/scan), #10425 (SharePoint access), #10426 (CX Training Room Calendar)</td>
+    <td>Help Desk</td>
+  </tr>
+  <tr class="should-row">
+    <td><span class="tag tag-s">SHOULD</span></td>
+    <td>Review Barracuda Targeted Phishing for mmitchell@covenant.org (Sat Jun 13) &mdash; confirm email quarantined, user not compromised</td>
+    <td>Inbox</td>
+  </tr>
+  <tr class="could-row">
+    <td><span class="tag tag-c">COULD</span></td>
+    <td>Respond to Help Desk tickets #10416 (file room printer / HeavyBid), #10419 (Printer), #10427 (IT closet in training room)</td>
+    <td>Help Desk</td>
+  </tr>
+  <tr class="could-row">
+    <td><span class="tag tag-c">COULD</span></td>
+    <td>Review CelLink CEL-GT-DATABROKER-01 backup failures (2 days) and Covenant Presbyterian Church SaaS Protection No Result (2 days)</td>
+    <td>Backup Radar</td>
+  </tr>
+</table>
+
+<!-- ===== SECTION 4: BACKUPS ===== -->
+<h2>Backups</h2>
+
+<div style="margin-bottom:14px">
+  <svg width="380" height="78" viewBox="0 0 380 78" xmlns="http://www.w3.org/2000/svg">
+    <text x="0" y="15" font-family="Arial" font-size="11" fill="#4a5568" font-weight="700">FAILED</text>
+    <rect x="72" y="3" width="180" height="16" rx="3" fill="#c53030"/>
+    <text x="162" y="15" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="700">3</text>
+    <text x="256" y="15" font-family="Arial" font-size="10" fill="#c53030">Capital Excav, MEJ, CelLink GT</text>
+    <text x="0" y="41" font-family="Arial" font-size="11" fill="#4a5568" font-weight="700">WARNING</text>
+    <rect x="72" y="29" width="60" height="16" rx="3" fill="#c05621"/>
+    <text x="102" y="41" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="700">1</text>
+    <text x="136" y="41" font-family="Arial" font-size="10" fill="#c05621">MEJ-DATA (Datto SIRIS)</text>
+    <text x="0" y="67" font-family="Arial" font-size="11" fill="#4a5568" font-weight="700">NO RESULT</text>
+    <rect x="72" y="55" width="60" height="16" rx="3" fill="#718096"/>
+    <text x="102" y="67" text-anchor="middle" font-family="Arial" font-size="11" fill="#fff" font-weight="700">1</text>
+    <text x="136" y="67" font-family="Arial" font-size="10" fill="#718096">CPC SaaS Protection</text>
+  </svg>
+</div>
+
+<div style="font-size:12px;font-weight:700;color:#c53030;margin:6px 0 4px">Failed</div>
+<table>
+  <tr><th>Client</th><th>Device / Job</th><th>Platform</th><th>Consecutive Days</th><th>Link</th></tr>
+  <tr>
+    <td>Capital Excavation</td>
+    <td>CapitalEx</td>
+    <td>Datto API</td>
+    <td>2 (Jun 13&ndash;14)</td>
+    <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVoXP_dAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar Jun 14</a></td>
+  </tr>
+  <tr>
+    <td>MEJ &amp; Associates</td>
+    <td>MEJ-DATA</td>
+    <td>Datto API</td>
+    <td>2+ (Jun 13 No Result, Jun 14 Failure)</td>
+    <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVoXP_bAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar Jun 14</a></td>
+  </tr>
+  <tr>
+    <td>CelLink</td>
+    <td>CEL-GT-DATABROKER-01 (GT-DATTO-01)</td>
+    <td>Datto API</td>
+    <td>2 (Jun 13&ndash;14)</td>
+    <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVoXP_aAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar Jun 14</a></td>
+  </tr>
+</table>
+
+<div style="font-size:12px;font-weight:700;color:#c05621;margin:8px 0 4px">Warning</div>
+<table>
+  <tr><th>Client</th><th>Device / Job</th><th>Platform</th><th>Note</th><th>Link</th></tr>
+  <tr>
+    <td>MEJ &amp; Associates</td>
+    <td>MEJ-DATA (192.168.1.7)</td>
+    <td>MEJDatto2025 SIRIS</td>
+    <td>Warning at 02:08 CDT Sun Jun 14 AND 02:03 CDT Mon Jun 15</td>
+    <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVpI2FTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Datto Alert Mon</a></td>
+  </tr>
+</table>
+
+<div style="font-size:12px;font-weight:700;color:#718096;margin:8px 0 4px">No Result</div>
+<table>
+  <tr><th>Client</th><th>Job</th><th>Platform</th><th>Consecutive Days</th><th>Link</th></tr>
+  <tr>
+    <td>Covenant Presbyterian Church</td>
+    <td>SaaS Protection</td>
+    <td>DattoSaasProtection</td>
+    <td>2 (Jun 13&ndash;14)</td>
+    <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAVoXP_cAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar Jun 14</a></td>
+  </tr>
+</table>
+
+<div class="ok-note">OK &mdash; CelLink (CelLinkSC): All 10 bootable screenshot verifications SUCCEEDED over the weekend: CEL-APPSERVER, CEL-SC-DC-01, CEL-SC-RADIUS, CEL-SC-DATABROKER-01, Volta, Henry, FaradayDEV, Joule, CEL-SC-UVIS-01, CEL-SC-DEPLOY. MEJ-DC1 and MEJ-SHELL: No current alerts per Alert Summary.</div>
+
+<!-- ===== SECTION 5: ALERTS ===== -->
+<h2>Alerts <span class="badge none-bg">Top 3 Uncommon</span></h2>
+
+<div class="card u">
+  <div class="card-title">1. SentinelOne &mdash; New Suspicious Threat on rdorsey106</div>
+  <div>Machine <code>rdorsey106</code>, external IP 108.x.x.x. Flagged Sun 2026-06-14 03:31 CDT. Non-recurring; no other endpoint threat alerts in the window. No confirmation of remediation in scope.</div>
+  <div class="card-meta">From: noreply@mailsender.sentinelone.net &middot; Received 08:31 UTC Sun Jun 14 &middot; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVkJp0yAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View in Outlook</a></div>
+</div>
+
+<div class="card s">
+  <div class="card-title">2. Barracuda SKOUT XDR &mdash; GLB.SM.UNI Integration Log Monitoring Degradation</div>
+  <div>Two XDR incident notifications in 19 hours: initial alert Fri 2026-06-12 18:11 CDT, update Sat 2026-06-13 13:11 CDT. Integration "GLB.SM.UNI" experiencing log monitoring degradation. Check SKOUT XDR console for current incident status and resolution.</div>
+  <div class="card-meta">From: soc@barracuda.com &middot; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVcGjOsAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Initial Alert</a> &middot; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVkJp0sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Update</a></div>
+</div>
+
+<div class="card s">
+  <div class="card-title">3. Barracuda &mdash; Targeted Phishing Attack Detected for mmitchell@covenant.org</div>
+  <div>Barracuda Impersonation Protection intercepted a targeted phishing email directed at mmitchell@covenant.org (Covenant Presbyterian Church) on Sat 2026-06-13 14:22 CDT. Confirm the message was quarantined and the user was not compromised.</div>
+  <div class="card-meta">From: noreply@barracuda.com &middot; Received 19:22 UTC Sat Jun 13 &middot; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVkJp0uAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View in Outlook</a></div>
+</div>
+
+<div class="section-note">Other automated alerts this window: Burnett Turner Law uplink flapping (2 brief failovers 01:00&ndash;01:13 CDT Mon, recovered to primary Internet 2); weekly PIM digests for ATXCPE, Buda Fire, McElroy Sullivan, Ariat Systems; Beehive Specialties scan completions; Microsoft 365 subscription renewals (Business Premium, O365 E1); Microsoft 365 invoices (Business Standard, Basic, Apps for Enterprise); Adobe CPC monthly invoice; RingCentral subprocessor list update; Cisco Meraki feedback request (Case 14332330, resolved).</div>
+
+<!-- ===== SECTION 6: TIME ENTRIES ===== -->
+<h2>Time Entries <span class="badge">1 qualifying</span></h2>
+
+<div class="section-note">Window: Fri 2026-06-12 16:00 CDT &rarr; Mon 2026-06-15 07:30 CDT</div>
+
+<div class="te-card blue">
+  <div class="te-hdr blue">On-Going Support (Blue) &mdash; Fri 2026-06-12</div>
+  <div class="te-body">
+<pre>Subject:     &lt;MISSING: client not identified in ticket&gt;
+Location:    &lt;MISSING: remote vs on-site unknown&gt;
+Description: Offboarded user Steven Moore. Completed account deactivation and access revocation.
+Category:    On-Going Support (Blue)
+Time:        2026-06-12 15:00 - &lt;MISSING: end time unknown&gt;</pre>
+  </div>
+  <div class="te-foot">Source: Help Desk #10417 &mdash; "Offboarding for Steven Moore at 3pm Today 6/12." Three ticket updates on 6/12&ndash;6/13. Client name not determinable from subject alone; fill in manually.</div>
+</div>
+
+<div class="section-note">Additional candidates below 80% confidence threshold (fill in manually after reviewing tickets):<br>
+&bull; Help Desk #10416 &mdash; "file room printer add to heavy bid" (Sat Jun 13) &mdash; likely Capital Excavation (CXAHEAVYBID device known), but time and location unknown.<br>
+&bull; Help Desk #10426 &mdash; "CX Training Room Calendar" (Sat Jun 13) &mdash; Capital Excavation confirmed by CX prefix, but time and location unknown.</div>
+
+</div><!-- end .body -->
+
+<div class="ftr">
+  Ariat Systems Morning Briefing &middot; Run Mon 2026-06-15 07:30 CDT &middot; gitmarsh/routines &middot; Preflight: GitHub OK, M365 OK (marshall@ariatsystems.com), ariat-time-entry skill OK
+</div>
+
+</div><!-- end .wrap -->
+</body>
+</html>
