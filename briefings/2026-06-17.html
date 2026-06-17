@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing — 2026-06-17</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;background:#f4f4f4;color:#1a1a1a;margin:0;padding:0;}
+.wrap{max-width:860px;margin:0 auto;padding:20px 24px;}
+h1{font-size:20px;margin:0 0 4px 0;color:#111;}
+.meta{font-size:11px;color:#888;margin-bottom:18px;}
+h2{font-size:13px;font-weight:bold;letter-spacing:.04em;text-transform:uppercase;margin:26px 0 8px 0;padding:6px 12px;}
+.badge{display:inline-block;border-radius:10px;padding:1px 8px;font-size:11px;color:#fff;font-weight:bold;margin-left:6px;vertical-align:middle;}
+.h-urgent{background:#fdeded;border-left:5px solid #c0392b;color:#7b0a0a;}
+.h-followup{background:#fef6ed;border-left:5px solid #d68910;color:#7d4000;}
+.h-todos{background:#edf3fd;border-left:5px solid #1a5276;color:#1a3a6b;}
+.h-backups{background:#f4f6f7;border-left:5px solid #566573;color:#2c3e50;}
+.h-alerts{background:#eafaf1;border-left:5px solid #1e8449;color:#145a32;}
+.h-time{background:#f5f5f5;border-left:5px solid #2471a3;color:#154360;}
+.bu{background:#c0392b;}.ba{background:#d68910;}.bs{background:#7f8c8d;}.bb{background:#566573;}.bt{background:#2471a3;}
+.card{background:#fff;border:1px solid #ddd;border-radius:3px;margin-bottom:8px;padding:10px 14px;font-size:13px;}
+.card-u{border-left:4px solid #c0392b;}.card-a{border-left:4px solid #d68910;}.card-s{border-left:4px solid #7f8c8d;}
+.card strong{display:block;font-size:13px;margin-bottom:3px;}
+.card .cmeta{font-size:11px;color:#888;margin-bottom:5px;}
+.card a{color:#2471a3;text-decoration:none;}
+.card a:hover{text-decoration:underline;}
+code{font-family:"Courier New",monospace;font-size:11px;background:#f0f0f0;padding:1px 4px;border-radius:2px;}
+table.todos{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px;background:#fff;border:1px solid #ddd;border-radius:3px;overflow:hidden;}
+table.todos th{background:#1a3a6b;color:#fff;padding:7px 10px;text-align:left;font-size:12px;}
+table.todos td{padding:7px 10px;border-bottom:1px solid #eee;vertical-align:top;}
+table.todos tr:last-child td{border-bottom:none;}
+.must td:first-child{color:#c0392b;font-weight:bold;}
+.should td:first-child{color:#d68910;font-weight:bold;}
+.could td:first-child{color:#7f8c8d;font-weight:bold;}
+.bfail{color:#c0392b;font-weight:bold;}.bwarn{color:#d68910;font-weight:bold;}.bok{color:#1e8449;font-weight:bold;}
+.te{font-family:"Courier New",monospace;font-size:12px;background:#fff;padding:10px 14px;margin-bottom:8px;border-radius:3px;border:1px solid #ddd;}
+.te-hdr{display:inline-block;font-size:10px;font-weight:bold;letter-spacing:.06em;padding:2px 7px;border-radius:2px;color:#fff;margin-bottom:7px;text-transform:uppercase;font-family:Arial,sans-serif;}
+.te-green{border-left:4px solid #1e8449;}.te-green .te-hdr{background:#1e8449;}
+.te-blue{border-left:4px solid #2471a3;}.te-blue .te-hdr{background:#2471a3;}
+.te-red{border-left:4px solid #c0392b;}.te-red .te-hdr{background:#c0392b;}
+.te div{margin-bottom:2px;}
+.overview{background:#fff;border:1px solid #ddd;border-radius:3px;padding:14px 16px;margin-bottom:18px;}
+.ov-title{font-size:12px;font-weight:bold;color:#555;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px;}
+hr.foot{border:none;border-top:1px solid #e0e0e0;margin-top:32px;}
+.footer{font-size:11px;color:#bbb;text-align:right;padding-top:8px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Morning Briefing &mdash; Wednesday, June 17, 2026</h1>
+<div class="meta">
+  Run: 07:30 CDT &nbsp;|&nbsp; Scan window: 2026-06-16 15:30 CDT &rarr; 2026-06-17 07:30 CDT &nbsp;|&nbsp;
+  Scanned: ~110 emails (Inbox 42, Help Desk 10, Alerts 44, Datto 14) &middot; 25+ Teams messages
+</div>
+
+<!-- Severity Overview -->
+<div class="overview">
+  <div class="ov-title">Severity Overview</div>
+  <svg width="680" height="36" viewBox="0 0 680 36" xmlns="http://www.w3.org/2000/svg">
+    <rect x="0" y="6" width="185" height="24" fill="#c0392b" rx="3"/>
+    <text x="92" y="22" text-anchor="middle" fill="#fff" font-size="12" font-family="Arial" font-weight="bold">Urgent 3</text>
+    <rect x="189" y="6" width="124" height="24" fill="#d68910" rx="3"/>
+    <text x="251" y="22" text-anchor="middle" fill="#fff" font-size="12" font-family="Arial" font-weight="bold">ASAP 2</text>
+    <rect x="317" y="6" width="363" height="24" fill="#7f8c8d" rx="3"/>
+    <text x="498" y="22" text-anchor="middle" fill="#fff" font-size="12" font-family="Arial" font-weight="bold">Standard 6</text>
+  </svg>
+</div>
+
+<!-- URGENT -->
+<h2 class="h-urgent">Urgent <span class="badge bu">3</span></h2>
+
+<div class="card card-u">
+  <strong>SentinelOne &mdash; 3 Suspicious Threat Alerts in 19-Minute Window</strong>
+  <div class="cmeta">Source: Inbox &nbsp;|&nbsp; 2026-06-17 08:21&ndash;08:40 UTC (03:21&ndash;03:40 CDT) &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaOnAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">jkush134</a> &middot;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaOoAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">jmartin117</a> &middot;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaOpAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">colinwilson123</a>
+  </div>
+  Machines <code>jkush134</code>, <code>jmartin117</code>, and <code>colinwilson123</code> each triggered a &ldquo;New Suspicious threat detected&rdquo; alert with external IP connections flagged. None resolved. Three separate machines firing in a 19-minute window is atypical &mdash; may indicate shared vector or lateral movement. Review SentinelOne console immediately for all three; determine client association and containment status.
+</div>
+
+<div class="card card-u">
+  <strong>CelLink &mdash; VPN Outage Reported (Active as of 07:01 CDT)</strong>
+  <div class="cmeta">Source: Teams (Nghi Nguyen) &nbsp;|&nbsp; 2026-06-17 12:01 UTC (07:01 CDT) &nbsp;|&nbsp; Also: CEL-GT-DATA-BROKER restarted 07:25 CDT</div>
+  Nghi Nguyen: &ldquo;we have got reports that at least 2 users are having problem with VPN.&rdquo; Likely related to last night&rsquo;s coordinated patching window. CEL-GT-DATA-BROKER was being restarted at 07:25 CDT. Verify patching did not alter VPN gateway config, routing, or dependent services. Coordinate with Nghi.
+</div>
+
+<div class="card card-u">
+  <strong>Kidd Roofing &mdash; Rogue AP Detected on Houston Network (Meraki)</strong>
+  <div class="cmeta">Source: Inbox (alerts-noreply@meraki.com) &nbsp;|&nbsp; Alert: 2026-06-17 01:24 UTC &nbsp;|&nbsp; First seen: 2026-06-16 19:05 CDT &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaOfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View alert</a>
+  </div>
+  Meraki detected 1 rogue AP on Kidd Roof-Houston network, first seen on Kidd Houston firewall at 19:05 CDT. Device not removed or recovered as of alert. Open Meraki dashboard, identify device MAC/SSID, determine if unauthorized hardware or misconfigured internal device, notify Kidd Roofing if needed.
+</div>
+
+<!-- FOLLOW-UPS -->
+<h2 class="h-followup">Follow-ups <span class="badge ba">5</span></h2>
+
+<div class="card card-a">
+  <strong>[ASAP] Michael Statham Directive: Hold on Burnett &amp; Turner Dropbox Tickets</strong>
+  <div class="cmeta">Source: Teams (Michael Statham &rarr; Marshall + Matt) &nbsp;|&nbsp; 2026-06-17 02:26 UTC (21:26 CDT)</div>
+  Michael: &ldquo;Leave those tickets and do not respond to her until you hear from me.&rdquo; Applies to Courtney Runkle (BurnettTurner Office Manager) and both Dropbox tickets. Ticket #26406516 was resolved and closed by Marshall at 20:42 CDT. Ticket #26407164 remains active with Dropbox support. Contact Michael this morning before any further client-facing action.
+</div>
+
+<div class="card card-a">
+  <strong>[ASAP] Burnett &amp; Turner &mdash; Dropbox Ticket #26407164 Active with Dropbox Support Overnight</strong>
+  <div class="cmeta">Source: Inbox &nbsp;|&nbsp; Dropbox last replied: 2026-06-17 04:03 UTC &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaOjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View latest</a>
+  </div>
+  Dropbox support (Shane) replied to ticket #26407164 overnight. A second ticket was opened after the first was resolved. Do not respond to Courtney per Michael&rsquo;s directive. Await Michael&rsquo;s direction before acting.
+</div>
+
+<div class="card card-s">
+  <strong>Covenant Presbyterian Church &mdash; Preschool Scan-to-Email (#10467)</strong>
+  <div class="cmeta">Source: Help Desk / Inbox &nbsp;|&nbsp; 8 ticket updates 15:50&ndash;22:00 CDT Jun 16 &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVo5lhKAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View ticket</a>
+  </div>
+  D. Dube emailed Marshall directly: Covenant Hall copiers working; Preschool copier cannot scan-to-email. Ticket #10467 received 8+ updates through evening. Status of resolution not confirmed. Follow up to confirm or schedule next steps.
+</div>
+
+<div class="card card-s">
+  <strong>McElroy Sullivan &mdash; New Laptop Vendor Decision (#10424)</strong>
+  <div class="cmeta">Source: Inbox / Help Desk &nbsp;|&nbsp; 2026-06-16 21:39&ndash;21:59 UTC &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVn4u39AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View email</a>
+  </div>
+  B. Hayenga replied &ldquo;Thank you sir!&rdquo; to Marshall&rsquo;s recommendation. Michael Statham noted Dell will beat CDW pricing. Confirm order path and next steps internally and with client.
+</div>
+
+<div class="card card-s">
+  <strong>Ticket #10456 &mdash; Billing Day / Files Not Working (Status Unknown)</strong>
+  <div class="cmeta">Source: Help Desk &nbsp;|&nbsp; Updates: ~21:17 CDT and 02:12&ndash;02:18 UTC (overnight) &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVo5lhLAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View ticket</a>
+  </div>
+  Multiple updates through evening and again overnight. Client association and resolution status not determinable from summary data. Review ticket on arrival to confirm status.
+</div>
+
+<!-- TODAY TO-DOS -->
+<h2 class="h-todos">Today To-Dos <span class="badge bt">11</span></h2>
+
+<table class="todos">
+  <thead>
+    <tr>
+      <th style="width:80px;">Priority</th>
+      <th>Task</th>
+      <th style="width:130px;">Source / Ref</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="must"><td>MUST</td><td>Triage 3 SentinelOne suspicious threats &mdash; open console, review <code>jkush134</code>, <code>jmartin117</code>, <code>colinwilson123</code>; confirm contained or escalate</td><td>Inbox / Alerts</td></tr>
+    <tr class="must"><td>MUST</td><td>CelLink VPN: coordinate with Nghi Nguyen; verify CEL-GT-DATA-BROKER restart resolved issue; check for post-patching config drift on VPN gateway</td><td>Teams</td></tr>
+    <tr class="must"><td>MUST</td><td>Kidd Roof-Houston rogue AP &mdash; open Meraki dashboard, identify device, determine if threat or misconfiguration; notify Kidd Roofing if warranted</td><td>Inbox / Meraki</td></tr>
+    <tr class="must"><td>MUST</td><td>Contact Michael Statham re: Burnett &amp; Turner Dropbox (#26407164) before any client reply to Courtney</td><td>Teams / Inbox</td></tr>
+    <tr class="should"><td>SHOULD</td><td>Covenant Preschool scan-to-email (#10467) &mdash; confirm resolved or assign next steps</td><td>Help Desk</td></tr>
+    <tr class="should"><td>SHOULD</td><td>MEJ-DATA Datto backup warning (MEJDatto2025) &mdash; review warning details, resolve or escalate</td><td>Datto</td></tr>
+    <tr class="should"><td>SHOULD</td><td>Volta CelLinkSC bootable screenshot failure &mdash; re-run verification or investigate root cause</td><td>Datto</td></tr>
+    <tr class="should"><td>SHOULD</td><td>Apple VPP &mdash; assign HCSS Plans licenses in Apple Business Manager</td><td>Inbox</td></tr>
+    <tr class="should"><td>SHOULD</td><td>Ticket #10456 status review &mdash; read ticket, confirm client and resolution</td><td>Help Desk</td></tr>
+    <tr class="could"><td>COULD</td><td>MSM laptop order &mdash; confirm vendor choice and order next steps with B. Hayenga (#10424)</td><td>Inbox / Help Desk</td></tr>
+    <tr class="could"><td>COULD</td><td>Review Dropbox support reply on #26407164 for situational awareness (do not reply to Courtney per Michael)</td><td>Inbox</td></tr>
+  </tbody>
+</table>
+
+<!-- BACKUPS -->
+<h2 class="h-backups">Backups <span class="badge bb">14</span></h2>
+
+<div class="overview" style="margin-bottom:12px;">
+  <div class="ov-title">Backup Status</div>
+  <svg width="480" height="66" viewBox="0 0 480 66" xmlns="http://www.w3.org/2000/svg">
+    <text x="0" y="17" font-size="11" font-family="Arial" fill="#555">Failed</text>
+    <rect x="68" y="4" width="34" height="16" fill="#c0392b" rx="2"/>
+    <text x="106" y="16" font-size="11" font-family="Arial" fill="#222"> 1</text>
+
+    <text x="0" y="40" font-size="11" font-family="Arial" fill="#555">Warning</text>
+    <rect x="68" y="27" width="34" height="16" fill="#d68910" rx="2"/>
+    <text x="106" y="39" font-size="11" font-family="Arial" fill="#222"> 1</text>
+
+    <text x="0" y="63" font-size="11" font-family="Arial" fill="#555">Succeeded</text>
+    <rect x="68" y="50" width="406" height="16" fill="#1e8449" rx="2"/>
+    <text x="105" y="62" font-size="11" font-family="Arial" fill="#fff"> 12</text>
+  </svg>
+</div>
+
+<div class="card card-u">
+  <strong><span class="bfail">FAILED</span> &mdash; Volta on CelLinkSC (Bootable Screenshot)</strong>
+  <div class="cmeta">Datto SIRIS CelLinkSC &nbsp;|&nbsp; 2026-06-17 07:58 UTC &nbsp;|&nbsp; IP: 172.16.130.11 &nbsp;|&nbsp; Snapshot: 4:16 PM PDT Jun 16 &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVyqOclAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View alert</a>
+  </div>
+  Bootable screenshot verification failed for Volta. All other 12 CelLink SC VMs verified successfully in the same window. Volta was patched overnight; patching likely disrupted the scheduled verification window. Re-run screenshot verification and confirm backup integrity.
+</div>
+
+<div class="card card-a">
+  <strong><span class="bwarn">WARNING</span> &mdash; MEJ-DATA on MEJDatto2025</strong>
+  <div class="cmeta">Datto SIRIS MEJDatto2025 &nbsp;|&nbsp; 2026-06-17 07:03 UTC (02:03 CDT) &nbsp;|&nbsp; Device: 192.168.1.7 &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVyqOckAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View alert</a>
+  </div>
+  Backup warning for MEJ-DATA (MEJ &amp; Associates). Alert summary at 05:50 UTC showed MEJ-DC1 with no alerts; MEJ-DATA separately triggered a warning at 07:03 UTC. Check Datto console for warning details (disk space, agent error, or job failure) and resolve or escalate.
+</div>
+
+<div class="card">
+  <strong><span class="bok">SUCCEEDED (12)</span> &mdash; CelLink SC Devices</strong>
+  <div class="cmeta">Datto SIRIS CelLinkSC &nbsp;|&nbsp; 2026-06-16 23:07 UTC &ndash; 2026-06-17 10:22 UTC</div>
+  CEL-APPSERVER (&#215;2), Henry, FaradayDEV, CEL-SC-DC-01, CEL-SC-DEPLOY, Faraday, Joule, CEL-SC-DATABROKER-01, CEL-SC-UVIS-01, CEL-SC-RADIUS
+</div>
+
+<!-- ALERTS -->
+<h2 class="h-alerts">Alerts <span class="badge" style="background:#1e8449;">Top 3</span></h2>
+<div style="font-size:11px;color:#888;margin-bottom:8px;">~44 automated alerts in window. Showing 3 most uncommon / non-recurring.</div>
+
+<div class="card">
+  <strong>#1 &mdash; Meraki Rogue AP, Kidd Roof-Houston (Non-Recurring Security Alert)</strong>
+  <div class="cmeta">alerts-noreply@meraki.com &nbsp;|&nbsp; 2026-06-17 01:24 UTC &nbsp;|&nbsp; Org: Kidd Roofing &nbsp;|&nbsp;
+    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaOfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View</a>
+  </div>
+  Meraki rogue AP alerts are infrequent. Unauthorized AP detected on Kidd Roof-Houston network; first seen on Kidd Houston FW at 19:05 CDT. Not cleared as of alert time. Direct action required.
+</div>
+
+<div class="card">
+  <strong>#2 &mdash; SentinelOne: Three Machines Flagged in 19-Minute Cluster</strong>
+  <div class="cmeta">noreply@mailsender.sentinelone.net &nbsp;|&nbsp; 2026-06-17 08:21&ndash;08:40 UTC</div>
+  Receiving three SentinelOne alerts across distinct machines within 19 minutes is atypical. May indicate shared exposure, a propagating threat, or a common malicious payload. Client association not confirmed from email headers alone &mdash; check SentinelOne console for organization context.
+</div>
+
+<div class="card">
+  <strong>#3 &mdash; Volta Backup Failure Against a Clean CelLink Verification Run</strong>
+  <div class="cmeta">reporting@dattobackup.com &nbsp;|&nbsp; 2026-06-17 07:58 UTC &nbsp;|&nbsp; CelLinkSC SIRIS</div>
+  12 of 13 CelLink bootable screenshot verifications succeeded in the same window. Volta alone failed. The contrast is notable; correlates directly with Volta being included in last night&rsquo;s patching window (Teams: patching complete ~03:18 CDT).
+</div>
+
+<!-- TIME ENTRIES -->
+<h2 class="h-time">Time Entries <span class="badge bt">5</span></h2>
+<div style="font-size:11px;color:#888;margin-bottom:8px;">Generated per ariat-time-entry skill (gitmarsh/ai_skills). Fields &lt;MISSING&gt; require manual completion.</div>
+
+<div class="te te-green">
+  <span class="te-hdr">Project (Green)</span>
+  <div><strong>Subject:</strong> Covenant Presbyterian Church</div>
+  <div><strong>Location:</strong> Remote</div>
+  <div><strong>Description:</strong> Investigated Preschool scan-to-email issue reported by D. Dube. Coordinated via Help Desk ticket #10467; Covenant Hall copiers confirmed working, Preschool unit affected.</div>
+  <div><strong>Category:</strong> Project (Green)</div>
+  <div><strong>Time:</strong> 2026-06-16 15:37 - &lt;MISSING: end time not determinable from available data&gt;</div>
+</div>
+
+<div class="te te-green">
+  <span class="te-hdr">Project (Green)</span>
+  <div><strong>Subject:</strong> McElroy, Sullivan, Miller &amp; Weber, L.L.P.</div>
+  <div><strong>Location:</strong> Remote</div>
+  <div><strong>Description:</strong> Responded to B. Hayenga laptop replacement inquiry. Provided vendor recommendation (Dell vs. CDW). Updated ticket #10424.</div>
+  <div><strong>Category:</strong> Project (Green)</div>
+  <div><strong>Time:</strong> 2026-06-16 16:39 - &lt;MISSING: end time not determinable from available data&gt;</div>
+</div>
+
+<div class="te te-blue">
+  <span class="te-hdr">On-Going Support (Blue)</span>
+  <div><strong>Subject:</strong> Burnett &amp; Turner Law</div>
+  <div><strong>Location:</strong> Remote</div>
+  <div><strong>Description:</strong> Troubleshot Dropbox/OneDrive file sync conflict on C. Runkle's machine. Engaged Dropbox Premium Support (ticket #26406516), coordinated remote session, investigated conflict between Dropbox and shared OneDrive folder.</div>
+  <div><strong>Category:</strong> On-Going Support (Blue)</div>
+  <div><strong>Time:</strong> 2026-06-16 16:59 - 18:00</div>
+</div>
+
+<div class="te te-red">
+  <span class="te-hdr">After-Hours (Red)</span>
+  <div><strong>Subject:</strong> Burnett &amp; Turner Law</div>
+  <div><strong>Location:</strong> Remote</div>
+  <div><strong>Description:</strong> Continued after-hours Dropbox troubleshooting. Identified known bug from June 12 Dropbox version update (confirmed via Dropbox community forums). Tested v258.3.3645. Resolved file sync issue and closed ticket #26406516.</div>
+  <div><strong>Category:</strong> After-Hours (Red)</div>
+  <div><strong>Time:</strong> 2026-06-16 18:00 - 20:42</div>
+</div>
+
+<div class="te te-red">
+  <span class="te-hdr">After-Hours (Red)</span>
+  <div><strong>Subject:</strong> CelLink</div>
+  <div><strong>Location:</strong> Remote</div>
+  <div><strong>Description:</strong> Patched Azure production VMs (CELAZUPRODDC1, CELAZUPRODFILE01, CELAZUPRODMGMT) as part of coordinated after-hours maintenance window. Completed at 20:00 CT.</div>
+  <div><strong>Category:</strong> After-Hours (Red)</div>
+  <div><strong>Time:</strong> 2026-06-16 &lt;MISSING: start time not determinable&gt; - 20:00</div>
+</div>
+
+<hr class="foot">
+<div class="footer">Ariat Systems &middot; Morning Briefing &middot; 2026-06-17 &middot; Auto-generated 07:30 CDT</div>
+</div>
+</body>
+</html>
