@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morning Briefing — 2026-06-23</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f0f2f5; color: #1a1a2e; line-height: 1.5; }
+  .wrapper { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: #fff; padding: 28px 32px; border-radius: 12px; margin-bottom: 20px; }
+  .header h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+  .header .subtitle { color: #a0aec0; font-size: 13px; margin-top: 6px; }
+  .header .meta { display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap; }
+  .header .meta-item { display: flex; flex-direction: column; }
+  .header .meta-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; color: #718096; }
+  .header .meta-value { font-size: 13px; font-weight: 600; color: #e2e8f0; margin-top: 2px; }
+  .counts { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+  .count-badge { padding: 12px 20px; border-radius: 10px; font-weight: 700; flex: 1; min-width: 100px; text-align: center; }
+  .count-urgent { background: #fff1f0; border: 2px solid #ff4d4f; color: #cf1322; }
+  .count-asap { background: #fff7e6; border: 2px solid #fa8c16; color: #ad4e00; }
+  .count-standard { background: #f6ffed; border: 2px solid #52c41a; color: #237804; }
+  .count-entries { background: #f0f5ff; border: 2px solid #597ef7; color: #1d39c4; }
+  .count-badge .count-num { font-size: 28px; display: block; line-height: 1; }
+  .count-badge .count-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+  .section { background: #fff; border-radius: 12px; margin-bottom: 16px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .section-header { padding: 14px 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; display: flex; align-items: center; gap: 10px; }
+  .section-urgent { border-left: 4px solid #ff4d4f; }
+  .section-urgent .section-header { background: #fff1f0; color: #cf1322; }
+  .section-asap { border-left: 4px solid #fa8c16; }
+  .section-asap .section-header { background: #fff7e6; color: #ad4e00; }
+  .section-standard { border-left: 4px solid #52c41a; }
+  .section-standard .section-header { background: #f6ffed; color: #237804; }
+  .section-backup { border-left: 4px solid #722ed1; }
+  .section-backup .section-header { background: #f9f0ff; color: #531dab; }
+  .section-alerts { border-left: 4px solid #eb2f96; }
+  .section-alerts .section-header { background: #fff0f6; color: #9e1068; }
+  .section-time { border-left: 4px solid #13c2c2; }
+  .section-time .section-header { background: #e6fffb; color: #006d75; }
+  .section-todo { border-left: 4px solid #1677ff; }
+  .section-todo .section-header { background: #e6f4ff; color: #003eb3; }
+  .item { padding: 14px 20px; border-bottom: 1px solid #f5f5f5; }
+  .item:last-child { border-bottom: none; }
+  .item-title { font-weight: 600; font-size: 14px; color: #1a1a2e; margin-bottom: 6px; }
+  .client-tag { display: inline-block; background: #e6f4ff; color: #003eb3; font-size: 11px; padding: 1px 7px; border-radius: 4px; margin-right: 6px; font-weight: 600; }
+  .item-body { font-size: 13px; color: #595959; line-height: 1.7; }
+  .item-meta { font-size: 11px; color: #8c8c8c; margin-top: 8px; font-style: italic; background: #fafafa; padding: 6px 10px; border-radius: 4px; border-left: 2px solid #d9d9d9; }
+  .badge-urgent { display: inline-block; background: #ff4d4f; color: #fff; font-size: 10px; padding: 2px 8px; border-radius: 3px; margin-right: 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle; }
+  .badge-asap { display: inline-block; background: #fa8c16; color: #fff; font-size: 10px; padding: 2px 8px; border-radius: 3px; margin-right: 6px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #fafafa; font-weight: 600; text-align: left; padding: 10px 14px; border-bottom: 2px solid #f0f0f0; color: #595959; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  td { padding: 10px 14px; border-bottom: 1px solid #f5f5f5; vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .status-ok { color: #52c41a; font-weight: 700; }
+  .status-fail { color: #ff4d4f; font-weight: 700; }
+  .status-warn { color: #fa8c16; font-weight: 700; }
+  .status-noresult { color: #722ed1; font-weight: 700; }
+  .time-entry { font-family: 'Courier New', Courier, monospace; font-size: 12px; background: #1e1e2e; color: #cdd6f4; padding: 16px 20px; margin: 14px 20px; border-radius: 8px; line-height: 2; white-space: pre; }
+  .fn { color: #89b4fa; }
+  .fv-green { color: #a6e3a1; }
+  .fv-time { color: #f38ba8; }
+  .chart-wrap { padding: 16px 20px 4px; }
+  .todo-group { padding: 10px 20px 4px; }
+  .todo-group h4 { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: #8c8c8c; margin-bottom: 8px; padding-bottom: 4px; border-bottom: 1px solid #f0f0f0; }
+  .todo-list { list-style: none; margin-bottom: 8px; }
+  .todo-list li { padding: 4px 0; font-size: 13px; color: #1a1a2e; display: flex; align-items: flex-start; gap: 8px; }
+  .todo-list li .cb { flex-shrink: 0; width: 14px; height: 14px; border: 1.5px solid #595959; border-radius: 2px; margin-top: 2px; display: inline-block; }
+  .todo-list.should li .cb { border-color: #bfbfbf; }
+  .todo-list.could li .cb { border-color: #d9d9d9; }
+  .todo-list.could li { color: #8c8c8c; }
+  .client-ref { font-size: 11px; color: #8c8c8c; margin-left: 4px; }
+  .note { background: #fffbe6; border-left: 3px solid #faad14; padding: 10px 16px; margin: 12px 20px; border-radius: 4px; font-size: 12px; color: #614700; }
+  .footer { text-align: center; font-size: 11px; color: #8c8c8c; padding: 20px 0 10px; line-height: 1.8; }
+  .footer a { color: #8c8c8c; }
+  .divider { border: none; border-top: 1px solid #f0f0f0; margin: 0; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Morning Briefing &mdash; Monday, June 23, 2026</h1>
+    <div class="subtitle">Ariat Systems IT &mdash; Auto-generated at 07:30 CDT</div>
+    <div class="meta">
+      <div class="meta-item">
+        <span class="meta-label">Scan Window</span>
+        <span class="meta-value">Fri Jun 19 16:00 CDT &rarr; Mon Jun 23 07:30 CDT</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Mail Scanned</span>
+        <span class="meta-value">&sim;81 Inbox &middot; 44 Help Desk &middot; 25 Alerts &middot; 72 Datto &middot; 14 Backup Radar</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Teams</span>
+        <span class="meta-value">&oplus; Rate-limited &mdash; 0 of 44 chats scanned</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COUNT BADGES -->
+  <div class="counts">
+    <div class="count-badge count-urgent"><span class="count-num">3</span><span class="count-label">Urgent</span></div>
+    <div class="count-badge count-asap"><span class="count-num">7</span><span class="count-label">ASAP</span></div>
+    <div class="count-badge count-standard"><span class="count-num">12</span><span class="count-label">Standard</span></div>
+    <div class="count-badge count-entries"><span class="count-num">1</span><span class="count-label">Time Entry</span></div>
+  </div>
+
+  <!-- SECTION 1: URGENT -->
+  <div class="section section-urgent">
+    <div class="section-header">&#x1F534; Urgent &mdash; Immediate Action Required (3)</div>
+
+    <div class="item">
+      <div class="item-title"><span class="badge-urgent">Urgent</span><span class="client-tag">Kidd Roofing</span>Angela Hyman &mdash; O365 Account Compromised (Impossible Travel)</div>
+      <div class="item-body">
+        Barracuda XDR detected impossible travel on Angela Hyman&rsquo;s O365 account (Jun 22). Account was locked. As of Jun 22 14:34 CDT, <strong>miles@alliedrevenue.com</strong> messaged Matt urgently: <em>&ldquo;Angela&rsquo;s calling performance is impacted.&rdquo;</em> Matt is working it but no resolution was confirmed in the scan window. Angela cannot work until the account is restored.
+      </div>
+      <div class="item-meta">Action: Reset Angela&rsquo;s password, confirm MFA re-enrollment, unlock account, verify no unauthorized OAuth apps or mail rules. Reply to miles@alliedrevenue.com when resolved.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="badge-urgent">Urgent</span><span class="client-tag">Ariat Internal</span>SentinelOne Active Threat &mdash; AriatConference Machine (Jun 20, UNRESOLVED)</div>
+      <div class="item-body">
+        SentinelOne detected an <strong>active threat</strong> on the <em>AriatConference</em> machine at Jun 20, 10:52 CDT. External IP <strong>24.173.190.70</strong> was implicated. No remediation confirmation found in the scan window &mdash; threat may still be active.
+      </div>
+      <div class="item-meta">Action: Check SentinelOne console for current threat status. Isolate machine if threat is unresolved. Remediate, verify clean, then reconnect.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="badge-urgent">Urgent</span><span class="client-tag">Ariat Internal</span>Dropbox: Mass Deletion + Account Email Changed &mdash; Possible Compromise</div>
+      <div class="item-body">
+        Three correlated events on Jun 22:<br>
+        &bull; <strong>09:45 CDT</strong> &mdash; Dropbox mass deletion alert received<br>
+        &bull; <strong>12:22 CDT</strong> &mdash; New Dropbox sign-in for Michael&rsquo;s account<br>
+        &bull; <strong>12:25 CDT</strong> &mdash; Dropbox account notification email changed <em>from</em> ariatalerts@ariatsystems.com <em>to</em> admin&hellip; (destination partially obscured in alert)<br><br>
+        Files may have been deleted and future Dropbox alerts silenced by re-routing notification email.
+      </div>
+      <div class="item-meta">Action: Log into Dropbox admin console. Audit deletion log; restore affected files if possible. Confirm current notification email address. Rotate credentials and revoke all active sessions.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 2: ASAP -->
+  <div class="section section-asap">
+    <div class="section-header">&#x1F7E0; ASAP &mdash; Address Today (7)</div>
+
+    <div class="item">
+      <div class="item-title"><span class="badge-asap">ASAP</span><span class="client-tag">MEJ &amp; Associates</span>Datto CRITICAL Errors &mdash; 3-Day Backup Chain Failure (Kaseya #7109962)</div>
+      <div class="item-body">
+        MEJDatto2025 device has CRITICAL ERRORS on MEJ-DC1, MEJ-SHELL, MEJ-TENANT, MEJ-UTILITY (starting Sat ~2AM CDT). MEJ-DATA has been critical every ~2h Sat&ndash;Sun. Root cause identified: <em>Unrecognized File System</em> on MEJ-DATA (Kaseya ticket <strong>#7109962</strong>, open).<br><br>
+        Kaseya <strong>#7122716</strong> (Local Storage Low on MEJDatto2025) was filed and closed Jun 22 &mdash; Amazon order for PNY CS900 500GB SSD placed same day.<br><br>
+        Backup Radar: MEJ-DATA Failed Jun 20, No Result Jun 21; MEJ-TENANT Failed Jun 22.
+      </div>
+      <div class="item-meta">Action: Follow up on #7109962. Confirm SSD arrival date. Verify backup resumes after storage expansion and filesystem repair.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="badge-asap">ASAP</span><span class="client-tag">Capital Excavation</span>Backup Failed &mdash; 3 Consecutive Days (Jun 20&ndash;22)</div>
+      <div class="item-body">
+        Backup Radar reports Capital Excavation backup failure on Jun 20, Jun 21, and Jun 22. No Datto alert found in folder &mdash; issue may not yet have triggered automated escalation.
+      </div>
+      <div class="item-meta">Action: Log into Datto BCDR for Capital Excavation. Identify and remediate backup error. Restore cadence today.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="badge-asap">ASAP</span><span class="client-tag">CelLink</span>Disk Space Critical &mdash; Multiple Production Servers</div>
+      <div class="item-body">
+        Four separate disk space alerts received Jun 20&ndash;21:<br>
+        &bull; <strong>CELAZUPRDFILE01 E:</strong> &le;5% free &mdash; CRITICAL (Jun 20) &larr; most urgent, production file server<br>
+        &bull; <strong>CELAZUPRDSYS01 F:</strong> &le;10% free (Jun 20)<br>
+        &bull; <strong>JOULE D:</strong> &le;7% free (Jun 20)<br>
+        &bull; <strong>CEL-GT-DC1 C:</strong> &le;15% free (Jun 21)
+      </div>
+      <div class="item-meta">Action: Clean up or expand CELAZUPRDFILE01 E: immediately. Assess CELAZUPRDSYS01, JOULE, and CEL-GT-DC1. Schedule maintenance window if disk expansion is required.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="badge-asap">ASAP</span><span class="client-tag">Covenant Presbyterian Church</span>DattoSaaS Protection &mdash; No Result 3 Days (Jun 20&ndash;22)</div>
+      <div class="item-body">
+        Covenant Presbyterian Church SaaS Protection backup returned <em>No Result</em> for three consecutive days: Jun 20, Jun 21, Jun 22. M365 data (mailboxes, SharePoint, Teams) has been unprotected for 72+ hours.
+      </div>
+      <div class="item-meta">Action: Log into Datto SaaS Protection. Investigate no-result error. Trigger a manual backup run and confirm M365 data is being captured.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="badge-asap">ASAP</span><span class="client-tag">MEJ &amp; Associates</span>Datto BCDR Device Upgrade &mdash; EOQ Quotes Arriving Today (Deadline Jun 29)</div>
+      <div class="item-body">
+        Dennis Rowe (dennis.rowe@kaseya.com) is sending BCDR device upgrade quotes today. EOQ discount deadline is <strong>June 29</strong>. Given active backup failures on MEJDatto2025, this upgrade is time-sensitive.
+      </div>
+      <div class="item-meta">Action: Review quotes when received. Discuss with client and approve before Jun 29 to capture EOQ pricing.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="badge-asap">ASAP</span><span class="client-tag">CelLink</span>Cisco Meraki Firmware Maintenance &mdash; MX 26.1.5 Upgrade Scheduled</div>
+      <div class="item-body">
+        Cisco Meraki firmware maintenance scheduled for CelLink (MX upgrade to 26.1.5). Email was unread at scan time &mdash; check for exact maintenance window and confirm with client if window overlaps business hours.
+      </div>
+      <div class="item-meta">Action: Open Meraki maintenance email, note scheduled time, notify CelLink contact if maintenance is during business hours.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="badge-asap">ASAP</span><span class="client-tag">Kidd Roofing</span>Cisco Meraki Firmware Maintenance &mdash; MX 26.1.5 Upgrade Scheduled</div>
+      <div class="item-body">
+        Cisco Meraki firmware maintenance also scheduled for Kidd Roofing. Given the active account compromise situation, confirm the maintenance window and verify firewall rules are intact post-upgrade.
+      </div>
+      <div class="item-meta">Action: Open Meraki maintenance email for Kidd Roofing. Flag timing to client alongside Angela Hyman resolution update.</div>
+    </div>
+  </div>
+
+  <!-- SECTION 3: TODAY'S TO-DOs -->
+  <div class="section section-todo">
+    <div class="section-header">&#x1F4CB; Today&rsquo;s To-Do List</div>
+
+    <div class="todo-group">
+      <h4>&#x2B50; Must Do</h4>
+      <ul class="todo-list">
+        <li><span class="cb"></span>Reset Angela Hyman password &amp; restore O365 account <span class="client-ref">(Kidd Roofing)</span></li>
+        <li><span class="cb"></span>Investigate Dropbox mass deletion + account email change &mdash; audit, restore, rotate creds <span class="client-ref">(Ariat Internal)</span></li>
+        <li><span class="cb"></span>Follow up on MEJ Datto backup chain &mdash; Kaseya #7109962 (Unrecognized File System) <span class="client-ref">(MEJ &amp; Associates)</span></li>
+        <li><span class="cb"></span>Remediate CELAZUPRDFILE01 E: disk space (&le;5% free &mdash; CRITICAL) <span class="client-ref">(CelLink)</span></li>
+        <li><span class="cb"></span>Investigate Capital Excavation backup failure (3 consecutive days) <span class="client-ref">(Capital Excavation)</span></li>
+        <li><span class="cb"></span>Investigate Covenant SaaS Protection no-result (3 consecutive days) <span class="client-ref">(CPC)</span></li>
+        <li><span class="cb"></span>Review Datto BCDR upgrade quotes from Dennis Rowe &mdash; EOQ deadline Jun 29 <span class="client-ref">(MEJ &amp; Associates)</span></li>
+        <li><span class="cb"></span>Ticket #10526 &mdash; Printer issue</li>
+        <li><span class="cb"></span>Ticket #10527 &mdash; QuickBooks unable to open</li>
+        <li><span class="cb"></span>Ticket #10528 &mdash; Old Laptop / Linux (many unread updates)</li>
+        <li><span class="cb"></span>Ticket #10530 &mdash; Outlook Search issue</li>
+      </ul>
+    </div>
+
+    <div class="todo-group">
+      <h4>&#x25C7; Should Do</h4>
+      <ul class="todo-list should">
+        <li><span class="cb"></span>Ticket #10495 &mdash; Offboarding</li>
+        <li><span class="cb"></span>Ticket #10502 &mdash; Team Meeting</li>
+        <li><span class="cb"></span>Ticket #10509 &mdash; Statement / Invoices (many unread updates)</li>
+        <li><span class="cb"></span>Ticket #10397 &mdash; New Heavybid Server</li>
+        <li><span class="cb"></span>Cisco Meraki RDP case 14338691 &mdash; needs response</li>
+        <li><span class="cb"></span>Ticket #9753 &mdash; Cyber Security</li>
+      </ul>
+    </div>
+
+    <div class="todo-group">
+      <h4>&middot; Could Do (Low Priority)</h4>
+      <ul class="todo-list could">
+        <li><span class="cb"></span>Burnett &amp; Turner MFA upgrade recommendation</li>
+        <li><span class="cb"></span>Barracuda email gateway licenses follow-up <span class="client-ref">(Whitehead)</span></li>
+        <li><span class="cb"></span>HaloPSA trial review (extended to Jul 10)</li>
+        <li><span class="cb"></span>Ticket #10492</li>
+        <li><span class="cb"></span>Ticket #10508</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- SECTION 4: BACKUP STATUS -->
+  <div class="section section-backup">
+    <div class="section-header">&#x1F4BE; Backup Status &mdash; Jun 20&ndash;22</div>
+
+    <div class="chart-wrap">
+      <svg width="100%" viewBox="0 0 780 200" xmlns="http://www.w3.org/2000/svg" style="font-family: -apple-system, sans-serif; display: block;">
+        <rect x="0" y="0" width="780" height="200" rx="8" fill="#f9f0ff" opacity="0.35"/>
+        <text x="14" y="20" font-size="10" font-weight="700" fill="#531dab">BACKUP HEALTH BY CLIENT &mdash; JUN 20&ndash;22</text>
+        <!-- Legend -->
+        <rect x="14" y="30" width="10" height="10" rx="2" fill="#52c41a"/><text x="28" y="40" font-size="10" fill="#595959">Success</text>
+        <rect x="82" y="30" width="10" height="10" rx="2" fill="#ff4d4f"/><text x="96" y="40" font-size="10" fill="#595959">Failed</text>
+        <rect x="140" y="30" width="10" height="10" rx="2" fill="#fa8c16"/><text x="154" y="40" font-size="10" fill="#595959">Warning</text>
+        <rect x="210" y="30" width="10" height="10" rx="2" fill="#722ed1"/><text x="224" y="40" font-size="10" fill="#595959">No Result</text>
+        <rect x="290" y="30" width="10" height="10" rx="2" fill="#8c8c8c"/><text x="304" y="40" font-size="10" fill="#595959">N/A</text>
+        <!-- Column headers -->
+        <text x="180" y="60" font-size="10" fill="#595959" font-weight="600" text-anchor="middle">Jun 20 (Fri)</text>
+        <text x="340" y="60" font-size="10" fill="#595959" font-weight="600" text-anchor="middle">Jun 21 (Sat)</text>
+        <text x="500" y="60" font-size="10" fill="#595959" font-weight="600" text-anchor="middle">Jun 22 (Sun)</text>
+        <!-- Row: MEJ-DATA -->
+        <text x="14" y="84" font-size="11" fill="#1a1a2e" font-weight="600">MEJ-DATA</text>
+        <rect x="110" y="70" width="140" height="20" rx="3" fill="#ff4d4f"/><text x="180" y="84" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">FAILED</text>
+        <rect x="270" y="70" width="140" height="20" rx="3" fill="#722ed1"/><text x="340" y="84" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">NO RESULT</text>
+        <rect x="430" y="70" width="140" height="20" rx="3" fill="#fa8c16"/><text x="500" y="84" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">WARNING</text>
+        <text x="585" y="84" font-size="9" fill="#595959">Unrecognized File System (#7109962)</text>
+        <!-- Row: MEJ-TENANT -->
+        <text x="14" y="108" font-size="11" fill="#1a1a2e" font-weight="600">MEJ-TENANT</text>
+        <rect x="110" y="94" width="140" height="20" rx="3" fill="#52c41a"/><text x="180" y="108" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">SUCCESS</text>
+        <rect x="270" y="94" width="140" height="20" rx="3" fill="#52c41a"/><text x="340" y="108" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">SUCCESS</text>
+        <rect x="430" y="94" width="140" height="20" rx="3" fill="#ff4d4f"/><text x="500" y="108" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">FAILED</text>
+        <text x="585" y="108" font-size="9" fill="#595959">Critical errors from Sat 2AM CDT</text>
+        <!-- Row: Capital Excavation -->
+        <text x="14" y="132" font-size="11" fill="#1a1a2e" font-weight="600">Capital Excav.</text>
+        <rect x="110" y="118" width="140" height="20" rx="3" fill="#ff4d4f"/><text x="180" y="132" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">FAILED</text>
+        <rect x="270" y="118" width="140" height="20" rx="3" fill="#ff4d4f"/><text x="340" y="132" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">FAILED</text>
+        <rect x="430" y="118" width="140" height="20" rx="3" fill="#ff4d4f"/><text x="500" y="132" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">FAILED</text>
+        <text x="585" y="132" font-size="9" fill="#595959">3 consecutive days, no Datto alert yet</text>
+        <!-- Row: Covenant CPC -->
+        <text x="14" y="156" font-size="11" fill="#1a1a2e" font-weight="600">Covenant CPC</text>
+        <rect x="110" y="142" width="140" height="20" rx="3" fill="#722ed1"/><text x="180" y="156" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">NO RESULT</text>
+        <rect x="270" y="142" width="140" height="20" rx="3" fill="#722ed1"/><text x="340" y="156" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">NO RESULT</text>
+        <rect x="430" y="142" width="140" height="20" rx="3" fill="#722ed1"/><text x="500" y="156" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">NO RESULT</text>
+        <text x="585" y="156" font-size="9" fill="#595959">SaaS Protection &mdash; M365 unprotected 72h+</text>
+        <!-- Row: CelLink -->
+        <text x="14" y="180" font-size="11" fill="#1a1a2e" font-weight="600">CelLink (all)</text>
+        <rect x="110" y="166" width="140" height="20" rx="3" fill="#52c41a"/><text x="180" y="180" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">SUCCESS</text>
+        <rect x="270" y="166" width="140" height="20" rx="3" fill="#52c41a"/><text x="340" y="180" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">SUCCESS</text>
+        <rect x="430" y="166" width="140" height="20" rx="3" fill="#52c41a"/><text x="500" y="180" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">SUCCESS</text>
+        <text x="585" y="180" font-size="9" fill="#595959">Henry had 1 warning Sat (screenshot); otherwise OK</text>
+      </svg>
+    </div>
+
+    <table style="margin-top:4px;">
+      <tr>
+        <th>Client / Device</th>
+        <th>Jun 20 (Fri)</th>
+        <th>Jun 21 (Sat)</th>
+        <th>Jun 22 (Sun)</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td><strong>MEJ-DATA</strong></td>
+        <td class="status-fail">Failed</td>
+        <td class="status-noresult">No Result</td>
+        <td class="status-warn">Warning</td>
+        <td>Root cause: Unrecognized File System (Kaseya #7109962)</td>
+      </tr>
+      <tr>
+        <td><strong>MEJ-TENANT</strong></td>
+        <td class="status-ok">Success</td>
+        <td class="status-ok">Success</td>
+        <td class="status-fail">Failed</td>
+        <td>Critical errors from Sat 2AM CDT on MEJDatto2025</td>
+      </tr>
+      <tr>
+        <td><strong>MEJ-DC1 / SHELL / UTILITY</strong></td>
+        <td>&mdash;</td>
+        <td class="status-fail">CRITICAL</td>
+        <td class="status-fail">CRITICAL</td>
+        <td>All volumes CRITICAL from Sat 2AM CDT</td>
+      </tr>
+      <tr>
+        <td><strong>Capital Excavation</strong></td>
+        <td class="status-fail">Failed</td>
+        <td class="status-fail">Failed</td>
+        <td class="status-fail">Failed</td>
+        <td>3 consecutive days &mdash; no Datto alert found yet</td>
+      </tr>
+      <tr>
+        <td><strong>Covenant Presbyterian (SaaS)</strong></td>
+        <td class="status-noresult">No Result</td>
+        <td class="status-noresult">No Result</td>
+        <td class="status-noresult">No Result</td>
+        <td>DattoSaaS &mdash; M365 data unprotected 72h+</td>
+      </tr>
+      <tr>
+        <td><strong>CelLink Henry</strong></td>
+        <td class="status-ok">Success</td>
+        <td class="status-warn">Warning (screenshot)</td>
+        <td>&mdash;</td>
+        <td>Appears recovered; all other CelLink devices healthy</td>
+      </tr>
+      <tr>
+        <td><strong>CelLink (all others)</strong></td>
+        <td class="status-ok">Success</td>
+        <td class="status-ok">Success</td>
+        <td class="status-ok">Success</td>
+        <td>CELAZUPRDFILE01, CELAZUPRDSYS01, JOULE, CEL-GT-DC1</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- SECTION 5: ALERTS -->
+  <div class="section section-alerts">
+    <div class="section-header">&#x1F6A8; Security &amp; System Alerts &mdash; Top 3 Uncommon</div>
+
+    <div class="item">
+      <div class="item-title">1. Dropbox: Mass Deletion + Account Email Changed <span class="client-ref">(Jun 22)</span></div>
+      <div class="item-body">
+        Mass deletion alert at 09:45 CDT, new sign-in at 12:22 CDT, account notification email changed at 12:25 CDT from ariatalerts@ariatsystems.com to admin&hellip; Three correlated events in under 3 hours. Files may have been deleted and future alerts silenced. <strong>HIGH suspicion of account compromise.</strong>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">2. SentinelOne Active Threat &mdash; AriatConference Machine (Jun 20 10:52 CDT)</div>
+      <div class="item-body">
+        Active threat detected on AriatConference machine. External IP 24.173.190.70 implicated. No remediation confirmation found in scan window. Status: <strong style="color:#ff4d4f;">UNRESOLVED</strong>.
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">3. Barracuda XDR Impossible Travel &mdash; Angela Hyman, Kidd Roofing (Jun 22)</div>
+      <div class="item-body">
+        Impossible travel alert on Angela Hyman&rsquo;s O365 account. Account locked by Barracuda XDR. Employee blocked from working as of 14:34 CDT Jun 22.
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">Other Alerts (Informational)</div>
+      <div class="item-body">
+        &bull; MSM: Emails removed after delivery (Barracuda) &mdash; routine, no action needed<br>
+        &bull; Entra ID / PIM weekly digests &mdash; no unusual privilege activity noted<br>
+        &bull; Barracuda email gateway licenses: Whitehead signed (Jun 19) &mdash; update Barracuda account<br>
+        &bull; CelLink disk space alerts (addressed in ASAP section above)
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: TIME ENTRIES -->
+  <div class="section section-time">
+    <div class="section-header">&#x23F1; Time Entries (1)</div>
+
+    <div class="note">
+      Time entries use the Ariat time entry format. Copy directly into the time tracking system. CPC/MSM override applied: work 11:00&ndash;11:30 (within 8AM&ndash;6PM window) &rarr; Project (Green).
+    </div>
+
+    <div class="time-entry"><span class="fn">Subject:</span>      Covenant Presbyterian Church
+<span class="fn">Location:</span>     Remote
+<span class="fn">Description:</span>  Investigated O365 medium-severity alert for unusual external file sharing.
+              Confirmed legitimate activity &mdash; Elizabeth Gilligan shared PDFs to music
+              and worship team. No security incident.
+<span class="fn">Category:</span>     <span class="fv-green">Project (Green)</span>
+<span class="fn">Time:</span>         <span class="fv-time">2026-06-20  11:00 &ndash; 11:30 CDT</span></div>
+  </div>
+
+  <!-- SECTION 7: STANDARD -->
+  <div class="section section-standard">
+    <div class="section-header">&#x1F7E2; Standard &mdash; FYI / No Immediate Action (12)</div>
+
+    <div class="item">
+      <div class="item-title"><span class="client-tag">Beehive Specialty</span>Surface Data Recovery &mdash; Resolved</div>
+      <div class="item-body">Ashley replied Jun 22 11:21 CDT: <em>&ldquo;Changing the view worked.&rdquo;</em> Issue resolved. Ticket can be closed.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="client-tag">Capital Excavation</span>New Laptop Request</div>
+      <div class="item-body">New laptop request received. Dell laptop quote received. Pending client approval.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="client-tag">Buda Fire &amp; EMS</span>Equipment Quote</div>
+      <div class="item-body">Matt is handling the equipment quote for Buda Fire. No immediate action for Marshall.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="client-tag">Burnett &amp; Turner Law</span>MFA Upgrade Recommendation</div>
+      <div class="item-body">MFA upgrade recommendation pending. No urgent timeline &mdash; address after current critical issues.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title"><span class="client-tag">Whitehead Wilson</span>Barracuda Email Gateway Licenses</div>
+      <div class="item-body">Whitehead signed Barracuda email gateway license agreement (Jun 19). Update Barracuda account when time permits.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">HaloPSA Trial Extended to July 10</div>
+      <div class="item-body">Trial period extended. Evaluate and make a decision before Jul 10.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">Cisco Meraki RDP Case 14338691</div>
+      <div class="item-body">Open support case requires a response. Listed under Should Do above.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">Michael Weekly Ticket Report (6/15&ndash;6/19)</div>
+      <div class="item-body">Weekly report received. Review at convenience.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">MSM &mdash; Barracuda Email Removed After Delivery (Informational)</div>
+      <div class="item-body">Routine Barracuda notifications for McElroy Sullivan Miller &amp; Weber LLP. No security event.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">Entra ID / PIM Weekly Digests</div>
+      <div class="item-body">No unusual privilege or access activity noted in weekly digest. Informational only.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">Dell Laptop Quote Received</div>
+      <div class="item-body">Quote received for new laptop (Capital Excavation request above). Pending client approval before ordering.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="item">
+      <div class="item-title">Datto BCDR Upgrade Quotes (MEJ) &mdash; Arriving Today</div>
+      <div class="item-body">Flagged above under ASAP. Listed here as well for completeness &mdash; EOQ deadline Jun 29.</div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    Generated by Morning Briefing Routine &middot; 2026-06-23 07:30 CDT &middot; Ariat Systems IT<br>
+    Scan window: Fri Jun 19 16:00 CDT &rarr; Mon Jun 23 07:30 CDT<br>
+    Mail: &sim;81 Inbox &middot; 44 Help Desk &middot; 25 Alerts &middot; 72 Datto &middot; 14 Backup Radar &middot; Teams: 0 of 44 chats (rate-limited)<br>
+    <a href="https://github.com/gitmarsh/routines">gitmarsh/routines</a>
+  </div>
+
+</div>
+</body>
+</html>
