@@ -1,0 +1,61 @@
+@import url("report.css");
+/* ============================================================
+   ARIAT BRIEFING — additive components for the twice-daily
+   briefing + index. Built ONLY from ariat-tokens variables;
+   inherits the report shell (sheet / rhead / rbody / rsection
+   / table.data / rfoot) verbatim. No hardcoded brand colors.
+   ============================================================ */
+
+/* priority + status pills (extend report.css's .pill) */
+.pill-danger  {background:var(--danger-bg); color:var(--danger-ink)}  .pill-danger .d  {background:var(--danger)}
+.pill-info    {background:var(--info-bg);   color:var(--info-ink)}    .pill-info .d    {background:var(--info)}
+.pill-neutral {background:var(--gray-100);  color:var(--gray-600)}    .pill-neutral .d {background:var(--gray-400)}
+
+/* HOT ITEMS callout — danger-tinted, ember left rule */
+.hot{background:var(--danger-bg);border:1px solid color-mix(in srgb,var(--danger) 30%,transparent);
+     border-left:4px solid var(--ariat-ember);border-radius:var(--r-sm);padding:16px 20px;margin-top:4px}
+.hot ul{margin:0;padding-left:18px}
+.hot li{font-size:13.5px;line-height:1.6;color:var(--gray-800);margin-bottom:4px}
+.hot li:last-child{margin-bottom:0}
+
+/* EOD two-column lists */
+.eod{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.eod h4{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:8px}
+.eod .must h4{color:var(--danger-ink)}
+.eod .carry h4{color:var(--info-ink)}
+.eod ul{margin:0;padding-left:18px}
+.eod li{font-size:13px;line-height:1.55;color:var(--gray-700);margin-bottom:3px}
+
+/* generic body list (Teams etc.) */
+.blist{margin:0;padding-left:18px}
+.blist li{font-size:13.5px;line-height:1.6;color:var(--gray-700);margin-bottom:7px}
+.note{font-size:12.5px;color:var(--gray-500);font-style:italic;margin-top:12px}
+
+/* Section E callout */
+.callout{background:var(--warning-bg);border:1px solid color-mix(in srgb,var(--warning) 36%,transparent);
+         border-radius:var(--r-sm);padding:13px 16px;font-size:13px;color:var(--gray-800);margin-bottom:14px}
+
+/* ---- INDEX: stats strip, kanban, briefing list ---- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:4px}
+.stat .v{font-family:var(--serif-display);font-size:34px;font-weight:700;color:var(--navy-900);
+         border-left:3px solid var(--ariat-orange);padding-left:13px;line-height:1.05}
+.stat .l{font-size:12px;color:var(--gray-500);margin-top:5px;padding-left:16px}
+
+.kan{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.kcard{border:1px solid var(--line);border-radius:var(--r-sm);padding:12px;background:var(--gray-50)}
+.kcard.empty{background:var(--gray-100);color:var(--gray-400)}
+.kday{font-family:var(--serif-display);font-size:14px;font-weight:600;color:var(--navy-900)}
+.kday span{font-family:var(--sans);font-weight:400;color:var(--gray-400);font-size:11px}
+.kslot{display:inline-block;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.06em;
+       background:var(--gray-100);color:var(--ariat-orange-deep);padding:1px 7px;border-radius:var(--r-pill);margin:9px 0 7px}
+.kstat{font-size:12px;color:var(--gray-600)} .kstat b{color:var(--navy-900)}
+.kstat.hot{color:var(--danger-ink);font-weight:600}
+.knone{font-size:12px;font-style:italic;margin-top:9px}
+
+.blink{display:flex;align-items:center;padding:10px 2px;border-bottom:1px solid var(--gray-100)}
+.blink .date{font-family:var(--mono);font-size:13px;color:var(--gray-700);width:150px}
+.blink .day{color:var(--gray-400);font-size:11px;margin-left:8px}
+.blink a.pill{text-decoration:none;margin-right:7px}
+.blink a.pill-am{background:var(--info-bg);color:var(--info-ink)}
+.blink a.pill-pm{background:var(--warning-bg);color:var(--warning-ink)}
+.blink a.pill:hover{filter:brightness(.96)}

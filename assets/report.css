@@ -1,0 +1,72 @@
+@import url("colors_and_type.css");
+/* ============================================================
+   ARIAT REPORT — the print / client document surface.
+   Paper ground, navy header with reversed logo, ember section
+   rules, mono figures. Loads on ../../colors_and_type.css.
+   ============================================================ */
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--gray-100);color:var(--gray-800);padding:40px 20px;-webkit-font-smoothing:antialiased}
+@media print{body{background:#fff;padding:0}}
+
+.sheet{max-width:840px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--sh-lg);overflow:hidden}
+@media print{.sheet{box-shadow:none;border:none;border-radius:0;max-width:none}}
+
+/* ---- Header ---------------------------------------------- */
+.rhead{background:var(--navy-900);color:#fff;padding:30px 38px;display:flex;justify-content:space-between;align-items:flex-start;position:relative;overflow:hidden}
+.rhead::after{content:"";position:absolute;right:-60px;top:-70px;width:240px;height:240px;filter:blur(64px);opacity:.42;border-radius:50%;background:var(--ariat-gradient);z-index:0}
+.rhead .lz{position:relative;z-index:1}
+.rlogo{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.rlogo .rmark{height:60px;width:auto;display:block}
+.rlogo .rdiv{width:1px;height:46px;background:rgba(255,255,255,.22)}
+.rlogo .rword{height:38px;width:auto;display:block}
+.rtitle{font-family:var(--serif-display);font-size:26px;font-weight:700;letter-spacing:-.01em}
+.rsub{color:rgba(255,255,255,.62);font-size:13.5px;margin-top:6px}
+.rmeta{position:relative;z-index:1;text-align:right;font-family:var(--mono);font-size:12px;color:rgba(255,255,255,.72);line-height:2}
+.rmeta .accent{color:var(--ariat-amber)}
+
+/* ---- Body ------------------------------------------------ */
+.rbody{padding:30px 38px}
+.rsection{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ariat-orange-deep);font-weight:600;margin:30px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--ariat-orange)}
+.rsection:first-child{margin-top:4px}
+
+.rkpis{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.rk .rkv{font-family:var(--serif-display);font-size:32px;font-weight:700;color:var(--navy-900);border-left:3px solid var(--ariat-orange);padding-left:13px;line-height:1.05}
+.rk .rkl{font-size:12px;color:var(--gray-500);margin-top:5px;padding-left:16px}
+
+.intro{font-size:14.5px;line-height:1.65;color:var(--gray-700);max-width:64ch}
+
+table.data{width:100%;border-collapse:collapse;font-size:13.5px;border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden}
+table.data th{text-align:left;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--gray-500);font-weight:600;padding:11px 15px;background:var(--gray-50);border-bottom:1px solid var(--line)}
+table.data td{padding:12px 15px;border-bottom:1px solid var(--gray-100);color:var(--gray-700)}
+table.data tr:last-child td{border-bottom:none}
+table.data td.mono{font-family:var(--mono);font-size:12.5px;color:var(--gray-600)}
+table.data td .svc{font-weight:600;color:var(--gray-800)}
+
+.pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 10px;border-radius:var(--r-pill);line-height:1.2}
+.pill .d{width:7px;height:7px;border-radius:50%}
+.pill-success{background:var(--success-bg);color:var(--success-ink)} .pill-success .d{background:var(--success)}
+.pill-warning{background:var(--warning-bg);color:var(--warning-ink)} .pill-warning .d{background:var(--warning)}
+
+/* incidents list */
+.inc{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:var(--r-sm);overflow:hidden}
+.inc .row{display:flex;gap:16px;padding:14px 16px;align-items:flex-start}
+.inc .row:not(:last-child){border-bottom:1px solid var(--gray-100)}
+.inc .ref{font-family:var(--mono);font-size:11.5px;color:var(--ariat-orange-deep);font-weight:600;white-space:nowrap;padding-top:1px}
+.inc .body .t{font-size:13.5px;font-weight:600;color:var(--gray-800)}
+.inc .body .m{font-size:12.5px;color:var(--gray-600);margin-top:2px;line-height:1.5}
+.inc .dur{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--gray-500);white-space:nowrap}
+
+.twocol{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+
+/* ---- Footer ---------------------------------------------- */
+.rfoot{padding:16px 38px;border-top:1px solid var(--line);display:flex;justify-content:space-between;font-size:12.5px;color:var(--gray-500);font-weight:600;letter-spacing:.01em}
+.rfoot span:last-child{font-family:var(--mono);font-weight:500;letter-spacing:0}
+
+.toolbar{max-width:840px;margin:0 auto 16px;display:flex;justify-content:flex-end}
+@media print{.toolbar{display:none}}
+.print-btn{font-weight:600;font-size:13px;border:1px solid var(--gray-300);background:#fff;color:var(--navy-900);border-radius:var(--r-sm);padding:8px 16px;display:inline-flex;align-items:center;gap:8px;box-shadow:var(--sh-sm);cursor:pointer}
+.print-btn:hover{background:var(--gray-50)}
+.print-btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+@media(max-width:680px){.rkpis{grid-template-columns:repeat(2,1fr)}.twocol{grid-template-columns:1fr}.rhead{flex-direction:column;gap:18px}.rmeta{text-align:left}}

@@ -1,0 +1,111 @@
+/* ============================================================
+   ARIAT SYSTEMS — Colors & Type
+   Foundational + semantic CSS variables and ready-to-use type
+   classes. Loads on top of ariat-tokens.css (which holds the raw
+   color/space/radius/elevation token values).
+
+   Fonts are Google Fonts — add this <link> to any page:
+   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+   ============================================================ */
+
+@import url("ariat-tokens.css");
+
+:root {
+  /* ---- Foreground / text colors (light surfaces) ---------- */
+  --fg-1: var(--gray-900);   /* primary text, headings           */
+  --fg-2: var(--gray-700);   /* body text                        */
+  --fg-3: var(--gray-500);   /* secondary / captions             */
+  --fg-4: var(--gray-400);   /* muted / placeholder              */
+  --fg-accent: var(--ariat-orange-deep);  /* links, eyebrows     */
+
+  /* ---- Foreground colors (dark / navy surfaces) ----------- */
+  --fg-on-dark-1: #ffffff;
+  --fg-on-dark-2: rgba(255,255,255,.72);
+  --fg-on-dark-3: rgba(255,255,255,.5);
+  --fg-on-dark-4: rgba(255,255,255,.32);
+  --fg-on-dark-accent: var(--ariat-amber);
+
+  /* ---- Background surfaces -------------------------------- */
+  --bg-app: var(--gray-50);     /* light app canvas             */
+  --bg-surface: #ffffff;        /* cards on light               */
+  --bg-sunk: var(--gray-100);   /* wells / inputs               */
+  --bg-paper: var(--paper);     /* report page                  */
+  --bg-navy: var(--navy-900);   /* app chrome / dark surface     */
+
+  /* ---- Font families (aliases) ---------------------------- */
+  --serif-display: var(--font-display);  /* (Sora — geometric, not serif) */
+  --sans: var(--font-sans);
+  --mono: var(--font-mono);
+
+  /* ---- Semantic type tokens (size / weight / line-height) - */
+  --display-size: var(--t-display); --display-weight: 800; --display-lh: 1.02; /* @kind font */ --display-ls: -.03em;
+  --h1-size: var(--t-h1); --h1-weight: 700; --h1-lh: var(--lh-tight); --h1-ls: -.02em;
+  --h2-size: var(--t-h2); --h2-weight: 700; --h2-lh: var(--lh-tight); --h2-ls: -.015em;
+  --h3-size: var(--t-h3); --h3-weight: 600; --h3-lh: var(--lh-snug);  --h3-ls: -.01em;
+  --h4-size: var(--t-h4); --h4-weight: 600; --h4-lh: var(--lh-snug);  --h4-ls: 0; /* @kind font */
+  --body-size: var(--t-body); --body-weight: 400; --body-lh: var(--lh-normal);
+  --small-size: var(--t-sm);  --small-weight: 400; --small-lh: var(--lh-normal);
+  --eyebrow-size: 12px; --eyebrow-weight: 600; --eyebrow-ls: .14em;
+  --code-size: var(--t-sm);   --code-weight: 500;
+}
+
+/* ============================================================
+   SEMANTIC TYPE CLASSES — apply directly, or copy the rules.
+   ============================================================ */
+.ds-display {
+  font-family: var(--serif-display);
+  font-size: var(--display-size); font-weight: var(--display-weight);
+  line-height: var(--display-lh); letter-spacing: var(--display-ls);
+  color: var(--fg-1);
+}
+.ds-h1 {
+  font-family: var(--serif-display);
+  font-size: var(--h1-size); font-weight: var(--h1-weight);
+  line-height: var(--h1-lh); letter-spacing: var(--h1-ls); color: var(--fg-1);
+}
+.ds-h2 {
+  font-family: var(--serif-display);
+  font-size: var(--h2-size); font-weight: var(--h2-weight);
+  line-height: var(--h2-lh); letter-spacing: var(--h2-ls); color: var(--fg-1);
+}
+.ds-h3 {
+  font-family: var(--serif-display);
+  font-size: var(--h3-size); font-weight: var(--h3-weight);
+  line-height: var(--h3-lh); letter-spacing: var(--h3-ls); color: var(--fg-1);
+}
+.ds-h4 {
+  font-family: var(--serif-display);
+  font-size: var(--h4-size); font-weight: var(--h4-weight);
+  line-height: var(--h4-lh); color: var(--fg-1);
+}
+.ds-body {
+  font-family: var(--sans);
+  font-size: var(--body-size); font-weight: var(--body-weight);
+  line-height: var(--body-lh); color: var(--fg-2);
+}
+.ds-small {
+  font-family: var(--sans);
+  font-size: var(--small-size); font-weight: var(--small-weight);
+  line-height: var(--small-lh); color: var(--fg-3);
+}
+/* The signature label: mono, uppercase, wide-tracked, ember accent. */
+.ds-eyebrow {
+  font-family: var(--mono);
+  font-size: var(--eyebrow-size); font-weight: var(--eyebrow-weight);
+  letter-spacing: var(--eyebrow-ls); text-transform: uppercase;
+  color: var(--fg-accent);
+}
+.ds-code {
+  font-family: var(--mono);
+  font-size: var(--code-size); font-weight: var(--code-weight);
+  color: var(--gray-700); background: var(--gray-100);
+  padding: 1px 6px; border-radius: var(--r-xs);
+}
+/* Mono used for data / figures / IDs / timestamps. */
+.ds-mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+
+/* The ember gradient as text fill — for a single hero number. */
+.ds-gradient-text {
+  background: var(--ariat-gradient);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
