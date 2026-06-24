@@ -1,0 +1,75 @@
+/* ============================================================
+   ARIAT SYSTEMS — Design Tokens
+   The single source of truth for color, type, space & elevation.
+   Use these variables in dashboards, internal tooling & reports.
+   ============================================================ */
+
+:root {
+  /* --- Brand: warm A-mark gradient ---------------------------- */
+  --ariat-amber:        #F6A823;   /* gradient top  — highlights, hover */
+  --ariat-orange:       #ED7A1C;   /* PRIMARY brand — actions, accents  */
+  --ariat-orange-deep:  #E66218;
+  --ariat-ember:        #E0421C;   /* gradient end  — emphasis, alerts  */
+  --ariat-gradient:     linear-gradient(125deg, #F6A823 0%, #ED7A1C 48%, #E0421C 100%); /* @kind color */
+  --ariat-gradient-soft: linear-gradient(125deg, rgba(246,168,35,.16), rgba(224,66,28,.16)); /* @kind color */
+
+  /* --- Navy / ink (application chrome) ------------------------ */
+  --navy-950: #0A1A30;   /* deepest backdrop          */
+  --navy-900: #0D213C;   /* primary app background    */
+  --navy-850: #102849;   /* sunk panels               */
+  --navy-800: #142E52;   /* card / surface            */
+  --navy-700: #1B3A63;   /* raised surface, hover     */
+  --navy-600: #244A78;   /* borders on dark           */
+  --navy-line: rgba(255,255,255,.09);   /* hairline on dark */
+  --navy-line-strong: rgba(255,255,255,.16);
+
+  /* --- Neutrals (reports, light surfaces) -------------------- */
+  --paper:    #FBFBF9;   /* report page                */
+  --gray-50:  #F5F6F8;
+  --gray-100: #EBEDF1;
+  --gray-200: #DCE0E7;
+  --gray-300: #C3CAD5;
+  --gray-400: #98A1B0;
+  --gray-500: #69727F;
+  --gray-600: #4B5360;
+  --gray-700: #353C47;
+  --gray-800: #232932;
+  --gray-900: #141A22;
+  --line: var(--gray-200);            /* hairline on light */
+
+  /* --- Semantic (status & data viz) -------------------------- */
+  --success: #1FA463;  --success-bg: #E6F5ED;  --success-ink:#0F6E40;
+  --warning: #E29A12;  --warning-bg: #FCF1DC;  --warning-ink:#8A5C00;
+  --danger:  #D93A22;  --danger-bg:  #FBE7E2;  --danger-ink: #97250F;
+  --info:    #2E7DF2;  --info-bg:    #E5EFFE;  --info-ink:   #14509E;
+
+  /* chart sequence — warm brand first, cool tones for contrast */
+  --c1:#ED7A1C; --c2:#2E7DF2; --c3:#1FA463; --c4:#F6A823; --c5:#7B61C9; --c6:#E0421C;
+
+  /* --- Typography -------------------------------------------- */
+  --font-display: "Sora", system-ui, sans-serif;
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+
+  /* type scale (1.250 major-third, 16px base) */
+  --t-display: 56px;  --t-h1: 40px;  --t-h2: 30px;  --t-h3: 23px;
+  --t-h4: 19px;  --t-body: 16px;  --t-sm: 14px;  --t-xs: 12.5px;
+  --lh-tight: 1.1;  --lh-snug: 1.3;  --lh-normal: 1.55;  /* @kind font */
+
+  /* --- Spacing (4px base) ------------------------------------ */
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:20px;
+  --s-6:24px; --s-8:32px; --s-10:40px; --s-12:48px; --s-16:64px; --s-20:80px;
+
+  /* --- Radius ------------------------------------------------- */
+  --r-xs:4px; --r-sm:6px; --r-md:10px; --r-lg:14px; --r-xl:20px; --r-pill:999px;
+
+  /* --- Elevation (light surfaces) ---------------------------- */
+  --sh-sm: 0 1px 2px rgba(15,26,45,.08), 0 1px 3px rgba(15,26,45,.06);
+  --sh-md: 0 4px 12px rgba(15,26,45,.10), 0 2px 4px rgba(15,26,45,.06);
+  --sh-lg: 0 18px 40px rgba(15,26,45,.16), 0 6px 12px rgba(15,26,45,.08);
+  --sh-brand: 0 10px 28px rgba(224,66,28,.32);
+
+  /* --- Motion ------------------------------------------------- */
+  --ease: cubic-bezier(.22,.61,.36,1); /* @kind other */
+  --dur: 180ms; /* @kind other */
+}
