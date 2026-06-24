@@ -1,374 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Morning Briefing — 2026-06-01</title>
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { background: #f4f6f8; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #1a1a2e; padding: 0; }
-table { border-collapse: collapse; }
-a { color: #2b6cb0; }
-.wrap { max-width: 860px; margin: 0 auto; padding: 20px; }
-.hdr { background: #1a1a2e; color: #fff; padding: 20px 24px; border-radius: 6px; margin-bottom: 18px; }
-.hdr h1 { font-size: 19px; font-weight: 700; letter-spacing: 0.3px; }
-.hdr .meta { font-family: 'Courier New', monospace; font-size: 11px; color: #a0aec0; margin-top: 6px; }
-.hdr .status { font-family: 'Courier New', monospace; font-size: 11px; color: #68d391; margin-top: 8px; line-height: 1.9; }
-.overview-table { width: 100%; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 18px; }
-.overview-table td { padding: 14px 18px; vertical-align: middle; }
-.leg { font-size: 13px; }
-.leg-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; }
-.dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
-.section { background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 18px; overflow: hidden; }
-.sec-hdr { background: #f7fafc; border-bottom: 1px solid #e2e8f0; padding: 10px 18px; }
-.sec-hdr h2 { font-size: 14px; font-weight: 700; display: inline; }
-.badge { display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 10px; margin-left: 8px; background: #e2e8f0; color: #4a5568; vertical-align: middle; }
-.badge-red { background: #fed7d7; color: #c53030; }
-.badge-orange { background: #feebc8; color: #b7791f; }
-.badge-blue { background: #bee3f8; color: #2b6cb0; }
-.badge-green { background: #c6f6d5; color: #276749; }
-.sec-body { padding: 14px 18px; }
-.item { border-left: 3px solid #e2e8f0; padding: 8px 12px; margin-bottom: 10px; border-radius: 0 4px 4px 0; background: #f7fafc; }
-.item:last-child { margin-bottom: 0; }
-.item-urgent { border-left-color: #e53e3e; }
-.item-asap { border-left-color: #dd6b20; }
-.item-std { border-left-color: #4299e1; }
-.item-ok { border-left-color: #48bb78; }
-.item-title { font-weight: 600; font-size: 13px; }
-.item-title a { color: #2b6cb0; text-decoration: none; }
-.item-title a:hover { text-decoration: underline; }
-.item-meta { font-size: 11px; color: #718096; font-family: 'Courier New', monospace; margin-top: 3px; }
-.item-detail { font-size: 12px; color: #4a5568; margin-top: 5px; line-height: 1.5; }
-.none-text { font-size: 13px; color: #718096; font-style: italic; }
-table.todo { width: 100%; border-collapse: collapse; font-size: 12px; }
-table.todo th { background: #edf2f7; padding: 7px 10px; text-align: left; font-size: 11px; font-weight: 700; color: #4a5568; text-transform: uppercase; letter-spacing: 0.4px; border-bottom: 1px solid #e2e8f0; }
-table.todo td { padding: 7px 10px; border-bottom: 1px solid #f0f4f8; vertical-align: top; }
-table.todo tr:last-child td { border-bottom: none; }
-.p-must { font-weight: 700; color: #c53030; }
-.p-should { font-weight: 600; color: #b7791f; }
-.p-could { color: #2b6cb0; }
-.te-card { border-radius: 5px; border: 2px solid #e2e8f0; margin-bottom: 14px; overflow: hidden; }
-.te-green { border-color: #276749; }
-.te-blue { border-color: #2b6cb0; }
-.te-red { border-color: #c53030; }
-.te-hdr { padding: 5px 12px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
-.te-hdr-green { background: #c6f6d5; color: #276749; }
-.te-hdr-blue { background: #bee3f8; color: #2b6cb0; }
-.te-hdr-red { background: #fed7d7; color: #c53030; }
-.te-body { padding: 10px 14px; font-family: 'Courier New', Courier, monospace; font-size: 12px; background: #f7fafc; line-height: 1.9; white-space: pre; }
-.bk-group-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; margin-top: 12px; padding-bottom: 3px; border-bottom: 1px solid #e2e8f0; }
-.note-text { font-size: 11px; color: #718096; font-style: italic; margin-top: 8px; }
-</style>
+<link rel="icon" type="image/png" href="../assets/ariat_favicon_32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/briefing.css" />
 </head>
 <body>
-<div class="wrap">
+<div class="toolbar">
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+    Print / Save PDF
+  </button>
+</div>
 
-<!-- HEADER -->
-<div class="hdr">
-  <h1>Morning Briefing &mdash; Monday, June&nbsp;1, 2026</h1>
-  <div class="meta">marshall@ariatsystems.com &nbsp;&bull;&nbsp; Run: 07:30 CDT &nbsp;&bull;&nbsp; Window: Fri 2026-05-29 16:00 CDT &rarr; Mon 2026-06-01 07:30 CDT</div>
-  <div class="status">
-    &#x2705; Preflight: GitHub + M365 + skill OK<br>
-    &#x2705; Window: 2026-05-29T21:00:00Z &rarr; 2026-06-01T12:30:00Z (Monday scan &mdash; covers Fri PM, weekend, Mon AM)<br>
-    &#x2705; Scanned: ~141 emails [Inbox 34 &bull; Help Desk 16 &bull; Alerts 40 &bull; Datto 43 &bull; Backup Radar 8], Teams 0 (Graph rate-limited)<br>
-    &#x2705; Classified: Urgent 0 &nbsp;|&nbsp; ASAP 5 &nbsp;|&nbsp; Standard 12 &nbsp;|&nbsp; Time Entries 1
+<div class="sheet">
+  <!-- Header -->
+  <div class="rhead">
+    <div class="lz">
+      <div class="rlogo">
+        <img class="rmark" src="../assets/ariat_mark.png" alt="" />
+        <span class="rdiv"></span>
+        <img class="rword" src="../assets/ariat_wordmark.png" alt="Ariat Systems" />
+      </div>
+      <div class="rtitle">Morning Briefing</div>
+      <div class="rsub">Monday, June 1, 2026 · Operational Summary</div>
+    </div>
+    <div class="rmeta">
+      <div><span class="accent">WINDOW</span> Fri 2026-05-29 16:00 → Mon 2026-06-01 07:30 CDT</div>
+      <div><span class="accent">SCANNED</span> ~141 emails (Inbox 34 · Help Desk 16 · Alerts 40 · Datto 43 · Backup Radar 8) · Teams 0 (Graph rate-limited)</div>
+      <div><span class="accent">REF</span> BRIEF-2026-06-01-AM</div>
+    </div>
   </div>
-</div>
 
-<!-- SEVERITY OVERVIEW -->
-<table class="overview-table">
-  <tr>
-    <td style="width:140px">
-      <!-- Donut chart: 0 Urgent, 5 ASAP, 12 Standard; C=2*pi*38=238.76 -->
-      <!-- ASAP arc: 70.18; Standard arc: 168.57; dashoffset=59.69 from top -->
-      <svg width="110" height="110" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50" cy="50" r="38" fill="none" stroke="#e2e8f0" stroke-width="16"/>
-        <!-- Standard (blue): 168.57 of 238.76, start at top -->
-        <circle cx="50" cy="50" r="38" fill="none" stroke="#4299e1" stroke-width="16"
-          stroke-dasharray="168.57 70.19" stroke-dashoffset="59.69"/>
-        <!-- ASAP (orange): 70.18 of 238.76, start after standard -->
-        <circle cx="50" cy="50" r="38" fill="none" stroke="#dd6b20" stroke-width="16"
-          stroke-dasharray="70.18 168.58" stroke-dashoffset="228.26"/>
-        <text x="50" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a2e" font-family="Arial">17</text>
-        <text x="50" y="59" text-anchor="middle" font-size="9" fill="#718096" font-family="Arial">items</text>
-      </svg>
-    </td>
-    <td class="leg">
-      <div class="leg-row"><span class="dot" style="background:#e53e3e"></span><strong>Urgent</strong>: 0</div>
-      <div class="leg-row"><span class="dot" style="background:#dd6b20"></span><strong>ASAP</strong>: 5</div>
-      <div class="leg-row"><span class="dot" style="background:#4299e1"></span><strong>Standard</strong>: 12</div>
-      <div class="leg-row"><span class="dot" style="background:#68d391"></span><strong>Time Entries</strong>: 1</div>
-    </td>
-    <td>
-      <!-- Horizontal bar chart -->
-      <svg width="200" height="80" viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
-        <text x="0" y="11" font-size="9" fill="#718096" font-family="Arial" font-weight="700">SEVERITY BREAKDOWN</text>
-        <rect x="0" y="18" width="4" height="14" fill="#e53e3e" rx="2"/>
-        <text x="9" y="30" font-size="10" fill="#718096" font-family="Arial">0 Urgent</text>
-        <rect x="0" y="38" width="50" height="14" fill="#dd6b20" rx="2"/>
-        <text x="55" y="50" font-size="10" fill="#dd6b20" font-family="Arial" font-weight="700">5 ASAP</text>
-        <rect x="0" y="58" width="120" height="14" fill="#4299e1" rx="2"/>
-        <text x="125" y="70" font-size="10" fill="#4299e1" font-family="Arial">12 Standard</text>
-      </svg>
-    </td>
-  </tr>
-</table>
+  <!-- Body -->
+  <div class="rbody">
 
-<!-- 1. URGENT -->
-<div class="section">
-  <div class="sec-hdr"><h2>1. Urgent</h2><span class="badge badge-red">0</span></div>
-  <div class="sec-body"><span class="none-text">None</span></div>
-</div>
+    <div class="rsection">Run Status</div>
+    <ul class="blist">
+      <li>Preflight: GitHub + M365 + skill OK</li>
+      <li>Window: 2026-05-29T21:00:00Z → 2026-06-01T12:30:00Z (Monday scan — covers Fri PM, weekend, Mon AM)</li>
+      <li>Scanned: ~141 emails [Inbox 34 · Help Desk 16 · Alerts 40 · Datto 43 · Backup Radar 8], Teams 0 (Graph rate-limited)</li>
+      <li>Classified: Urgent 0 | ASAP 5 | Standard 12 | Time Entries 1</li>
+    </ul>
 
-<!-- 2. FOLLOW-UPS -->
-<div class="section">
-  <div class="sec-hdr"><h2>2. Follow-ups</h2><span class="badge badge-orange">5</span></div>
-  <div class="sec-body">
-
-    <div class="item item-asap">
-      <div class="item-title"><span style="background:#feebc8;color:#b7791f;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;margin-right:6px">ASAP</span><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWOAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">#10295 &mdash; Dickson Productions: Can&rsquo;t open Adobe attachment</a></div>
-      <div class="item-meta">Assigned to Marshall by Michael Statham &bull; Sat 2026-05-30 09:21 CDT &bull; Jennifer Vocelka (jenni@dicksonproductions.com)</div>
-      <div class="item-detail">Jennifer responded that she is available; waiting on Marshall to schedule a remote session. Michael apologized Friday for not responding. Client is blocked on Ariat&rsquo;s reply. Mac iMac &ldquo;JenniV-iMac&rdquo; (macOS 26.4) cannot open an email attachment &mdash; likely needs Adobe Acrobat/Reader installed.</div>
+    <div class="rsection">Severity Overview</div>
+    <div class="stats">
+      <div class="stat"><div class="v">0</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="v">5</div><div class="l">ASAP</div></div>
+      <div class="stat"><div class="v">12</div><div class="l">Standard</div></div>
+      <div class="stat"><div class="v">1</div><div class="l">Time Entries</div></div>
     </div>
 
-    <div class="item item-asap">
-      <div class="item-title"><span style="background:#feebc8;color:#b7791f;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;margin-right:6px">ASAP</span><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUrChptAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">MEJ-DATA Backup &mdash; 67.2 Days Since Last Successful Backup</a></div>
-      <div class="item-meta">Backup Radar + Datto &bull; First warning: Sat 2026-05-30 02:03 CDT &bull; Client: McElroy, Sullivan, Miller &amp; Weber</div>
-      <div class="item-detail">Bootable screenshot FAILED on MEJDatto2025 (Sat 3:27am CDT). Backup Radar reports 67.2 days since last successful backup &mdash; this is not a new failure. No Result returned from Datto API on both Saturday and Sunday. Backup Radar escalated to &ldquo;Failure&rdquo; status Sunday. Datto appliance ID: 6c92cfea8770, device: MEJ-DATA.</div>
-    </div>
+    <div class="rsection">1 · Urgent</div>
+    <p class="note">None.</p>
 
-    <div class="item item-asap">
-      <div class="item-title"><span style="background:#feebc8;color:#b7791f;font-size:10px;font-weight:700;padding:1px 6px;border-radius:8px;margin-right:6px">ASAP</span><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FDAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLink: CELAZUPRDFILE01 &mdash; E: drive at &lt;=5% free</a></div>
-      <div class="item-meta">RMM Alert &bull; Sat 2026-05-30 04:09 CDT &bull; Client: CelLink (Azure)</div>
-      <div class="item-detail">Critical disk threshold. E: drive on Azure file server CELAZUPRDFILE01 is at or below 5% free. No recovery notification received over the weekend. Server is a production Azure VM. Needs investigation and remediation before space exhaustion causes service disruption.</div>
-    </div>
-
-    <div class="item item-std">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWQAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">#10318 &mdash; Covenant Presbyterian Church: Converting Publisher Files</a></div>
-      <div class="item-meta">Help Desk &bull; Fri 2026-05-29 16:51 CDT &bull; Client: Covenant Presbyterian Church &bull; Requester: Maureen Crawley</div>
-      <div class="item-detail">Maureen asked to &ldquo;reconnect on Monday&rdquo; about converting MS Publisher files using a batch script. Marshall reviewed the script Friday and confirmed it does not require admin permissions. Follow up this morning with a decision.</div>
-    </div>
-
-    <div class="item item-std">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUnnDbfAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Kidd Roofing &mdash; Sage: &ldquo;Emailing a transaction crashes the program&rdquo;</a></div>
-      <div class="item-meta">Inbox (noreply@kb.sage.com) &bull; Fri 2026-05-29 18:03 CDT &bull; Client: Kidd Roofing (clowe@kiddroof.com, Jamia Albert)</div>
-      <div class="item-detail">Jamia Albert shared a Sage Knowledgebase article with Marshall about Sage crashing when emailing transactions. Forwarded to Marshall directly. Confirm whether an active ticket exists or if this is a new user-reported issue that needs investigation.</div>
-    </div>
-
-  </div>
-</div>
-
-<!-- 3. TODAY TO-DOS -->
-<div class="section">
-  <div class="sec-hdr"><h2>3. Today To-Dos</h2><span class="badge">13</span></div>
-  <div class="sec-body">
-    <table class="todo">
-      <thead>
-        <tr>
-          <th style="width:72px">Priority</th>
-          <th style="width:190px">Item</th>
-          <th>Action</th>
-          <th style="width:140px">Client / Source</th>
-        </tr>
-      </thead>
+    <div class="rsection">2 · Follow-ups</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Item</th><th>Source</th></tr></thead>
       <tbody>
         <tr>
-          <td class="p-must">MUST</td>
-          <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWOAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">#10295 &mdash; Adobe (Dickson)</a></td>
-          <td>Contact Jennifer Vocelka to schedule remote session. Install Adobe Acrobat/Reader on JenniV-iMac (macOS). Client has been waiting since Wed 5/28.</td>
-          <td>Dickson Productions / Help Desk</td>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">#10295 — Dickson Productions: Can&rsquo;t open Adobe attachment.</span> Jennifer responded that she is available; waiting on Marshall to schedule a remote session. Michael apologized Friday for not responding. Client is blocked on Ariat&rsquo;s reply. Mac iMac &ldquo;JenniV-iMac&rdquo; (macOS 26.4) cannot open an email attachment — likely needs Adobe Acrobat/Reader installed.</td>
+          <td class="mono">Assigned to Marshall by Michael Statham · Sat 2026-05-30 09:21 CDT · Jennifer Vocelka (jenni@dicksonproductions.com)</td>
         </tr>
         <tr>
-          <td class="p-must">MUST</td>
-          <td>MEJ-DATA Backup</td>
-          <td>Log into Datto appliance MEJDatto2025 (6c92cfea8770) and diagnose why backups have failed for 67+ days. Resolve issue, trigger manual backup, verify success. Notify MSM of status.</td>
-          <td>MSM / Datto + Backup Radar</td>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">MEJ-DATA Backup — 67.2 Days Since Last Successful Backup.</span> Bootable screenshot FAILED on MEJDatto2025 (Sat 3:27am CDT). Backup Radar reports 67.2 days since last successful backup — this is not a new failure. No Result returned from Datto API on both Saturday and Sunday. Backup Radar escalated to &ldquo;Failure&rdquo; status Sunday. Datto appliance ID: 6c92cfea8770, device: MEJ-DATA.</td>
+          <td class="mono">Backup Radar + Datto · First warning: Sat 2026-05-30 02:03 CDT · Client: McElroy, Sullivan, Miller &amp; Weber</td>
         </tr>
         <tr>
-          <td class="p-must">MUST</td>
-          <td>CelLink CELAZUPRDFILE01 E:</td>
-          <td>Investigate E: drive on Azure VM CELAZUPRDFILE01 (&lt;=5% free). Identify large files or snapshot accumulation. Free space or extend volume before impact.</td>
-          <td>CelLink / RMM Alert</td>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">CelLink: CELAZUPRDFILE01 — E: drive at ≤5% free.</span> Critical disk threshold. E: drive on Azure file server CELAZUPRDFILE01 is at or below 5% free. No recovery notification received over the weekend. Server is a production Azure VM. Needs investigation and remediation before space exhaustion causes service disruption.</td>
+          <td class="mono">RMM Alert · Sat 2026-05-30 04:09 CDT · Client: CelLink (Azure)</td>
         </tr>
         <tr>
-          <td class="p-must">MUST</td>
-          <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWQAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">#10318 &mdash; CPC Publisher Script</a></td>
-          <td>Call or email Maureen Crawley this morning. Communicate approval decision on the batch Publisher-to-PDF conversion script and provide guidance to proceed.</td>
-          <td>Covenant Presbyterian Church / Help Desk</td>
+          <td><span class="pill pill-info"><span class="d"></span>Standard</span></td>
+          <td><span class="svc">#10318 — Covenant Presbyterian Church: Converting Publisher Files.</span> Maureen asked to &ldquo;reconnect on Monday&rdquo; about converting MS Publisher files using a batch script. Marshall reviewed the script Friday and confirmed it does not require admin permissions. Follow up this morning with a decision.</td>
+          <td class="mono">Help Desk · Fri 2026-05-29 16:51 CDT · Requester: Maureen Crawley</td>
         </tr>
         <tr>
-          <td class="p-should">SHOULD</td>
-          <td>CelLink disk alerts (GT-ETL-01, JOULE)</td>
-          <td>GT-ETL-01 C: &lt;=15% (Fri 5:41pm CDT). JOULE D: &lt;=7% (Sat 9:06am CDT). Investigate and remediate both &mdash; check for log accumulation or data growth.</td>
-          <td>CelLink / RMM Alert</td>
-        </tr>
-        <tr>
-          <td class="p-should">SHOULD</td>
-          <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUqgMWZAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">#10319 &mdash; BRIO Camera (Michael Statham)</a></td>
-          <td>Michael Statham created ticket to set up Logitech BRIO 4K camera on desktop at office. Review and assign or handle.</td>
-          <td>Internal / Help Desk</td>
-        </tr>
-        <tr>
-          <td class="p-should">SHOULD</td>
-          <td>#10313 &mdash; SA Office Setup</td>
-          <td>Review New Office Set Up &mdash; San Antonio ticket for Kidd Roofing. Marshall and Michael planned to be on-site last Thursday (5/28); confirm outcome and remaining work.</td>
-          <td>Kidd Roofing / Help Desk</td>
-        </tr>
-        <tr>
-          <td class="p-should">SHOULD</td>
-          <td>Kidd Roofing Sage crash</td>
-          <td>Confirm whether &ldquo;Emailing a transaction crashes Sage&rdquo; has an active ticket. If not, open one and investigate. Device: KIDDASAGE (Azure Cloud).</td>
-          <td>Kidd Roofing / Inbox</td>
-        </tr>
-        <tr>
-          <td class="p-should">SHOULD</td>
-          <td>Meraki firmware upgrades</td>
-          <td>Meraki MX 26.1.4 scheduled for CPC and Buda Fire networks. Confirm upgrade window and monitor for any connectivity disruption during/after the maintenance window.</td>
-          <td>CPC + Buda Fire / Meraki</td>
-        </tr>
-        <tr>
-          <td class="p-could">COULD</td>
-          <td>Open ticket review (6 tickets)</td>
-          <td>Review and triage: #10317 (ZZ Folder), #10310 (Printer Not Working), #10315 (Kevin Barron Computer), #10297 (BurnettTurner), #10314 (Tristan Martinez), #10294 (PEACHTREE).</td>
-          <td>Various / Help Desk</td>
-        </tr>
-        <tr>
-          <td class="p-could">COULD</td>
-          <td>Whitehead Wilson onboarding</td>
-          <td>Matt sent introductory &ldquo;best practices&rdquo; email to all@whiteheadwilson.com on Friday (high importance). Confirm onboarding status and whether any setup work is required.</td>
-          <td>Whitehead Wilson / Inbox</td>
-        </tr>
-        <tr>
-          <td class="p-could">COULD</td>
-          <td>CPC + MSM targeted phishing</td>
-          <td>Two CPC users (mgarcia, mray) received targeted phishing on Saturday. Auto-remediated by Barracuda. Optionally notify client and confirm no user interaction with the messages.</td>
-          <td>CPC / Alerts</td>
-        </tr>
-        <tr>
-          <td class="p-could">COULD</td>
-          <td>Weekly backup reports</td>
-          <td>Review MEJ &amp; Associates and Beehive Specialty weekly Backup Radar reports for additional patterns beyond the MEJ-DATA failure already noted.</td>
-          <td>Various / Backup Radar</td>
+          <td><span class="pill pill-info"><span class="d"></span>Standard</span></td>
+          <td><span class="svc">Kidd Roofing — Sage: &ldquo;Emailing a transaction crashes the program&rdquo;.</span> Jamia Albert shared a Sage Knowledgebase article with Marshall about Sage crashing when emailing transactions. Forwarded to Marshall directly. Confirm whether an active ticket exists or if this is a new user-reported issue that needs investigation.</td>
+          <td class="mono">Inbox (noreply@kb.sage.com) · Fri 2026-05-29 18:03 CDT · Kidd Roofing (clowe@kiddroof.com, Jamia Albert)</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="rsection">3 · Today To-Dos</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Item</th><th>Action</th><th>Client / Source</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td>#10295 — Adobe (Dickson)</td>
+          <td>Contact Jennifer Vocelka to schedule remote session. Install Adobe Acrobat/Reader on JenniV-iMac (macOS). Client has been waiting since Wed 5/28.</td>
+          <td class="mono">Dickson Productions / Help Desk</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td>MEJ-DATA Backup</td>
+          <td>Log into Datto appliance MEJDatto2025 (6c92cfea8770) and diagnose why backups have failed for 67+ days. Resolve issue, trigger manual backup, verify success. Notify MSM of status.</td>
+          <td class="mono">MSM / Datto + Backup Radar</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td>CelLink CELAZUPRDFILE01 E:</td>
+          <td>Investigate E: drive on Azure VM CELAZUPRDFILE01 (≤5% free). Identify large files or snapshot accumulation. Free space or extend volume before impact.</td>
+          <td class="mono">CelLink / RMM Alert</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td>#10318 — CPC Publisher Script</td>
+          <td>Call or email Maureen Crawley this morning. Communicate approval decision on the batch Publisher-to-PDF conversion script and provide guidance to proceed.</td>
+          <td class="mono">Covenant Presbyterian Church / Help Desk</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>CelLink disk alerts (GT-ETL-01, JOULE)</td>
+          <td>GT-ETL-01 C: ≤15% (Fri 5:41pm CDT). JOULE D: ≤7% (Sat 9:06am CDT). Investigate and remediate both — check for log accumulation or data growth.</td>
+          <td class="mono">CelLink / RMM Alert</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>#10319 — BRIO Camera (Michael Statham)</td>
+          <td>Michael Statham created ticket to set up Logitech BRIO 4K camera on desktop at office. Review and assign or handle.</td>
+          <td class="mono">Internal / Help Desk</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>#10313 — SA Office Setup</td>
+          <td>Review New Office Set Up — San Antonio ticket for Kidd Roofing. Marshall and Michael planned to be on-site last Thursday (5/28); confirm outcome and remaining work.</td>
+          <td class="mono">Kidd Roofing / Help Desk</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>Kidd Roofing Sage crash</td>
+          <td>Confirm whether &ldquo;Emailing a transaction crashes Sage&rdquo; has an active ticket. If not, open one and investigate. Device: KIDDASAGE (Azure Cloud).</td>
+          <td class="mono">Kidd Roofing / Inbox</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>Meraki firmware upgrades</td>
+          <td>Meraki MX 26.1.4 scheduled for CPC and Buda Fire networks. Confirm upgrade window and monitor for any connectivity disruption during/after the maintenance window.</td>
+          <td class="mono">CPC + Buda Fire / Meraki</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>Could</span></td>
+          <td>Open ticket review (6 tickets)</td>
+          <td>Review and triage: #10317 (ZZ Folder), #10310 (Printer Not Working), #10315 (Kevin Barron Computer), #10297 (BurnettTurner), #10314 (Tristan Martinez), #10294 (PEACHTREE).</td>
+          <td class="mono">Various / Help Desk</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>Could</span></td>
+          <td>Whitehead Wilson onboarding</td>
+          <td>Matt sent introductory &ldquo;best practices&rdquo; email to all@whiteheadwilson.com on Friday (high importance). Confirm onboarding status and whether any setup work is required.</td>
+          <td class="mono">Whitehead Wilson / Inbox</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>Could</span></td>
+          <td>CPC + MSM targeted phishing</td>
+          <td>Two CPC users (mgarcia, mray) received targeted phishing on Saturday. Auto-remediated by Barracuda. Optionally notify client and confirm no user interaction with the messages.</td>
+          <td class="mono">CPC / Alerts</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>Could</span></td>
+          <td>Weekly backup reports</td>
+          <td>Review MEJ &amp; Associates and Beehive Specialty weekly Backup Radar reports for additional patterns beyond the MEJ-DATA failure already noted.</td>
+          <td class="mono">Various / Backup Radar</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">4 · Backups</div>
+    <p class="note">Failed 1 · Warning 1 · No Result 3 (Sat &amp; Sun). Distinct issues, Mon 2026-06-01.</p>
+    <table class="data">
+      <thead><tr><th>Status</th><th>Device / Client</th><th>When (CDT)</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Failed</span></td>
+          <td><span class="svc">MEJ-DATA — McElroy, Sullivan, Miller &amp; Weber</span><br><span class="mono">MEJDatto2025 (6c92cfea8770)</span></td>
+          <td class="mono">2026-05-30 02:00</td>
+          <td>Bootable Screenshot FAILED. <strong>67.2 days since last successful backup.</strong> Backup Radar also reports a &ldquo;Failure&rdquo; for this device as of Sunday 05/31. The 67.2-day gap indicates this is a long-standing unresolved backup issue, not a new failure.</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Warning</span></td>
+          <td><span class="svc">MEJ-DATA — Backup Warning (precedes failure)</span><br><span class="mono">MEJDatto2025 (6c92cfea8770)</span></td>
+          <td class="mono">Sat 2026-05-30 02:03</td>
+          <td>Warning reported 3 minutes before the bootable screenshot failure. Part of the same ongoing MEJ-DATA backup issue.</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>No Result</span></td>
+          <td><span class="svc">MEJ &amp; Associates — MEJ-DATA</span><br><span class="mono">Datto API</span></td>
+          <td class="mono">Sat 05-30 10:00 &amp; Sun 05-31 10:00</td>
+          <td>Backup Radar received no data from the Datto API for MEJ-DATA on both days. Consistent with the Datto appliance / connectivity issue underlying the 67-day failure.</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>No Result</span></td>
+          <td><span class="svc">Covenant Presbyterian Church</span><br><span class="mono">DattoSaasProtection</span></td>
+          <td class="mono">Sat 05-30 10:00 &amp; Sun 05-31 10:00</td>
+          <td>DattoSaasProtection returned no result for CPC on both weekend days. May indicate a licensing or connectivity issue with the SaaS backup service. Investigate if this is a new issue or ongoing.</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>No Result</span></td>
+          <td><span class="svc">Capital Excavation — Rescue-cxfile01</span><br><span class="mono">Datto API</span></td>
+          <td class="mono">Sat 05-30 10:00 &amp; Sun 05-31 10:00</td>
+          <td>No result from Datto API for Capital Excavation on both weekend days. Review whether this is a new gap or a recurring pattern in the weekly report.</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td>
+          <td><span class="svc">CelLink — all clear</span><br><span class="mono">CelLinkSC (84160c323b48)</span></td>
+          <td class="mono">Fri 2026-05-29 – Sun 2026-05-31</td>
+          <td>All servers verified over the weekend: CEL-APPSERVER, CEL-SC-UVIS-01, CEL-SC-RADIUS, CEL-SC-DC-01, FaradayDEV, CEL-SC-DATABROKER-01, CEL-SC-DEPLOY, Joule, Henry, Volta, Faraday. All SUCCEEDED on both Fri and Sat night verification runs.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">5 · Alerts — Top 3 Uncommon</div>
+    <table class="data">
+      <thead><tr><th>Severity</th><th>Alert</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>High</span></td>
+          <td><span class="svc">Barracuda: Coordinated Targeted Phishing — Covenant Presbyterian Church.</span> Two separate users at CPC received targeted impersonation attacks within seconds of each other on Saturday afternoon. Both auto-remediated (moved to junk). Simultaneous dual-targeting of the same organization is unusual and may indicate a coordinated campaign. Consider notifying CPC and verifying neither user interacted with the messages.</td>
+          <td class="mono">Barracuda Impersonation Protection · Sat 2026-05-30 20:35 CDT · mgarcia@covenant.org &amp; mray@covenant.org</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Medium</span></td>
+          <td><span class="svc">Barracuda: 3 Incident Responses in 22 Hours.</span> Three separate Incident Response events over the weekend: Fri 5:07pm CDT, Sat 5:07am CDT, Sat 3:08pm CDT. Each detected and remediated emails with malicious content (moved to junk). Three incidents in 22 hours is elevated compared to the typical single-per-day pattern. No action required beyond awareness.</td>
+          <td class="mono">Barracuda Incident Response · Fri 2026-05-29 22:07 UTC · Sat 2026-05-30 10:07 UTC · Sat 2026-05-30 20:08 UTC</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>High</span></td>
+          <td><span class="svc">CelLink: Three Disk Space Alerts Across Multiple Devices.</span> Three distinct disk space alerts on three different CelLink machines within 15 hours. GT-ETL-01 (Georgetown TX), CELAZUPRDFILE01 (Azure), and JOULE (San Carlos CA). Multiple concurrent disk issues across geographically distributed systems suggests possible snapshot/log buildup or a shared storage policy issue rather than unrelated coincidences.</td>
+          <td class="mono">RMM Alerts · Fri 17:41 CDT (GT-ETL-01 C:≤15%), Sat 04:09 CDT (CELAZUPRDFILE01 E:≤5%), Sat 09:06 CDT (JOULE D:≤7%)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">6 · Time Entries</div>
+    <div class="callout">Period: Fri 2026-05-29 16:00 CDT → Mon 2026-06-01 07:30 CDT. <span class="ds-code">Friday — May 29, 2026</span></div>
+    <table class="data">
+      <thead><tr><th>Category</th><th>Entry</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-success"><span class="d"></span>Project (Green)</span><br><span class="mono">Covenant Presbyterian Church — Ticket #10318</span></td>
+          <td><span class="svc">Subject:</span> Covenant Presbyterian Church · <span class="svc">Location:</span> Remote<br><span class="svc">Description:</span> Reviewed Microsoft Publisher batch conversion script submitted by Maureen Crawley. Confirmed script does not require admin permissions. Advised on process; agreed to reconnect Monday to finalize approval.</td>
+          <td class="mono">2026-05-29 15:54 - 16:51</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note">Note: CPC category is Project (Green) per skill rule — CPC during business hours always Project regardless of work type. Time anchored to Marshall&rsquo;s message timestamps at 15:54 and 16:51 CST; start is 6 minutes before window open (16:00 CDT) but work continued into the window.</p>
+    <p class="note">Saturday 2026-05-30 and Sunday 2026-05-31: No qualifying client-work evidence found in the scan window. Ticket #10295 assigned to Marshall on Sat but no Marshall response observed — no time entry generated.</p>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="rfoot">
+    <span>Ariat Systems · Internal</span>
+    <span>Generated 2026-06-01 07:30 CDT · briefs.cloudmarsh.com</span>
   </div>
 </div>
-
-<!-- 4. BACKUPS -->
-<div class="section">
-  <div class="sec-hdr"><h2>4. Backups</h2><span class="badge badge-red">Failed 1</span><span class="badge badge-orange">Warning 1</span><span class="badge">No Result 3</span></div>
-  <div class="sec-body">
-
-    <!-- SVG bar chart -->
-    <svg width="320" height="72" viewBox="0 0 320 72" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:16px">
-      <text x="0" y="11" font-size="9" fill="#718096" font-family="Arial" font-weight="700">BACKUP STATUS (distinct issues, Mon 2026-06-01)</text>
-      <!-- Failed -->
-      <rect x="0" y="18" width="80" height="14" fill="#e53e3e" rx="2"/>
-      <text x="84" y="30" font-size="10" fill="#e53e3e" font-family="Arial" font-weight="700">1 Failed</text>
-      <!-- Warning -->
-      <rect x="0" y="37" width="40" height="14" fill="#dd6b20" rx="2"/>
-      <text x="44" y="49" font-size="10" fill="#dd6b20" font-family="Arial">1 Warning</text>
-      <!-- No Result -->
-      <rect x="0" y="56" width="120" height="14" fill="#718096" rx="2"/>
-      <text x="124" y="68" font-size="10" fill="#718096" font-family="Arial">3 No Result (Sat &amp; Sun)</text>
-    </svg>
-
-    <div class="bk-group-title" style="color:#e53e3e">Failed</div>
-    <div class="item item-urgent">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUrGVzAAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">MEJ-DATA &mdash; McElroy, Sullivan, Miller &amp; Weber &mdash; Bootable Screenshot FAILED</a></div>
-      <div class="item-meta">Datto: MEJDatto2025 (6c92cfea8770) &bull; Failed: 2026-05-30 02:00 CDT &bull; <strong style="color:#e53e3e">67.2 days since last successful backup</strong></div>
-      <div class="item-detail">Screenshot failure on device MEJ-DATA. Backup Radar also reports a &ldquo;Failure&rdquo; for this device as of Sunday 05/31. The 67.2-day gap indicates this is a long-standing unresolved backup issue, not a new failure.</div>
-    </div>
-
-    <div class="bk-group-title" style="color:#dd6b20">Warning</div>
-    <div class="item item-asap">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUrGVy9AAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">MEJ-DATA &mdash; Backup Warning (precedes failure)</a></div>
-      <div class="item-meta">Datto: MEJDatto2025 (6c92cfea8770) &bull; Sat 2026-05-30 02:03 CDT</div>
-      <div class="item-detail">Warning reported 3 minutes before the bootable screenshot failure. Part of the same ongoing MEJ-DATA backup issue.</div>
-    </div>
-
-    <div class="bk-group-title" style="color:#718096">No Result</div>
-    <div class="item item-std">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUrChpqAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">MEJ &amp; Associates &mdash; MEJ-DATA &mdash; No Result on Datto API</a></div>
-      <div class="item-meta">Backup Radar &bull; Sat 2026-05-30 10:00 CDT &amp; Sun 2026-05-31 10:00 CDT</div>
-      <div class="item-detail">Backup Radar received no data from the Datto API for MEJ-DATA on both days. Consistent with the Datto appliance / connectivity issue underlying the 67-day failure.</div>
-    </div>
-    <div class="item item-std">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUrChprAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Covenant Presbyterian Church &mdash; No Result on DattoSaasProtection</a></div>
-      <div class="item-meta">Backup Radar &bull; Sat 2026-05-30 10:00 CDT &amp; Sun 2026-05-31 10:00 CDT</div>
-      <div class="item-detail">DattoSaasProtection returned no result for CPC on both weekend days. May indicate a licensing or connectivity issue with the SaaS backup service. Investigate if this is a new issue or ongoing.</div>
-    </div>
-    <div class="item item-std">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAUrChpsAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Capital Excavation &mdash; Rescue-cxfile01 &mdash; No Result on Datto API</a></div>
-      <div class="item-meta">Backup Radar &bull; Sat 2026-05-30 10:00 CDT &amp; Sun 2026-05-31 10:00 CDT</div>
-      <div class="item-detail">No result from Datto API for Capital Excavation on both weekend days. Review whether this is a new gap or a recurring pattern in the weekly report.</div>
-    </div>
-
-    <div class="bk-group-title" style="color:#276749">Succeeded (CelLink &mdash; all clear)</div>
-    <div class="item item-ok">
-      <div class="item-title">CelLink &mdash; All Bootable Screenshots Succeeded (Fri PM, Sat, Sun)</div>
-      <div class="item-meta">Datto: CelLinkSC (84160c323b48) &bull; Fri 2026-05-29 &ndash; Sun 2026-05-31</div>
-      <div class="item-detail">All servers verified over the weekend: CEL-APPSERVER, CEL-SC-UVIS-01, CEL-SC-RADIUS, CEL-SC-DC-01, FaradayDEV, CEL-SC-DATABROKER-01, CEL-SC-DEPLOY, Joule, Henry, Volta, Faraday. All SUCCEEDED on both Fri and Sat night verification runs.</div>
-    </div>
-
-  </div>
-</div>
-
-<!-- 5. ALERTS -->
-<div class="section">
-  <div class="sec-hdr"><h2>5. Alerts</h2><span class="badge">Top 3 Uncommon</span></div>
-  <div class="sec-body">
-
-    <div class="item item-asap">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FNAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Barracuda: Coordinated Targeted Phishing &mdash; Covenant Presbyterian Church</a></div>
-      <div class="item-meta">Barracuda Impersonation Protection &bull; Sat 2026-05-30 20:35 CDT &bull; mgarcia@covenant.org &amp; mray@covenant.org</div>
-      <div class="item-detail">Two separate users at CPC received targeted impersonation attacks within seconds of each other on Saturday afternoon. Both auto-remediated (moved to junk). Simultaneous dual-targeting of the same organization is unusual and may indicate a coordinated campaign. Consider notifying CPC and verifying neither user interacted with the messages.</div>
-    </div>
-
-    <div class="item item-std">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FQAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">Barracuda: 3 Incident Responses in 22 Hours</a></div>
-      <div class="item-meta">Barracuda Incident Response &bull; Fri 2026-05-29 22:07 UTC &bull; Sat 2026-05-30 10:07 UTC &bull; Sat 2026-05-30 20:08 UTC</div>
-      <div class="item-detail">Three separate Incident Response events over the weekend: Fri 5:07pm CDT, Sat 5:07am CDT, Sat 3:08pm CDT. Each detected and remediated emails with malicious content (moved to junk). Three incidents in 22 hours is elevated compared to the typical single-per-day pattern. No action required beyond awareness.</div>
-    </div>
-
-    <div class="item item-asap">
-      <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUp93FDAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">CelLink: Three Disk Space Alerts Across Multiple Devices</a></div>
-      <div class="item-meta">RMM Alerts &bull; Fri 17:41 CDT (GT-ETL-01 C:&lt;=15%), Sat 04:09 CDT (CELAZUPRDFILE01 E:&lt;=5%), Sat 09:06 CDT (JOULE D:&lt;=7%)</div>
-      <div class="item-detail">Three distinct disk space alerts on three different CelLink machines within 15 hours. GT-ETL-01 (Georgetown TX), CELAZUPRDFILE01 (Azure), and JOULE (San Carlos CA). Multiple concurrent disk issues across geographically distributed systems suggests possible snapshot/log buildup or a shared storage policy issue rather than unrelated coincidences.</div>
-    </div>
-
-  </div>
-</div>
-
-<!-- 6. TIME ENTRIES -->
-<div class="section">
-  <div class="sec-hdr"><h2>6. Time Entries</h2><span class="badge badge-blue">1</span></div>
-  <div class="sec-body">
-
-    <p style="font-size:12px;color:#718096;margin-bottom:14px">Period: Fri 2026-05-29 16:00 CDT &rarr; Mon 2026-06-01 07:30 CDT</p>
-
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;color:#4a5568;margin-bottom:10px;padding-bottom:4px;border-bottom:1px solid #e2e8f0">Friday &mdash; May 29, 2026</div>
-
-    <div class="te-card te-green">
-      <div class="te-hdr te-hdr-green">Project (Green) &mdash; Covenant Presbyterian Church &mdash; Ticket #10318</div>
-      <div class="te-body">Subject:     Covenant Presbyterian Church
-Location:    Remote
-Description: Reviewed Microsoft Publisher batch conversion script submitted
-             by Maureen Crawley. Confirmed script does not require admin
-             permissions. Advised on process; agreed to reconnect Monday
-             to finalize approval.
-Category:    Project (Green)
-Time:        2026-05-29 15:54 - 16:51</div>
-    </div>
-
-    <p class="note-text">Note: CPC category is Project (Green) per skill rule &mdash; CPC during business hours always Project regardless of work type. Time anchored to Marshall&rsquo;s message timestamps at 15:54 and 16:51 CST; start is 6 minutes before window open (16:00 CDT) but work continued into the window.</p>
-
-    <p class="note-text" style="margin-top:8px">Saturday 2026-05-30 and Sunday 2026-05-31: No qualifying client-work evidence found in the scan window. Ticket #10295 assigned to Marshall on Sat but no Marshall response observed &mdash; no time entry generated.</p>
-
-  </div>
-</div>
-
-</div><!-- .wrap -->
 </body>
 </html>

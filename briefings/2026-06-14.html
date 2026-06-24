@@ -1,499 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Briefing — 2026-06-14</title>
-<style>
-  :root {
-    --bg: #0f172a;
-    --surface: #1e293b;
-    --surface2: #273548;
-    --border: #334155;
-    --text: #e2e8f0;
-    --text-muted: #94a3b8;
-    --urgent: #dc2626;
-    --urgent-bg: #450a0a;
-    --asap: #ea580c;
-    --asap-bg: #431407;
-    --standard: #3b82f6;
-    --standard-bg: #1e3a5f;
-    --green: #16a34a;
-    --yellow: #ca8a04;
-    --red: #dc2626;
-    --blue: #3b82f6;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 24px;
-    max-width: 900px;
-    margin: 0 auto;
-  }
-  h1 { font-size: 22px; font-weight: 700; margin-bottom: 4px; }
-  h2 { font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0; }
-  .meta { color: var(--text-muted); font-size: 12px; margin-bottom: 24px; }
-  .section { margin-bottom: 32px; }
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 12px;
-  }
-  .badge {
-    display: inline-block;
-    padding: 2px 8px;
-    border-radius: 9999px;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .badge-urgent { background: var(--urgent); color: #fff; }
-  .badge-asap { background: var(--asap); color: #fff; }
-  .badge-standard { background: var(--standard); color: #fff; }
-  .badge-count { background: var(--surface2); color: var(--text-muted); }
-  .card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin-bottom: 8px;
-  }
-  .card-urgent { border-left: 4px solid var(--urgent); background: var(--urgent-bg); }
-  .card-asap { border-left: 4px solid var(--asap); }
-  .card-standard { border-left: 4px solid var(--standard); }
-  .card-title { font-weight: 600; margin-bottom: 4px; }
-  .card-meta { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
-  .card-body { font-size: 13px; }
-  table { width: 100%; border-collapse: collapse; }
-  th {
-    text-align: left;
-    padding: 8px 10px;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-muted);
-    border-bottom: 1px solid var(--border);
-    background: var(--surface2);
-  }
-  td { padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 13px; }
-  tr:last-child td { border-bottom: none; }
-  .status-failed { color: var(--red); font-weight: 700; }
-  .status-warning { color: var(--yellow); font-weight: 700; }
-  .status-ok { color: var(--green); }
-  .status-nodata { color: var(--text-muted); }
-  .time-entry {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-left: 4px solid var(--blue);
-    border-radius: 6px;
-    padding: 12px 16px;
-    margin-bottom: 10px;
-    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', Consolas, monospace;
-    font-size: 12px;
-    line-height: 1.8;
-  }
-  .field-label { color: var(--text-muted); }
-  .missing { color: var(--yellow); font-style: italic; }
-  .chart-wrap { margin-bottom: 20px; }
-  .chart-label { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
-  .todo-group { margin-bottom: 12px; }
-  .todo-group:last-child { margin-bottom: 0; }
-  .todo-group-title {
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    letter-spacing: 0.05em;
-    margin-bottom: 6px;
-  }
-  .todo-item { display: flex; gap: 8px; padding: 3px 0; font-size: 13px; }
-  .todo-num { color: var(--text-muted); min-width: 20px; flex-shrink: 0; }
-  a { color: #60a5fa; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  code { background: #0f172a; padding: 1px 5px; border-radius: 3px; font-size: 12px; font-family: 'SF Mono', 'Fira Code', monospace; }
-  hr { border: none; border-top: 1px solid var(--border); margin: 24px 0; }
-</style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ariat Systems — Morning Briefing · 2026-06-14</title>
+<link rel="icon" type="image/png" href="../assets/ariat_favicon_32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/briefing.css" />
 </head>
 <body>
-
-<h1>Morning Briefing</h1>
-<p class="meta">Sunday, June 14, 2026 &nbsp;&middot;&nbsp; Generated 07:30 CDT &nbsp;&middot;&nbsp; Scan window: Fri Jun 12 16:00 CDT &rarr; Sun Jun 14 07:30 CDT</p>
-
-<!-- Severity Overview Chart -->
-<div class="chart-wrap">
-  <div class="chart-label">Severity Overview &mdash; 16 classified items</div>
-  <svg width="500" height="50" viewBox="0 0 500 50" xmlns="http://www.w3.org/2000/svg">
-    <!-- Urgent: 1/16 = 6.25% of 483px = 30px -->
-    <rect x="0" y="6" width="30" height="26" rx="3" fill="#dc2626"/>
-    <text x="15" y="22" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" font-weight="700">1</text>
-    <!-- ASAP: 3/16 = 18.75% = 91px -->
-    <rect x="34" y="6" width="91" height="26" rx="3" fill="#ea580c"/>
-    <text x="79" y="22" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" font-weight="700">3</text>
-    <!-- Standard: 12/16 = 75% = 362px -->
-    <rect x="129" y="6" width="354" height="26" rx="3" fill="#3b82f6"/>
-    <text x="306" y="22" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" font-weight="700">12</text>
-    <!-- Legend -->
-    <rect x="0" y="38" width="10" height="8" fill="#dc2626" rx="1"/>
-    <text x="14" y="46" fill="#94a3b8" font-size="10" font-family="sans-serif">Urgent</text>
-    <rect x="58" y="38" width="10" height="8" fill="#ea580c" rx="1"/>
-    <text x="72" y="46" fill="#94a3b8" font-size="10" font-family="sans-serif">ASAP</text>
-    <rect x="112" y="38" width="10" height="8" fill="#3b82f6" rx="1"/>
-    <text x="126" y="46" fill="#94a3b8" font-size="10" font-family="sans-serif">Standard</text>
-  </svg>
+<div class="toolbar">
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+    Print / Save PDF
+  </button>
 </div>
 
-<!-- Backup Health Chart -->
-<div class="chart-wrap">
-  <div class="chart-label">Backup Health &mdash; 17 protected assets</div>
-  <svg width="500" height="50" viewBox="0 0 500 50" xmlns="http://www.w3.org/2000/svg">
-    <!-- Failed: 3/17 = 17.6% of 483px = 85px -->
-    <rect x="0" y="6" width="85" height="26" rx="3" fill="#dc2626"/>
-    <text x="42" y="22" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" font-weight="700">3 Failed</text>
-    <!-- Warning: 1/17 = 5.9% = 29px -->
-    <rect x="89" y="6" width="28" height="26" rx="3" fill="#ca8a04"/>
-    <text x="103" y="22" fill="#fff" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" font-weight="700">1</text>
-    <!-- No Result: 2/17 = 11.8% = 57px -->
-    <rect x="121" y="6" width="57" height="26" rx="3" fill="#475569"/>
-    <text x="149" y="22" fill="#fff" font-size="10" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" font-weight="700">2 N/R</text>
-    <!-- OK: 11/17 = 64.7% = 313px -->
-    <rect x="182" y="6" width="301" height="26" rx="3" fill="#16a34a"/>
-    <text x="332" y="22" fill="#fff" font-size="11" font-family="sans-serif" text-anchor="middle" dominant-baseline="middle" font-weight="700">11 OK</text>
-    <!-- Legend -->
-    <rect x="0" y="38" width="10" height="8" fill="#dc2626" rx="1"/>
-    <text x="14" y="46" fill="#94a3b8" font-size="10" font-family="sans-serif">Failed</text>
-    <rect x="52" y="38" width="10" height="8" fill="#ca8a04" rx="1"/>
-    <text x="66" y="46" fill="#94a3b8" font-size="10" font-family="sans-serif">Warning</text>
-    <rect x="115" y="38" width="10" height="8" fill="#475569" rx="1"/>
-    <text x="129" y="46" fill="#94a3b8" font-size="10" font-family="sans-serif">No Result</text>
-    <rect x="185" y="38" width="10" height="8" fill="#16a34a" rx="1"/>
-    <text x="199" y="46" fill="#94a3b8" font-size="10" font-family="sans-serif">OK</text>
-  </svg>
-</div>
-
-<!-- ═══════════════════════════════════════
-     SECTION 1: URGENT
-     ═══════════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="badge badge-urgent">Urgent</span>
-    <h2>Urgent</h2>
-    <span class="badge badge-count">1</span>
-  </div>
-
-  <div class="card card-urgent">
-    <div class="card-title">&#128308; SentinelOne &mdash; Suspicious DLL on <code>rdorsey106</code></div>
-    <div class="card-meta">Sun Jun 14 03:31 CDT &nbsp;&middot;&nbsp; Ext IP: 108.221.44.49 &nbsp;&middot;&nbsp; Int IP: 10.111.111.40</div>
-    <div class="card-body">
-      Threat DLL: <code>076DD84014E791407A6EE5A8A2E0B24B61BFF489.dll</code><br>
-      External C2 communication detected. Client not identifiable from alert text &mdash; check SentinelOne console to identify endpoint owner and determine if isolation/remediation is needed.<br>
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVkJp0yAAA%3D&amp;exvsurl=1&amp;viewmodel=ReadMessageItem">View alert in Outlook &rarr;</a>
+<div class="sheet">
+  <!-- Header -->
+  <div class="rhead">
+    <div class="lz">
+      <div class="rlogo">
+        <img class="rmark" src="../assets/ariat_mark.png" alt="" />
+        <span class="rdiv"></span>
+        <img class="rword" src="../assets/ariat_wordmark.png" alt="Ariat Systems" />
+      </div>
+      <div class="rtitle">Morning Briefing</div>
+      <div class="rsub">Sunday, June 14, 2026 · Operational Summary</div>
     </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
-     SECTION 2: FOLLOW-UPS
-     ═══════════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="badge badge-asap">ASAP</span>
-    <h2>Follow-Ups</h2>
-    <span class="badge badge-count">3</span>
-  </div>
-
-  <div class="card card-asap">
-    <div class="card-title">Ticket #10418 &mdash; Danielle Taylor &middot; SharePoint Client File Subsite</div>
-    <div class="card-meta">ASAP &nbsp;&middot;&nbsp; Status: Open &nbsp;&middot;&nbsp; Client ready to proceed</div>
-    <div class="card-body">
-      Created restricted SharePoint subsite for client file access. Danielle planned to log in Friday evening or wait until Monday.
-      Needs follow-up: confirm client can access, complete setup if needed.
+    <div class="rmeta">
+      <div><span class="accent">WINDOW</span> Fri Jun 12 16:00 → Sun Jun 14 07:30 CDT</div>
+      <div><span class="accent">SCANNED</span> 16 classified items · 17 protected assets</div>
+      <div><span class="accent">REF</span> BRIEF-2026-06-14-AM</div>
     </div>
   </div>
 
-  <div class="card card-standard">
-    <div class="card-title">Ticket #10416 &mdash; Capital Excavation &middot; File Room Printer &rarr; HeavyBid</div>
-    <div class="card-meta">Standard &nbsp;&middot;&nbsp; New (Sat) &nbsp;&middot;&nbsp; Unread &nbsp;&middot;&nbsp; No response sent</div>
-    <div class="card-body">Request to add the file room printer to the HeavyBid application.</div>
+  <!-- Body -->
+  <div class="rbody">
+
+    <div class="rsection">Severity Overview</div>
+    <div class="stats">
+      <div class="stat"><div class="v">1</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="v">3</div><div class="l">ASAP</div></div>
+      <div class="stat"><div class="v">12</div><div class="l">Standard</div></div>
+      <div class="stat"><div class="v">16</div><div class="l">Classified</div></div>
+    </div>
+    <p class="note">Backup health — 17 protected assets: 3 Failed · 1 Warning · 2 No Result · 11 OK.</p>
+
+    <div class="rsection">Urgent</div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Source / Meta</th><th>Detail</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">SentinelOne — Suspicious DLL on <span class="ds-code">rdorsey106</span></span> <span class="pill pill-danger"><span class="d"></span>Urgent</span></td>
+          <td>EDR · Ext IP 108.221.44.49 · Int IP 10.111.111.40</td>
+          <td>Threat DLL: <span class="ds-code">076DD84014E791407A6EE5A8A2E0B24B61BFF489.dll</span>. External C2 communication detected. Client not identifiable from alert text — check SentinelOne console to identify endpoint owner and determine if isolation/remediation is needed.</td>
+          <td class="mono">Sun Jun 14 03:31 CDT</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Follow-ups</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Item</th><th>Status</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">Ticket #10418 — Danielle Taylor · SharePoint Client File Subsite</span></td>
+          <td class="mono">Open · Client ready to proceed</td>
+          <td>Created restricted SharePoint subsite for client file access. Danielle planned to log in Friday evening or wait until Monday. Needs follow-up: confirm client can access, complete setup if needed.</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Standard</span></td>
+          <td><span class="svc">Ticket #10416 — Capital Excavation · File Room Printer → HeavyBid</span></td>
+          <td class="mono">New (Sat) · Unread · No response sent</td>
+          <td>Request to add the file room printer to the HeavyBid application.</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Standard</span></td>
+          <td><span class="svc">Ticket #10425 — SharePoint Folder Access from Client</span></td>
+          <td class="mono">New (Sat) · Unread · No response sent</td>
+          <td>Client requesting SharePoint folder access. Review request and provision access.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Today To-Dos</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>#</th><th>Task</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td class="mono">1</td><td>Triage <strong>rdorsey106</strong> SentinelOne threat — identify client, check isolation status, remediate DLL if active</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td class="mono">2</td><td>Clear <strong>CelLink CELAZUPRDFILE01</strong> Azure E: drive (≤5% free) — firing for 24+ hours</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td class="mono">3</td><td>Investigate <strong>CelLink CEL-GT-DATABROKER-01</strong> backup failure — 3 consecutive days, Backup Radar</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td class="mono">4</td><td>Address other CelLink disk alerts: CELAZUPRDSYS01 F: ≤10%, CEL-APPSERVER C: ≤8%, JOULE D: ≤7%</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td class="mono">5</td><td>Remote in for <strong>Ticket #10418</strong> — help Danielle Taylor complete SharePoint subsite access</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td class="mono">6</td><td>Investigate <strong>MEJ-DATA</strong> filesystem warning (recurring 2 nights: Sat + Sun 02:0x CDT; bootable screenshot failed)</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td class="mono">7</td><td>Respond to <strong>Ticket #10425</strong> — SharePoint folder access request</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td class="mono">8</td><td><strong>Ticket #10416</strong> — Capital Excavation file room printer → HeavyBid</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td class="mono">9</td><td><strong>Ticket #10410</strong> — Printer and scan follow-up</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td class="mono">10</td><td>covenant.org SSL cert review — expires ~1 month, not urgent yet</td></tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Backups — 17 Assets</div>
+    <table class="data">
+      <thead><tr><th>Asset</th><th>Status</th><th>Days</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>CelLink CEL-GT-DATABROKER-01</strong></td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td class="mono">3</td><td>3 consecutive failures: 06/12 00:01, 06/12 12:00, 06/13 00:01 · Backup Radar</td></tr>
+        <tr><td><strong>MEJ-DATA (MSM) — screenshot</strong></td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td class="mono">1</td><td>Bootable screenshot FAILED Sat 08:39 UTC · Datto</td></tr>
+        <tr><td><strong>Capital Excavation</strong></td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td class="mono">1</td><td>1-day failure · Datto</td></tr>
+        <tr><td><strong>MEJ-DATA (MSM) — filesystem</strong></td><td><span class="pill pill-warning"><span class="d"></span>Warning</span></td><td class="mono">2</td><td>Unknown filesystem type · Sat 02:04 CDT + Sun 02:08 CDT · Datto</td></tr>
+        <tr><td><strong>Covenant Presbyterian Church</strong></td><td><span class="pill pill-neutral"><span class="d"></span>No Result</span></td><td class="mono">—</td><td>DattoSaasProtection — no status returned in scan window</td></tr>
+        <tr><td><strong>MEJ &amp; Associates</strong></td><td><span class="pill pill-neutral"><span class="d"></span>No Result</span></td><td class="mono">—</td><td>Datto API — no status returned in scan window</td></tr>
+        <tr><td>CelLink CEL-APPSERVER</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink Henry</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink CEL-SC-UVIS-01</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink CEL-SC-DC-01</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink FaradayDEV</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink Volta</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink Joule</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink CEL-SC-DEPLOY</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink CEL-SC-RADIUS</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink CEL-SC-DATABROKER-01</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+        <tr><td>CelLink Faraday</td><td><span class="pill pill-success"><span class="d"></span>OK</span></td><td class="mono">0</td><td></td></tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Alerts</div>
+    <table class="data">
+      <thead><tr><th>Alert</th><th>Source / Meta</th><th>Detail</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">SentinelOne — Suspicious DLL · <span class="ds-code">rdorsey106</span></span> <span class="pill pill-danger"><span class="d"></span>Urgent</span></td>
+          <td>EDR</td>
+          <td>External IP <span class="ds-code">108.221.44.49</span> contacted from internal <span class="ds-code">10.111.111.40</span>. DLL hash: <span class="ds-code">076DD84014E791407A6EE5A8A2E0B24B61BFF489.dll</span></td>
+          <td class="mono">Sun Jun 14 03:31 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="svc">Barracuda Impersonation Protection — Targeted Phishing</span> <span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td>Target: mmitchell@covenant.org</td>
+          <td>Phishing email targeting Mitchell at Covenant Presbyterian Church. Barracuda impersonation protection flagged and blocked delivery.</td>
+          <td class="mono">Sat Jun 13 19:22 UTC</td>
+        </tr>
+        <tr>
+          <td><span class="svc">Barracuda SKOUT XDR — GLB.SM.UNI Log Monitoring Degradation</span> <span class="pill pill-info"><span class="d"></span>Standard</span></td>
+          <td>2 occurrences</td>
+          <td>Log monitoring degradation fired twice within ~19 hours. Monitor for recurrence; may indicate connectivity or agent issue with SKOUT collector.</td>
+          <td class="mono">Fri Jun 12 23:11 UTC + Sat Jun 13 18:11 UTC</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Time Entries — 3 entries · Fri Jun 12</div>
+    <table class="data">
+      <thead><tr><th>Subject</th><th>Location</th><th>Description</th><th>Category</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">Buda Fire &amp; EMS</span></td>
+          <td>Remote</td>
+          <td>Troubleshot and resolved offline printer for Zaynah Rodriguez. Remoted in.</td>
+          <td>On-Going Support (Blue)</td>
+          <td class="mono">2026-06-12 10:56 – 11:30</td>
+        </tr>
+        <tr>
+          <td><span class="svc">Capital Excavation</span></td>
+          <td>Remote</td>
+          <td>Pulled Training Room Calendar into Norma DeLaRosa's Outlook account. Confirmed sync.</td>
+          <td>On-Going Support (Blue)</td>
+          <td class="mono">2026-06-12 14:15 – 15:00</td>
+        </tr>
+        <tr>
+          <td><span class="svc">&lt;MISSING: client not identifiable with ≥80% confidence — Danielle Taylor, SharePoint subsite&gt;</span></td>
+          <td>Remote</td>
+          <td>Created separate SharePoint subsite for restricted file access. Offered to remote in to complete sync.</td>
+          <td>On-Going Support (Blue)</td>
+          <td class="mono">&lt;MISSING: start/end time — exchanges span 10:32–15:33 CST, actual work duration not determinable&gt;</td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 
-  <div class="card card-standard">
-    <div class="card-title">Ticket #10425 &mdash; SharePoint Folder Access from Client</div>
-    <div class="card-meta">Standard &nbsp;&middot;&nbsp; New (Sat) &nbsp;&middot;&nbsp; Unread &nbsp;&middot;&nbsp; No response sent</div>
-    <div class="card-body">Client requesting SharePoint folder access. Review request and provision access.</div>
+  <!-- Footer -->
+  <div class="rfoot">
+    <span>Ariat Systems · Internal</span>
+    <span>Generated 2026-06-14 07:30 CDT · briefs.cloudmarsh.com</span>
   </div>
 </div>
-
-<!-- ═══════════════════════════════════════
-     SECTION 3: TODAY TO-DOS
-     ═══════════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="badge badge-standard">Plan</span>
-    <h2>Today To-Dos</h2>
-    <span class="badge badge-count">10</span>
-  </div>
-
-  <div class="card">
-    <div class="todo-group">
-      <div class="todo-group-title">Must</div>
-      <div class="todo-item">
-        <span class="todo-num">1.</span>
-        <span>Triage <strong>rdorsey106</strong> SentinelOne threat &mdash; identify client, check isolation status, remediate DLL if active</span>
-      </div>
-      <div class="todo-item">
-        <span class="todo-num">2.</span>
-        <span>Clear <strong>CelLink CELAZUPRDFILE01</strong> Azure E: drive (&le;5% free) &mdash; firing for 24+ hours</span>
-      </div>
-      <div class="todo-item">
-        <span class="todo-num">3.</span>
-        <span>Investigate <strong>CelLink CEL-GT-DATABROKER-01</strong> backup failure &mdash; 3 consecutive days, Backup Radar</span>
-      </div>
-    </div>
-
-    <div class="todo-group">
-      <div class="todo-group-title">Should</div>
-      <div class="todo-item">
-        <span class="todo-num">4.</span>
-        <span>Address other CelLink disk alerts: CELAZUPRDSYS01 F: &le;10%, CEL-APPSERVER C: &le;8%, JOULE D: &le;7%</span>
-      </div>
-      <div class="todo-item">
-        <span class="todo-num">5.</span>
-        <span>Remote in for <strong>Ticket #10418</strong> &mdash; help Danielle Taylor complete SharePoint subsite access</span>
-      </div>
-      <div class="todo-item">
-        <span class="todo-num">6.</span>
-        <span>Investigate <strong>MEJ-DATA</strong> filesystem warning (recurring 2 nights: Sat + Sun 02:0x CDT; bootable screenshot failed)</span>
-      </div>
-      <div class="todo-item">
-        <span class="todo-num">7.</span>
-        <span>Respond to <strong>Ticket #10425</strong> &mdash; SharePoint folder access request</span>
-      </div>
-    </div>
-
-    <div class="todo-group">
-      <div class="todo-group-title">Could</div>
-      <div class="todo-item">
-        <span class="todo-num">8.</span>
-        <span><strong>Ticket #10416</strong> &mdash; Capital Excavation file room printer &rarr; HeavyBid</span>
-      </div>
-      <div class="todo-item">
-        <span class="todo-num">9.</span>
-        <span><strong>Ticket #10410</strong> &mdash; Printer and scan follow-up</span>
-      </div>
-      <div class="todo-item">
-        <span class="todo-num">10.</span>
-        <span>covenant.org SSL cert review &mdash; expires ~1 month, not urgent yet</span>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
-     SECTION 4: BACKUPS
-     ═══════════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="badge badge-standard">Backups</span>
-    <h2>Backups</h2>
-    <span class="badge badge-count">17 assets</span>
-  </div>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Asset</th>
-        <th>Status</th>
-        <th>Days</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>CelLink CEL-GT-DATABROKER-01</strong></td>
-        <td class="status-failed">FAILED</td>
-        <td>3</td>
-        <td>3 consecutive failures: 06/12 00:01, 06/12 12:00, 06/13 00:01 &middot; Backup Radar</td>
-      </tr>
-      <tr>
-        <td><strong>MEJ-DATA (MSM) &mdash; screenshot</strong></td>
-        <td class="status-failed">FAILED</td>
-        <td>1</td>
-        <td>Bootable screenshot FAILED Sat 08:39 UTC &middot; Datto</td>
-      </tr>
-      <tr>
-        <td><strong>Capital Excavation</strong></td>
-        <td class="status-failed">FAILED</td>
-        <td>1</td>
-        <td>1-day failure &middot; Datto</td>
-      </tr>
-      <tr>
-        <td><strong>MEJ-DATA (MSM) &mdash; filesystem</strong></td>
-        <td class="status-warning">WARNING</td>
-        <td>2</td>
-        <td>Unknown filesystem type &middot; Sat 02:04 CDT + Sun 02:08 CDT &middot; Datto</td>
-      </tr>
-      <tr>
-        <td><strong>Covenant Presbyterian Church</strong></td>
-        <td class="status-nodata">NO RESULT</td>
-        <td>&mdash;</td>
-        <td>DattoSaasProtection &mdash; no status returned in scan window</td>
-      </tr>
-      <tr>
-        <td><strong>MEJ &amp; Associates</strong></td>
-        <td class="status-nodata">NO RESULT</td>
-        <td>&mdash;</td>
-        <td>Datto API &mdash; no status returned in scan window</td>
-      </tr>
-      <tr>
-        <td>CelLink CEL-APPSERVER</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink Henry</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink CEL-SC-UVIS-01</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink CEL-SC-DC-01</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink FaradayDEV</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink Volta</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink Joule</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink CEL-SC-DEPLOY</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink CEL-SC-RADIUS</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink CEL-SC-DATABROKER-01</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>CelLink Faraday</td>
-        <td class="status-ok">OK</td>
-        <td>0</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<!-- ═══════════════════════════════════════
-     SECTION 5: ALERTS
-     ═══════════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="badge badge-urgent">Security</span>
-    <h2>Alerts</h2>
-    <span class="badge badge-count">3</span>
-  </div>
-
-  <div class="card card-urgent">
-    <div class="card-title">SentinelOne &mdash; Suspicious DLL &middot; <code>rdorsey106</code></div>
-    <div class="card-meta">Sun Jun 14 03:31 CDT &nbsp;&middot;&nbsp; EDR &nbsp;&middot;&nbsp; <span class="badge badge-urgent">Urgent</span></div>
-    <div class="card-body">
-      External IP <code>108.221.44.49</code> contacted from internal <code>10.111.111.40</code>.<br>
-      DLL hash: <code>076DD84014E791407A6EE5A8A2E0B24B61BFF489.dll</code>
-    </div>
-  </div>
-
-  <div class="card card-asap">
-    <div class="card-title">Barracuda Impersonation Protection &mdash; Targeted Phishing</div>
-    <div class="card-meta">Sat Jun 13 19:22 UTC &nbsp;&middot;&nbsp; Target: mmitchell@covenant.org &nbsp;&middot;&nbsp; <span class="badge badge-asap">ASAP</span></div>
-    <div class="card-body">
-      Phishing email targeting Mitchell at Covenant Presbyterian Church. Barracuda impersonation protection flagged and blocked delivery.
-    </div>
-  </div>
-
-  <div class="card card-standard">
-    <div class="card-title">Barracuda SKOUT XDR &mdash; GLB.SM.UNI Log Monitoring Degradation</div>
-    <div class="card-meta">Fri Jun 12 23:11 UTC + Sat Jun 13 18:11 UTC &nbsp;&middot;&nbsp; 2 occurrences &nbsp;&middot;&nbsp; <span class="badge badge-standard">Standard</span></div>
-    <div class="card-body">
-      Log monitoring degradation fired twice within ~19 hours. Monitor for recurrence; may indicate connectivity or agent issue with SKOUT collector.
-    </div>
-  </div>
-</div>
-
-<!-- ═══════════════════════════════════════
-     SECTION 6: TIME ENTRIES
-     ═══════════════════════════════════════ -->
-<div class="section">
-  <div class="section-header">
-    <span class="badge badge-standard">Calendar</span>
-    <h2>Time Entries</h2>
-    <span class="badge badge-count">3 entries &middot; Fri Jun 12</span>
-  </div>
-
-  <div class="time-entry">
-    <div><span class="field-label">Subject:     </span>Buda Fire &amp; EMS</div>
-    <div><span class="field-label">Location:    </span>Remote</div>
-    <div><span class="field-label">Description: </span>Troubleshot and resolved offline printer for Zaynah Rodriguez. Remoted in.</div>
-    <div><span class="field-label">Category:    </span>On-Going Support (Blue)</div>
-    <div><span class="field-label">Time:        </span>2026-06-12 10:56 - 11:30</div>
-  </div>
-
-  <div class="time-entry">
-    <div><span class="field-label">Subject:     </span>Capital Excavation</div>
-    <div><span class="field-label">Location:    </span>Remote</div>
-    <div><span class="field-label">Description: </span>Pulled Training Room Calendar into Norma DeLaRosa's Outlook account. Confirmed sync.</div>
-    <div><span class="field-label">Category:    </span>On-Going Support (Blue)</div>
-    <div><span class="field-label">Time:        </span>2026-06-12 14:15 - 15:00</div>
-  </div>
-
-  <div class="time-entry">
-    <div><span class="field-label">Subject:     </span><span class="missing">&lt;MISSING: client not identifiable with &ge;80% confidence &mdash; Danielle Taylor, SharePoint subsite&gt;</span></div>
-    <div><span class="field-label">Location:    </span>Remote</div>
-    <div><span class="field-label">Description: </span>Created separate SharePoint subsite for restricted file access. Offered to remote in to complete sync.</div>
-    <div><span class="field-label">Category:    </span>On-Going Support (Blue)</div>
-    <div><span class="field-label">Time:        </span><span class="missing">&lt;MISSING: start/end time &mdash; exchanges span 10:32&ndash;15:33 CST, actual work duration not determinable&gt;</span></div>
-  </div>
-</div>
-
-<hr>
-<p style="color: #475569; font-size: 11px;">Generated by morning-briefing routine &middot; gitmarsh/routines &middot; 2026-06-14T12:30:00Z</p>
-
 </body>
 </html>

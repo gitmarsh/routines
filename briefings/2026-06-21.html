@@ -1,310 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Morning Briefing &mdash; 2026-06-21</title>
-<style>
-  body{background:#f0f2f5;font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;color:#1a1a2e}
-  .wrap{max-width:920px;margin:0 auto;padding:20px 16px}
-  h1{font-size:20px;margin:0 0 4px;color:#111}
-  .run-meta{font-size:11px;color:#888;margin-bottom:20px;font-family:'Courier New',monospace}
-  h2{font-size:15px;color:#222;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid #e0e0e0;display:flex;align-items:center;gap:8px}
-  .badge{display:inline-block;background:#555;color:#fff;border-radius:10px;padding:1px 9px;font-size:11px;font-weight:bold;vertical-align:middle}
-  .b-urgent{background:#c62828}
-  .b-asap{background:#e65100}
-  .b-standard{background:#1565c0}
-  .b-none{background:#9e9e9e}
-  .section{background:#fff;border-radius:8px;padding:16px 18px;margin-bottom:18px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
-  .item{padding:9px 12px;border-radius:5px;margin-bottom:8px;border-left:4px solid #ccc}
-  .item:last-child{margin-bottom:0}
-  .u{border-left-color:#c62828;background:#fff8f8}
-  .asap{border-left-color:#e65100;background:#fff9f5}
-  .std{border-left-color:#1565c0;background:#f5f7ff}
-  .item-title{font-size:13px;font-weight:bold;margin-bottom:2px}
-  .item-meta{font-size:11px;color:#666;margin-top:2px}
-  a{color:#1565c0;text-decoration:none}
-  a:hover{text-decoration:underline}
-  .none-msg{color:#999;font-style:italic;font-size:13px}
-  table.todo{width:100%;border-collapse:collapse;font-size:13px}
-  table.todo th{background:#f0f0f0;padding:6px 10px;text-align:left;font-size:12px;color:#444;border-bottom:2px solid #ddd}
-  table.todo td{padding:7px 10px;border-bottom:1px solid #eee;vertical-align:top}
-  table.todo tr:last-child td{border-bottom:none}
-  .must{color:#c62828;font-weight:bold;font-size:11px;white-space:nowrap}
-  .should{color:#e65100;font-weight:bold;font-size:11px;white-space:nowrap}
-  .could{color:#1565c0;font-weight:bold;font-size:11px;white-space:nowrap}
-  .mono{font-family:'Courier New',monospace;font-size:12px}
-  .te-card{border-radius:6px;padding:12px 14px;margin-bottom:10px;border-left:4px solid #ccc;background:#f8fffe}
-  .te-project{border-left-color:#2e7d32;background:#f1fff3}
-  .te-support{border-left-color:#1565c0;background:#f0f4ff}
-  .te-afterhours{border-left-color:#c62828;background:#fff8f8}
-  .te-block{font-family:'Courier New',monospace;font-size:12px;background:#f4f4f4;border-radius:4px;padding:10px 12px;margin-top:6px;white-space:pre-wrap;line-height:1.6}
-  .bkp-row{display:flex;align-items:center;margin-bottom:6px;font-size:13px}
-  .bkp-label{width:180px;flex-shrink:0;color:#444}
-  .bkp-bar-wrap{flex:1;background:#eee;border-radius:3px;height:14px;overflow:hidden}
-  .bkp-bar{height:14px;border-radius:3px}
-  .bkp-count{width:30px;text-align:right;font-weight:bold;font-size:12px;padding-left:6px}
-  .chip{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;margin-right:4px;font-weight:bold}
-  .chip-fail{background:#fde8e8;color:#c62828}
-  .chip-warn{background:#fff3e0;color:#e65100}
-  .chip-nr{background:#e3f2fd;color:#1565c0}
-  .chip-ok{background:#e8f5e9;color:#2e7d32}
-  .sev-legend{font-size:11px;color:#555;margin-top:4px}
-  .sev-dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:3px;vertical-align:middle}
-</style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Morning Briefing — 2026-06-21</title>
+<link rel="icon" type="image/png" href="../assets/ariat_favicon_32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/briefing.css" />
 </head>
 <body>
-<div class="wrap">
-
-<!-- Header -->
-<h1>Morning Briefing &mdash; Sunday, June 21, 2026</h1>
-<div class="run-meta">
-Window: 2026-06-19T16:00 CDT &rarr; 2026-06-21T07:30 CDT (Fri PM + weekend + Sun AM)&nbsp;&nbsp;|
-&nbsp;&nbsp;Scanned: 121 emails (Inbox 30, Help Desk 5, Alerts 41, Datto 40, Backup Radar 5), 0 Teams messages&nbsp;&nbsp;|
-&nbsp;&nbsp;Classified: Urgent 1 | ASAP 6 | Standard ~12 | Time Entries 2
+<div class="toolbar">
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+    Print / Save PDF
+  </button>
 </div>
 
-<!-- Severity Overview -->
-<div class="section" style="padding:12px 18px">
-<table style="width:100%;border-collapse:collapse">
-<tr>
-<td style="width:140px;vertical-align:middle">
-<svg width="120" height="120" viewBox="0 0 120 120">
-  <!-- donut: total=19, r=40, cx=cy=60, circumference=251.3 -->
-  <!-- urgent 1/19=13.2 -->
-  <circle r="40" cx="60" cy="60" fill="none" stroke="#c62828" stroke-width="18"
-    stroke-dasharray="13.2 238.1" stroke-dashoffset="0" transform="rotate(-90 60 60)"/>
-  <!-- asap 6/19=79.4, offset=-13.2 -->
-  <circle r="40" cx="60" cy="60" fill="none" stroke="#e65100" stroke-width="18"
-    stroke-dasharray="79.4 171.9" stroke-dashoffset="-13.2" transform="rotate(-90 60 60)"/>
-  <!-- standard 12/19=158.7, offset=-92.6 -->
-  <circle r="40" cx="60" cy="60" fill="none" stroke="#1565c0" stroke-width="18"
-    stroke-dasharray="158.7 92.6" stroke-dashoffset="-92.6" transform="rotate(-90 60 60)"/>
-  <circle r="31" cx="60" cy="60" fill="white"/>
-  <text x="60" y="57" text-anchor="middle" font-size="14" font-weight="bold" fill="#222">19</text>
-  <text x="60" y="70" text-anchor="middle" font-size="9" fill="#888">items</text>
-</svg>
-</td>
-<td style="vertical-align:middle;padding-left:16px">
-  <div style="margin-bottom:8px">
-    <span class="sev-dot" style="background:#c62828"></span>
-    <strong style="color:#c62828">Urgent</strong>&nbsp;&nbsp;1 item
+<div class="sheet">
+  <!-- Header -->
+  <div class="rhead">
+    <div class="lz">
+      <div class="rlogo">
+        <img class="rmark" src="../assets/ariat_mark.png" alt="" />
+        <span class="rdiv"></span>
+        <img class="rword" src="../assets/ariat_wordmark.png" alt="Ariat Systems" />
+      </div>
+      <div class="rtitle">Morning Briefing</div>
+      <div class="rsub">Sunday, June 21, 2026 · Operational Summary</div>
+    </div>
+    <div class="rmeta">
+      <div><span class="accent">WINDOW</span> 2026-06-19T16:00 → 2026-06-21T07:30 CDT (Fri PM + weekend + Sun AM)</div>
+      <div><span class="accent">SCANNED</span> 121 emails (Inbox 30 · Help Desk 5 · Alerts 41 · Datto 40 · Backup Radar 5) · 0 Teams</div>
+      <div><span class="accent">REF</span> BRIEF-2026-06-21-AM</div>
+    </div>
   </div>
-  <div style="margin-bottom:8px">
-    <span class="sev-dot" style="background:#e65100"></span>
-    <strong style="color:#e65100">ASAP</strong>&nbsp;&nbsp;6 items
+
+  <!-- Body -->
+  <div class="rbody">
+
+    <div class="rsection">Severity Overview</div>
+    <div class="stats">
+      <div class="stat"><div class="v">1</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="v">6</div><div class="l">ASAP</div></div>
+      <div class="stat"><div class="v">~12</div><div class="l">Standard</div></div>
+      <div class="stat"><div class="v">2</div><div class="l">Time Entries</div></div>
+    </div>
+
+    <div class="rsection">Urgent</div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Detail</th><th>Source</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">SentinelOne — Active Threat NOT Mitigated — Machine: AriatConference</span></td>
+          <td>Machine: <strong>AriatConference</strong> (192.168.128.8, ext IP 24.173.190.70). Threat file: <span class="ds-code">Click HERE to start the WebNavigator Browser Installer_cfreuw9c_.exe</span>. Status: <strong>NOT mitigated</strong> — manual remediation required.</td>
+          <td>SentinelOne via Inbox</td>
+          <td class="mono">Sat Jun 20, 10:52 AM CDT</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Follow-ups</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Subject</th><th>Source</th><th>Summary</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">Meraki Case #14324335 — AnyConnect Users Unable to Reach</span></td>
+          <td>Inbox (support@meraki.com)</td>
+          <td>Meraki support noted they have not heard back from Marshall. Case remains open. Clients may still be impacted. Reply required to keep case active.</td>
+          <td class="mono">Fri Jun 20, 2:51 PM CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Standard</span></td>
+          <td><span class="svc">Re: Surface Data Recovery — Beehive Specialty (Kristie)</span></td>
+          <td>Inbox (Kristie@Specialbee.com)</td>
+          <td>Kristie confirmed data recovery was successful. Ashley verified all files. Thread appears resolved; no further action required unless formal closure is needed.</td>
+          <td class="mono">Fri Jun 20, 1:56 PM CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Standard</span></td>
+          <td><span class="svc">[ariat] Ticket #10495 — Offboarding Client List (multiple weekend updates)</span></td>
+          <td>Help Desk (support@rmmservice.com)</td>
+          <td>Two overnight ticket updates on Sunday. Review for any action required before Monday.</td>
+          <td class="mono">Sun Jun 21, 12:02 &amp; 1:02 AM CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Standard</span></td>
+          <td><span class="svc">Re: HaloPSA Demo — Trial Extended to July 10</span></td>
+          <td>Inbox (Mia.Dillon@imaginehalo.com)</td>
+          <td>Mia extended trial through Jul 10. She mentioned Michael communicated something about plans. Response to Mia recommended before trial ends.</td>
+          <td class="mono">Fri Jun 19, 6:25 PM CDT</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Today To-Dos</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Task</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Remediate SentinelOne active threat on AriatConference — WebNavigator installer, NOT mitigated</td><td class="mono">SentinelOne / Inbox</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Fix MEJDatto2025 — out of disk space, all 5 agents failing (DC1, DATA, SHELL, TENANT, UTILITY)</td><td class="mono">Datto / Backup Radar</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>CelLink CELAZUPRDFILE01 (Azure) E: drive ≤5% free — actively alerting since Sat 9:28am CDT</td><td class="mono">Alerts folder</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Investigate Capital Excavation CapitalEx backup — 17.7 days since last success; offsite 23.2 days</td><td class="mono">Backup Radar</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Reply to Meraki support on Case #14324335 — AnyConnect; support is waiting</td><td class="mono">Inbox</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>CelLink CELAZUPRDSYS01 (Syspro) F: ≤10% free; JOULE D: ≤7% — clean up or expand</td><td class="mono">Alerts folder</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Review Ticket #10495 Offboarding Client List — two overnight weekend updates</td><td class="mono">Help Desk</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Respond to Mia Dillon (HaloPSA) re trial/next steps before Jul 10 deadline</td><td class="mono">Inbox</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Replace Covenant Hall server closet Temp Stick battery (20%)</td><td class="mono">Alerts folder</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Barracuda SKOUT XDR — GLB.SM.UNI integration log monitoring degradation</td><td class="mono">Inbox</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>CelLink CEL-GT-DC1 C: ≤15% free; review before it escalates</td><td class="mono">Alerts folder</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Investigate Burnett &amp; Turner LAW-D remote session activity overnight (3am–6am CDT Sun)</td><td class="mono">Alerts folder</td></tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Backups</div>
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:10px;"><strong>Failed:</strong> 6 · <strong>Warning:</strong> 1 · <strong>No Result:</strong> 2</p>
+
+    <div class="callout"><strong>Failed</strong></div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">MEJ &amp; Associates — MEJDatto2025 — ALL AGENTS CRITICAL</span><br><span class="mono">Datto SIRIS 6c92cfea8770</span></td>
+          <td>Root cause: <span class="ds-code">Backup skipped due to not enough free space</span>. Agents failed: <span class="ds-code">MEJ-DC1</span> <span class="ds-code">MEJ-DATA</span> <span class="ds-code">MEJ-SHELL</span> <span class="ds-code">MEJ-TENANT</span> <span class="ds-code">MEJ-UTILITY</span>. MEJ-DATA first failed: <strong>Fri Jun 19 8:01am CDT</strong> (&gt;47 hours ago). Critical alerts firing every hour overnight.</td>
+        </tr>
+        <tr>
+          <td><span class="svc">Capital Excavation — CapitalEx — Disk Utilization Alert (17.7 days)</span></td>
+          <td>Last success: &gt;17.7 days ago. Offsite (Rescue-cxfile01) last result: <strong>May 27, 2026 (23.2 days)</strong>. Hourly failures since at least Jun 19. Offsite backup has not reported since May 27.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>Warning</strong></div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td><span class="svc">MEJ &amp; Associates — MEJ-DATA — Backup Warning (escalated to Critical)</span></td><td>Warning at Sat Jun 20 9:30am CDT, then escalated to Critical Error overnight.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>No Result</strong></div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td><span class="svc">Covenant Presbyterian Church — DattoSaasProtection — No Result 06/20/2026</span></td><td>Backup Radar alert Fri Jun 20 10:00am CDT.</td></tr>
+        <tr><td><span class="svc">Capital Excavation — Rescue-cxfile01 Offsite — No Result since May 27, 2026</span></td><td>23.2 days without offsite result.</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout"><strong>Healthy</strong></div>
+    <p class="ds-body" style="font-size:13.5px;">CelLink (CelLinkSC): <span class="ds-code">CEL-APPSERVER</span> <span class="ds-code">CEL-SC-DC-01</span> <span class="ds-code">CEL-SC-RADIUS</span> <span class="ds-code">Faraday</span> <span class="ds-code">FaradayDEV</span> <span class="ds-code">Joule</span> <span class="ds-code">Volta</span> <span class="ds-code">CEL-SC-UVIS-01</span> <span class="ds-code">CEL-SC-DEPLOY</span> <span class="ds-code">CEL-SC-DATABROKER-01</span> <span class="ds-code">Henry</span></p>
+
+    <div class="rsection">Alerts (Top 3 Unusual)</div>
+    <table class="data">
+      <thead><tr><th>Alert</th><th>Detail</th><th>Source</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">SentinelOne — Active Threat NOT Mitigated on AriatConference</span></td>
+          <td>Malware: <span class="ds-code">WebNavigator Browser Installer_cfreuw9c_.exe</span>. Machine 192.168.128.8, ext 24.173.190.70. Threat NOT auto-mitigated — requires manual action.</td>
+          <td>SentinelOne</td>
+          <td class="mono">Sat Jun 20, 10:52am CDT</td>
+        </tr>
+        <tr>
+          <td><span class="svc">Firefox OTP (accounts@firefox.com) — 4 codes sent to marsh@cloudmarsh.com in ~2 minutes</span></td>
+          <td>Four OTP requests for "Firefox on Linux" attributed to "Kyle." Rapid repeated OTP attempts (4 in 2 min) may indicate unauthorized login attempts or a malfunctioning app. Verify with Kyle if this was intentional.</td>
+          <td>Inbox</td>
+          <td class="mono">Sat Jun 20, 1:27–1:29am CDT</td>
+        </tr>
+        <tr>
+          <td><span class="svc">Barracuda SKOUT XDR — GLB.SM.UNI Integration Log Monitoring Degradation</span></td>
+          <td>XDR SOC reported integration log monitoring degradation. Not routine — this indicates a gap in log collection visibility. Review whether incident detection is impacted.</td>
+          <td>Inbox (soc@barracuda.com)</td>
+          <td class="mono">Sun Jun 21, 8:10pm CDT (01:10 UTC)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Time Entries</div>
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:10px;">Fri Jun 20, 2026 · 2 entries.</p>
+
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:6px;"><strong>Project (Green) — Covenant Presbyterian Church.</strong> Evidence: Marshall sent reply on Microsoft 365 file-sharing alert thread (16:19 CDT); Darleen Dube confirmed resolution 21:20 UTC.</p>
+    <table class="data">
+      <tbody>
+        <tr><td class="mono">Subject</td><td>Covenant Presbyterian Church</td></tr>
+        <tr><td class="mono">Location</td><td>Remote</td></tr>
+        <tr><td class="mono">Description</td><td>Reviewed Microsoft 365 medium-severity alert for unusual external file sharing. Confirmed activity was legitimate: Elizabeth Gilligan shared 6 PDFs from the music &amp; worship SharePoint site.</td></tr>
+        <tr><td class="mono">Category</td><td>Project (Green)</td></tr>
+        <tr><td class="mono">Time</td><td>2026-06-20 16:00 - 16:30</td></tr>
+      </tbody>
+    </table>
+
+    <p class="ds-body" style="font-size:13.5px;margin:14px 0 6px;"><strong>On-Going Support (Blue) — Beehive Specialty.</strong> Evidence: Kristie at Specialbee.com replied "Thanks so much for this" confirming Surface data recovery at 18:56 CDT Fri. Start/end time not determinable from available evidence.</p>
+    <table class="data">
+      <tbody>
+        <tr><td class="mono">Subject</td><td>Beehive Specialty</td></tr>
+        <tr><td class="mono">Location</td><td>Remote</td></tr>
+        <tr><td class="mono">Description</td><td>Performed Surface data recovery. All files confirmed recovered by user (Ashley); previously missing files also found.</td></tr>
+        <tr><td class="mono">Category</td><td>On-Going Support (Blue)</td></tr>
+        <tr><td class="mono">Time</td><td><span class="ds-code">&lt;MISSING: start/end time not in evidence; work completed by ~18:56 CDT&gt;</span></td></tr>
+      </tbody>
+    </table>
+
   </div>
-  <div>
-    <span class="sev-dot" style="background:#1565c0"></span>
-    <strong style="color:#1565c0">Standard</strong>&nbsp;&nbsp;~12 items
+
+  <!-- Footer -->
+  <div class="rfoot">
+    <span>Ariat Systems · Internal</span>
+    <span>Generated 2026-06-21 07:30 CDT · briefs.cloudmarsh.com</span>
   </div>
-</td>
-</tr>
-</table>
-</div>
-
-<!-- SECTION 1: URGENT -->
-<div class="section">
-<h2>Urgent <span class="badge b-urgent">1</span></h2>
-
-<div class="item u">
-  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">SentinelOne &mdash; Active Threat NOT Mitigated &mdash; Machine: AriatConference</a></div>
-  <div class="item-meta">Sat Jun 20, 10:52 AM CDT &nbsp;|&nbsp; Source: SentinelOne via Inbox</div>
-  <div style="font-size:12px;margin-top:6px;line-height:1.5">
-    Machine: <strong>AriatConference</strong> (192.168.128.8, ext IP 24.173.190.70)<br>
-    Threat file: <span class="mono">Click HERE to start the WebNavigator Browser Installer_cfreuw9c_.exe</span><br>
-    Status: <strong style="color:#c62828">NOT mitigated</strong> &mdash; manual remediation required.<br>
-    <a href="https://usea1-ninjaone2.sentinelone.net/analyze/threats/2506029155618571716/overview" style="font-size:11px">View threat in SentinelOne console</a>
-  </div>
-</div>
-
-</div>
-
-<!-- SECTION 2: FOLLOW-UPS -->
-<div class="section">
-<h2>Follow-ups <span class="badge b-asap">4</span></h2>
-
-<div class="item asap">
-  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQyAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Meraki Case #14324335 &mdash; AnyConnect Users Unable to Reach [ASAP]</a></div>
-  <div class="item-meta">Fri Jun 20, 2:51 PM CDT &nbsp;|&nbsp; Source: Inbox (support@meraki.com)</div>
-  <div style="font-size:12px;margin-top:4px">Meraki support noted they have not heard back from Marshall. Case remains open. Clients may still be impacted. Reply required to keep case active.</div>
-</div>
-
-<div class="item std">
-  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQvAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Re: Surface Data Recovery &mdash; Beehive Specialty (Kristie)</a></div>
-  <div class="item-meta">Fri Jun 20, 1:56 PM CDT &nbsp;|&nbsp; Source: Inbox (Kristie@Specialbee.com)</div>
-  <div style="font-size:12px;margin-top:4px">Kristie confirmed data recovery was successful. Ashley verified all files. Thread appears resolved; no further action required unless formal closure is needed.</div>
-</div>
-
-<div class="item std">
-  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAVyAQp%2BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">[ariat] Ticket #10495 &mdash; Offboarding Client List (multiple weekend updates)</a></div>
-  <div class="item-meta">Sun Jun 21, 12:02 AM &amp; 1:02 AM CDT &nbsp;|&nbsp; Source: Help Desk (support@rmmservice.com)</div>
-  <div style="font-size:12px;margin-top:4px">Two overnight ticket updates on Sunday. Review for any action required before Monday.</div>
-</div>
-
-<div class="item std">
-  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Re: HaloPSA Demo &mdash; Trial Extended to July 10</a></div>
-  <div class="item-meta">Fri Jun 19, 6:25 PM CDT &nbsp;|&nbsp; Source: Inbox (Mia.Dillon@imaginehalo.com)</div>
-  <div style="font-size:12px;margin-top:4px">Mia extended trial through Jul 10. She mentioned Michael communicated something about plans. Response to Mia recommended before trial ends.</div>
-</div>
-
-</div>
-
-<!-- SECTION 3: TODAY TO-DOS -->
-<div class="section">
-<h2>Today To-Dos <span class="badge">12</span></h2>
-<table class="todo">
-<thead><tr><th style="width:70px">Priority</th><th>Task</th><th style="width:200px">Source</th></tr></thead>
-<tbody>
-<tr><td class="must">MUST</td><td>Remediate SentinelOne active threat on AriatConference &mdash; WebNavigator installer, NOT mitigated</td><td class="mono" style="font-size:11px">SentinelOne / Inbox</td></tr>
-<tr><td class="must">MUST</td><td>Fix MEJDatto2025 &mdash; out of disk space, all 5 agents failing (DC1, DATA, SHELL, TENANT, UTILITY)</td><td class="mono" style="font-size:11px">Datto / Backup Radar</td></tr>
-<tr><td class="must">MUST</td><td>CelLink CELAZUPRDFILE01 (Azure) E: drive &lt;=5% free &mdash; actively alerting since Sat 9:28am CDT</td><td class="mono" style="font-size:11px">Alerts folder</td></tr>
-<tr><td class="must">MUST</td><td>Investigate Capital Excavation CapitalEx backup &mdash; 17.7 days since last success; offsite 23.2 days</td><td class="mono" style="font-size:11px">Backup Radar</td></tr>
-<tr><td class="should">SHOULD</td><td>Reply to Meraki support on Case #14324335 &mdash; AnyConnect; support is waiting</td><td class="mono" style="font-size:11px">Inbox</td></tr>
-<tr><td class="should">SHOULD</td><td>CelLink CELAZUPRDSYS01 (Syspro) F: &lt;=10% free; JOULE D: &lt;=7% &mdash; clean up or expand</td><td class="mono" style="font-size:11px">Alerts folder</td></tr>
-<tr><td class="should">SHOULD</td><td>Review Ticket #10495 Offboarding Client List &mdash; two overnight weekend updates</td><td class="mono" style="font-size:11px">Help Desk</td></tr>
-<tr><td class="should">SHOULD</td><td>Respond to Mia Dillon (HaloPSA) re trial/next steps before Jul 10 deadline</td><td class="mono" style="font-size:11px">Inbox</td></tr>
-<tr><td class="could">COULD</td><td>Replace Covenant Hall server closet Temp Stick battery (20%)</td><td class="mono" style="font-size:11px">Alerts folder</td></tr>
-<tr><td class="could">COULD</td><td>Barracuda SKOUT XDR &mdash; GLB.SM.UNI integration log monitoring degradation</td><td class="mono" style="font-size:11px">Inbox</td></tr>
-<tr><td class="could">COULD</td><td>CelLink CEL-GT-DC1 C: &lt;=15% free; review before it escalates</td><td class="mono" style="font-size:11px">Alerts folder</td></tr>
-<tr><td class="could">COULD</td><td>Investigate Burnett &amp; Turner LAW-D remote session activity overnight (3am&ndash;6am CDT Sun)</td><td class="mono" style="font-size:11px">Alerts folder</td></tr>
-</tbody>
-</table>
-</div>
-
-<!-- SECTION 4: BACKUPS -->
-<div class="section">
-<h2>Backups <span class="badge b-urgent">Failed 6</span> <span class="badge b-asap">Warning 1</span> <span class="badge b-none">No Result 2</span></h2>
-
-<!-- Bar chart -->
-<div style="margin-bottom:14px;max-width:420px">
-<div class="bkp-row">
-  <span class="bkp-label">Failed agents</span>
-  <div class="bkp-bar-wrap"><div class="bkp-bar" style="width:100%;background:#c62828"></div></div>
-  <span class="bkp-count" style="color:#c62828">6</span>
-</div>
-<div class="bkp-row">
-  <span class="bkp-label">Warning</span>
-  <div class="bkp-bar-wrap"><div class="bkp-bar" style="width:16%;background:#e65100"></div></div>
-  <span class="bkp-count" style="color:#e65100">1</span>
-</div>
-<div class="bkp-row">
-  <span class="bkp-label">No Result</span>
-  <div class="bkp-bar-wrap"><div class="bkp-bar" style="width:33%;background:#1565c0"></div></div>
-  <span class="bkp-count" style="color:#1565c0">2</span>
-</div>
-</div>
-
-<div style="font-size:13px;font-weight:bold;margin-bottom:6px;color:#c62828">Failed</div>
-
-<div class="item u" style="margin-bottom:6px">
-  <div class="item-title">MEJ &amp; Associates &mdash; MEJDatto2025 &mdash; ALL AGENTS CRITICAL</div>
-  <div class="item-meta">Root cause: <span class="mono">Backup skipped due to not enough free space</span> &nbsp;|&nbsp; Datto SIRIS 6c92cfea8770</div>
-  <div style="font-size:12px;margin-top:5px;line-height:1.8">
-    <span class="chip chip-fail">MEJ-DC1</span>
-    <span class="chip chip-fail">MEJ-DATA</span>
-    <span class="chip chip-fail">MEJ-SHELL</span>
-    <span class="chip chip-fail">MEJ-TENANT</span>
-    <span class="chip chip-fail">MEJ-UTILITY</span><br>
-    MEJ-DATA first failed: <strong>Fri Jun 19 8:01am CDT</strong> (&gt;47 hours ago). Critical alerts firing every hour overnight.<br>
-    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVyqOdtAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View latest critical alert</a> &nbsp;|&nbsp;
-    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAV0FyDyAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Backup Radar report</a>
-  </div>
-</div>
-
-<div class="item u" style="margin-bottom:12px">
-  <div class="item-title">Capital Excavation &mdash; CapitalEx &mdash; Disk Utilization Alert (17.7 days)</div>
-  <div class="item-meta">Last success: &gt;17.7 days ago &nbsp;|&nbsp; Offsite (Rescue-cxfile01) last result: <strong>May 27, 2026 (23.2 days)</strong></div>
-  <div style="font-size:12px;margin-top:4px">
-    <span class="chip chip-fail">CapitalEx</span>
-    <span class="chip chip-nr">Rescue-cxfile01 (offsite)</span><br>
-    Hourly failures since at least Jun 19. Offsite backup has not reported since May 27.<br>
-    <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAV0FyDxAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View Backup Radar report</a>
-  </div>
-</div>
-
-<div style="font-size:13px;font-weight:bold;margin-bottom:6px;color:#e65100">Warning</div>
-<div class="item asap" style="margin-bottom:12px">
-  <div class="item-title">MEJ &amp; Associates &mdash; MEJ-DATA &mdash; Backup Warning (escalated to Critical)</div>
-  <div class="item-meta">Warning at Sat Jun 20 9:30am CDT, then escalated to Critical Error overnight</div>
-</div>
-
-<div style="font-size:13px;font-weight:bold;margin-bottom:6px;color:#1565c0">No Result</div>
-<div class="item std" style="margin-bottom:6px">
-  <div class="item-title">Covenant Presbyterian Church &mdash; DattoSaasProtection &mdash; No Result 06/20/2026</div>
-  <div class="item-meta">Backup Radar alert Fri Jun 20 10:00am CDT &nbsp;|&nbsp; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAIJ7ai0AACcFJNx05zPTLNH4BZPylwuAAV0FyDzAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View alert</a></div>
-</div>
-<div class="item std" style="margin-bottom:6px">
-  <div class="item-title">Capital Excavation &mdash; Rescue-cxfile01 Offsite &mdash; No Result since May 27, 2026</div>
-  <div class="item-meta">23.2 days without offsite result</div>
-</div>
-
-<div style="font-size:13px;font-weight:bold;margin-bottom:6px;color:#2e7d32;margin-top:10px">Healthy</div>
-<div style="font-size:12px;color:#444">
-  CelLink (CelLinkSC): <span class="chip chip-ok">CEL-APPSERVER</span><span class="chip chip-ok">CEL-SC-DC-01</span><span class="chip chip-ok">CEL-SC-RADIUS</span><span class="chip chip-ok">Faraday</span><span class="chip chip-ok">FaradayDEV</span><span class="chip chip-ok">Joule</span><span class="chip chip-ok">Volta</span><span class="chip chip-ok">CEL-SC-UVIS-01</span><span class="chip chip-ok">CEL-SC-DEPLOY</span><span class="chip chip-ok">CEL-SC-DATABROKER-01</span><span class="chip chip-ok">Henry</span>
-</div>
-
-</div>
-
-<!-- SECTION 5: ALERTS -->
-<div class="section">
-<h2>Alerts (Top 3 Unusual) <span class="badge">3</span></h2>
-
-<div class="item u">
-  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQqAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">SentinelOne &mdash; Active Threat NOT Mitigated on AriatConference</a></div>
-  <div class="item-meta">Sat Jun 20, 10:52am CDT &nbsp;|&nbsp; Source: SentinelOne</div>
-  <div style="font-size:12px;margin-top:4px">Malware: <span class="mono">WebNavigator Browser Installer_cfreuw9c_.exe</span>. Machine 192.168.128.8, ext 24.173.190.70. Threat NOT auto-mitigated &mdash; requires manual action.</div>
-</div>
-
-<div class="item std">
-  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Firefox OTP (accounts@firefox.com) &mdash; 4 codes sent to marsh@cloudmarsh.com in ~2 minutes</a></div>
-  <div class="item-meta">Sat Jun 20, 1:27&ndash;1:29am CDT &nbsp;|&nbsp; Source: Inbox</div>
-  <div style="font-size:12px;margin-top:4px">Four OTP requests for &ldquo;Firefox on Linux&rdquo; attributed to &ldquo;Kyle.&rdquo; Rapid repeated OTP attempts (4 in 2 min) may indicate unauthorized login attempts or a malfunctioning app. Verify with Kyle if this was intentional.</div>
-</div>
-
-<div class="item std">
-  <div class="item-title"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQ1AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Barracuda SKOUT XDR &mdash; GLB.SM.UNI Integration Log Monitoring Degradation</a></div>
-  <div class="item-meta">Sun Jun 21, 8:10pm CDT (01:10 UTC) &nbsp;|&nbsp; Source: Inbox (soc@barracuda.com)</div>
-  <div style="font-size:12px;margin-top:4px">XDR SOC reported integration log monitoring degradation. Not routine &mdash; this indicates a gap in log collection visibility. Review whether incident detection is impacted.</div>
-</div>
-
-</div>
-
-<!-- SECTION 6: TIME ENTRIES -->
-<div class="section">
-<h2>Time Entries <span class="badge">2</span></h2>
-<p style="font-size:12px;color:#888;margin-top:0;margin-bottom:12px">Fri Jun 20, 2026</p>
-
-<div class="te-card te-project">
-  <div style="font-size:12px;font-weight:bold;color:#2e7d32;margin-bottom:4px">Project (Green) &nbsp;&mdash;&nbsp; Covenant Presbyterian Church</div>
-  <div style="font-size:11px;color:#888;margin-bottom:6px">Evidence: Marshall sent reply on Microsoft 365 file-sharing alert thread (16:19 CDT); Darleen Dube confirmed resolution 21:20 UTC.</div>
-  <div class="te-block">Subject:     Covenant Presbyterian Church
-Location:    Remote
-Description: Reviewed Microsoft 365 medium-severity alert for unusual external
-             file sharing. Confirmed activity was legitimate: Elizabeth Gilligan
-             shared 6 PDFs from the music &amp; worship SharePoint site.
-Category:    Project (Green)
-Time:        2026-06-20 16:00 - 16:30</div>
-</div>
-
-<div class="te-card te-support">
-  <div style="font-size:12px;font-weight:bold;color:#1565c0;margin-bottom:4px">On-Going Support (Blue) &nbsp;&mdash;&nbsp; Beehive Specialty</div>
-  <div style="font-size:11px;color:#888;margin-bottom:6px">Evidence: Kristie at Specialbee.com replied &ldquo;Thanks so much for this&rdquo; confirming Surface data recovery at 18:56 CDT Fri. Start/end time not determinable from available evidence.</div>
-  <div class="te-block">Subject:     Beehive Specialty
-Location:    Remote
-Description: Performed Surface data recovery. All files confirmed recovered
-             by user (Ashley); previously missing files also found.
-Category:    On-Going Support (Blue)
-Time:        &lt;MISSING: start/end time not in evidence; work completed by ~18:56 CDT&gt;</div>
-</div>
-
-</div>
-
-<!-- Footer -->
-<div style="font-size:11px;color:#aaa;text-align:center;margin-top:10px;padding-bottom:20px">
-Generated by Morning Briefing routine &mdash; 2026-06-21 07:30 CDT &mdash; gitmarsh/routines
-</div>
-
 </div>
 </body>
 </html>

@@ -1,308 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Briefing &mdash; 2026-05-22</title>
-<style>
-  body { margin: 0; padding: 0; background: #f0f2f5; font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #1a1a1a; }
-  .wrapper { max-width: 860px; margin: 0 auto; padding: 24px 16px 48px; }
-  h1 { font-size: 22px; font-weight: 700; margin: 0 0 4px; color: #0d1117; }
-  .meta { font-size: 12px; color: #666; margin-bottom: 24px; font-family: 'Courier New', monospace; }
-  h2 { font-size: 15px; font-weight: 700; margin: 0; color: #0d1117; display: inline; }
-  .section { background: #fff; border-radius: 6px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
-  .section-header { padding: 14px 18px 10px; border-bottom: 1px solid #e8e8e8; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
-  .section-body { padding: 14px 18px; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 12px; font-weight: 700; }
-  .badge-urgent { background: #fde8e8; color: #c0392b; }
-  .badge-asap { background: #fef3e2; color: #b7600a; }
-  .badge-standard { background: #e8f4f8; color: #1a6b8a; }
-  .badge-count { background: #e9ecef; color: #444; }
-  .item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
-  .item:last-child { border-bottom: none; padding-bottom: 0; }
-  .item-title { font-weight: 700; font-size: 13px; margin-bottom: 3px; }
-  .item-title a { color: #0969da; text-decoration: none; }
-  .item-title a:hover { text-decoration: underline; }
-  .item-meta { font-size: 12px; color: #555; font-family: 'Courier New', monospace; }
-  .item-body { font-size: 13px; margin-top: 4px; color: #333; }
-  .none { color: #888; font-style: italic; font-size: 13px; padding: 6px 0; }
-  table.todo { width: 100%; border-collapse: collapse; font-size: 13px; }
-  table.todo th { background: #f7f8fa; text-align: left; padding: 7px 10px; font-size: 12px; color: #555; border-bottom: 2px solid #e0e0e0; }
-  table.todo td { padding: 8px 10px; border-bottom: 1px solid #f0f0f0; vertical-align: top; }
-  table.todo tr:last-child td { border-bottom: none; }
-  .pill-must { background: #fde8e8; color: #c0392b; font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 8px; white-space: nowrap; }
-  .pill-should { background: #fef3e2; color: #b7600a; font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 8px; white-space: nowrap; }
-  .pill-could { background: #e8f4f8; color: #1a6b8a; font-size: 11px; font-weight: 700; padding: 2px 7px; border-radius: 8px; white-space: nowrap; }
-  .te-card { border-radius: 4px; padding: 12px 14px; margin-bottom: 12px; font-family: 'Courier New', monospace; font-size: 12px; line-height: 1.7; }
-  .te-card:last-child { margin-bottom: 0; }
-  .te-project { border-left: 4px solid #2e7d32; background: #f1f8f1; }
-  .te-ongoing { border-left: 4px solid #1565c0; background: #f0f4ff; }
-  .te-after { border-left: 4px solid #c62828; background: #fff5f5; }
-  .chart-wrap { margin-bottom: 14px; }
-  .backup-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .backup-table th { background: #f7f8fa; text-align: left; padding: 7px 10px; font-size: 12px; color: #555; border-bottom: 2px solid #e0e0e0; }
-  .backup-table td { padding: 8px 10px; border-bottom: 1px solid #f0f0f0; font-family: 'Courier New', monospace; font-size: 12px; vertical-align: top; }
-  .backup-table tr:last-child td { border-bottom: none; }
-  .status-failed { color: #c0392b; font-weight: 700; }
-  .status-warning { color: #b7600a; font-weight: 700; }
-  .status-ok { color: #2e7d32; font-weight: 700; }
-  .overview { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; background: #fff; border-radius: 6px; padding: 16px 18px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
-  .overview-label { font-size: 13px; font-weight: 700; color: #0d1117; margin-bottom: 8px; }
-  .legend-item { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; margin-right: 12px; }
-  .dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
-  .ticket-id { font-family: 'Courier New', monospace; font-size: 12px; color: #888; }
-</style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Morning Briefing — 2026-05-22</title>
+<link rel="icon" type="image/png" href="../assets/ariat_favicon_32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/briefing.css" />
 </head>
 <body>
-<div class="wrapper">
+<div class="toolbar">
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+    Print / Save PDF
+  </button>
+</div>
 
-  <h1>Morning Briefing</h1>
-  <div class="meta">2026-05-22 &nbsp;|&nbsp; 07:30 CDT &nbsp;|&nbsp; Window: 2026-05-21 15:30 CDT &rarr; 2026-05-22 07:30 CDT &nbsp;|&nbsp; Scanned: 37 emails, 0 Teams messages</div>
-
-  <!-- Severity Overview -->
-  <div class="overview">
-    <div>
-      <div class="overview-label">Severity Overview</div>
-      <svg width="110" height="110" viewBox="0 0 110 110">
-        <circle cx="55" cy="55" r="40" fill="none" stroke="#e8f4f8" stroke-width="18"/>
-        <circle cx="55" cy="55" r="40" fill="none" stroke="#a8d4e6" stroke-width="18"
-          stroke-dasharray="167.6 83.7" stroke-dashoffset="0" transform="rotate(-90 55 55)"/>
-        <circle cx="55" cy="55" r="40" fill="none" stroke="#f5a623" stroke-width="18"
-          stroke-dasharray="55.8 195.5" stroke-dashoffset="-167.6" transform="rotate(-90 55 55)"/>
-        <circle cx="55" cy="55" r="40" fill="none" stroke="#e74c3c" stroke-width="18"
-          stroke-dasharray="27.9 223.4" stroke-dashoffset="-223.4" transform="rotate(-90 55 55)"/>
-        <text x="55" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#0d1117">9</text>
-        <text x="55" y="64" text-anchor="middle" font-size="10" fill="#666">items</text>
-      </svg>
+<div class="sheet">
+  <!-- Header -->
+  <div class="rhead">
+    <div class="lz">
+      <div class="rlogo">
+        <img class="rmark" src="../assets/ariat_mark.png" alt="" />
+        <span class="rdiv"></span>
+        <img class="rword" src="../assets/ariat_wordmark.png" alt="Ariat Systems" />
+      </div>
+      <div class="rtitle">Morning Briefing</div>
+      <div class="rsub">Friday, May 22, 2026 · Operational Summary</div>
     </div>
-    <div>
-      <div>
-        <span class="legend-item"><span class="dot" style="background:#e74c3c"></span> Urgent: <strong>1</strong></span>
-        <span class="legend-item"><span class="dot" style="background:#f5a623"></span> ASAP: <strong>2</strong></span>
-        <span class="legend-item"><span class="dot" style="background:#a8d4e6"></span> Standard: <strong>6</strong></span>
-      </div>
-      <div style="margin-top:10px;font-size:12px;color:#555;">
-        Backups: <strong style="color:#c0392b">1 Failed</strong> &nbsp;|&nbsp; <strong style="color:#b7600a">1 Warning</strong> &nbsp;|&nbsp; <strong style="color:#888">0 No Result</strong>
-      </div>
+    <div class="rmeta">
+      <div><span class="accent">WINDOW</span> 2026-05-21 15:30 → 2026-05-22 07:30 CDT</div>
+      <div><span class="accent">SCANNED</span> 37 emails · 0 Teams messages</div>
+      <div><span class="accent">REF</span> BRIEF-2026-05-22-AM</div>
     </div>
   </div>
 
-  <!-- 1. URGENT -->
-  <div class="section">
-    <div class="section-header">
-      <h2>Urgent</h2>
-      <span class="badge badge-urgent">1</span>
+  <!-- Body -->
+  <div class="rbody">
+
+    <div class="rsection">Severity Overview</div>
+    <div class="stats">
+      <div class="stat"><div class="v">1</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="v">2</div><div class="l">ASAP</div></div>
+      <div class="stat"><div class="v">6</div><div class="l">Standard</div></div>
     </div>
-    <div class="section-body">
-      <div class="item">
-        <div class="item-title">
-          <span class="badge badge-urgent" style="margin-right:6px">URGENT</span>
-          <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUDwSiTAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">[#10194] TBB Law &mdash; Holiday Office Closed</a>
-        </div>
-        <div class="item-meta">Source: Help Desk &nbsp;|&nbsp; Assigned by Michael Statham &nbsp;|&nbsp; 2026-05-22 07:25 CDT</div>
-        <div class="item-body">Gaby Stockdell (gaby@tbblaw.com) requests holiday greeting enabled <strong>Friday May 22 at 12:30pm through Tuesday May 26 at 7:00am</strong>. Michael confirmed this morning: &ldquo;We will ensure this gets turned on today at 12:30pm.&rdquo; Ticket assigned to Marshall. Action required before 12:30pm today. Device: FRONTDESK.</div>
-      </div>
+    <p class="note">Backups: 1 Failed · 1 Warning · 0 No Result</p>
+
+    <div class="rsection">Urgent</div>
+    <ul class="blist">
+      <li>
+        <span class="pill pill-danger"><span class="d"></span>Critical</span>
+        <strong>[#10194] TBB Law — Holiday Office Closed</strong>
+        <span class="note">Source: Help Desk · Assigned by Michael Statham · 2026-05-22 07:25 CDT</span>
+        <br>Gaby Stockdell (gaby@tbblaw.com) requests holiday greeting enabled <strong>Friday May 22 at 12:30pm through Tuesday May 26 at 7:00am</strong>. Michael confirmed this morning: "We will ensure this gets turned on today at 12:30pm." Ticket assigned to Marshall. Action required before 12:30pm today. Device: FRONTDESK.
+      </li>
+    </ul>
+
+    <div class="rsection">Follow-ups</div>
+    <ul class="blist">
+      <li>
+        <span class="pill pill-warning"><span class="d"></span>High</span>
+        <strong>Whitehead Wilson — VoIP Phone Recommendations (Marshall's assignment)</strong>
+        <span class="note">Source: Inbox / RE: Additional Services · Assigned to Marshall by Michael Statham ~2026-05-15</span>
+        <br>Michael explicitly assigned Marshall to send phone recommendations to David Wilson (dwilson@whiteheadwilson.com). New office at 3410 Far West Blvd Suite 250, Austin TX. Client has June 1 internet + phone deadline. AT&amp;T fiber install now rescheduled to Wed May 27 (slot for today was taken, cannot be moved back). No evidence phone recommendations were sent. David Wilson is waiting on this.
+      </li>
+      <li>
+        <span class="pill pill-info"><span class="d"></span>Medium</span>
+        <strong>[#10192] Internet Issues — Status: Waiting</strong>
+        <span class="note">Source: Help Desk · Michael Statham checked in · 2026-05-22 07:24 CDT</span>
+        <br>Intermittent internet drops after a recent firewall update reported by Amy Sweetland. Matt made wireless adjustments; Amy confirmed one issue around 10am May 20 but no major recurrence since. Michael checked in this morning; ticket moved to Waiting status. Marshall is receiving updates. No immediate action required unless Amy reports new issues.
+      </li>
+      <li>
+        <span class="pill pill-info"><span class="d"></span>Medium</span>
+        <strong>[#9753] ATXCPE — Cyber Security Implementations (YubiKey Purchase Pending)</strong>
+        <span class="note">Source: Help Desk · Tag removed · 2026-05-22 07:28 CDT</span>
+        <br>All security implementation steps complete (XDR, Cisco Umbrella, DUO, Conditional Access, training). Remaining blocker: ATXCPE has not yet purchased YubiKeys for partners. Matt noted May 13: "YubiKeys to be ordered." Ticket still open. FYI only — waiting on client action.
+      </li>
+    </ul>
+
+    <div class="rsection">Today To-Dos</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Item</th><th>Source / Deadline</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td><strong>Flip TBB Law holiday greeting ON at 12:30pm</strong><br><span class="note">Device: FRONTDESK. Enable closed-office greeting Fri 12:30pm → Tue May 26 07:00am. Michael confirmed this is happening today.</span></td>
+          <td><span class="mono">#10194</span><br>Deadline: 12:30pm</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td><strong>Send VoIP phone recommendations to Whitehead Wilson</strong><br><span class="note">Email David Wilson (dwilson@whiteheadwilson.com) with Teams VoIP phone options. June 1 deadline for full office setup.</span></td>
+          <td>Inbox /<br>Additional Services</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Could</span></td>
+          <td><strong>Investigate CelLink CEL-SC-DATABROKER-01 backup failure</strong><br><span class="note">4 BK103 critical errors since Thu 6:52pm CDT. Agent cannot initiate backup job. All other CelLink agents completed successfully overnight.</span></td>
+          <td>Datto / CelLinkSC</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Could</span></td>
+          <td><strong>Address CelLink VOLTA disk space (≤10% free on C:)</strong><br><span class="note">Two duplicate alerts received at 11:04am. Device at San Carlos CA location. Requires cleanup or capacity review.</span></td>
+          <td>Alerts / RMM</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Backups</div>
+    <div class="stats">
+      <div class="stat"><div class="v">1</div><div class="l">Failed</div></div>
+      <div class="stat"><div class="v">1</div><div class="l">Warning</div></div>
+      <div class="stat"><div class="v">0</div><div class="l">No Result</div></div>
     </div>
+    <table class="data">
+      <thead><tr><th>Status</th><th>Client</th><th>Device / Agent</th><th>Error</th><th>Last Alert</th><th>Count (window)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Failed</span></td>
+          <td>CelLink</td>
+          <td>CEL-SC-DATABROKER-01<br><span class="mono">CelLinkSC (84160c323b48)</span></td>
+          <td>BK103 — Backup failed, agent unable to initiate backup job</td>
+          <td class="mono">2026-05-22 06:42 CDT</td>
+          <td>4 alerts<br>First: 2026-05-21 18:52 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Warning</span></td>
+          <td>McElroy, Sullivan, Miller &amp; Weber</td>
+          <td>MEJ-DATA<br><span class="mono">MEJDatto2025 (6c92cfea8770)</span></td>
+          <td>FSC0013 — Unknown filesystem type</td>
+          <td class="mono">2026-05-21 20:02 CDT</td>
+          <td>4 occurrences<br>First: 2026-05-21 02:03 CDT</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="note"><strong>CelLink successful overnight:</strong> CEL-APPSERVER (x2), Faraday, FaradayDEV, Joule, Volta, CEL-SC-DC-01, Henry, CEL-SC-UVIS-01, CEL-SC-DEPLOY, CEL-SC-RADIUS — all bootable screenshots passed.</p>
+
+    <div class="rsection">Alerts — Top 3 Uncommon</div>
+    <ul class="blist">
+      <li>
+        <strong>1. Barracuda: Targeted Phishing Attack — mgarcia@covenant.org (Covenant Presbyterian Church)</strong>
+        <span class="note">Source: Inbox · noreply@barracuda.com · 2026-05-21 16:32 CDT</span>
+        <br>Barracuda Sentinel intercepted a Costco membership impersonation email sent to MP Garcia at CPC. From: C0STC0 Team &lt;cstcteam@mnsafetycenter.com&gt;. Analysis: suspicious CTA + suspicious URL. Message moved to user's Junk folder automatically. <strong>No action required</strong> — Sentinel handled it.
+      </li>
+      <li>
+        <strong>2. CelLink VOLTA — C: Drive ≤10% Free Space</strong>
+        <span class="note">Source: Alerts · noreply@rmmservice.com · 2026-05-22 06:04 CDT (2 alerts)</span>
+        <br>Device VOLTA at CelLink San Carlos CA location. C: volume at or below 10% free. Two duplicate alerts at 06:04 CDT. Requires disk cleanup or capacity review. Related note: VOLTA backup screenshot succeeded overnight.
+      </li>
+      <li>
+        <strong>3. Burnett &amp; Turner Law — Overnight Device Activity Cluster (01:39–06:04 CDT)</strong>
+        <span class="note">Source: Alerts · noreply@rmmservice.com · 2026-05-22 01:39–06:04 CDT (5 notifications)</span>
+        <br>Unusual cluster of RMM activity notifications for multiple Burnett &amp; Turner Law devices overnight: BT-RE*, LAW-A*, LAW-D* (multiple instances). Activity span: 01:39am to 06:04am CDT. Overnight machine activity without a known maintenance window. Worth confirming this was scheduled or automated.
+      </li>
+    </ul>
+
+    <div class="rsection">Time Entries</div>
+    <p class="note">No qualifying work activity (≥80% confidence Marshall performed billable work for a client) identified in the 16-hour scan window. Teams returned no messages.</p>
+
   </div>
 
-  <!-- 2. FOLLOW-UPS -->
-  <div class="section">
-    <div class="section-header">
-      <h2>Follow-ups</h2>
-      <span class="badge badge-count">3</span>
-    </div>
-    <div class="section-body">
-
-      <div class="item">
-        <div class="item-title">
-          <span class="badge badge-asap" style="margin-right:6px">ASAP</span>
-          <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSl9AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Whitehead Wilson &mdash; VoIP Phone Recommendations (Marshall&rsquo;s assignment)</a>
-        </div>
-        <div class="item-meta">Source: Inbox / RE: Additional Services &nbsp;|&nbsp; Assigned to Marshall by Michael Statham ~2026-05-15</div>
-        <div class="item-body">Michael explicitly assigned Marshall to send phone recommendations to David Wilson (dwilson@whiteheadwilson.com). New office at 3410 Far West Blvd Suite 250, Austin TX. Client has June 1 internet + phone deadline. AT&amp;T fiber install now rescheduled to Wed May 27 (slot for today was taken, cannot be moved back). No evidence phone recommendations were sent. David Wilson is waiting on this.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="badge badge-standard" style="margin-right:6px">STANDARD</span>
-          <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUDwSiSAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">[#10192] Internet Issues &mdash; Status: Waiting</a>
-        </div>
-        <div class="item-meta">Source: Help Desk &nbsp;|&nbsp; Michael Statham checked in &nbsp;|&nbsp; 2026-05-22 07:24 CDT</div>
-        <div class="item-body">Intermittent internet drops after a recent firewall update reported by Amy Sweetland. Matt made wireless adjustments; Amy confirmed one issue around 10am May 20 but no major recurrence since. Michael checked in this morning; ticket moved to Waiting status. Marshall is receiving updates. No immediate action required unless Amy reports new issues.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          <span class="badge badge-standard" style="margin-right:6px">STANDARD</span>
-          <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRKAACcFJNx05zPTLNH4BZPylwuAAUDwSiUAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">[#9753] ATXCPE &mdash; Cyber Security Implementations (YubiKey Purchase Pending)</a>
-        </div>
-        <div class="item-meta">Source: Help Desk &nbsp;|&nbsp; Tag removed &nbsp;|&nbsp; 2026-05-22 07:28 CDT</div>
-        <div class="item-body">All security implementation steps complete (XDR, Cisco Umbrella, DUO, Conditional Access, training). Remaining blocker: ATXCPE has not yet purchased YubiKeys for partners. Matt noted May 13: &ldquo;YubiKeys to be ordered.&rdquo; Ticket still open. FYI only &mdash; waiting on client action.</div>
-      </div>
-
-    </div>
+  <!-- Footer -->
+  <div class="rfoot">
+    <span>Ariat Systems · Internal</span>
+    <span>Generated 2026-05-22 07:30 CDT · briefs.cloudmarsh.com</span>
   </div>
-
-  <!-- 3. TODAY TO-DOS -->
-  <div class="section">
-    <div class="section-header">
-      <h2>Today To-Dos</h2>
-      <span class="badge badge-count">4</span>
-    </div>
-    <div class="section-body">
-      <table class="todo">
-        <thead>
-          <tr>
-            <th style="width:80px">Priority</th>
-            <th>Item</th>
-            <th style="width:120px">Source / Deadline</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="pill-must">MUST</span></td>
-            <td>
-              <strong>Flip TBB Law holiday greeting ON at 12:30pm</strong><br>
-              <span style="font-size:12px;color:#555">Device: FRONTDESK. Enable closed-office greeting Fri 12:30pm &rarr; Tue May 26 07:00am. Michael confirmed this is happening today.</span>
-            </td>
-            <td><span class="ticket-id">#10194</span><br>Deadline: 12:30pm</td>
-          </tr>
-          <tr>
-            <td><span class="pill-should">SHOULD</span></td>
-            <td>
-              <strong>Send VoIP phone recommendations to Whitehead Wilson</strong><br>
-              <span style="font-size:12px;color:#555">Email David Wilson (dwilson@whiteheadwilson.com) with Teams VoIP phone options. June 1 deadline for full office setup.</span>
-            </td>
-            <td>Inbox / <br>Additional Services</td>
-          </tr>
-          <tr>
-            <td><span class="pill-could">COULD</span></td>
-            <td>
-              <strong>Investigate CelLink CEL-SC-DATABROKER-01 backup failure</strong><br>
-              <span style="font-size:12px;color:#555">4 BK103 critical errors since Thu 6:52pm CDT. Agent cannot initiate backup job. All other CelLink agents completed successfully overnight.</span>
-            </td>
-            <td>Datto / CelLinkSC</td>
-          </tr>
-          <tr>
-            <td><span class="pill-could">COULD</span></td>
-            <td>
-              <strong>Address CelLink VOLTA disk space (&lt;=10% free on C:)</strong><br>
-              <span style="font-size:12px;color:#555">Two duplicate alerts received at 11:04am. Device at San Carlos CA location. Requires cleanup or capacity review.</span>
-            </td>
-            <td>Alerts / RMM</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- 4. BACKUPS -->
-  <div class="section">
-    <div class="section-header">
-      <h2>Backups</h2>
-      <span class="badge badge-count">2 issues</span>
-      <span class="badge badge-urgent" style="margin-left:4px">1 Failed</span>
-      <span class="badge badge-asap" style="margin-left:4px">1 Warning</span>
-      <span class="badge" style="margin-left:4px;background:#e8e8e8;color:#666">0 No Result</span>
-    </div>
-    <div class="section-body">
-      <div class="chart-wrap">
-        <svg width="260" height="70" viewBox="0 0 260 70" aria-label="Backup status bar chart">
-          <text x="0" y="13" font-size="11" fill="#555">Failed</text>
-          <rect x="70" y="2" width="80" height="14" fill="#e74c3c" rx="2"/>
-          <text x="155" y="13" font-size="11" fill="#c0392b" font-weight="700">1</text>
-          <text x="0" y="35" font-size="11" fill="#555">Warning</text>
-          <rect x="70" y="24" width="80" height="14" fill="#f5a623" rx="2"/>
-          <text x="155" y="35" font-size="11" fill="#b7600a" font-weight="700">1</text>
-          <text x="0" y="57" font-size="11" fill="#555">No Result</text>
-          <rect x="70" y="46" width="1" height="14" fill="#ccc" rx="2"/>
-          <text x="155" y="57" font-size="11" fill="#888">0</text>
-        </svg>
-      </div>
-      <table class="backup-table">
-        <thead>
-          <tr>
-            <th>Status</th>
-            <th>Client</th>
-            <th>Device / Agent</th>
-            <th>Error</th>
-            <th>Last Alert</th>
-            <th>Count (window)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="status-failed">FAILED</td>
-            <td>CelLink</td>
-            <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQGMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" style="color:#c0392b">CEL-SC-DATABROKER-01</a><br>CelLinkSC (84160c323b48)</td>
-            <td>BK103 &mdash; Backup failed, agent unable to initiate backup job</td>
-            <td>2026-05-22 06:42 CDT</td>
-            <td>4 alerts<br>First: 2026-05-21 18:52 CDT</td>
-          </tr>
-          <tr>
-            <td class="status-warning">WARNING</td>
-            <td>McElroy, Sullivan, Miller &amp; Weber</td>
-            <td><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUBMQGIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" style="color:#b7600a">MEJ-DATA</a><br>MEJDatto2025 (6c92cfea8770)</td>
-            <td>FSC0013 &mdash; Unknown filesystem type</td>
-            <td>2026-05-21 20:02 CDT</td>
-            <td>4 occurrences<br>First: 2026-05-21 02:03 CDT</td>
-          </tr>
-        </tbody>
-      </table>
-      <div style="margin-top:10px;font-size:12px;color:#555">
-        <strong>CelLink successful overnight:</strong> CEL-APPSERVER (x2), Faraday, FaradayDEV, Joule, Volta, CEL-SC-DC-01, Henry, CEL-SC-UVIS-01, CEL-SC-DEPLOY, CEL-SC-RADIUS &mdash; all bootable screenshots passed.
-      </div>
-    </div>
-  </div>
-
-  <!-- 5. ALERTS -->
-  <div class="section">
-    <div class="section-header">
-      <h2>Alerts</h2>
-      <span class="badge badge-count">Top 3 Uncommon</span>
-    </div>
-    <div class="section-body">
-
-      <div class="item">
-        <div class="item-title">
-          1. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUAiSmBAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Barracuda: Targeted Phishing Attack &mdash; mgarcia@covenant.org (Covenant Presbyterian Church)</a>
-        </div>
-        <div class="item-meta">Source: Inbox &nbsp;|&nbsp; noreply@barracuda.com &nbsp;|&nbsp; 2026-05-21 16:32 CDT</div>
-        <div class="item-body">Barracuda Sentinel intercepted a Costco membership impersonation email sent to MP Garcia at CPC. From: C0STC0 Team &lt;cstcteam@mnsafetycenter.com&gt;. Analysis: suspicious CTA + suspicious URL. Message moved to user&rsquo;s Junk folder automatically. <strong>No action required</strong> &mdash; Sentinel handled it.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          2. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUB6CPNAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CelLink VOLTA &mdash; C: Drive &lt;=10% Free Space</a>
-        </div>
-        <div class="item-meta">Source: Alerts &nbsp;|&nbsp; noreply@rmmservice.com &nbsp;|&nbsp; 2026-05-22 06:04 CDT (2 alerts)</div>
-        <div class="item-body">Device VOLTA at CelLink San Carlos CA location. C: volume at or below 10% free. Two duplicate alerts at 06:04 CDT. Requires disk cleanup or capacity review. Related note: VOLTA backup screenshot succeeded overnight.</div>
-      </div>
-
-      <div class="item">
-        <div class="item-title">
-          3. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUB6CO7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Burnett &amp; Turner Law &mdash; Overnight Device Activity Cluster (01:39&ndash;06:04 CDT)</a>
-        </div>
-        <div class="item-meta">Source: Alerts &nbsp;|&nbsp; noreply@rmmservice.com &nbsp;|&nbsp; 2026-05-22 01:39&ndash;06:04 CDT (5 notifications)</div>
-        <div class="item-body">Unusual cluster of RMM activity notifications for multiple Burnett &amp; Turner Law devices overnight: BT-RE*, LAW-A*, LAW-D* (multiple instances). Activity span: 01:39am to 06:04am CDT. Overnight machine activity without a known maintenance window. Worth confirming this was scheduled or automated.</div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- 6. TIME ENTRIES -->
-  <div class="section">
-    <div class="section-header">
-      <h2>Time Entries</h2>
-      <span class="badge badge-count">0</span>
-    </div>
-    <div class="section-body">
-      <div class="none">No qualifying work activity (&ge;80% confidence Marshall performed billable work for a client) identified in the 16-hour scan window. Teams returned no messages.</div>
-    </div>
-  </div>
-
-  <div style="font-size:11px;color:#aaa;text-align:center;margin-top:8px;">Generated 2026-05-22 07:30 CDT &nbsp;|&nbsp; Window: 2026-05-21 15:30 CDT &rarr; 2026-05-22 07:30 CDT &nbsp;|&nbsp; gitmarsh/routines</div>
-
 </div>
 </body>
 </html>

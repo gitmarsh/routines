@@ -1,523 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Morning Briefing — 2026-06-22</title>
-<style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1117; color: #e1e4e8; font-size: 14px; line-height: 1.5; }
-.container { max-width: 920px; margin: 0 auto; padding: 24px 16px; }
-
-/* Header */
-.header { background: linear-gradient(135deg, #1a1f2e 0%, #0d1117 100%); border: 1px solid #30363d; border-radius: 12px; padding: 24px; margin-bottom: 20px; }
-.header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
-.header-title { font-size: 24px; font-weight: 700; color: #f0f6fc; }
-.header-meta { font-size: 12px; color: #8b949e; margin-top: 4px; }
-.severity-pills { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.pill { padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.2px; }
-.pill-urgent { background: rgba(255,59,48,0.18); color: #ff6b6b; border: 1px solid rgba(255,59,48,0.5); }
-.pill-asap { background: rgba(255,149,0,0.18); color: #ffb84d; border: 1px solid rgba(255,149,0,0.5); }
-.pill-standard { background: rgba(48,130,209,0.18); color: #58a6ff; border: 1px solid rgba(48,130,209,0.5); }
-.scan-status { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; padding-top: 14px; border-top: 1px solid #21262d; }
-.scan-item { font-size: 11px; color: #6e7681; }
-.scan-ok { color: #4ade80; }
-.scan-warn { color: #ffb84d; }
-
-/* Section */
-.section { background: #161b22; border: 1px solid #30363d; border-radius: 10px; margin-bottom: 18px; overflow: hidden; }
-.section-header { padding: 13px 20px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid #30363d; }
-.section-icon { flex-shrink: 0; }
-.section-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; flex: 1; }
-.section-count { background: #21262d; color: #8b949e; border-radius: 12px; padding: 2px 10px; font-size: 11px; font-weight: 600; white-space: nowrap; }
-.section-body { padding: 16px 20px; }
-
-/* Alert cards */
-.alert-card { border-radius: 8px; padding: 13px 15px; margin-bottom: 10px; border-left: 3px solid; }
-.alert-card:last-child { margin-bottom: 0; }
-.ac-urgent { background: rgba(255,59,48,0.07); border-color: #ff3b30; }
-.ac-asap { background: rgba(255,149,0,0.07); border-color: #ff9500; }
-.ac-standard { background: rgba(48,130,209,0.05); border-color: #3082d1; }
-.ac-info { background: rgba(139,92,246,0.06); border-color: #7c3aed; }
-.card-title { font-weight: 600; color: #f0f6fc; margin-bottom: 5px; font-size: 13px; line-height: 1.4; }
-.card-body { color: #8b949e; font-size: 12px; line-height: 1.6; }
-.card-time { color: #6e7681; font-size: 11px; margin-top: 6px; font-style: italic; }
-
-.badge { display: inline-block; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 700; margin-right: 7px; text-transform: uppercase; letter-spacing: 0.4px; }
-.badge-urgent { background: #ff3b30; color: #fff; }
-.badge-asap { background: #d97706; color: #fff; }
-.badge-standard { background: #1d4ed8; color: #fff; }
-.badge-warn { background: #92400e; color: #fcd34d; border: 1px solid #b45309; }
-.badge-info { background: #1e3a5f; color: #93c5fd; border: 1px solid #2563eb; }
-
-/* Table */
-table { width: 100%; border-collapse: collapse; font-size: 12px; }
-th { background: #0d1117; color: #6e7681; text-align: left; padding: 8px 12px; font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.4px; border-bottom: 1px solid #30363d; }
-td { padding: 9px 12px; border-bottom: 1px solid #21262d; vertical-align: top; color: #c9d1d9; }
-tr:last-child td { border-bottom: none; }
-tr:hover td { background: rgba(48,54,61,0.4); }
-.td-must { color: #ff6b6b; font-weight: 700; font-size: 11px; }
-.td-should { color: #ffb84d; font-weight: 700; font-size: 11px; }
-.td-could { color: #58a6ff; font-weight: 700; font-size: 11px; }
-
-/* Status */
-.st-fail { color: #ff6b6b; font-weight: 700; }
-.st-warn { color: #ffb84d; font-weight: 700; }
-.st-ok { color: #4ade80; font-weight: 700; }
-.st-none { color: #6e7681; font-weight: 600; }
-
-/* Time entry cards */
-.time-card { border-radius: 8px; padding: 14px 16px; margin-bottom: 10px; border: 1px solid; }
-.time-card:last-child { margin-bottom: 0; }
-.tc-blue { background: rgba(37,99,235,0.1); border-color: rgba(59,130,246,0.4); }
-.tc-red { background: rgba(220,38,38,0.1); border-color: rgba(239,68,68,0.4); }
-.time-card-label { font-size: 10px; color: #6e7681; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
-.tf { margin-bottom: 5px; font-size: 12px; display: flex; gap: 8px; }
-.tf-key { color: #6e7681; min-width: 92px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2px; flex-shrink: 0; padding-top: 1px; }
-.tf-val { color: #e1e4e8; }
-.tf-missing { color: #f87171; font-style: italic; background: rgba(239,68,68,0.12); border-radius: 3px; padding: 1px 5px; }
-.cat-blue { color: #60a5fa; font-weight: 700; }
-.cat-red { color: #f87171; font-weight: 700; }
-
-/* Footer */
-.footer { text-align: center; color: #4b5563; font-size: 11px; padding: 20px; border-top: 1px solid #21262d; margin-top: 4px; line-height: 1.8; }
-
-hr.divider { border: none; border-top: 1px solid #21262d; margin: 12px 0; }
-
-strong { color: #f0f6fc; }
-</style>
+<link rel="icon" type="image/png" href="../assets/ariat_favicon_32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/briefing.css" />
 </head>
 <body>
-<div class="container">
-
-<!-- HEADER -->
-<div class="header">
-  <div class="header-top">
-    <div>
-      <div class="header-title">Morning Briefing</div>
-      <div class="header-meta" style="margin-top:5px;">Monday, June 22, 2026 &nbsp;&middot;&nbsp; Ariat Systems &nbsp;&middot;&nbsp; Marshall Hearn</div>
-      <div class="header-meta" style="margin-top:2px;">Scan window: Fri Jun 19 16:00 CDT &rarr; Mon Jun 22 07:30 CDT</div>
-    </div>
-    <div class="severity-pills">
-      <span class="pill pill-urgent">&bull; 2 Urgent</span>
-      <span class="pill pill-asap">&bull; 8 ASAP</span>
-      <span class="pill pill-standard">&bull; 12 Standard</span>
-    </div>
-  </div>
-  <div class="scan-status">
-    <span class="scan-item"><span class="scan-ok">&#10003;</span> ~117 emails scanned</span>
-    <span class="scan-item"><span class="scan-warn">&#9888;</span> Teams: rate-limited (0 / 45 chats &mdash; check manually)</span>
-    <span class="scan-item"><span class="scan-ok">&#10003;</span> Backups analyzed</span>
-    <span class="scan-item"><span class="scan-ok">&#10003;</span> Classified</span>
-  </div>
+<div class="toolbar">
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+    Print / Save PDF
+  </button>
 </div>
 
-<!-- OVERVIEW CHARTS -->
-<div class="section">
-  <div class="section-header" style="border-bottom:1px solid #30363d;">
-    <span class="section-title" style="color:#8b949e;">Overview</span>
-  </div>
-  <div class="section-body">
-    <div style="display:flex; gap:32px; align-items:center; flex-wrap:wrap;">
-
-      <!-- Donut chart: 22 items total (2U + 8A + 12S) -->
-      <!-- C = 2pi x 46 approx 289.03 -->
-      <!-- Urgent 2/22 = 26.27; ASAP 8/22 = 105.10; Standard 12/22 = 157.65 -->
-      <div style="position:relative; width:120px; height:120px; flex-shrink:0;">
-        <svg width="120" height="120" viewBox="0 0 120 120">
-          <circle cx="60" cy="60" r="46" fill="none" stroke="#21262d" stroke-width="16"/>
-          <circle cx="60" cy="60" r="46" fill="none" stroke="#ff3b30" stroke-width="16"
-            stroke-dasharray="26.27 262.76" stroke-dashoffset="0"
-            transform="rotate(-90 60 60)"/>
-          <circle cx="60" cy="60" r="46" fill="none" stroke="#d97706" stroke-width="16"
-            stroke-dasharray="105.10 183.93" stroke-dashoffset="-26.27"
-            transform="rotate(-90 60 60)"/>
-          <circle cx="60" cy="60" r="46" fill="none" stroke="#1d4ed8" stroke-width="16"
-            stroke-dasharray="157.65 131.38" stroke-dashoffset="-131.37"
-            transform="rotate(-90 60 60)"/>
-        </svg>
-        <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; pointer-events:none;">
-          <div style="font-size:22px; font-weight:700; color:#f0f6fc; line-height:1;">22</div>
-          <div style="font-size:10px; color:#6e7681;">items</div>
-        </div>
+<div class="sheet">
+  <!-- Header -->
+  <div class="rhead">
+    <div class="lz">
+      <div class="rlogo">
+        <img class="rmark" src="../assets/ariat_mark.png" alt="" />
+        <span class="rdiv"></span>
+        <img class="rword" src="../assets/ariat_wordmark.png" alt="Ariat Systems" />
       </div>
-
-      <div style="display:flex; flex-direction:column; gap:8px;">
-        <div style="display:flex; align-items:center; gap:10px; font-size:13px;">
-          <div style="width:10px; height:10px; border-radius:50%; background:#ff3b30; flex-shrink:0;"></div>
-          <span style="color:#ff6b6b; font-weight:700;">2</span><span style="color:#6e7681;">&nbsp;Urgent</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:10px; font-size:13px;">
-          <div style="width:10px; height:10px; border-radius:50%; background:#d97706; flex-shrink:0;"></div>
-          <span style="color:#ffb84d; font-weight:700;">8</span><span style="color:#6e7681;">&nbsp;ASAP</span>
-        </div>
-        <div style="display:flex; align-items:center; gap:10px; font-size:13px;">
-          <div style="width:10px; height:10px; border-radius:50%; background:#1d4ed8; flex-shrink:0;"></div>
-          <span style="color:#58a6ff; font-weight:700;">12</span><span style="color:#6e7681;">&nbsp;Standard</span>
-        </div>
-      </div>
-
-      <!-- Backup bar chart -->
-      <div style="margin-left:24px;">
-        <div style="font-size:10px; color:#6e7681; font-weight:700; text-transform:uppercase; letter-spacing:0.4px; margin-bottom:8px;">Backup Health (13 devices)</div>
-        <svg width="210" height="90" viewBox="0 0 210 90">
-          <rect x="10" y="15" width="36" height="60" fill="#ef4444" rx="3"/>
-          <text x="28" y="11" text-anchor="middle" fill="#f87171" font-size="12" font-weight="bold" font-family="sans-serif">7</text>
-          <text x="28" y="86" text-anchor="middle" fill="#6e7681" font-size="10" font-family="sans-serif">Failed</text>
-          <rect x="68" y="49" width="36" height="26" fill="#d97706" rx="3"/>
-          <text x="86" y="45" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="bold" font-family="sans-serif">3</text>
-          <text x="86" y="86" text-anchor="middle" fill="#6e7681" font-size="10" font-family="sans-serif">Warning</text>
-          <rect x="126" y="49" width="36" height="26" fill="#4b5563" rx="3"/>
-          <text x="144" y="45" text-anchor="middle" fill="#9ca3af" font-size="12" font-weight="bold" font-family="sans-serif">3</text>
-          <text x="144" y="86" text-anchor="middle" fill="#6e7681" font-size="10" font-family="sans-serif">No Result</text>
-          <rect x="184" y="60" width="20" height="15" fill="#16a34a" rx="3" opacity="0.4"/>
-          <text x="194" y="86" text-anchor="middle" fill="#6e7681" font-size="10" font-family="sans-serif">OK</text>
-        </svg>
-      </div>
-
+      <div class="rtitle">Morning Briefing</div>
+      <div class="rsub">Monday, June 22, 2026 · Operational Summary</div>
+    </div>
+    <div class="rmeta">
+      <div><span class="accent">WINDOW</span> Fri Jun 19 16:00 → Mon Jun 22 07:30 CDT</div>
+      <div><span class="accent">SCANNED</span> ~117 emails · Teams rate-limited (0 / 45 chats — check manually)</div>
+      <div><span class="accent">REF</span> BRIEF-2026-06-22-AM</div>
     </div>
   </div>
-</div>
 
-<!-- SECTION 1: URGENT -->
-<div class="section">
-  <div class="section-header" style="background:rgba(255,59,48,0.08);">
-    <svg class="section-icon" width="16" height="16" viewBox="0 0 16 16" fill="#ff6b6b">
-      <path d="M8 1a7 7 0 100 14A7 7 0 008 1zM7.25 4.75a.75.75 0 011.5 0v3.5a.75.75 0 01-1.5 0v-3.5zm.75 7.25a1 1 0 110-2 1 1 0 010 2z"/>
-    </svg>
-    <span class="section-title" style="color:#ff6b6b;">Urgent &mdash; Requires Immediate Action</span>
-    <span class="section-count">2</span>
-  </div>
-  <div class="section-body">
+  <!-- Body -->
+  <div class="rbody">
 
-    <div class="alert-card ac-urgent">
-      <div class="card-title">
-        <span class="badge badge-urgent">URGENT</span>
-        SentinelOne: AriatConference &mdash; Active Threat NOT Mitigated
-      </div>
-      <div class="card-body">
-        Threat detected on workstation <strong>AriatConference</strong> was confirmed <strong>NOT mitigated</strong> per SentinelOne alert email. Detection persisted from Friday evening through this morning with no remediation. Endpoint may still be actively compromised. <strong>Action:</strong> Log into SentinelOne console now &mdash; review threat details, quarantine endpoint or kill threat process, initiate full scan, and check for lateral movement indicators.
-      </div>
-      <div class="card-time">Detected: Fri Jun 19 (evening) &middot; Status: Unmitigated as of briefing time &middot; Source: SentinelOne alert email</div>
+    <div class="rsection">Severity Overview</div>
+    <div class="stats">
+      <div class="stat"><div class="v">2</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="v">8</div><div class="l">ASAP</div></div>
+      <div class="stat"><div class="v">12</div><div class="l">Standard</div></div>
+      <div class="stat"><div class="v">22</div><div class="l">Total Items</div></div>
     </div>
+    <p class="note">Backup health (13 devices): 7 failed · 3 warning · 3 no result. ~117 emails scanned and classified. Teams scan rate-limited (0 of 45 chats) — check manually.</p>
 
-    <div class="alert-card ac-urgent">
-      <div class="card-title">
-        <span class="badge badge-urgent">URGENT</span>
-        SentinelOne: jbrown112 &mdash; Suspicious Activity Detected
-      </div>
-      <div class="card-body">
-        SentinelOne flagged suspicious behavior on endpoint associated with user <strong>jbrown112</strong>. Threat classification and mitigation status are unknown until console is reviewed. <strong>Action:</strong> Open SentinelOne dashboard &mdash; check threat classification, mitigation status, affected processes, and correlate with any weekend sign-in activity for this account.
-      </div>
-      <div class="card-time">Detected this weekend &middot; Verify mitigation status &middot; Source: SentinelOne alert email</div>
-    </div>
-
-  </div>
-</div>
-
-<!-- SECTION 2: FOLLOW-UPS / ASAP -->
-<div class="section">
-  <div class="section-header" style="background:rgba(217,119,6,0.08);">
-    <svg class="section-icon" width="16" height="16" viewBox="0 0 16 16" fill="#ffb84d">
-      <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm.75 4.75v4.5a.75.75 0 01-1.5 0v-4.5a.75.75 0 011.5 0zM8 13a1 1 0 110-2 1 1 0 010 2z"/>
-    </svg>
-    <span class="section-title" style="color:#ffb84d;">Follow-ups &amp; ASAP Items</span>
-    <span class="section-count">8</span>
-  </div>
-  <div class="section-body">
-
-    <div class="alert-card ac-asap">
-      <div class="card-title">
-        <span class="badge badge-asap">ASAP</span>
-        ADP: Suspicious Credential Activity &mdash; Sunday Evening
-      </div>
-      <div class="card-body">
-        Two sequential ADP security notification emails arrived Sunday evening: (1) <strong>User ID was requested</strong> for your account, then (2) a <strong>sign-in attempt was detected</strong>. This pattern suggests an unauthorized account recovery or access attempt. If you did not initiate these, change your ADP password immediately and enable MFA. Also verify no changes to direct deposit or tax withholding were made.
-      </div>
-      <div class="card-time">Sun Jun 21, evening &middot; Source: ADP Security Notifications</div>
-    </div>
-
-    <div class="alert-card ac-asap">
-      <div class="card-title">
-        <span class="badge badge-asap">ASAP</span>
-        MEJ &amp; Associates: Datto Appliance Disk Full &mdash; All 5 Agents Failing
-      </div>
-      <div class="card-body">
-        Root cause confirmed: <strong>BAK0615 &mdash; &ldquo;Backup skipped due to not enough free space&rdquo;</strong>. The Datto appliance itself is out of disk space &mdash; this is a device-level issue, not per-agent. All 5 protected machines are currently unprotected: <strong>MEJ-DC1, MEJ-DATA, MEJ-SHELL, MEJ-TENANT, MEJ-UTILITY</strong>. Remediation options: delete old snapshots to reclaim space, expand Datto storage, or archive data offsite. No MEJ backup protection until resolved.
-      </div>
-      <div class="card-time">Ongoing this weekend &middot; Source: Datto / reporting@dattobackup.com / Backup Radar</div>
-    </div>
-
-    <div class="alert-card ac-asap">
-      <div class="card-title">
-        <span class="badge badge-asap">ASAP</span>
-        Capital Excavation: 18.7 Days Without Successful Backup
-      </div>
-      <div class="card-body">
-        Backup Radar shows primary device <strong>CapitalEx</strong> has not had a successful backup in <strong>18.7 days</strong> (disk utilization alert). Offsite / Rescue device is even worse at <strong>24.2 days</strong> without result. Both local and cloud protection are compromised. Investigate Datto appliance at Capital Excavation &mdash; check disk utilization, agent error codes, and connectivity.
-      </div>
-      <div class="card-time">Ongoing &middot; Source: Backup Radar / noreply@backupradar.com &middot; Both primary and offsite affected</div>
-    </div>
-
-    <div class="alert-card ac-asap">
-      <div class="card-title">
-        <span class="badge badge-asap">ASAP</span>
-        CelLink: Henry Backup Failure
-      </div>
-      <div class="card-body">
-        Backup failure reported for <strong>CelLink Henry</strong> device this weekend. Review Backup Radar or Datto console for CelLink to check the last successful backup date, specific error codes, and agent health. Coordinate with CelLink contact if on-site access or storage remediation is needed.
-      </div>
-      <div class="card-time">This weekend &middot; Source: Backup Radar / Datto</div>
-    </div>
-
-    <div class="alert-card ac-asap">
-      <div class="card-title">
-        <span class="badge badge-asap">ASAP</span>
-        CelLink: CELAZUPRDFILE01 &mdash; E: Drive Alert
-      </div>
-      <div class="card-body">
-        RMM monitoring fired an alert on <strong>CELAZUPRDFILE01 E: drive</strong> (production file server) on Saturday. This is typically a disk utilization or health alert. Check current disk capacity, SMART status, and I/O health. If nearing capacity, coordinate with CelLink for storage expansion before it becomes critical.
-      </div>
-      <div class="card-time">Sat Jun 20 &middot; Source: RMM monitoring / Alerts folder</div>
-    </div>
-
-    <div class="alert-card ac-asap">
-      <div class="card-title">
-        <span class="badge badge-asap">ASAP</span>
-        Beehive Specialty: Ashley &mdash; Surface Recovery / Missing Thumbnails
-      </div>
-      <div class="card-body">
-        Ashley at Beehive Specialty reported an issue with her Microsoft Surface where thumbnails or file previews are missing (recovery-related). You sent a reply on Friday &mdash; check if she responded over the weekend and follow up to close the ticket.
-      </div>
-      <div class="card-time">Fri Jun 19 &rarr; ongoing &middot; Contact: ashley@specialbee.com &middot; Source: Sent Items / Inbox</div>
-    </div>
-
-    <div class="alert-card ac-asap">
-      <div class="card-title">
-        <span class="badge badge-asap">ASAP</span>
-        Cisco Meraki: AnyConnect Case &mdash; Awaiting Your Reply
-      </div>
-      <div class="card-body">
-        An open Meraki support case for <strong>AnyConnect</strong> is waiting for your response. Meraki has been waiting on additional information or confirmation of next steps. Check your email thread or the Meraki dashboard for the case and provide the requested reply to keep it moving.
-      </div>
-      <div class="card-time">Open case &middot; Source: Meraki case management emails</div>
-    </div>
-
-    <div class="alert-card ac-asap">
-      <div class="card-title">
-        <span class="badge badge-asap">ASAP</span>
-        HaloPSA Trial: Extended to July 10 &mdash; Active Evaluation Window
-      </div>
-      <div class="card-body">
-        HaloPSA trial has been extended through <strong>July 10, 2026</strong>. The evaluation window is open. Ensure trial usage is progressing, document findings, and prepare a go/no-go decision before the deadline. Consider scheduling a dedicated review session this week.
-      </div>
-      <div class="card-time">Trial deadline: Jul 10, 2026 &middot; Source: HaloPSA / vendor email</div>
-    </div>
-
-  </div>
-</div>
-
-<!-- SECTION 3: TODAY'S TO-DOS -->
-<div class="section">
-  <div class="section-header" style="background:rgba(139,92,246,0.07);">
-    <svg class="section-icon" width="16" height="16" viewBox="0 0 16 16" fill="#a78bfa">
-      <path d="M2 2.75A.75.75 0 012.75 2h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 2.75zm0 5A.75.75 0 012.75 7h10.5a.75.75 0 010 1.5H2.75A.75.75 0 012 7zm0 5a.75.75 0 01.75-.75h5.5a.75.75 0 010 1.5h-5.5A.75.75 0 012 12.75z"/>
-    </svg>
-    <span class="section-title" style="color:#a78bfa;">Today's To-Dos</span>
-    <span class="section-count">12 tasks</span>
-  </div>
-  <div class="section-body">
-    <table>
-      <thead>
-        <tr>
-          <th style="width:72px;">Priority</th>
-          <th>Task</th>
-          <th style="width:175px;">Client / System</th>
-        </tr>
-      </thead>
+    <div class="rsection">Urgent — Requires Immediate Action</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Alert</th><th>Detail</th><th>When / Source</th></tr></thead>
       <tbody>
-        <tr><td class="td-must">MUST</td><td>Open SentinelOne console &mdash; investigate AriatConference threat, quarantine if still active, full scan</td><td>Ariat / SentinelOne</td></tr>
-        <tr><td class="td-must">MUST</td><td>Review SentinelOne jbrown112 suspicious activity &mdash; confirm mitigation status</td><td>Ariat / SentinelOne</td></tr>
-        <tr><td class="td-must">MUST</td><td>Verify ADP credential activity Sun night was you &mdash; change password + enable MFA if unauthorized</td><td>Personal / ADP</td></tr>
-        <tr><td class="td-must">MUST</td><td>Remediate MEJ &amp; Associates Datto disk full &mdash; all 5 agents unprotected (BAK0615)</td><td>MEJ &amp; Associates</td></tr>
-        <tr><td class="td-must">MUST</td><td>Investigate Capital Excavation backup gap &mdash; 18.7 days primary, 24.2 days offsite</td><td>Capital Excavation</td></tr>
-        <tr><td class="td-should">SHOULD</td><td>Check CelLink Henry backup failure + CELAZUPRDFILE01 E: drive disk alert</td><td>CelLink</td></tr>
-        <tr><td class="td-should">SHOULD</td><td>Follow up with Ashley on Surface thumbnail/recovery issue</td><td>Beehive Specialty</td></tr>
-        <tr><td class="td-should">SHOULD</td><td>Reply to Meraki AnyConnect support case &mdash; provide requested information</td><td>Meraki / Case Mgmt</td></tr>
-        <tr><td class="td-should">SHOULD</td><td>Verify Burnett &amp; Turner LAW-DC02 is stable after Sat 14:18 UTC offline event</td><td>Burnett &amp; Turner</td></tr>
-        <tr><td class="td-could">COULD</td><td>Review Barracuda SKOUT XDR degradation notice &mdash; assess detection coverage gaps</td><td>Barracuda SKOUT XDR</td></tr>
-        <tr><td class="td-could">COULD</td><td>Replace batteries on Temp Stick sensors that fired Saturday alerts</td><td>Environmental Sensors</td></tr>
-        <tr><td class="td-could">COULD</td><td>Schedule HaloPSA trial review session &mdash; deadline July 10</td><td>HaloPSA / Internal</td></tr>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Critical</span></td>
+          <td><span class="svc">SentinelOne: AriatConference — Active Threat NOT Mitigated</span></td>
+          <td>Threat detected on workstation <strong>AriatConference</strong> was confirmed <strong>NOT mitigated</strong> per SentinelOne alert email. Detection persisted from Friday evening through this morning with no remediation. Endpoint may still be actively compromised. <strong>Action:</strong> Log into SentinelOne console now — review threat details, quarantine endpoint or kill threat process, initiate full scan, and check for lateral movement indicators.</td>
+          <td class="mono">Detected Fri Jun 19 (evening) · Unmitigated as of briefing · SentinelOne alert email</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Critical</span></td>
+          <td><span class="svc">SentinelOne: jbrown112 — Suspicious Activity Detected</span></td>
+          <td>SentinelOne flagged suspicious behavior on endpoint associated with user <strong>jbrown112</strong>. Threat classification and mitigation status are unknown until console is reviewed. <strong>Action:</strong> Open SentinelOne dashboard — check threat classification, mitigation status, affected processes, and correlate with any weekend sign-in activity for this account.</td>
+          <td class="mono">Detected this weekend · Verify mitigation status · SentinelOne alert email</td>
+        </tr>
       </tbody>
     </table>
-  </div>
-</div>
 
-<!-- SECTION 4: BACKUPS -->
-<div class="section">
-  <div class="section-header" style="background:rgba(139,92,246,0.07);">
-    <svg class="section-icon" width="16" height="16" viewBox="0 0 16 16" fill="#a78bfa">
-      <path d="M2 7a6 6 0 0112 0v.25a.75.75 0 01-.75.75H2.75A.75.75 0 012 7.25V7zm1.5 2.5h9a5.5 5.5 0 01-9 0zm7.5-1a.5.5 0 000-1H5a.5.5 0 000 1h6z"/>
-    </svg>
-    <span class="section-title" style="color:#a78bfa;">Backup Health</span>
-    <span class="section-count">7 failed &middot; 3 warning &middot; 3 no result</span>
-  </div>
-  <div class="section-body">
-    <table>
-      <thead>
-        <tr>
-          <th style="width:155px;">Client</th>
-          <th style="width:185px;">Device / Agent</th>
-          <th style="width:110px;">Status</th>
-          <th>Detail</th>
-        </tr>
-      </thead>
+    <div class="rsection">Follow-ups &amp; ASAP Items</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Item</th><th>Detail</th><th>When / Source</th></tr></thead>
       <tbody>
-        <tr><td><strong>Capital Excavation</strong></td><td>CapitalEx (primary)</td><td class="st-fail">&bull; FAILED</td><td>18.7 days since last successful backup &middot; disk utilization alert on Datto</td></tr>
-        <tr><td>Capital Excavation</td><td>CapitalEx Rescue (offsite)</td><td class="st-none">&bull; NO RESULT</td><td>24.2 days without result &middot; offsite sync broken or stalled</td></tr>
-        <tr><td><strong>MEJ &amp; Associates</strong></td><td>MEJ-DC1</td><td class="st-fail">&bull; FAILED</td><td>BAK0615: Datto appliance disk full &mdash; no free space</td></tr>
-        <tr><td>MEJ &amp; Associates</td><td>MEJ-DATA</td><td class="st-fail">&bull; FAILED</td><td>BAK0615: Datto appliance disk full &mdash; no free space</td></tr>
-        <tr><td>MEJ &amp; Associates</td><td>MEJ-SHELL</td><td class="st-fail">&bull; FAILED</td><td>BAK0615: Datto appliance disk full &mdash; no free space</td></tr>
-        <tr><td>MEJ &amp; Associates</td><td>MEJ-TENANT</td><td class="st-fail">&bull; FAILED</td><td>BAK0615: Datto appliance disk full &mdash; no free space</td></tr>
-        <tr><td>MEJ &amp; Associates</td><td>MEJ-UTILITY</td><td class="st-fail">&bull; FAILED</td><td>BAK0615: Datto appliance disk full &mdash; no free space</td></tr>
-        <tr><td>MEJ &amp; Associates</td><td>MEJDatto2025 (appliance health)</td><td class="st-warn">&bull; WARNING</td><td>Datto appliance health degraded &middot; 3 agents in warning state</td></tr>
-        <tr><td><strong>CelLink</strong></td><td>Henry</td><td class="st-fail">&bull; FAILED</td><td>Backup failure this weekend &middot; check agent status in Backup Radar</td></tr>
-        <tr><td><strong>Covenant Presbyterian</strong></td><td>DattoSaasProtection (1)</td><td class="st-none">&bull; NO RESULT</td><td>SaaS protection &mdash; no result reported this cycle</td></tr>
-        <tr><td>Covenant Presbyterian</td><td>DattoSaasProtection (2)</td><td class="st-none">&bull; NO RESULT</td><td>SaaS protection &mdash; no result reported this cycle</td></tr>
-        <tr><td><strong>Burnett &amp; Turner</strong></td><td>LAW-DC02</td><td class="st-warn">&bull; WARNING</td><td>Went offline Sat 14:18 UTC &mdash; back online ~20 min later &middot; verify backup ran after recovery</td></tr>
-        <tr><td><strong>Beehive Specialty</strong></td><td>Multiple agents</td><td class="st-warn">&bull; WARNING</td><td>Surface issue ongoing &mdash; confirm backup health not impacted</td></tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">ADP: Suspicious Credential Activity — Sunday Evening</span></td>
+          <td>Two sequential ADP security notification emails arrived Sunday evening: (1) <strong>User ID was requested</strong> for your account, then (2) a <strong>sign-in attempt was detected</strong>. This pattern suggests an unauthorized account recovery or access attempt. If you did not initiate these, change your ADP password immediately and enable MFA. Also verify no changes to direct deposit or tax withholding were made.</td>
+          <td class="mono">Sun Jun 21, evening · ADP Security Notifications</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">MEJ &amp; Associates: Datto Appliance Disk Full — All 5 Agents Failing</span></td>
+          <td>Root cause confirmed: <strong>BAK0615 — "Backup skipped due to not enough free space"</strong>. The Datto appliance itself is out of disk space — this is a device-level issue, not per-agent. All 5 protected machines are currently unprotected: <strong>MEJ-DC1, MEJ-DATA, MEJ-SHELL, MEJ-TENANT, MEJ-UTILITY</strong>. Remediation options: delete old snapshots to reclaim space, expand Datto storage, or archive data offsite. No MEJ backup protection until resolved.</td>
+          <td class="mono">Ongoing this weekend · Datto / reporting@dattobackup.com / Backup Radar</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">Capital Excavation: 18.7 Days Without Successful Backup</span></td>
+          <td>Backup Radar shows primary device <strong>CapitalEx</strong> has not had a successful backup in <strong>18.7 days</strong> (disk utilization alert). Offsite / Rescue device is even worse at <strong>24.2 days</strong> without result. Both local and cloud protection are compromised. Investigate Datto appliance at Capital Excavation — check disk utilization, agent error codes, and connectivity.</td>
+          <td class="mono">Ongoing · Backup Radar / noreply@backupradar.com · Both primary and offsite affected</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">CelLink: Henry Backup Failure</span></td>
+          <td>Backup failure reported for <strong>CelLink Henry</strong> device this weekend. Review Backup Radar or Datto console for CelLink to check the last successful backup date, specific error codes, and agent health. Coordinate with CelLink contact if on-site access or storage remediation is needed.</td>
+          <td class="mono">This weekend · Backup Radar / Datto</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">CelLink: CELAZUPRDFILE01 — E: Drive Alert</span></td>
+          <td>RMM monitoring fired an alert on <strong>CELAZUPRDFILE01 E: drive</strong> (production file server) on Saturday. This is typically a disk utilization or health alert. Check current disk capacity, SMART status, and I/O health. If nearing capacity, coordinate with CelLink for storage expansion before it becomes critical.</td>
+          <td class="mono">Sat Jun 20 · RMM monitoring / Alerts folder</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">Beehive Specialty: Ashley — Surface Recovery / Missing Thumbnails</span></td>
+          <td>Ashley at Beehive Specialty reported an issue with her Microsoft Surface where thumbnails or file previews are missing (recovery-related). You sent a reply on Friday — check if she responded over the weekend and follow up to close the ticket.</td>
+          <td class="mono">Fri Jun 19 → ongoing · ashley@specialbee.com · Sent Items / Inbox</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">Cisco Meraki: AnyConnect Case — Awaiting Your Reply</span></td>
+          <td>An open Meraki support case for <strong>AnyConnect</strong> is waiting for your response. Meraki has been waiting on additional information or confirmation of next steps. Check your email thread or the Meraki dashboard for the case and provide the requested reply to keep it moving.</td>
+          <td class="mono">Open case · Meraki case management emails</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">HaloPSA Trial: Extended to July 10 — Active Evaluation Window</span></td>
+          <td>HaloPSA trial has been extended through <strong>July 10, 2026</strong>. The evaluation window is open. Ensure trial usage is progressing, document findings, and prepare a go/no-go decision before the deadline. Consider scheduling a dedicated review session this week.</td>
+          <td class="mono">Trial deadline: Jul 10, 2026 · HaloPSA / vendor email</td>
+        </tr>
       </tbody>
     </table>
-  </div>
-</div>
 
-<!-- SECTION 5: ALERTS -->
-<div class="section">
-  <div class="section-header" style="background:rgba(34,197,94,0.06);">
-    <svg class="section-icon" width="16" height="16" viewBox="0 0 16 16" fill="#4ade80">
-      <path d="M8 1a6.5 6.5 0 100 13A6.5 6.5 0 008 1zm.75 3.75v3.5a.75.75 0 01-1.5 0v-3.5a.75.75 0 011.5 0zM8 12.5a1 1 0 110-2 1 1 0 010 2z"/>
-    </svg>
-    <span class="section-title" style="color:#4ade80;">System Alerts &mdash; Notable Uncommon Events</span>
-    <span class="section-count">3 notable</span>
-  </div>
-  <div class="section-body">
-
-    <div class="alert-card ac-standard">
-      <div class="card-title">
-        <span class="badge badge-warn">WARN</span>
-        Barracuda SKOUT XDR &mdash; Service Degradation Notice
-      </div>
-      <div class="card-body">
-        Barracuda SKOUT XDR reported a service degradation event this weekend. Review the Barracuda portal for: which components were affected, the degradation window timeline, and whether detection coverage had any gaps. Confirm the service is fully restored before relying on XDR alerts as primary threat detection.
-      </div>
-      <div class="card-time">This weekend &middot; Source: Barracuda SKOUT XDR notification &middot; Alerts folder</div>
-    </div>
-
-    <div class="alert-card ac-standard">
-      <div class="card-title">
-        <span class="badge badge-warn">WARN</span>
-        Temp Stick: Low Battery &mdash; Multiple Environmental Sensors
-      </div>
-      <div class="card-body">
-        Multiple Temp Stick environmental sensors reported low battery on Saturday. Identify which sensor locations (server room, network closet, etc.) and schedule battery replacement. Check if any temperature or humidity readings were missed during the low-battery period.
-      </div>
-      <div class="card-time">Sat Jun 20 &middot; Source: Temp Stick alerts &middot; Alerts folder</div>
-    </div>
-
-    <div class="alert-card ac-info">
-      <div class="card-title">
-        <span class="badge badge-info">INFO</span>
-        Microsoft Security Center: MFA Recommendation
-      </div>
-      <div class="card-body">
-        Microsoft Security issued an MFA recommendation/reminder this weekend &mdash; likely flagging accounts without MFA enrolled in your tenant. Worth reviewing given the ADP credential activity Sunday night. Assess which M365 accounts lack MFA and consider enforcing via Conditional Access policy.
-      </div>
-      <div class="card-time">This weekend &middot; Source: Microsoft 365 Security Center</div>
-    </div>
-
-  </div>
-</div>
-
-<!-- SECTION 6: TIME ENTRIES -->
-<div class="section">
-  <div class="section-header" style="background:rgba(236,72,153,0.07);">
-    <svg class="section-icon" width="16" height="16" viewBox="0 0 16 16" fill="#f472b6">
-      <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm.5 4.75a.5.5 0 00-1 0v5l3.5 2.1a.5.5 0 10.5-.866L8.5 9.25V4.75z"/>
-    </svg>
-    <span class="section-title" style="color:#f472b6;">Time Entries</span>
-    <span class="section-count">2 entries &middot; ariat-time-entry skill</span>
-  </div>
-  <div class="section-body">
-
-    <div class="time-card tc-blue">
-      <div class="time-card-label">Entry 1 of 2 &nbsp;&middot;&nbsp; <span class="cat-blue">On-Going Support</span></div>
-      <div class="tf"><span class="tf-key">Subject</span><span class="tf-val">Surface recovery &mdash; missing thumbnails / file previews</span></div>
-      <div class="tf"><span class="tf-key">Location</span><span class="tf-val">Remote</span></div>
-      <div class="tf"><span class="tf-key">Description</span><span class="tf-val">Assisted Ashley at Beehive Specialty (specialbee.com) with Microsoft Surface issue &mdash; thumbnail previews missing, recovery-related; ongoing support for existing client device</span></div>
-      <div class="tf"><span class="tf-key">Category</span><span class="cat-blue">On-Going Support</span><span style="color:#6e7681;font-size:11px;margin-left:6px;">(existing device, support work &rarr; Blue)</span></div>
-      <div class="tf"><span class="tf-key">Time</span><span class="tf-missing">&lt;MISSING: no duration or start/end time recoverable from email &mdash; provide actual time before submission&gt;</span></div>
-    </div>
-
-    <div class="time-card tc-red">
-      <div class="time-card-label">Entry 2 of 2 &nbsp;&middot;&nbsp; <span class="cat-red">After-Hours (time-of-day override applied)</span></div>
-      <div class="tf"><span class="tf-key">Subject</span><span class="tf-val">Beehive Specialty &mdash; after-hours correspondence / email review</span></div>
-      <div class="tf"><span class="tf-key">Location</span><span class="tf-val">Remote</span></div>
-      <div class="tf"><span class="tf-key">Description</span><span class="tf-val">After-hours review and response to Beehive Specialty Surface recovery issue; work occurred outside 8am&ndash;6pm CDT per email timestamps</span></div>
-      <div class="tf"><span class="tf-key">Category</span><span class="cat-red">After-Hours</span><span style="color:#6e7681;font-size:11px;margin-left:6px;">(time-of-day override: outside 8am&ndash;6pm CDT &rarr; Red)</span></div>
-      <div class="tf"><span class="tf-key">Time</span><span class="tf-missing">&lt;MISSING: end time unknown &mdash; provide actual start/end time before submission&gt;</span></div>
-    </div>
-
-    <div style="background:rgba(139,92,246,0.07); border:1px solid rgba(139,92,246,0.2); border-radius:6px; padding:10px 14px; margin-top:12px; font-size:11px; color:#9ca3af; line-height:1.7;">
-      <strong style="color:#c4b5fd;">ariat-time-entry note:</strong> Both entries require Marshall to fill in actual time values before submission to HaloPSA. After-Hours category applied per skill rules (work outside 8am&ndash;6pm CDT). Confidence threshold met for all other fields.
-    </div>
-
-  </div>
-</div>
-
-<!-- STANDARD ITEMS -->
-<div class="section">
-  <div class="section-header" style="background:rgba(48,130,209,0.05);">
-    <svg class="section-icon" width="16" height="16" viewBox="0 0 16 16" fill="#58a6ff">
-      <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM3.5 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm9 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>
-    </svg>
-    <span class="section-title" style="color:#58a6ff;">Standard Items &mdash; Informational / No Immediate Action</span>
-    <span class="section-count">12</span>
-  </div>
-  <div class="section-body">
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th style="width:155px;">Source</th>
-          <th style="width:110px;">When</th>
-        </tr>
-      </thead>
+    <div class="rsection">Today's To-Dos</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Task</th><th>Client / System</th></tr></thead>
       <tbody>
-        <tr><td>Burnett &amp; Turner LAW-DC02 offline event &mdash; resolved within ~20 min, no ongoing outage</td><td>RMM / Activity alerts</td><td>Sat 14:18 UTC</td></tr>
-        <tr><td>Datto successful backup notifications (various clients &mdash; routine OK)</td><td>reporting@dattobackup.com</td><td>Weekend</td></tr>
-        <tr><td>Backup Radar routine device health digest</td><td>noreply@backupradar.com</td><td>Weekend</td></tr>
-        <tr><td>Meraki routine case update notifications (non-AnyConnect)</td><td>Cisco Meraki</td><td>Weekend</td></tr>
-        <tr><td>SentinelOne management digest / routine scan reports</td><td>SentinelOne</td><td>Weekend</td></tr>
-        <tr><td>Barracuda SKOUT XDR routine scan and report emails</td><td>Barracuda</td><td>Weekend</td></tr>
-        <tr><td>RMM service routine device health check-ins</td><td>rmmservice.com</td><td>Weekend</td></tr>
-        <tr><td>Microsoft 365 security digest and sign-in report (routine)</td><td>Microsoft Security</td><td>Weekend</td></tr>
-        <tr><td>Microsoft licensing / admin center routine notifications</td><td>Microsoft 365 Admin</td><td>Weekend</td></tr>
-        <tr><td>Cisco Meraki device health &mdash; no new critical alerts beyond AnyConnect case</td><td>Meraki</td><td>Weekend</td></tr>
-        <tr><td>Automated vendor newsletters and marketing (filtered, no action needed)</td><td>Various vendors</td><td>Weekend</td></tr>
-        <tr><td style="color:#ffb84d;">Teams scan incomplete &mdash; rate-limited by Microsoft Graph API &middot; 0 of 45 chats retrieved &middot; check Teams manually for weekend messages</td><td>MS Teams Graph API</td><td>This run</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Open SentinelOne console — investigate AriatConference threat, quarantine if still active, full scan</td><td>Ariat / SentinelOne</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Review SentinelOne jbrown112 suspicious activity — confirm mitigation status</td><td>Ariat / SentinelOne</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Verify ADP credential activity Sun night was you — change password + enable MFA if unauthorized</td><td>Personal / ADP</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Remediate MEJ &amp; Associates Datto disk full — all 5 agents unprotected (BAK0615)</td><td>MEJ &amp; Associates</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Investigate Capital Excavation backup gap — 18.7 days primary, 24.2 days offsite</td><td>Capital Excavation</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Check CelLink Henry backup failure + CELAZUPRDFILE01 E: drive disk alert</td><td>CelLink</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Follow up with Ashley on Surface thumbnail/recovery issue</td><td>Beehive Specialty</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Reply to Meraki AnyConnect support case — provide requested information</td><td>Meraki / Case Mgmt</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Verify Burnett &amp; Turner LAW-DC02 is stable after Sat 14:18 UTC offline event</td><td>Burnett &amp; Turner</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Review Barracuda SKOUT XDR degradation notice — assess detection coverage gaps</td><td>Barracuda SKOUT XDR</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Replace batteries on Temp Stick sensors that fired Saturday alerts</td><td>Environmental Sensors</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Schedule HaloPSA trial review session — deadline July 10</td><td>HaloPSA / Internal</td></tr>
       </tbody>
     </table>
+
+    <div class="rsection">Backup Health</div>
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:10px;">7 failed · 3 warning · 3 no result.</p>
+    <table class="data">
+      <thead><tr><th>Client</th><th>Device / Agent</th><th>Status</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Capital Excavation</strong></td><td>CapitalEx (primary)</td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td>18.7 days since last successful backup · disk utilization alert on Datto</td></tr>
+        <tr><td>Capital Excavation</td><td>CapitalEx Rescue (offsite)</td><td><span class="pill pill-neutral"><span class="d"></span>No Result</span></td><td>24.2 days without result · offsite sync broken or stalled</td></tr>
+        <tr><td><strong>MEJ &amp; Associates</strong></td><td>MEJ-DC1</td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td>BAK0615: Datto appliance disk full — no free space</td></tr>
+        <tr><td>MEJ &amp; Associates</td><td>MEJ-DATA</td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td>BAK0615: Datto appliance disk full — no free space</td></tr>
+        <tr><td>MEJ &amp; Associates</td><td>MEJ-SHELL</td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td>BAK0615: Datto appliance disk full — no free space</td></tr>
+        <tr><td>MEJ &amp; Associates</td><td>MEJ-TENANT</td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td>BAK0615: Datto appliance disk full — no free space</td></tr>
+        <tr><td>MEJ &amp; Associates</td><td>MEJ-UTILITY</td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td>BAK0615: Datto appliance disk full — no free space</td></tr>
+        <tr><td>MEJ &amp; Associates</td><td>MEJDatto2025 (appliance health)</td><td><span class="pill pill-warning"><span class="d"></span>Warning</span></td><td>Datto appliance health degraded · 3 agents in warning state</td></tr>
+        <tr><td><strong>CelLink</strong></td><td>Henry</td><td><span class="pill pill-danger"><span class="d"></span>Failed</span></td><td>Backup failure this weekend · check agent status in Backup Radar</td></tr>
+        <tr><td><strong>Covenant Presbyterian</strong></td><td>DattoSaasProtection (1)</td><td><span class="pill pill-neutral"><span class="d"></span>No Result</span></td><td>SaaS protection — no result reported this cycle</td></tr>
+        <tr><td>Covenant Presbyterian</td><td>DattoSaasProtection (2)</td><td><span class="pill pill-neutral"><span class="d"></span>No Result</span></td><td>SaaS protection — no result reported this cycle</td></tr>
+        <tr><td><strong>Burnett &amp; Turner</strong></td><td>LAW-DC02</td><td><span class="pill pill-warning"><span class="d"></span>Warning</span></td><td>Went offline Sat 14:18 UTC — back online ~20 min later · verify backup ran after recovery</td></tr>
+        <tr><td><strong>Beehive Specialty</strong></td><td>Multiple agents</td><td><span class="pill pill-warning"><span class="d"></span>Warning</span></td><td>Surface issue ongoing — confirm backup health not impacted</td></tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">System Alerts — Notable Uncommon Events</div>
+    <table class="data">
+      <thead><tr><th>Tag</th><th>Alert</th><th>Detail</th><th>When / Source</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Warn</span></td>
+          <td><span class="svc">Barracuda SKOUT XDR — Service Degradation Notice</span></td>
+          <td>Barracuda SKOUT XDR reported a service degradation event this weekend. Review the Barracuda portal for: which components were affected, the degradation window timeline, and whether detection coverage had any gaps. Confirm the service is fully restored before relying on XDR alerts as primary threat detection.</td>
+          <td class="mono">This weekend · Barracuda SKOUT XDR notification · Alerts folder</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Warn</span></td>
+          <td><span class="svc">Temp Stick: Low Battery — Multiple Environmental Sensors</span></td>
+          <td>Multiple Temp Stick environmental sensors reported low battery on Saturday. Identify which sensor locations (server room, network closet, etc.) and schedule battery replacement. Check if any temperature or humidity readings were missed during the low-battery period.</td>
+          <td class="mono">Sat Jun 20 · Temp Stick alerts · Alerts folder</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Info</span></td>
+          <td><span class="svc">Microsoft Security Center: MFA Recommendation</span></td>
+          <td>Microsoft Security issued an MFA recommendation/reminder this weekend — likely flagging accounts without MFA enrolled in your tenant. Worth reviewing given the ADP credential activity Sunday night. Assess which M365 accounts lack MFA and consider enforcing via Conditional Access policy.</td>
+          <td class="mono">This weekend · Microsoft 365 Security Center</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">Time Entries</div>
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:10px;">2 entries · ariat-time-entry skill.</p>
+
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:6px;"><strong>Entry 1 of 2 · On-Going Support (existing device, support work → Blue)</strong></p>
+    <table class="data">
+      <tbody>
+        <tr><td class="mono">Subject</td><td>Surface recovery — missing thumbnails / file previews</td></tr>
+        <tr><td class="mono">Location</td><td>Remote</td></tr>
+        <tr><td class="mono">Description</td><td>Assisted Ashley at Beehive Specialty (specialbee.com) with Microsoft Surface issue — thumbnail previews missing, recovery-related; ongoing support for existing client device</td></tr>
+        <tr><td class="mono">Category</td><td>On-Going Support</td></tr>
+        <tr><td class="mono">Time</td><td><span class="ds-code">&lt;MISSING: no duration or start/end time recoverable from email — provide actual time before submission&gt;</span></td></tr>
+      </tbody>
+    </table>
+
+    <p class="ds-body" style="font-size:13.5px;margin:14px 0 6px;"><strong>Entry 2 of 2 · After-Hours (time-of-day override: outside 8am–6pm CDT → Red)</strong></p>
+    <table class="data">
+      <tbody>
+        <tr><td class="mono">Subject</td><td>Beehive Specialty — after-hours correspondence / email review</td></tr>
+        <tr><td class="mono">Location</td><td>Remote</td></tr>
+        <tr><td class="mono">Description</td><td>After-hours review and response to Beehive Specialty Surface recovery issue; work occurred outside 8am–6pm CDT per email timestamps</td></tr>
+        <tr><td class="mono">Category</td><td>After-Hours</td></tr>
+        <tr><td class="mono">Time</td><td><span class="ds-code">&lt;MISSING: end time unknown — provide actual start/end time before submission&gt;</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>ariat-time-entry note:</strong> Both entries require Marshall to fill in actual time values before submission to HaloPSA. After-Hours category applied per skill rules (work outside 8am–6pm CDT). Confidence threshold met for all other fields.</div>
+
+    <div class="rsection">Standard Items — Informational / No Immediate Action</div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Source</th><th>When</th></tr></thead>
+      <tbody>
+        <tr><td>Burnett &amp; Turner LAW-DC02 offline event — resolved within ~20 min, no ongoing outage</td><td>RMM / Activity alerts</td><td class="mono">Sat 14:18 UTC</td></tr>
+        <tr><td>Datto successful backup notifications (various clients — routine OK)</td><td>reporting@dattobackup.com</td><td class="mono">Weekend</td></tr>
+        <tr><td>Backup Radar routine device health digest</td><td>noreply@backupradar.com</td><td class="mono">Weekend</td></tr>
+        <tr><td>Meraki routine case update notifications (non-AnyConnect)</td><td>Cisco Meraki</td><td class="mono">Weekend</td></tr>
+        <tr><td>SentinelOne management digest / routine scan reports</td><td>SentinelOne</td><td class="mono">Weekend</td></tr>
+        <tr><td>Barracuda SKOUT XDR routine scan and report emails</td><td>Barracuda</td><td class="mono">Weekend</td></tr>
+        <tr><td>RMM service routine device health check-ins</td><td>rmmservice.com</td><td class="mono">Weekend</td></tr>
+        <tr><td>Microsoft 365 security digest and sign-in report (routine)</td><td>Microsoft Security</td><td class="mono">Weekend</td></tr>
+        <tr><td>Microsoft licensing / admin center routine notifications</td><td>Microsoft 365 Admin</td><td class="mono">Weekend</td></tr>
+        <tr><td>Cisco Meraki device health — no new critical alerts beyond AnyConnect case</td><td>Meraki</td><td class="mono">Weekend</td></tr>
+        <tr><td>Automated vendor newsletters and marketing (filtered, no action needed)</td><td>Various vendors</td><td class="mono">Weekend</td></tr>
+        <tr><td>Teams scan incomplete — rate-limited by Microsoft Graph API · 0 of 45 chats retrieved · check Teams manually for weekend messages</td><td>MS Teams Graph API</td><td class="mono">This run</td></tr>
+      </tbody>
+    </table>
+
   </div>
-</div>
 
-<!-- FOOTER -->
-<div class="footer">
-  Generated by Claude Code morning briefing routine<br>
-  Run: 2026-06-22 07:30 CDT &nbsp;&middot;&nbsp; Window: 2026-06-19T21:00Z &rarr; 2026-06-22T12:30Z<br>
-  ~117 emails scanned &nbsp;&middot;&nbsp; 0/45 Teams chats (rate-limited &mdash; check Teams manually)<br>
-  <span style="color:#374151;">Ariat Systems &mdash; for Marshall Hearn</span>
-</div>
-
+  <!-- Footer -->
+  <div class="rfoot">
+    <span>Ariat Systems · Internal</span>
+    <span>Generated 2026-06-22 07:30 CDT · briefs.cloudmarsh.com</span>
+  </div>
 </div>
 </body>
 </html>

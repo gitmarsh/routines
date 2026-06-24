@@ -1,278 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Morning Briefing — 2026-06-19</title>
-<style>
-body{margin:0;padding:0;background:#f0f2f5;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#1a1a1a;}
-table{border-collapse:collapse;}
-.outer{width:100%;background:#f0f2f5;}
-.inner{max-width:800px;margin:0 auto;background:#ffffff;}
-.hdr{background:#1b2a3c;color:#fff;padding:24px 32px;}
-.hdr h1{margin:0 0 4px 0;font-size:21px;font-weight:700;letter-spacing:.3px;}
-.hdr .meta{font-size:11px;color:#7a9ab8;font-family:'Courier New',monospace;}
-.overview{padding:16px 32px;background:#f7f9fc;border-bottom:2px solid #e2e8f0;}
-.section{padding:18px 32px;border-bottom:1px solid #e8ecf0;}
-.section h2{margin:0 0 14px 0;font-size:13px;font-weight:700;color:#1b2a3c;text-transform:uppercase;letter-spacing:.6px;border-left:3px solid #1b2a3c;padding-left:8px;}
-.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700;vertical-align:middle;margin-left:6px;}
-.bu{background:#fde8e8;color:#b91c1c;}
-.ba{background:#fef3cd;color:#92400e;}
-.bs{background:#dbeafe;color:#1d4ed8;}
-.bn{background:#f1f5f9;color:#64748b;}
-.bw{background:#fef9c3;color:#854d0e;}
-.bok{background:#dcfce7;color:#15803d;}
-.mono{font-family:'Courier New',monospace;font-size:11px;background:#f1f5f9;padding:1px 4px;border-radius:3px;}
-.ts{font-family:'Courier New',monospace;font-size:11px;color:#64748b;}
-a.lnk{color:#1d4ed8;text-decoration:none;font-size:11px;}
-a.lnk:hover{text-decoration:underline;}
-.todo-t{width:100%;border-collapse:collapse;font-size:13px;}
-.todo-t th{background:#f1f5f9;padding:6px 10px;text-align:left;font-size:10px;color:#64748b;font-weight:700;text-transform:uppercase;border:1px solid #dde3ea;}
-.todo-t td{padding:8px 10px;border:1px solid #dde3ea;vertical-align:top;line-height:1.5;}
-.tr-m{background:#fff5f5;}
-.tr-s{background:#fffbeb;}
-.tr-c{background:#f0f9ff;}
-.item{padding:10px 0;border-bottom:1px solid #f0f4f8;}
-.item:last-child{border-bottom:none;}
-.ur{color:#b91c1c;font-weight:700;}
-.ap{color:#92400e;font-weight:700;}
-.st{color:#1d4ed8;font-weight:700;}
-.none{color:#94a3b8;font-style:italic;font-size:13px;}
-.ac{border-left:3px solid #92400e;background:#fffbeb;padding:10px 14px;margin:8px 0;border-radius:0 4px 4px 0;}
-.ac.crit{border-left-color:#b91c1c;background:#fef2f2;}
-.ac.info{border-left-color:#1d4ed8;background:#eff6ff;}
-.ftr{background:#f1f5f9;padding:14px 32px;font-size:10px;color:#94a3b8;font-family:'Courier New',monospace;line-height:1.8;}
-</style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ariat Systems — Morning Briefing · 2026-06-19</title>
+<link rel="icon" type="image/png" href="../assets/ariat_favicon_32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/briefing.css" />
 </head>
 <body>
-<table class="outer" width="100%" cellpadding="0" cellspacing="0">
-<tr><td>
-<table class="inner" width="800" align="center" cellpadding="0" cellspacing="0">
-
-<!-- HEADER -->
-<tr><td class="hdr">
-<h1>Morning Briefing &mdash; June 19, 2026</h1>
-<div class="meta">Run: 07:30 CDT &nbsp;|&nbsp; Window: Thu Jun 18 15:30 CDT &rarr; Fri Jun 19 07:30 CDT &nbsp;|&nbsp; Outlook (marshall@ariatsystems.com) + MS Teams</div>
-</td></tr>
-
-<!-- SEVERITY OVERVIEW -->
-<tr><td class="overview">
-<table width="100%" cellpadding="0" cellspacing="0">
-<tr>
-<td width="150" align="center" valign="middle">
-<svg width="130" height="130" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Severity donut: 1 Urgent, 2 ASAP, 5 Standard">
-  <circle cx="65" cy="65" r="40" fill="none" stroke="#e2e8f0" stroke-width="22"/>
-  <!-- Standard 5/8 = 157.08 starts at offset 94.25 -->
-  <circle cx="65" cy="65" r="40" fill="none" stroke="#3b82f6" stroke-width="22"
-    stroke-dasharray="157.08 94.25" stroke-dashoffset="-94.25" transform="rotate(-90 65 65)"/>
-  <!-- ASAP 2/8 = 62.83 starts at offset 31.42 -->
-  <circle cx="65" cy="65" r="40" fill="none" stroke="#f59e0b" stroke-width="22"
-    stroke-dasharray="62.83 188.50" stroke-dashoffset="-31.42" transform="rotate(-90 65 65)"/>
-  <!-- Urgent 1/8 = 31.42 starts at 0 -->
-  <circle cx="65" cy="65" r="40" fill="none" stroke="#dc2626" stroke-width="22"
-    stroke-dasharray="31.42 219.91" stroke-dashoffset="0" transform="rotate(-90 65 65)"/>
-  <text x="65" y="60" text-anchor="middle" font-size="22" font-weight="700" fill="#1b2a3c" font-family="Arial">8</text>
-  <text x="65" y="76" text-anchor="middle" font-size="9" fill="#94a3b8" font-family="Arial">ITEMS</text>
-</svg>
-</td>
-<td valign="middle" style="padding-left:20px;">
-<table cellpadding="5" cellspacing="0">
-<tr>
-  <td><span style="display:inline-block;width:13px;height:13px;background:#dc2626;border-radius:2px;"></span></td>
-  <td style="padding-left:8px;font-size:13px;">Urgent</td>
-  <td style="padding-left:16px;font-weight:700;font-size:18px;color:#dc2626;">1</td>
-</tr>
-<tr>
-  <td><span style="display:inline-block;width:13px;height:13px;background:#f59e0b;border-radius:2px;"></span></td>
-  <td style="padding-left:8px;font-size:13px;">ASAP</td>
-  <td style="padding-left:16px;font-weight:700;font-size:18px;color:#92400e;">2</td>
-</tr>
-<tr>
-  <td><span style="display:inline-block;width:13px;height:13px;background:#3b82f6;border-radius:2px;"></span></td>
-  <td style="padding-left:8px;font-size:13px;">Standard</td>
-  <td style="padding-left:16px;font-weight:700;font-size:18px;color:#1d4ed8;">5</td>
-</tr>
-<tr><td colspan="3" style="padding-top:8px;">
-  <span class="ts">Inbox 17 &bull; Help Desk 0 &bull; Alerts 8 &bull; Datto 13 &bull; Backup Radar 0 &bull; Teams 16 msgs</span>
-</td></tr>
-</table>
-</td>
-</tr>
-</table>
-</td></tr>
-
-<!-- 1. URGENT -->
-<tr><td class="section">
-<h2>1. Urgent <span class="badge bu">1</span></h2>
-
-<div class="item">
-<div style="margin-bottom:5px;"><span class="ur">[URGENT]</span> <strong style="margin-left:6px;">Michael Statham &mdash; Buda Fire AT&T Device List (Needed Today)</strong></div>
-<div style="font-size:13px;margin-bottom:5px;line-height:1.6;">Michael Statham requested, at 4:01 PM CDT yesterday, a list of all AT&amp;T devices Buda Fire has registered under <strong>Apple Business Manager</strong> and <strong>JAMF</strong>, with device type for each (Truck / Cell Phone / Tablet). He wants this today.</div>
-<div><span class="ts">Thu Jun 18 &bull; 21:01Z &bull; Teams chat</span></div>
+<div class="toolbar">
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+    Print / Save PDF
+  </button>
 </div>
 
-</td></tr>
+<div class="sheet">
+  <!-- Header -->
+  <div class="rhead">
+    <div class="lz">
+      <div class="rlogo">
+        <img class="rmark" src="../assets/ariat_mark.png" alt="" />
+        <span class="rdiv"></span>
+        <img class="rword" src="../assets/ariat_wordmark.png" alt="Ariat Systems" />
+      </div>
+      <div class="rtitle">Morning Briefing</div>
+      <div class="rsub">Friday, June 19, 2026 · Operational Summary</div>
+    </div>
+    <div class="rmeta">
+      <div><span class="accent">WINDOW</span> Thu Jun 18 15:30 → Fri Jun 19 07:30 CDT</div>
+      <div><span class="accent">SCANNED</span> Inbox 17 · Help Desk 0 · Alerts 8 · Datto 13 · Backup Radar 0 · Teams 16</div>
+      <div><span class="accent">REF</span> BRIEF-2026-06-19-AM</div>
+    </div>
+  </div>
 
-<!-- 2. FOLLOW-UPS -->
-<tr><td class="section">
-<h2>2. Follow-ups <span class="badge bn">0</span></h2>
-<p class="none">No threads identified in scan window where someone is blocked waiting on Marshall's reply. Prior-day MUST/SHOULD carry-forward not available (yesterday's briefing not parsed in this run).</p>
-</td></tr>
+  <!-- Body -->
+  <div class="rbody">
 
-<!-- 3. TODAY TO-DOS -->
-<tr><td class="section">
-<h2>3. Today To-Dos</h2>
-<table class="todo-t" cellpadding="0" cellspacing="0">
-<tr>
-  <th width="72">Priority</th>
-  <th>Task</th>
-  <th width="170">Source / Time (CDT)</th>
-</tr>
+    <div class="rsection">Severity Overview</div>
+    <div class="stats">
+      <div class="stat"><div class="v">1</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="v">2</div><div class="l">ASAP</div></div>
+      <div class="stat"><div class="v">5</div><div class="l">Standard</div></div>
+      <div class="stat"><div class="v">8</div><div class="l">Items</div></div>
+    </div>
+    <p class="note">Outlook (marshall@ariatsystems.com) + MS Teams · Inbox 17 · Help Desk 0 · Alerts 8 · Datto 13 · Backup Radar 0 · Teams 16 msgs.</p>
 
-<!-- MUST -->
-<tr class="tr-m">
-  <td><strong class="ur">MUST</strong></td>
-  <td>Pull Buda Fire AT&amp;T device list from Apple Business Manager and JAMF. Provide to Michael Statham: device name + type (Truck / Cell Phone / Tablet).</td>
-  <td><span class="ts">Teams &bull; Thu 4:01 PM</span></td>
-</tr>
-<tr class="tr-m">
-  <td><strong class="ur">MUST</strong></td>
-  <td>Investigate CelLink <span class="mono">CELAZUPRDFILE01</span> (Azure) &mdash; E: drive at or below 5% free space. Triggered 4:09 AM CDT. Expand volume, archive data, or purge before disk fills and services degrade.
-  <br><span class="ts">Device ID: 779 &bull; <a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAVxaHOyAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View alert</a></span></td>
-  <td><span class="ts">Alerts &bull; Fri 4:09 AM</span></td>
-</tr>
-<tr class="tr-m">
-  <td><strong class="ur">MUST</strong></td>
-  <td>MSM Meraki firewall <span class="mono">192.168.1.66</span> has not forwarded logs to Barracuda XDR since Jun 16 08:03 UTC (3+ days). Snooze set by matt.kerker.85, expired Jun 18 13:44 UTC. Verify firewall is online, check syslog port 514 config, reply to Barracuda Ticket #126981841.
-  <br><span class="ts"><a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View Barracuda alert</a></span></td>
-  <td><span class="ts">Inbox &bull; Fri 4:12 AM</span></td>
-</tr>
+    <div class="rsection">1 · Urgent</div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Source</th><th>Detail</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">Michael Statham — Buda Fire AT&amp;T Device List (Needed Today)</span> <span class="pill pill-danger"><span class="d"></span>Urgent</span></td>
+          <td>Teams chat</td>
+          <td>Michael Statham requested, at 4:01 PM CDT yesterday, a list of all AT&amp;T devices Buda Fire has registered under <strong>Apple Business Manager</strong> and <strong>JAMF</strong>, with device type for each (Truck / Cell Phone / Tablet). He wants this today.</td>
+          <td class="mono">Thu Jun 18 · 21:01Z</td>
+        </tr>
+      </tbody>
+    </table>
 
-<!-- SHOULD -->
-<tr class="tr-s">
-  <td><strong class="ap">SHOULD</strong></td>
-  <td>Investigate MEJ-DATA Datto backup warning &mdash; <span class="mono">FSC0013</span> (Unknown filesystem type), 4 occurrences Jun 18 02:03&ndash;20:02 CDT. Device: MEJDatto2025, agent 192.168.1.7.
-  <br><span class="ts"><a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVyqOdFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View warning</a></span></td>
-  <td><span class="ts">Datto &bull; Fri 2:04 AM</span></td>
-</tr>
-<tr class="tr-s">
-  <td><strong class="ap">SHOULD</strong></td>
-  <td>Review SentinelOne suspicious threats &mdash; <span class="mono">ojara115</span> (int 192.168.3.11, ext 50.190.127.201) and <span class="mono">jkush134</span> (ext 108.221.x.x). Both flagged for suspicious DLL activity. Confirm quarantine status in console.
-  <br><span class="ts"><a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQLAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View ojara115</a> &bull; <a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQGAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View jkush134</a></span></td>
-  <td><span class="ts">Inbox &bull; Fri 3:23&ndash;4:34 AM</span></td>
-</tr>
-<tr class="tr-s">
-  <td><strong class="ap">SHOULD</strong></td>
-  <td>Confirm David's access to Whitehead Wilson SharePoint shared drive. Matt confirmed permissions are set and invite link was sent; David was out of town when it was originally configured. May just need to sync. (Per Michael Statham Teams request, 6:37 PM CDT Thu.)</td>
-  <td><span class="ts">Teams &bull; Thu 6:37 PM</span></td>
-</tr>
+    <div class="rsection">2 · Follow-ups</div>
+    <p class="note">No threads identified in scan window where someone is blocked waiting on Marshall's reply. Prior-day MUST/SHOULD carry-forward not available (yesterday's briefing not parsed in this run).</p>
 
-<!-- COULD -->
-<tr class="tr-c">
-  <td><strong style="color:#1e40af;">COULD</strong></td>
-  <td>Verify MSM malicious URL remediation complete &mdash; 1 message to <span class="mono">rparedez@msmtx.com</span> auto-remediated by O365 Defender at 11:56 UTC. Informational severity, no user clicked. Confirm with client that no further action is needed.
-  <br><span class="ts"><a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View O365 alert</a> &bull; <a class="lnk" href="https://security.microsoft.com/alerts/fab7092714-0a95-44d6-e400-08decdf8e45b">Security Center</a></span></td>
-  <td><span class="ts">Inbox &bull; Fri 6:58 AM</span></td>
-</tr>
-<tr class="tr-c">
-  <td><strong style="color:#1e40af;">COULD</strong></td>
-  <td>Complete Cisco Meraki Case 14332330 support feedback survey.
-  <br><span class="ts"><a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaP8AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View email</a></span></td>
-  <td><span class="ts">Inbox &bull; Thu 4:00 PM</span></td>
-</tr>
-</table>
-</td></tr>
+    <div class="rsection">3 · Today To-Dos</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Task</th><th>Source / Time (CDT)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td>Pull Buda Fire AT&amp;T device list from Apple Business Manager and JAMF. Provide to Michael Statham: device name + type (Truck / Cell Phone / Tablet).</td>
+          <td class="mono">Teams · Thu 4:01 PM</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td>Investigate CelLink <span class="ds-code">CELAZUPRDFILE01</span> (Azure) — E: drive at or below 5% free space. Triggered 4:09 AM CDT. Expand volume, archive data, or purge before disk fills and services degrade. Device ID: 779.</td>
+          <td class="mono">Alerts · Fri 4:09 AM</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td>MSM Meraki firewall <span class="ds-code">192.168.1.66</span> has not forwarded logs to Barracuda XDR since Jun 16 08:03 UTC (3+ days). Snooze set by matt.kerker.85, expired Jun 18 13:44 UTC. Verify firewall is online, check syslog port 514 config, reply to Barracuda Ticket #126981841.</td>
+          <td class="mono">Inbox · Fri 4:12 AM</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>Investigate MEJ-DATA Datto backup warning — <span class="ds-code">FSC0013</span> (Unknown filesystem type), 4 occurrences Jun 18 02:03–20:02 CDT. Device: MEJDatto2025, agent 192.168.1.7.</td>
+          <td class="mono">Datto · Fri 2:04 AM</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>Review SentinelOne suspicious threats — <span class="ds-code">ojara115</span> (int 192.168.3.11, ext 50.190.127.201) and <span class="ds-code">jkush134</span> (ext 108.221.x.x). Both flagged for suspicious DLL activity. Confirm quarantine status in console.</td>
+          <td class="mono">Inbox · Fri 3:23–4:34 AM</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>Confirm David's access to Whitehead Wilson SharePoint shared drive. Matt confirmed permissions are set and invite link was sent; David was out of town when it was originally configured. May just need to sync. (Per Michael Statham Teams request, 6:37 PM CDT Thu.)</td>
+          <td class="mono">Teams · Thu 6:37 PM</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Could</span></td>
+          <td>Verify MSM malicious URL remediation complete — 1 message to <span class="ds-code">rparedez@msmtx.com</span> auto-remediated by O365 Defender at 11:56 UTC. Informational severity, no user clicked. Confirm with client that no further action is needed.</td>
+          <td class="mono">Inbox · Fri 6:58 AM</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-info"><span class="d"></span>Could</span></td>
+          <td>Complete Cisco Meraki Case 14332330 support feedback survey.</td>
+          <td class="mono">Inbox · Thu 4:00 PM</td>
+        </tr>
+      </tbody>
+    </table>
 
-<!-- 4. BACKUPS -->
-<tr><td class="section">
-<h2>4. Backups <span class="badge bw">1 Warning</span> <span class="badge bok">10 OK</span></h2>
+    <div class="rsection">4 · Backups</div>
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:10px;"><strong>0 Failed</strong> · <strong>1 Warning</strong> · <strong>0 No Result</strong> · <strong>10 Succeeded</strong></p>
 
-<!-- Bar chart -->
-<table cellpadding="0" cellspacing="0" style="margin-bottom:16px;">
-<tr><td>
-<svg width="340" height="90" viewBox="0 0 340 90" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Backup results: 0 Failed, 1 Warning, 10 Succeeded, 0 No Result">
-  <text x="0" y="15" font-size="10" fill="#64748b" font-family="Arial">Failed</text>
-  <rect x="72" y="3" width="0" height="14" fill="#dc2626" rx="2"/>
-  <text x="76" y="15" font-size="10" fill="#94a3b8" font-family="Arial">0</text>
+    <table class="data">
+      <thead><tr><th>Status</th><th>Device / Detail</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Warning</span></td>
+          <td><strong>MEJ-DATA</strong> — <span class="ds-code">FSC0013</span> Unknown filesystem type · MEJDatto2025 (<span class="ds-code">6c92cfea8770</span>) · First: Jun 18 02:03 CDT · Last: Jun 18 20:02 CDT · Count (24h): 4</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="callout"><strong>Succeeded — CelLink SC Bootable Screenshots (10):</strong> CEL-APPSERVER · Faraday · CEL-SC-DATABROKER-01 · CEL-SC-RADIUS · CEL-SC-DEPLOY · FaradayDEV · CEL-SC-DC-01 · Volta · CEL-SC-UVIS-01 · Henry.</div>
 
-  <text x="0" y="38" font-size="10" fill="#64748b" font-family="Arial">Warning</text>
-  <rect x="72" y="26" width="14" height="14" fill="#f59e0b" rx="2"/>
-  <text x="90" y="38" font-size="10" fill="#92400e" font-family="Arial">1  (MEJ-DATA)</text>
+    <div class="rsection">5 · Alerts — Top 3 Uncommon</div>
+    <table class="data">
+      <thead><tr><th>#</th><th>Alert</th><th>Source</th><th>Detail</th><th>Time</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="mono">1</td>
+          <td><span class="svc">CelLink Azure: CELAZUPRDFILE01 — E: Drive Critical (≤5% Free)</span> <span class="pill pill-danger"><span class="d"></span>Critical</span></td>
+          <td>Alerts · noreply@rmmservice.com</td>
+          <td>Azure production file server (CelLink) with critically low disk space on E: drive. Condition triggered 04:09 AM CDT. If not addressed, services writing to E: will fail. RMM device ID: 779.</td>
+          <td class="mono">09:09Z Fri</td>
+        </tr>
+        <tr>
+          <td class="mono">2</td>
+          <td><span class="svc">Barracuda SKOUT XDR: MSM Meraki Log Monitoring Degraded (3+ Days)</span></td>
+          <td>Inbox · soc@barracuda.com</td>
+          <td>Cisco Meraki firewall at <span class="ds-code">192.168.1.66</span> (MSM / account mcel6705) has not forwarded logs since <span class="ds-code">2026-06-16T08:03Z</span>. Matt Kerker snoozed the alarm on Jun 11; snooze expired <span class="ds-code">2026-06-18T13:44Z</span>. Risk: Medium. Ticket #126981841. XDR is blind to MSM network traffic. Next steps from Barracuda SOC: verify syslog config, confirm device is up, check port 514, reply with availability if troubleshooting needed.</td>
+          <td class="mono">09:12Z Fri</td>
+        </tr>
+        <tr>
+          <td class="mono">3</td>
+          <td><span class="svc">SentinelOne: Two Simultaneous Suspicious Threats</span></td>
+          <td>Inbox · noreply@mailsender.sentinelone.net</td>
+          <td>Two suspicious DLL threats detected within a 71-minute window on separate machines:<br>• <span class="ds-code">ojara115</span> (int 192.168.3.11, ext 50.190.127.201) — <span class="ds-code">076DD84014E791407A6EE5A8A2E0B24B61BFF489.dll</span> — 09:34Z<br>• <span class="ds-code">jkush134</span> (ext 108.221.x.x) — 08:23Z<br>Confirm quarantine status for both in SentinelOne console. Review threat details for related IOCs.</td>
+          <td class="mono">08:23Z–09:34Z Fri</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <text x="0" y="61" font-size="10" fill="#64748b" font-family="Arial">Succeeded</text>
-  <rect x="72" y="49" width="140" height="14" fill="#22c55e" rx="2"/>
-  <text x="216" y="61" font-size="10" fill="#15803d" font-family="Arial">10  (CelLink SC)</text>
+    <div class="rsection">6 · Time Entries</div>
+    <p class="note">No qualifying evidence of Marshall performing billable client work during the 16-hour scan window at ≥80% confidence. Team chat activity (Whitehead Wilson SharePoint coordination, Buda Fire device list request) is informational/coordination only — no confirmed work blocks with sufficient time evidence.</p>
 
-  <text x="0" y="84" font-size="10" fill="#64748b" font-family="Arial">No Result</text>
-  <rect x="72" y="72" width="0" height="14" fill="#94a3b8" rx="2"/>
-  <text x="76" y="84" font-size="10" fill="#94a3b8" font-family="Arial">0</text>
-</svg>
-</td></tr>
-</table>
+  </div>
 
-<div style="margin-bottom:14px;">
-  <span class="badge bw">Warning</span>
-  <div style="margin-top:8px;font-size:13px;">
-    <strong>MEJ-DATA</strong> &mdash; <span class="mono">FSC0013</span> Unknown filesystem type &bull; MEJDatto2025 (<span class="mono">6c92cfea8770</span>) &bull; First: Jun 18 02:03 CDT &bull; Last: Jun 18 20:02 CDT &bull; Count (24h): 4
-    &nbsp;<a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAVyqOdFAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">[email]</a>
+  <!-- Footer -->
+  <div class="rfoot">
+    <span>Ariat Systems · Internal</span>
+    <span>Generated 2026-06-19 07:30 CDT · briefs.cloudmarsh.com</span>
   </div>
 </div>
-
-<div>
-  <span class="badge bok">Succeeded &mdash; CelLink SC Bootable Screenshots</span>
-  <div style="margin-top:8px;font-size:11px;font-family:'Courier New',monospace;line-height:2;color:#15803d;">
-    CEL-APPSERVER &nbsp;&bull;&nbsp; Faraday &nbsp;&bull;&nbsp; CEL-SC-DATABROKER-01 &nbsp;&bull;&nbsp; CEL-SC-RADIUS &nbsp;&bull;&nbsp; CEL-SC-DEPLOY<br>
-    FaradayDEV &nbsp;&bull;&nbsp; CEL-SC-DC-01 &nbsp;&bull;&nbsp; Volta &nbsp;&bull;&nbsp; CEL-SC-UVIS-01 &nbsp;&bull;&nbsp; Henry
-  </div>
-</div>
-
-</td></tr>
-
-<!-- 5. ALERTS -->
-<tr><td class="section">
-<h2>5. Alerts <span class="badge bn">Top 3 Uncommon</span></h2>
-
-<div class="ac crit">
-  <div style="font-weight:700;margin-bottom:5px;">#1 &mdash; CelLink Azure: <span class="mono" style="background:none;padding:0;">CELAZUPRDFILE01</span> &mdash; E: Drive Critical (&le;5% Free)</div>
-  <div style="font-size:12px;margin-bottom:5px;line-height:1.6;">Azure production file server (CelLink) with critically low disk space on E: drive. Condition triggered 04:09 AM CDT. If not addressed, services writing to E: will fail. RMM device ID: 779.</div>
-  <div class="ts">09:09Z Fri &bull; Alerts &bull; noreply@rmmservice.com &bull; <a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAVxaHOyAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View email</a></div>
-</div>
-
-<div class="ac" style="margin-top:8px;">
-  <div style="font-weight:700;margin-bottom:5px;">#2 &mdash; Barracuda SKOUT XDR: MSM Meraki Log Monitoring Degraded (3+ Days)</div>
-  <div style="font-size:12px;margin-bottom:5px;line-height:1.6;">Cisco Meraki firewall at <span class="mono">192.168.1.66</span> (MSM / account mcel6705) has not forwarded logs since <span class="mono">2026-06-16T08:03Z</span>. Matt Kerker snoozed the alarm on Jun 11; snooze expired <span class="mono">2026-06-18T13:44Z</span>. Risk: Medium. Ticket #126981841. XDR is blind to MSM network traffic. Next steps from Barracuda SOC: verify syslog config, confirm device is up, check port 514, reply with availability if troubleshooting needed.</div>
-  <div class="ts">09:12Z Fri &bull; Inbox &bull; soc@barracuda.com &bull; <a class="lnk" href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAVw%2FaQIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">View email</a></div>
-</div>
-
-<div class="ac info" style="margin-top:8px;">
-  <div style="font-weight:700;margin-bottom:5px;">#3 &mdash; SentinelOne: Two Simultaneous Suspicious Threats</div>
-  <div style="font-size:12px;margin-bottom:5px;line-height:1.6;">
-    Two suspicious DLL threats detected within a 71-minute window on separate machines:<br>
-    &bull; <span class="mono">ojara115</span> (int 192.168.3.11, ext 50.190.127.201) &mdash; <span class="mono">076DD84014E791407A6EE5A8A2E0B24B61BFF489.dll</span> &mdash; 09:34Z<br>
-    &bull; <span class="mono">jkush134</span> (ext 108.221.x.x) &mdash; 08:23Z<br>
-    Confirm quarantine status for both in SentinelOne console. Review threat details for related IOCs.
-  </div>
-  <div class="ts">08:23Z&ndash;09:34Z Fri &bull; Inbox &bull; noreply@mailsender.sentinelone.net</div>
-</div>
-
-</td></tr>
-
-<!-- 6. TIME ENTRIES -->
-<tr><td class="section">
-<h2>6. Time Entries <span class="badge bn">0</span></h2>
-<p class="none">No qualifying evidence of Marshall performing billable client work during the 16-hour scan window at &ge;80% confidence. Team chat activity (Whitehead Wilson SharePoint coordination, Buda Fire device list request) is informational/coordination only &mdash; no confirmed work blocks with sufficient time evidence.</p>
-</td></tr>
-
-<!-- FOOTER -->
-<tr><td class="ftr">
-&#x2705; Preflight: GitHub OK &bull; M365 (marshall@ariatsystems.com) OK &bull; ariat-time-entry skill OK<br>
-&#x2705; Window: 2026-06-18T20:30Z &rarr; 2026-06-19T12:30Z (Thu 15:30 CDT &rarr; Fri 07:30 CDT)<br>
-&#x2705; Scanned: 17 inbox &bull; 0 helpdesk &bull; 8 alerts &bull; 13 datto &bull; 0 backup-radar (folder not found) &bull; 16 teams msgs<br>
-&#x2705; Classified: Urgent 1 &bull; ASAP 2 &bull; Standard 5 &bull; Time Entries 0
-</td></tr>
-
-</table>
-</td></tr>
-</table>
 </body>
 </html>

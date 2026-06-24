@@ -1,247 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Morning Briefing &mdash; 2026-05-26</title>
-<style>
-body { margin: 0; font-family: Arial, Helvetica, sans-serif; font-size: 14px; background: #f0f2f5; color: #222; }
-a { color: #1a5fa8; text-decoration: none; }
-a:hover { text-decoration: underline; }
-</style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ariat Systems — Morning Briefing · 2026-05-26</title>
+<link rel="icon" type="image/png" href="../assets/ariat_favicon_32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/briefing.css" />
 </head>
 <body>
-<table width="100%" border="0" cellspacing="0" cellpadding="20" style="background:#f0f2f5;min-height:100vh;">
-<tr><td align="center" valign="top">
-<table width="800" border="0" cellspacing="0" cellpadding="0" style="max-width:800px;background:#ffffff;border:1px solid #d8dce3;border-radius:4px;">
+<div class="toolbar">
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+    Print / Save PDF
+  </button>
+</div>
 
-<!-- HEADER -->
-<tr><td style="background:#1a2738;padding:22px 28px;border-radius:4px 4px 0 0;">
-  <div style="color:#fff;font-size:19px;font-weight:700;margin-bottom:8px;">Morning Briefing &mdash; 2026-05-26</div>
-  <div style="font-family:'Courier New',monospace;font-size:11px;color:#98b0c8;line-height:1.8;">
-    Run: Tue 2026-05-26 07:30 CDT &nbsp;|&nbsp; Window: 2026-05-25 15:30 CDT &rarr; 2026-05-26 07:30 CDT<br>
-    &#x2714; Preflight: GitHub + M365 + ariat-time-entry skill OK<br>
-    &#x2714; Scanned: 50 emails [Inbox:12, Alerts:22, Datto:16, Help Desk:0, Backup Radar:0] &mdash; Teams: timed out<br>
-    &#x2714; Classified: Urgent 1 &nbsp;|&nbsp; ASAP 1 &nbsp;|&nbsp; Standard 12 &nbsp;|&nbsp; Time Entries 0
-  </div>
-</td></tr>
-
-<!-- SEVERITY OVERVIEW -->
-<tr><td style="padding:14px 28px 14px 28px;border-bottom:1px solid #e8eaed;">
-  <div style="font-size:11px;color:#666;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;">Severity Overview</div>
-  <svg width="480" height="38" xmlns="http://www.w3.org/2000/svg">
-    <rect x="0" y="4" width="33" height="16" fill="#b52b2b" rx="2"/>
-    <text x="16" y="16" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
-    <rect x="37" y="4" width="33" height="16" fill="#c56a0e" rx="2"/>
-    <text x="53" y="16" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
-    <rect x="74" y="4" width="394" height="16" fill="#778899" rx="2"/>
-    <text x="271" y="16" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle">12 Standard</text>
-    <text x="0" y="34" font-family="Arial" font-size="9" fill="#b52b2b">Urgent (1)</text>
-    <text x="37" y="34" font-family="Arial" font-size="9" fill="#c56a0e">ASAP (1)</text>
-  </svg>
-</td></tr>
-
-<!-- 1. URGENT -->
-<tr><td style="padding:18px 28px;border-bottom:1px solid #e8eaed;">
-  <div style="margin-bottom:14px;">
-    <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a2738;">1. Urgent</span>
-    <span style="display:inline-block;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:700;color:#fff;background:#b52b2b;margin-left:8px;">1</span>
-  </div>
-  <table width="100%" cellspacing="0" cellpadding="0" style="border-left:4px solid #b52b2b;background:#fdf2f2;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;margin-bottom:4px;">
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbrYAAA%3D&exvsurl=1&viewmodel=ReadMessageItem" style="color:#b52b2b;">ATXCPE &mdash; Price Payne first day, requesting immediate IT onboarding</a>
+<div class="sheet">
+  <!-- Header -->
+  <div class="rhead">
+    <div class="lz">
+      <div class="rlogo">
+        <img class="rmark" src="../assets/ariat_mark.png" alt="" />
+        <span class="rdiv"></span>
+        <img class="rword" src="../assets/ariat_wordmark.png" alt="Ariat Systems" />
+      </div>
+      <div class="rtitle">Morning Briefing</div>
+      <div class="rsub">Tuesday, May 26, 2026 · Operational Summary</div>
     </div>
-    <div style="font-size:11px;color:#777;font-family:'Courier New',monospace;">From: Terry Payne &lt;tpayne@atxcpe.com&gt; | To: Michael, Marshall | 2026-05-26 07:07 CDT | Inbox | High</div>
-    <div style="font-size:13px;margin-top:6px;">Today is Price Payne's first day at ATXCPE. Terry Payne (President) is requesting someone spend time with Price this morning covering log-on procedures, a network tour, a security overview, and email protocols. Sent directly to both Michael and Marshall. User cannot fully onboard without Ariat intervention today.</div>
-    <div style="font-size:11px;color:#555;margin-top:5px;font-style:italic;">Action: Coordinate with Michael. Contact Terry at (737) 332-3501 or tpayne@atxcpe.com to confirm coverage and timing.</div>
-  </td></tr>
-  </table>
-</td></tr>
-
-<!-- 2. FOLLOW-UPS -->
-<tr><td style="padding:18px 28px;border-bottom:1px solid #e8eaed;">
-  <div style="margin-bottom:14px;">
-    <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a2738;">2. Follow-ups</span>
-    <span style="display:inline-block;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:700;color:#fff;background:#445566;margin-left:8px;">1</span>
-  </div>
-  <table width="100%" cellspacing="0" cellpadding="0" style="border-left:4px solid #aab;background:#f8f9fa;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;margin-bottom:4px;">
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbrMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Cisco Meraki Case 14273993 &mdash; AutoVPN Not Working (Notice 2 of 3)</a>
+    <div class="rmeta">
+      <div><span class="accent">WINDOW</span> 2026-05-25 15:30 → 2026-05-26 07:30 CDT</div>
+      <div><span class="accent">SCANNED</span> 50 emails · Inbox 12 · Alerts 22 · Datto 16 · Help Desk 0 · Backup Radar 0 · Teams timed out</div>
+      <div><span class="accent">REF</span> BRIEF-2026-05-26-AM</div>
     </div>
-    <div style="font-size:11px;color:#777;font-family:'Courier New',monospace;">From: support@meraki.com | 2026-05-25 17:51 CDT | Inbox | Customer: 4908-0243</div>
-    <div style="font-size:13px;margin-top:6px;">Automated notice 2 of 3 from Cisco Meraki. Case remains open and unresolved. Meraki is requesting a status update. Case assigned to Justin. If no activity before notice 3, case may be auto-closed.</div>
-    <div style="font-size:11px;color:#555;margin-top:5px;font-style:italic;">Action: Reply to Meraki case 14273993 with current status, or close if AutoVPN issue is resolved.</div>
-  </td></tr>
-  </table>
-</td></tr>
-
-<!-- 3. TODAY TO-DOS -->
-<tr><td style="padding:18px 28px;border-bottom:1px solid #e8eaed;">
-  <div style="margin-bottom:14px;">
-    <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a2738;">3. Today To-Dos</span>
-    <span style="display:inline-block;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:700;color:#fff;background:#445566;margin-left:8px;">7</span>
-  </div>
-  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border-collapse:collapse;font-size:13px;">
-  <tr style="background:#edf0f3;">
-    <td style="padding:6px 10px;width:68px;font-size:11px;font-weight:700;text-transform:uppercase;color:#555;">Priority</td>
-    <td style="padding:6px 10px;font-size:11px;font-weight:700;text-transform:uppercase;color:#555;">Item</td>
-    <td style="padding:6px 10px;width:110px;font-size:11px;font-weight:700;text-transform:uppercase;color:#555;">Source / Time</td>
-  </tr>
-  <tr style="border-bottom:1px solid #eee;">
-    <td style="padding:8px 10px;color:#b52b2b;font-weight:700;vertical-align:top;">MUST</td>
-    <td style="padding:8px 10px;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbrYAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">ATXCPE &mdash; Respond to Terry Payne; arrange Price Payne IT onboarding today (first day, user needs login procedures &amp; security briefing)</a></td>
-    <td style="padding:8px 10px;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox<br>07:07 CDT</td>
-  </tr>
-  <tr style="border-bottom:1px solid #eee;">
-    <td style="padding:8px 10px;color:#b52b2b;font-weight:700;vertical-align:top;">MUST</td>
-    <td style="padding:8px 10px;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUYMzZfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CelLink &mdash; CELAZUPRDFILE01 (Azure) E: drive disk space &le;5% &mdash; remediate before volume fills and causes service failure</a></td>
-    <td style="padding:8px 10px;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;color:#777;">Alerts<br>02:54 CDT</td>
-  </tr>
-  <tr style="border-bottom:1px solid #eee;">
-    <td style="padding:8px 10px;color:#c56a0e;font-weight:700;vertical-align:top;">SHOULD</td>
-    <td style="padding:8px 10px;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUXII1BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CelLink &mdash; CEL-SC-UVIS-01 Datto CRITICAL ERROR x2 &mdash; &quot;Cannot connect to the host &mdash; aborting backup&quot; at midnight and 4:01 AM PDT; backup still failing as of 6 AM CDT</a></td>
-    <td style="padding:8px 10px;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;color:#777;">Datto<br>06:01 CDT</td>
-  </tr>
-  <tr style="border-bottom:1px solid #eee;">
-    <td style="padding:8px 10px;color:#c56a0e;font-weight:700;vertical-align:top;">SHOULD</td>
-    <td style="padding:8px 10px;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAUYUbrMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Reply to Cisco Meraki Case 14273993 (AutoVPN) &mdash; notice 2 of 3; provide status update or close if resolved</a></td>
-    <td style="padding:8px 10px;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox<br>17:51 CDT</td>
-  </tr>
-  <tr style="border-bottom:1px solid #eee;">
-    <td style="padding:8px 10px;color:#c56a0e;font-weight:700;vertical-align:top;">SHOULD</td>
-    <td style="padding:8px 10px;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUXII0_AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">MEJ &amp; Associates &mdash; MEJ-DATA backup warning on MEJDatto2025 (192.168.1.7, 2:03 AM CDT) &mdash; investigate cause</a></td>
-    <td style="padding:8px 10px;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;color:#777;">Datto<br>02:03 CDT</td>
-  </tr>
-  <tr style="border-bottom:1px solid #eee;">
-    <td style="padding:8px 10px;color:#555;font-weight:700;vertical-align:top;">COULD</td>
-    <td style="padding:8px 10px;vertical-align:top;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUYMzZjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Capital Excavation &mdash; CXDATAENTRY (Windows Server, Buda TX) unexpected reboot at 6:00 AM CDT &mdash; verify system is stable, check event logs</a></td>
-    <td style="padding:8px 10px;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;color:#777;">Alerts<br>06:00 CDT</td>
-  </tr>
-  <tr>
-    <td style="padding:8px 10px;color:#555;font-weight:700;vertical-align:top;">COULD</td>
-    <td style="padding:8px 10px;vertical-align:top;">Covenant Presbyterian Church &mdash; Duane Dube has open follow-up questions about AT&amp;T circuit misconfiguration post-storm (May 20&ndash;25 incident); Michael replied but technical root cause questions may warrant Marshall's input</td>
-    <td style="padding:8px 10px;vertical-align:top;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox<br>(outside window)</td>
-  </tr>
-  </table>
-</td></tr>
-
-<!-- 4. BACKUPS -->
-<tr><td style="padding:18px 28px;border-bottom:1px solid #e8eaed;">
-  <div style="margin-bottom:14px;">
-    <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a2738;">4. Backups</span>
-    <span style="display:inline-block;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:700;color:#fff;background:#445566;margin-left:8px;">Datto: 16 emails | Backup Radar: 0</span>
-  </div>
-  <div style="font-size:11px;color:#777;margin-bottom:8px;">Datto device status across scan window (CelLink = SIRIS S5-24; MEJ = SIRIS 6c92cfea8770)</div>
-  <svg width="440" height="96" xmlns="http://www.w3.org/2000/svg">
-    <!-- Bars: Failed=1, Warning=1, No Result=0, Succeeded=11. Max=11, chart height=60, y_base=74 -->
-    <!-- Failed 1/11*60=5.5 -->
-    <text x="0" y="9" font-family="Arial" font-size="9" fill="#b52b2b" font-weight="bold">FAILED</text>
-    <rect x="0" y="68" width="80" height="6" fill="#b52b2b" rx="2"/>
-    <text x="40" y="64" font-family="Arial" font-size="11" fill="#b52b2b" text-anchor="middle" font-weight="bold">1</text>
-    <text x="40" y="88" font-family="Arial" font-size="9" fill="#777" text-anchor="middle">CEL-SC-UVIS-01</text>
-    <!-- Warning 1/11*60=5.5 -->
-    <text x="100" y="9" font-family="Arial" font-size="9" fill="#c56a0e" font-weight="bold">WARNING</text>
-    <rect x="100" y="68" width="80" height="6" fill="#c56a0e" rx="2"/>
-    <text x="140" y="64" font-family="Arial" font-size="11" fill="#c56a0e" text-anchor="middle" font-weight="bold">1</text>
-    <text x="140" y="88" font-family="Arial" font-size="9" fill="#777" text-anchor="middle">MEJ-DATA</text>
-    <!-- No Result -->
-    <text x="200" y="9" font-family="Arial" font-size="9" fill="#aaa" font-weight="bold">NO RESULT</text>
-    <text x="240" y="75" font-family="Arial" font-size="13" fill="#ccc" text-anchor="middle">0</text>
-    <text x="240" y="88" font-family="Arial" font-size="9" fill="#bbb" text-anchor="middle">&mdash;</text>
-    <!-- Succeeded 11 -->
-    <text x="305" y="9" font-family="Arial" font-size="9" fill="#2a8a4a" font-weight="bold">SUCCEEDED</text>
-    <rect x="300" y="14" width="80" height="60" fill="#2a8a4a" rx="2"/>
-    <text x="340" y="49" font-family="Arial" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">11</text>
-    <text x="340" y="88" font-family="Arial" font-size="9" fill="#777" text-anchor="middle">CelLink devices</text>
-  </svg>
-
-  <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#b52b2b;margin:14px 0 5px;">Failed (1)</div>
-  <table width="100%" cellspacing="0" cellpadding="0" style="border-left:4px solid #b52b2b;background:#fdf2f2;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;margin-bottom:3px;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUXII1BAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CRITICAL ERROR &mdash; CEL-SC-UVIS-01 on CelLinkSC (S5-24, SN: 84160C323B48)</a></div>
-    <div style="font-size:11px;color:#777;font-family:'Courier New',monospace;">Agent: 172.16.130.253 | 12:01 AM PDT (first) + 4:01 AM PDT (second) | 2x consecutive critical alerts</div>
-    <div style="font-size:12px;margin-top:5px;">Error: <span style="font-family:'Courier New',monospace;background:#ffe8e8;padding:1px 5px;border-radius:2px;">Cannot connect to the host &mdash; aborting backup</span><br>Backup has been in critical failure since midnight PDT. Alerts are suppressed 60 min between each notification. Possible connection to the disk space issue on CELAZUPRDFILE01 if that Azure host is the same machine at 172.16.130.253. Bootable screenshot for this host succeeded at 8:01 PM PDT Mon (prior scheduled job).</div>
-  </td></tr>
-  </table>
-
-  <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#c56a0e;margin:12px 0 5px;">Warning (1)</div>
-  <table width="100%" cellspacing="0" cellpadding="0" style="border-left:4px solid #c56a0e;background:#fdf6ee;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;margin-bottom:3px;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRBAACcFJNx05zPTLNH4BZPylwuAAUXII0_AAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Warning &mdash; MEJ-DATA on MEJDatto2025 (6c92cfea8770)</a></div>
-    <div style="font-size:11px;color:#777;font-family:'Courier New',monospace;">Agent: 192.168.1.7 | 2026-05-26 02:03 CDT | MEJ &amp; Associates</div>
-    <div style="font-size:12px;margin-top:5px;">Backup warning reported for MEJ-DATA. Concurrent alert summary (1:19 AM CDT) shows MEJ-DC1 with no current alerts. Investigate warning cause on MEJDatto2025.</div>
-  </td></tr>
-  </table>
-
-  <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#999;margin:12px 0 5px;">No Result (0)</div>
-  <div style="font-size:13px;color:#999;font-style:italic;margin-bottom:10px;">None</div>
-
-  <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#2a8a4a;margin:0 0 5px;">Succeeded (11) &mdash; CelLink Datto Bootable Screenshots</div>
-  <div style="font-family:'Courier New',monospace;font-size:12px;background:#f0fdf4;border:1px solid #c3e6cb;border-radius:4px;padding:8px 12px;line-height:2.0;color:#2a2a2a;">
-    CEL-APPSERVER &bull; 3:00 PM PDT Mon + 3:00 AM PDT Tue (2 runs)<br>
-    CEL-SC-DC-01 &bull; 8:13 PM PDT Mon &bull; CEL-SC-DATABROKER-01 &bull; 8:35 PM PDT Mon<br>
-    CEL-SC-DEPLOY &bull; 8:24 PM PDT Mon &bull; Joule &bull; 8:28 PM PDT Mon<br>
-    CEL-SC-RADIUS &bull; 8:35 PM PDT Mon &bull; FaradayDEV &bull; 8:19 PM PDT Mon<br>
-    Volta &bull; 8:19 PM PDT Mon &bull; Henry &bull; 8:01 PM PDT Mon<br>
-    CEL-SC-UVIS-01 screenshot &bull; 8:01 PM PDT Mon (prior job only; backup now failing)<br>
-    Faraday &bull; 11:01 PM PDT Mon
-  </div>
-  <div style="font-size:11px;color:#999;margin-top:6px;">Backup Radar: folder contained no emails in scan window.</div>
-</td></tr>
-
-<!-- 5. ALERTS -->
-<tr><td style="padding:18px 28px;border-bottom:1px solid #e8eaed;">
-  <div style="margin-bottom:14px;">
-    <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a2738;">5. Alerts</span>
-    <span style="display:inline-block;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:700;color:#fff;background:#445566;margin-left:8px;">Top 3 most uncommon</span>
   </div>
 
-  <table width="100%" cellspacing="0" cellpadding="0" style="border-left:4px solid #c56a0e;background:#fdf6ee;margin-bottom:10px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;margin-bottom:3px;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUYMzZfAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CelLink &mdash; CELAZUPRDFILE01 (Azure) Disk Volume E: &le;5% Free</a></div>
-    <div style="font-size:11px;color:#777;font-family:'Courier New',monospace;">noreply@rmmservice.com | 2026-05-26 02:54 CDT | Azure | Windows Server | 2 duplicate simultaneous alerts</div>
-    <div style="font-size:12px;margin-top:5px;">E: drive on Azure production file server is critically low on space. Risk of write failures and service disruption if not remediated. Two simultaneous duplicate alerts indicate the condition triggered multiple monitoring checks. Potentially correlated with the Datto &quot;cannot connect&quot; error on the same site.</div>
-  </td></tr>
-  </table>
+  <!-- Body -->
+  <div class="rbody">
 
-  <table width="100%" cellspacing="0" cellpadding="0" style="border-left:4px solid #888;background:#f8f9fa;margin-bottom:10px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;margin-bottom:3px;">CelLink &mdash; UPS GT-UPS-MDF-02-02: Double power event at 19:30 + 19:36 CDT (both recovered)</div>
-    <div style="font-size:11px;color:#777;font-family:'Courier New',monospace;">ups_alerts@cllnk.com | 2026-05-25 19:30&ndash;19:37 CDT | Location: Unknown | 8 alert emails</div>
-    <div style="font-size:12px;margin-top:5px;">Two brief power events within 6 minutes: On Battery &rarr; Bypass out-of-range &rarr; Recovered, repeated. Both events recovered within minutes. Pattern suggests intermittent power quality issue at the CelLink MDF. UPS device location is tagged &quot;Unknown&quot; &mdash; may need to be configured. Not immediately actionable but noteworthy given other CelLink overnight issues.</div>
-  </td></tr>
-  </table>
+    <div class="rsection">Preflight &amp; Classification</div>
+    <ul class="blist">
+      <li>Preflight: GitHub + M365 + ariat-time-entry skill OK.</li>
+      <li>Scanned: 50 emails [Inbox 12, Alerts 22, Datto 16, Help Desk 0, Backup Radar 0] — Teams: timed out.</li>
+      <li>Classified: Urgent 1 · ASAP 1 · Standard 12 · Time Entries 0.</li>
+    </ul>
 
-  <table width="100%" cellspacing="0" cellpadding="0" style="border-left:4px solid #888;background:#f8f9fa;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;margin-bottom:3px;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAUYMzZjAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Capital Excavation &mdash; CXDATAENTRY (Windows Server) unexpected reboot, 6:00 AM CDT</a></div>
-    <div style="font-size:11px;color:#777;font-family:'Courier New',monospace;">noreply@rmmservice.com | 2026-05-26 06:00 CDT | Main Office, Buda TX | Role: WINDOWS_SERVER</div>
-    <div style="font-size:12px;margin-top:5px;">Unscheduled reboot of data-entry server. May be patch-triggered, crash (BSOD), or power-related. Verify stable and check event logs for reboot cause.</div>
-  </td></tr>
-  </table>
-</td></tr>
+    <div class="rsection">Severity Overview</div>
+    <div class="stats">
+      <div class="stat"><div class="v">1</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="v">1</div><div class="l">ASAP</div></div>
+      <div class="stat"><div class="v">12</div><div class="l">Standard</div></div>
+      <div class="stat"><div class="v">0</div><div class="l">Time Entries</div></div>
+    </div>
 
-<!-- 6. TIME ENTRIES -->
-<tr><td style="padding:18px 28px;border-bottom:1px solid #e8eaed;">
-  <div style="margin-bottom:14px;">
-    <span style="font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#1a2738;">6. Time Entries</span>
-    <span style="display:inline-block;border-radius:10px;padding:1px 8px;font-size:11px;font-weight:700;color:#fff;background:#445566;margin-left:8px;">0</span>
+    <div class="rsection">1 · Urgent</div>
+    <div class="hot">
+      <ul>
+        <li><strong>ATXCPE — Price Payne first day, requesting immediate IT onboarding.</strong> From Terry Payne &lt;tpayne@atxcpe.com&gt;, to Michael &amp; Marshall, 2026-05-26 07:07 CDT (Inbox, High). Today is Price Payne&rsquo;s first day at ATXCPE. Terry Payne (President) is requesting someone spend time with Price this morning covering log-on procedures, a network tour, a security overview, and email protocols. Sent directly to both Michael and Marshall. User cannot fully onboard without Ariat intervention today. <em>Action: Coordinate with Michael. Contact Terry at (737) 332-3501 or tpayne@atxcpe.com to confirm coverage and timing.</em></li>
+      </ul>
+    </div>
+
+    <div class="rsection">2 · Follow-ups</div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Detail</th><th>Action</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">Cisco Meraki Case 14273993 — AutoVPN Not Working (Notice 2 of 3)</span></td>
+          <td>From support@meraki.com · Customer 4908-0243. Automated notice 2 of 3 from Cisco Meraki. Case remains open and unresolved. Meraki is requesting a status update. Case assigned to Justin. If no activity before notice 3, case may be auto-closed.</td>
+          <td>Reply to Meraki case 14273993 with current status, or close if AutoVPN issue is resolved.</td>
+          <td class="mono">2026-05-25 17:51 CDT</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">3 · Today To-Dos</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Item</th><th>Source / Time</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td><span class="svc">ATXCPE</span> — Respond to Terry Payne; arrange Price Payne IT onboarding today (first day, user needs login procedures &amp; security briefing).</td>
+          <td class="mono">Inbox · 07:07 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-danger"><span class="d"></span>Must</span></td>
+          <td><span class="svc">CelLink</span> — CELAZUPRDFILE01 (Azure) E: drive disk space ≤5% — remediate before volume fills and causes service failure.</td>
+          <td class="mono">Alerts · 02:54 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td><span class="svc">CelLink</span> — CEL-SC-UVIS-01 Datto CRITICAL ERROR ×2 — &ldquo;Cannot connect to the host — aborting backup&rdquo; at midnight and 4:01 AM PDT; backup still failing as of 6 AM CDT.</td>
+          <td class="mono">Datto · 06:01 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td>Reply to Cisco Meraki Case 14273993 (AutoVPN) — notice 2 of 3; provide status update or close if resolved.</td>
+          <td class="mono">Inbox · 17:51 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>Should</span></td>
+          <td><span class="svc">MEJ &amp; Associates</span> — MEJ-DATA backup warning on MEJDatto2025 (192.168.1.7, 2:03 AM CDT) — investigate cause.</td>
+          <td class="mono">Datto · 02:03 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>Could</span></td>
+          <td><span class="svc">Capital Excavation</span> — CXDATAENTRY (Windows Server, Buda TX) unexpected reboot at 6:00 AM CDT — verify system is stable, check event logs.</td>
+          <td class="mono">Alerts · 06:00 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>Could</span></td>
+          <td><span class="svc">Covenant Presbyterian Church</span> — Duane Dube has open follow-up questions about AT&amp;T circuit misconfiguration post-storm (May 20–25 incident); Michael replied but technical root cause questions may warrant Marshall&rsquo;s input.</td>
+          <td class="mono">Inbox · (outside window)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">4 · Backups</div>
+    <p class="note">Datto: 16 emails · Backup Radar: 0. Datto device status across scan window (CelLink = SIRIS S5-24; MEJ = SIRIS 6c92cfea8770).</p>
+    <div class="stats">
+      <div class="stat"><div class="v">1</div><div class="l">Failed — CEL-SC-UVIS-01</div></div>
+      <div class="stat"><div class="v">1</div><div class="l">Warning — MEJ-DATA</div></div>
+      <div class="stat"><div class="v">0</div><div class="l">No Result</div></div>
+      <div class="stat"><div class="v">11</div><div class="l">Succeeded — CelLink devices</div></div>
+    </div>
+
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:10px;"><strong>Failed (1)</strong></p>
+    <table class="data">
+      <thead><tr><th>Device</th><th>Detail</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">CRITICAL ERROR — CEL-SC-UVIS-01 on CelLinkSC (S5-24, SN: 84160C323B48)</span></td>
+          <td>Agent 172.16.130.253 · 2× consecutive critical alerts. Error: <span class="ds-code">Cannot connect to the host — aborting backup</span>. Backup has been in critical failure since midnight PDT. Alerts are suppressed 60 min between each notification. Possible connection to the disk space issue on CELAZUPRDFILE01 if that Azure host is the same machine at 172.16.130.253. Bootable screenshot for this host succeeded at 8:01 PM PDT Mon (prior scheduled job).</td>
+          <td class="mono">12:01 AM PDT (first) + 4:01 AM PDT (second)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="ds-body" style="font-size:13.5px;margin:14px 0 10px;"><strong>Warning (1)</strong></p>
+    <table class="data">
+      <thead><tr><th>Device</th><th>Detail</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">Warning — MEJ-DATA on MEJDatto2025 (6c92cfea8770)</span></td>
+          <td>Agent 192.168.1.7 · MEJ &amp; Associates. Backup warning reported for MEJ-DATA. Concurrent alert summary (1:19 AM CDT) shows MEJ-DC1 with no current alerts. Investigate warning cause on MEJDatto2025.</td>
+          <td class="mono">2026-05-26 02:03 CDT</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="ds-body" style="font-size:13.5px;margin:14px 0 6px;"><strong>No Result (0):</strong> None.</p>
+
+    <p class="ds-body" style="font-size:13.5px;margin:14px 0 6px;"><strong>Succeeded (11) — CelLink Datto Bootable Screenshots</strong></p>
+    <ul class="blist">
+      <li><span class="ds-code">CEL-APPSERVER</span> · 3:00 PM PDT Mon + 3:00 AM PDT Tue (2 runs)</li>
+      <li><span class="ds-code">CEL-SC-DC-01</span> · 8:13 PM PDT Mon · <span class="ds-code">CEL-SC-DATABROKER-01</span> · 8:35 PM PDT Mon</li>
+      <li><span class="ds-code">CEL-SC-DEPLOY</span> · 8:24 PM PDT Mon · <span class="ds-code">Joule</span> · 8:28 PM PDT Mon</li>
+      <li><span class="ds-code">CEL-SC-RADIUS</span> · 8:35 PM PDT Mon · <span class="ds-code">FaradayDEV</span> · 8:19 PM PDT Mon</li>
+      <li><span class="ds-code">Volta</span> · 8:19 PM PDT Mon · <span class="ds-code">Henry</span> · 8:01 PM PDT Mon</li>
+      <li><span class="ds-code">CEL-SC-UVIS-01</span> screenshot · 8:01 PM PDT Mon (prior job only; backup now failing)</li>
+      <li><span class="ds-code">Faraday</span> · 11:01 PM PDT Mon</li>
+    </ul>
+    <p class="note">Backup Radar: folder contained no emails in scan window.</p>
+
+    <div class="rsection">5 · Alerts</div>
+    <p class="note">Top 3 most uncommon.</p>
+    <table class="data">
+      <thead><tr><th>Alert</th><th>Detail</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">CelLink — CELAZUPRDFILE01 (Azure) Disk Volume E: ≤5% Free</span></td>
+          <td>noreply@rmmservice.com · Azure · Windows Server · 2 duplicate simultaneous alerts. E: drive on Azure production file server is critically low on space. Risk of write failures and service disruption if not remediated. Two simultaneous duplicate alerts indicate the condition triggered multiple monitoring checks. Potentially correlated with the Datto &ldquo;cannot connect&rdquo; error on the same site.</td>
+          <td class="mono">2026-05-26 02:54 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="svc">CelLink — UPS GT-UPS-MDF-02-02: Double power event at 19:30 + 19:36 CDT (both recovered)</span></td>
+          <td>ups_alerts@cllnk.com · Location Unknown · 8 alert emails. Two brief power events within 6 minutes: On Battery → Bypass out-of-range → Recovered, repeated. Both events recovered within minutes. Pattern suggests intermittent power quality issue at the CelLink MDF. UPS device location is tagged &ldquo;Unknown&rdquo; — may need to be configured. Not immediately actionable but noteworthy given other CelLink overnight issues.</td>
+          <td class="mono">2026-05-25 19:30–19:37 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="svc">Capital Excavation — CXDATAENTRY (Windows Server) unexpected reboot, 6:00 AM CDT</span></td>
+          <td>noreply@rmmservice.com · Main Office, Buda TX · Role WINDOWS_SERVER. Unscheduled reboot of data-entry server. May be patch-triggered, crash (BSOD), or power-related. Verify stable and check event logs for reboot cause.</td>
+          <td class="mono">2026-05-26 06:00 CDT</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rsection">6 · Time Entries</div>
+    <div class="callout">No qualifying items. No email evidence of Marshall performing client work with ≥80% confidence during scan window (2026-05-25 15:30 CDT – 2026-05-26 07:30 CDT).</div>
+    <p class="note">Note: Teams scan timed out — Teams messages not included. Coverage may be incomplete.</p>
+
   </div>
-  <div style="font-size:13px;color:#999;font-style:italic;">No qualifying items. No email evidence of Marshall performing client work with &ge;80% confidence during scan window (2026-05-25 15:30 CDT &ndash; 2026-05-26 07:30 CDT).</div>
-  <div style="font-size:11px;color:#c56a0e;font-family:'Courier New',monospace;margin-top:6px;">Note: Teams scan timed out &mdash; Teams messages not included. Coverage may be incomplete.</div>
-</td></tr>
 
-<!-- FOOTER -->
-<tr><td style="background:#f0f2f5;padding:10px 28px;text-align:center;border-radius:0 0 4px 4px;">
-  <div style="font-size:11px;color:#aaa;font-family:'Courier New',monospace;">
-    Generated 2026-05-26 07:30 CDT &nbsp;&bull;&nbsp; gitmarsh/routines &nbsp;&bull;&nbsp; ariat-time-entry SKILL.md sha:65d36fe
+  <!-- Footer -->
+  <div class="rfoot">
+    <span>Ariat Systems · Internal</span>
+    <span>Generated 2026-05-26 07:30 CDT · briefs.cloudmarsh.com</span>
   </div>
-</td></tr>
-
-</table>
-</td></tr>
-</table>
+</div>
 </body>
 </html>

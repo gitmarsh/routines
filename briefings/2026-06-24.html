@@ -1,378 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Morning Briefing — 2026-06-24</title>
-<style>
-body{margin:0;padding:0;background:#f5f5f5;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#222;}
-a{color:#1a5fa8;text-decoration:none;}
-a:hover{text-decoration:underline;}
-.wrapper{max-width:860px;margin:0 auto;background:#fff;}
-.none{color:#888;font-style:italic;font-size:13px;}
-</style>
+<link rel="icon" type="image/png" href="../assets/ariat_favicon_32.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/briefing.css" />
 </head>
-<body bgcolor="#f5f5f5">
-<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f5f5f5">
-<tr><td align="center" style="padding:20px 10px;">
-<table width="860" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="max-width:860px;width:100%;font-family:Arial,Helvetica,sans-serif;">
+<body>
+<div class="toolbar">
+  <button class="print-btn" onclick="window.print()">
+    <svg viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>
+    Print / Save PDF
+  </button>
+</div>
 
-<!-- HEADER -->
-<tr><td bgcolor="#1a1a2e" style="padding:24px 32px;">
-  <div style="color:#ffffff;font-size:22px;font-weight:700;letter-spacing:0.5px;margin:0 0 6px 0;">Morning Briefing</div>
-  <div style="color:#aaaaaa;font-size:12px;">Wednesday, June 24, 2026 &nbsp;|&nbsp; Window: 2026-06-23 15:30 CDT &#8594; 2026-06-24 07:30 CDT</div>
-  <div style="color:#888888;font-size:11px;margin-top:3px;">Scanned: 23 inbox &middot; 2 help desk &middot; 13 alerts &middot; 13 datto &middot; 0 backup radar &middot; 25 teams = 76 items</div>
-</td></tr>
-
-<!-- SEVERITY OVERVIEW -->
-<tr><td style="padding:20px 32px 0 32px;">
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f0f4fa" style="border:1px solid #d0d8e8;">
-  <tr><td style="padding:16px 20px;">
-    <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#555;margin-bottom:12px;letter-spacing:0.5px;">Severity Overview</div>
-    <table border="0" cellpadding="0" cellspacing="0">
-    <tr valign="top">
-      <td style="padding-right:28px;text-align:center;">
-        <div style="font-size:32px;font-weight:700;color:#c0392b;line-height:1;">2</div>
-        <div style="font-size:11px;color:#666;margin-top:2px;">Urgent</div>
-      </td>
-      <td style="padding-right:28px;text-align:center;">
-        <div style="font-size:32px;font-weight:700;color:#e67e22;line-height:1;">3</div>
-        <div style="font-size:11px;color:#666;margin-top:2px;">ASAP</div>
-      </td>
-      <td style="padding-right:28px;text-align:center;">
-        <div style="font-size:32px;font-weight:700;color:#555;line-height:1;">10</div>
-        <div style="font-size:11px;color:#666;margin-top:2px;">Standard</div>
-      </td>
-      <td style="padding-left:12px;vertical-align:bottom;">
-        <!-- Bar chart: heights proportional to max=10, chart area height=48px -->
-        <svg width="120" height="62" xmlns="http://www.w3.org/2000/svg">
-          <rect x="4"  y="40" width="22" height="8"  fill="#c0392b" rx="2"/>
-          <rect x="34" y="34" width="22" height="14" fill="#e67e22" rx="2"/>
-          <rect x="64" y="0"  width="22" height="48" fill="#7f8c8d" rx="2"/>
-          <text x="15"  y="60" font-family="Arial" font-size="9" fill="#c0392b" text-anchor="middle">U:2</text>
-          <text x="45"  y="60" font-family="Arial" font-size="9" fill="#e67e22" text-anchor="middle">A:3</text>
-          <text x="75"  y="60" font-family="Arial" font-size="9" fill="#555"    text-anchor="middle">S:10</text>
-        </svg>
-      </td>
-    </tr>
-    </table>
-  </td></tr>
-  </table>
-</td></tr>
-
-<!-- MAIN CONTENT -->
-<tr><td style="padding:24px 32px 32px 32px;">
-
-<!-- ====== SECTION 1: URGENT ====== -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
-<tr>
-  <td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#1a1a2e;text-transform:uppercase;letter-spacing:0.5px;">Urgent</span></td>
-  <td align="right" style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="background:#c0392b;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px;">2</span></td>
-</tr>
-<tr><td colspan="2" style="padding-top:12px;">
-
-  <!-- Urgent 1 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fdf0ee" style="border-left:4px solid #c0392b;margin-bottom:10px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;color:#222;">Michael Statham — Decommission LAWDC2 (Morning Request)</div>
-    <div style="font-size:11px;color:#888;margin-top:2px;font-family:'Courier New',monospace;">Teams &middot; 2026-06-24 07:15 CDT</div>
-    <div style="font-size:12px;color:#333;margin-top:5px;">"Please turn off LAWDC2 and see if we can remove it by this time next week if no one complains of anything." Shut down today; monitor through next week before decommission.</div>
-  </td></tr>
-  </table>
-
-  <!-- Urgent 2 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fdf0ee" style="border-left:4px solid #c0392b;margin-bottom:10px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;color:#222;">SentinelOne — 9 Suspicious Threats in 86-Minute Wave</div>
-    <div style="font-size:11px;color:#888;margin-top:2px;font-family:'Courier New',monospace;">Inbox &middot; 2026-06-24 03:34–05:00 CDT &middot; via AriatAlerts</div>
-    <div style="font-size:12px;color:#333;margin-top:5px;">Nine separate "New Suspicious threat detected" alerts across machines:
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEdAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">ojara115</a>,
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEcAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">colinwilson123</a>,
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEbAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">amorgan113</a>,
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEaAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">jbrown112</a>,
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEZAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">jmartin117</a>,
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEYAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">aarchbold090</a>,
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEXAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">tbarrett131</a>,
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEWAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">rdorsey106</a>,
-      <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEVAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">jkush134</a>.
-      Nine detections across 9 machines in 86 minutes is an atypical burst. Check for common client/network association in SentinelOne console.
+<div class="sheet">
+  <!-- Header -->
+  <div class="rhead">
+    <div class="lz">
+      <div class="rlogo">
+        <img class="rmark" src="../assets/ariat_mark.png" alt="" />
+        <span class="rdiv"></span>
+        <img class="rword" src="../assets/ariat_wordmark.png" alt="Ariat Systems" />
+      </div>
+      <div class="rtitle">Morning Briefing</div>
+      <div class="rsub">Wednesday, June 24, 2026 · Operational Summary</div>
     </div>
-  </td></tr>
-  </table>
+    <div class="rmeta">
+      <div><span class="accent">WINDOW</span> 2026-06-23 15:30 → 2026-06-24 07:30 CDT</div>
+      <div><span class="accent">SCANNED</span> 23 inbox · 2 help desk · 13 alerts · 13 datto · 0 backup radar · 25 teams = 76 items</div>
+      <div><span class="accent">REF</span> BRIEF-2026-06-24-AM</div>
+    </div>
+  </div>
 
-</td></tr>
-</table>
+  <!-- Body -->
+  <div class="rbody">
 
-<!-- ====== SECTION 2: FOLLOW-UPS ====== -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
-<tr>
-  <td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#1a1a2e;text-transform:uppercase;letter-spacing:0.5px;">Follow-Ups</span></td>
-  <td align="right" style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="background:#e67e22;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px;">3</span></td>
-</tr>
-<tr><td colspan="2" style="padding-top:12px;">
+    <div class="rsection">Severity Overview</div>
+    <div class="stats">
+      <div class="stat"><div class="v">2</div><div class="l">Urgent</div></div>
+      <div class="stat"><div class="v">3</div><div class="l">ASAP</div></div>
+      <div class="stat"><div class="v">10</div><div class="l">Standard</div></div>
+      <div class="stat"><div class="v">0</div><div class="l">Time Entries</div></div>
+    </div>
 
-  <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#888;letter-spacing:0.5px;margin-bottom:6px;">ASAP</div>
+    <div class="rsection">Urgent</div>
+    <table class="data">
+      <thead><tr><th>Item</th><th>Detail</th><th>Source</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">Michael Statham — Decommission LAWDC2 (Morning Request)</span></td>
+          <td>"Please turn off LAWDC2 and see if we can remove it by this time next week if no one complains of anything." Shut down today; monitor through next week before decommission.</td>
+          <td>Teams</td>
+          <td class="mono">2026-06-24 07:15 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="svc">SentinelOne — 9 Suspicious Threats in 86-Minute Wave</span></td>
+          <td>Nine separate "New Suspicious threat detected" alerts across machines: <span class="ds-code">ojara115</span>, <span class="ds-code">colinwilson123</span>, <span class="ds-code">amorgan113</span>, <span class="ds-code">jbrown112</span>, <span class="ds-code">jmartin117</span>, <span class="ds-code">aarchbold090</span>, <span class="ds-code">tbarrett131</span>, <span class="ds-code">rdorsey106</span>, <span class="ds-code">jkush134</span>. Nine detections across 9 machines in 86 minutes is an atypical burst. Check for common client/network association in SentinelOne console.</td>
+          <td>Inbox · via AriatAlerts</td>
+          <td class="mono">2026-06-24 03:34–05:00 CDT</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <!-- Follow-up 1 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fef9f0" style="border-left:4px solid #e67e22;margin-bottom:8px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;color:#222;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEKAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">RE: Data Recovery — Beehive Specialty (Ashley Cotten Putman)</a></div>
-    <div style="font-size:11px;color:#888;margin-top:2px;font-family:'Courier New',monospace;">From: Ashley@Specialbee.com &middot; 2026-06-23 16:36 CDT &middot; Importance: High</div>
-    <div style="font-size:12px;color:#333;margin-top:5px;">"Lets shoot for tomorrow if possible." — Client expects data recovery scheduled today (Jun 24). Reply required to confirm or offer alternate time.</div>
-  </td></tr>
-  </table>
+    <div class="rsection">Follow-Ups</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Item</th><th>From</th><th>Detail</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">RE: Data Recovery — Beehive Specialty (Ashley Cotten Putman)</span></td>
+          <td>Ashley@Specialbee.com</td>
+          <td>"Lets shoot for tomorrow if possible." — Client expects data recovery scheduled today (Jun 24). Reply required to confirm or offer alternate time. <em>(Importance: High)</em></td>
+          <td class="mono">2026-06-23 16:36 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-warning"><span class="d"></span>ASAP</span></td>
+          <td><span class="svc">New API Credentials — Capital Excavation (Glen's Account, HCSS)</span></td>
+          <td>no-reply@hcssapps.com + Teams</td>
+          <td>HCSS notification: API client "Timecard Report" created under Glen's account for Capital Excavation. Matt flagged in Teams ("GLEN IS IN THE API / OH SHIT MARSHALL"). Verify authorization; revoke if not sanctioned.</td>
+          <td class="mono">2026-06-23 17:00–17:18 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="pill pill-neutral"><span class="d"></span>Blocked on reply</span></td>
+          <td><span class="svc">Re: Computer Upgrades — Covenant Presbyterian Church (JWise)</span></td>
+          <td>JWise@covenant.org</td>
+          <td>JWise confirmed control room PC can be upgraded June 29, but said FE200 sound booth PC needs <strong>replacement</strong>, not upgrade — may require hardware procurement before the visit. Reply/acknowledge pending from Marshall. <em>(Importance: High)</em></td>
+          <td class="mono">2026-06-23 16:09 CDT</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <!-- Follow-up 2 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fef9f0" style="border-left:4px solid #e67e22;margin-bottom:8px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;color:#222;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnENAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">New API Credentials — Capital Excavation (Glen's Account, HCSS)</a></div>
-    <div style="font-size:11px;color:#888;margin-top:2px;font-family:'Courier New',monospace;">no-reply@hcssapps.com + Teams &middot; 2026-06-23 17:00–17:18 CDT</div>
-    <div style="font-size:12px;color:#333;margin-top:5px;">HCSS notification: API client "Timecard Report" created under Glen's account for Capital Excavation. Matt flagged in Teams ("GLEN IS IN THE API / OH SHIT MARSHALL"). Verify authorization; revoke if not sanctioned.</div>
-  </td></tr>
-  </table>
+    <div class="rsection">Today To-Dos</div>
+    <table class="data">
+      <thead><tr><th>Priority</th><th>Item</th><th>Source</th></tr></thead>
+      <tbody>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Reply to Ashley (Beehive Specialty) re: Data Recovery — client expecting today</td><td class="mono">Inbox</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Shut down LAWDC2 per Michael Statham; monitor 1 week before physical removal</td><td class="mono">Teams</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Verify/revoke HCSS API credentials for Capital Excavation (Glen's account)</td><td class="mono">Inbox / Teams</td></tr>
+        <tr><td><span class="pill pill-danger"><span class="d"></span>Must</span></td><td>Address CelLink CELAZUPRDFILE01 E: drive at ≤5% — expand or clean before it fills</td><td class="mono">Alerts</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Investigate SentinelOne burst — 9 suspicious detections in 86 min, find common client/network</td><td class="mono">Inbox</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Reply to JWise (Covenant) re: FE200 sound booth PC — needs replacement, not upgrade; Jun 29 visit</td><td class="mono">Inbox</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Review 6 Microsoft 365 invoices — confirm no billing anomalies before due dates</td><td class="mono">Inbox</td></tr>
+        <tr><td><span class="pill pill-warning"><span class="d"></span>Should</span></td><td>Clean up Burnett &amp; Turner VPN access list — old long-standing access confirmed by Michael</td><td class="mono">Teams</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Replace Temp Stick battery at Covenant Hall server closet (battery at 20%)</td><td class="mono">Alerts</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Check CelLink JOULE D: (≤7%) and CELAZUPRDSYS01 F: (≤10%) — warning level disk usage</td><td class="mono">Alerts</td></tr>
+        <tr><td><span class="pill pill-info"><span class="d"></span>Could</span></td><td>Review Barracuda SAT campaign results for Kidd Roofing (training + phishing both completed)</td><td class="mono">Inbox</td></tr>
+      </tbody>
+    </table>
 
-  <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#888;letter-spacing:0.5px;margin:10px 0 6px 0;">Blocked on reply</div>
+    <div class="rsection">Backups</div>
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:10px;"><strong>All Clear</strong> — Failed: 0 · Warning: 0 · No Result: 0.</p>
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:6px;"><strong>Datto — CelLink SC (12 agents, all SUCCEEDED)</strong></p>
+    <table class="data">
+      <thead><tr><th>Agent</th><th>Backup Time (PDT)</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="mono">CEL-SC-DC-01</td><td class="mono">Tue 23/Jun 20:07</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">CEL-SC-UVIS-01</td><td class="mono">Tue 23/Jun 20:00</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">Henry</td><td class="mono">Tue 23/Jun 20:00</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">Volta</td><td class="mono">Tue 23/Jun 20:11</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">CEL-SC-RADIUS</td><td class="mono">Tue 23/Jun 20:26</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">Joule</td><td class="mono">Tue 23/Jun 20:16</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">FaradayDEV</td><td class="mono">Tue 23/Jun 20:09</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">CEL-SC-DEPLOY</td><td class="mono">Tue 23/Jun 20:13</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">CEL-SC-DATABROKER-01</td><td class="mono">Tue 23/Jun 20:23</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">Faraday</td><td class="mono">Tue 23/Jun 23:00</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">CEL-APPSERVER (AM)</td><td class="mono">Wed 24/Jun 01:00</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+        <tr><td class="mono">CEL-APPSERVER (PM)</td><td class="mono">Tue 23/Jun 13:01</td><td><span class="pill pill-success"><span class="d"></span>Succeeded</span></td></tr>
+      </tbody>
+    </table>
+    <p class="ds-body" style="font-size:13.5px;margin-top:10px;">MEJ &amp; Associates (MEJDatto2025): Alert summary received 01:36 CDT — <strong>No current alerts reported.</strong></p>
+    <p class="note">Backup Radar: No emails in window.</p>
 
-  <!-- Follow-up 3 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fafafa" style="border-left:4px solid #aaa;margin-bottom:8px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;color:#222;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Re: Computer Upgrades — Covenant Presbyterian Church (JWise)</a></div>
-    <div style="font-size:11px;color:#888;margin-top:2px;font-family:'Courier New',monospace;">From: JWise@covenant.org &middot; 2026-06-23 16:09 CDT &middot; Importance: High</div>
-    <div style="font-size:12px;color:#333;margin-top:5px;">JWise confirmed control room PC can be upgraded June 29, but said FE200 sound booth PC needs <strong>replacement</strong>, not upgrade — may require hardware procurement before the visit. Reply/acknowledge pending from Marshall.</div>
-  </td></tr>
-  </table>
+    <div class="rsection">Alerts (Top 3 Unusual)</div>
+    <table class="data">
+      <thead><tr><th>Alert</th><th>Detail</th><th>Source</th><th>When</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="svc">1. Unauthorized HCSS API Credential — Capital Excavation</span></td>
+          <td>New API client "Timecard Report" created using Glen's account for Capital Excavation. Non-routine; not a standard automated credential. Teams conversation showed alarm ("OH SHIT MARSHALL / GLEN IS IN THE API"). Requires immediate authorization check.</td>
+          <td>no-reply@hcssapps.com</td>
+          <td class="mono">2026-06-23 17:00 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="svc">2. CelLink CELAZUPRDFILE01 E: Drive ≤5% Free (Azure)</span></td>
+          <td>Critical threshold crossed. CELAZUPRDSYS01 F: also at ≤10%. Activity notifications on CELAZUPRDFILE01 preceded this alert (active file writes). Expand volume or clean up files; risk of service impact if drive fills.</td>
+          <td>noreply@rmmservice.com · Location: Azure</td>
+          <td class="mono">2026-06-24 05:42 CDT</td>
+        </tr>
+        <tr>
+          <td><span class="svc">3. Meraki Firmware Schedule Changed on Two CelLink Networks Simultaneously</span></td>
+          <td>Both CelLink Meraki security appliances (San Carlos &amp; Georgetown) had firmware update schedules changed within 1 minute of each other (San Carlos from 2026-07-02, Georgetown from 2026-07-01, both moved earlier). Concurrent admin action on two separate networks — confirm this was intentional.</td>
+          <td>Meraki</td>
+          <td class="mono">2026-06-23 16:37–16:38 CDT</td>
+        </tr>
+      </tbody>
+    </table>
 
-</td></tr>
-</table>
+    <div class="rsection">Time Entries</div>
+    <div class="callout">No items in this window meet the ≥80% confidence threshold for confirmed Marshall-performed billable work. Three candidate threads flagged for manual review.</div>
 
-<!-- ====== SECTION 3: TODAY TO-DOS ====== -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
-<tr>
-  <td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#1a1a2e;text-transform:uppercase;letter-spacing:0.5px;">Today To-Dos</span></td>
-  <td align="right" style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="background:#1a5fa8;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px;">11</span></td>
-</tr>
-<tr><td colspan="2" style="padding-top:12px;">
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:13px;">
-  <tr bgcolor="#eeeeee">
-    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;width:65px;">Priority</th>
-    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;">Item</th>
-    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;width:100px;">Source</th>
-  </tr>
-  <!-- MUST -->
-  <tr style="border-bottom:1px solid #f0f0f0;">
-    <td style="padding:7px 10px;font-weight:700;color:#c0392b;font-size:11px;">MUST</td>
-    <td style="padding:7px 10px;">Reply to Ashley (Beehive Specialty) re: Data Recovery — client expecting today</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox</td>
-  </tr>
-  <tr style="border-bottom:1px solid #f0f0f0;">
-    <td style="padding:7px 10px;font-weight:700;color:#c0392b;font-size:11px;">MUST</td>
-    <td style="padding:7px 10px;">Shut down LAWDC2 per Michael Statham; monitor 1 week before physical removal</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Teams</td>
-  </tr>
-  <tr style="border-bottom:1px solid #f0f0f0;">
-    <td style="padding:7px 10px;font-weight:700;color:#c0392b;font-size:11px;">MUST</td>
-    <td style="padding:7px 10px;">Verify/revoke HCSS API credentials for Capital Excavation (Glen's account)</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox / Teams</td>
-  </tr>
-  <tr style="border-bottom:1px solid #f0f0f0;">
-    <td style="padding:7px 10px;font-weight:700;color:#c0392b;font-size:11px;">MUST</td>
-    <td style="padding:7px 10px;">Address CelLink CELAZUPRDFILE01 E: drive at &le;5% — expand or clean before it fills</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Alerts</td>
-  </tr>
-  <!-- SHOULD -->
-  <tr style="border-bottom:1px solid #f0f0f0;" bgcolor="#fffdf8">
-    <td style="padding:7px 10px;font-weight:700;color:#e67e22;font-size:11px;">SHOULD</td>
-    <td style="padding:7px 10px;">Investigate SentinelOne burst — 9 suspicious detections in 86 min, find common client/network</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox</td>
-  </tr>
-  <tr style="border-bottom:1px solid #f0f0f0;" bgcolor="#fffdf8">
-    <td style="padding:7px 10px;font-weight:700;color:#e67e22;font-size:11px;">SHOULD</td>
-    <td style="padding:7px 10px;">Reply to JWise (Covenant) re: FE200 sound booth PC — needs replacement, not upgrade; Jun 29 visit</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox</td>
-  </tr>
-  <tr style="border-bottom:1px solid #f0f0f0;" bgcolor="#fffdf8">
-    <td style="padding:7px 10px;font-weight:700;color:#e67e22;font-size:11px;">SHOULD</td>
-    <td style="padding:7px 10px;">Review 6 Microsoft 365 invoices — confirm no billing anomalies before due dates</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox</td>
-  </tr>
-  <tr style="border-bottom:1px solid #f0f0f0;" bgcolor="#fffdf8">
-    <td style="padding:7px 10px;font-weight:700;color:#e67e22;font-size:11px;">SHOULD</td>
-    <td style="padding:7px 10px;">Clean up Burnett &amp; Turner VPN access list — old long-standing access confirmed by Michael</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Teams</td>
-  </tr>
-  <!-- COULD -->
-  <tr style="border-bottom:1px solid #f0f0f0;">
-    <td style="padding:7px 10px;color:#777;font-size:11px;">COULD</td>
-    <td style="padding:7px 10px;">Replace Temp Stick battery at Covenant Hall server closet (battery at 20%)</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Alerts</td>
-  </tr>
-  <tr style="border-bottom:1px solid #f0f0f0;">
-    <td style="padding:7px 10px;color:#777;font-size:11px;">COULD</td>
-    <td style="padding:7px 10px;">Check CelLink JOULE D: (&le;7%) and CELAZUPRDSYS01 F: (&le;10%) — warning level disk usage</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Alerts</td>
-  </tr>
-  <tr>
-    <td style="padding:7px 10px;color:#777;font-size:11px;">COULD</td>
-    <td style="padding:7px 10px;">Review Barracuda SAT campaign results for Kidd Roofing (training + phishing both completed)</td>
-    <td style="padding:7px 10px;font-family:'Courier New',monospace;font-size:11px;color:#777;">Inbox</td>
-  </tr>
-  </table>
-</td></tr>
-</table>
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:10px;"><strong>Candidate 1 — Ticket #10538: New Machine Setup and Upgrades.</strong> Help Desk notifications at 15:38 and 15:42 CDT (Jun 23). Two updates in rapid succession suggest activity. Open the ticket and verify Marshall's name appears as a responder. If confirmed: log as <strong>Project (Green)</strong> for the applicable client.</p>
 
-<!-- ====== SECTION 4: BACKUPS ====== -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
-<tr>
-  <td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#1a1a2e;text-transform:uppercase;letter-spacing:0.5px;">Backups</span></td>
-  <td align="right" style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="background:#27ae60;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px;">All Clear</span></td>
-</tr>
-<tr><td colspan="2" style="padding-top:14px;">
+    <p class="ds-body" style="font-size:13.5px;margin-bottom:6px;"><strong>Candidate 2 — Capital Excavation: HCSS API Investigation.</strong> Teams discussion at ~17:12–17:18 CDT (Jun 23). Within working hours. If time was actively spent investigating, log as <strong>On-Going Support (Blue)</strong> for Capital Excavation.</p>
+    <table class="data">
+      <tbody>
+        <tr><td class="mono">Subject</td><td>Capital Excavation</td></tr>
+        <tr><td class="mono">Location</td><td>Remote</td></tr>
+        <tr><td class="mono">Desc</td><td>Investigated unauthorized HCSS API credential generation from Glen's account.</td></tr>
+        <tr><td class="mono">Category</td><td>On-Going Support (Blue)</td></tr>
+        <tr><td class="mono">Time</td><td>2026-06-23 17:12 - <span class="ds-code">&lt;MISSING: end time&gt;</span></td></tr>
+      </tbody>
+    </table>
 
-  <!-- Summary counts + tiny bar chart -->
-  <table border="0" cellpadding="0" cellspacing="0" style="margin-bottom:14px;">
-  <tr valign="middle">
-    <td style="padding-right:18px;">
-      <!-- Bar chart: all zero, show baseline only -->
-      <svg width="100" height="55" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="48" x2="100" y2="48" stroke="#ddd" stroke-width="1"/>
-        <rect x="4"  y="46" width="22" height="2" fill="#c0392b" rx="1"/>
-        <rect x="34" y="46" width="22" height="2" fill="#e67e22" rx="1"/>
-        <rect x="64" y="46" width="22" height="2" fill="#7f8c8d" rx="1"/>
-        <text x="15"  y="56" font-family="Arial" font-size="8" fill="#c0392b" text-anchor="middle">Failed</text>
-        <text x="45"  y="56" font-family="Arial" font-size="8" fill="#e67e22" text-anchor="middle">Warn</text>
-        <text x="75"  y="56" font-family="Arial" font-size="8" fill="#555"    text-anchor="middle">No Res</text>
-      </svg>
-    </td>
-    <td style="font-size:13px;">
-      <span style="color:#c0392b;font-weight:700;">Failed: 0</span> &nbsp;&nbsp;
-      <span style="color:#e67e22;font-weight:700;">Warning: 0</span> &nbsp;&nbsp;
-      <span style="color:#555;font-weight:700;">No Result: 0</span>
-    </td>
-  </tr>
-  </table>
+    <p class="ds-body" style="font-size:13.5px;margin:14px 0 6px;"><strong>Candidate 3 — Burnett &amp; Turner Law: VPN Access Review.</strong> Teams discussion at ~15:55 CDT (Jun 23). Marshall identified old VPN access; Michael confirmed cleanup needed. If actionable time was spent, log as <strong>On-Going Support (Blue)</strong> for Burnett &amp; Turner Law.</p>
+    <table class="data">
+      <tbody>
+        <tr><td class="mono">Subject</td><td>Burnett &amp; Turner Law</td></tr>
+        <tr><td class="mono">Location</td><td>Remote</td></tr>
+        <tr><td class="mono">Desc</td><td>Reviewed and prepared to remove old standing VPN access credentials.</td></tr>
+        <tr><td class="mono">Category</td><td>On-Going Support (Blue)</td></tr>
+        <tr><td class="mono">Time</td><td>2026-06-23 15:55 - <span class="ds-code">&lt;MISSING: end time&gt;</span></td></tr>
+      </tbody>
+    </table>
 
-  <!-- Datto table -->
-  <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#555;letter-spacing:0.5px;margin-bottom:6px;">Datto &mdash; CelLink SC (12 agents, all SUCCEEDED)</div>
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-family:'Courier New',monospace;font-size:12px;">
-  <tr bgcolor="#f5f5f5">
-    <th style="text-align:left;padding:5px 10px;font-size:10px;text-transform:uppercase;font-family:Arial,sans-serif;color:#555;">Agent</th>
-    <th style="text-align:left;padding:5px 10px;font-size:10px;text-transform:uppercase;font-family:Arial,sans-serif;color:#555;">Backup Time (PDT)</th>
-    <th style="text-align:left;padding:5px 10px;font-size:10px;text-transform:uppercase;font-family:Arial,sans-serif;color:#555;">Status</th>
-  </tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">CEL-SC-DC-01</td><td style="padding:4px 10px;">Tue 23/Jun 20:07</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">CEL-SC-UVIS-01</td><td style="padding:4px 10px;">Tue 23/Jun 20:00</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">Henry</td><td style="padding:4px 10px;">Tue 23/Jun 20:00</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">Volta</td><td style="padding:4px 10px;">Tue 23/Jun 20:11</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">CEL-SC-RADIUS</td><td style="padding:4px 10px;">Tue 23/Jun 20:26</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">Joule</td><td style="padding:4px 10px;">Tue 23/Jun 20:16</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">FaradayDEV</td><td style="padding:4px 10px;">Tue 23/Jun 20:09</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">CEL-SC-DEPLOY</td><td style="padding:4px 10px;">Tue 23/Jun 20:13</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">CEL-SC-DATABROKER-01</td><td style="padding:4px 10px;">Tue 23/Jun 20:23</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">Faraday</td><td style="padding:4px 10px;">Tue 23/Jun 23:00</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr style="border-bottom:1px solid #eee;"><td style="padding:4px 10px;">CEL-APPSERVER (AM)</td><td style="padding:4px 10px;">Wed 24/Jun 01:00</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  <tr><td style="padding:4px 10px;">CEL-APPSERVER (PM)</td><td style="padding:4px 10px;">Tue 23/Jun 13:01</td><td style="padding:4px 10px;color:#27ae60;font-weight:700;">SUCCEEDED</td></tr>
-  </table>
+  </div>
 
-  <div style="font-size:12px;color:#555;margin-top:10px;">MEJ &amp; Associates (MEJDatto2025): Alert summary received 01:36 CDT &mdash; <strong>No current alerts reported.</strong></div>
-  <div style="font-size:12px;color:#aaa;font-style:italic;margin-top:4px;">Backup Radar: No emails in window.</div>
-
-</td></tr>
-</table>
-
-<!-- ====== SECTION 5: ALERTS ====== -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
-<tr>
-  <td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#1a1a2e;text-transform:uppercase;letter-spacing:0.5px;">Alerts</span></td>
-  <td align="right" style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="background:#1a5fa8;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px;">Top 3</span></td>
-</tr>
-<tr><td colspan="2" style="padding-top:12px;">
-
-  <!-- Alert 1 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f5f9ff" style="border-left:4px solid #1a5fa8;margin-bottom:10px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;color:#222;">1. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnENAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Unauthorized HCSS API Credential — Capital Excavation</a></div>
-    <div style="font-size:11px;color:#888;font-family:'Courier New',monospace;margin-top:2px;">no-reply@hcssapps.com &middot; 2026-06-23 17:00 CDT</div>
-    <div style="font-size:12px;color:#333;margin-top:5px;">New API client "Timecard Report" created using Glen's account for Capital Excavation. Non-routine; not a standard automated credential. Teams conversation showed alarm ("OH SHIT MARSHALL / GLEN IS IN THE API"). Requires immediate authorization check.</div>
-  </td></tr>
-  </table>
-
-  <!-- Alert 2 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f5f9ff" style="border-left:4px solid #1a5fa8;margin-bottom:10px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;color:#222;">2. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAWErdtQAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CelLink CELAZUPRDFILE01 E: Drive &le;5% Free (Azure)</a></div>
-    <div style="font-size:11px;color:#888;font-family:'Courier New',monospace;margin-top:2px;">noreply@rmmservice.com &middot; 2026-06-24 05:42 CDT &middot; Location: Azure</div>
-    <div style="font-size:12px;color:#333;margin-top:5px;">Critical threshold crossed. <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAWErdtSAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">CELAZUPRDSYS01 F: also at &le;10%</a>. Activity notifications on CELAZUPRDFILE01 preceded this alert (active file writes). Expand volume or clean up files; risk of service impact if drive fills.</div>
-  </td></tr>
-  </table>
-
-  <!-- Alert 3 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#f5f9ff" style="border-left:4px solid #1a5fa8;margin-bottom:10px;">
-  <tr><td style="padding:10px 14px;">
-    <div style="font-weight:700;font-size:13px;color:#222;">3. Meraki Firmware Schedule Changed on Two CelLink Networks Simultaneously</div>
-    <div style="font-size:11px;color:#888;font-family:'Courier New',monospace;margin-top:2px;"><a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAAEMAACcFJNx05zPTLNH4BZPylwuAAWDqnEMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">San Carlos</a> &amp; <a href="https://outlook.office365.com/owa/?ItemID=AAMkADZkYjhlYzliLTQyYzYtNGI3NC04NjY2LTZiYTAwNWVjYTk1YgBGAAAAAACN3VQc8VlXSpql1nlaNo4uBwCcFJNx05zPTLNH4BZPylwuAAAAAJRCAACcFJNx05zPTLNH4BZPylwuAAWErdtIAAA%3D&exvsurl=1&viewmodel=ReadMessageItem">Georgetown</a> &middot; 2026-06-23 16:37–16:38 CDT</div>
-    <div style="font-size:12px;color:#333;margin-top:5px;">Both CelLink Meraki security appliances had firmware update schedules changed within 1 minute of each other (San Carlos from 2026-07-02, Georgetown from 2026-07-01, both moved earlier). Concurrent admin action on two separate networks — confirm this was intentional.</div>
-  </td></tr>
-  </table>
-
-</td></tr>
-</table>
-
-<!-- ====== SECTION 6: TIME ENTRIES ====== -->
-<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
-<tr>
-  <td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#1a1a2e;text-transform:uppercase;letter-spacing:0.5px;">Time Entries</span></td>
-  <td align="right" style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="background:#7f8c8d;color:#fff;font-size:11px;font-weight:700;padding:2px 9px;border-radius:10px;">0 Qualifying</span></td>
-</tr>
-<tr><td colspan="2" style="padding-top:12px;">
-
-  <p style="font-size:13px;color:#555;margin:0 0 12px 0;">No items in this window meet the &ge;80% confidence threshold for confirmed Marshall-performed billable work. Three candidate threads flagged for manual review:</p>
-
-  <!-- Candidate 1 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff8e1" style="border:1px solid #f0c040;margin-bottom:8px;">
-  <tr><td style="padding:10px 14px;font-size:12px;">
-    <strong>Candidate 1 — Ticket #10538: New Machine Setup and Upgrades</strong><br>
-    Help Desk notifications at 15:38 and 15:42 CDT (Jun 23). Two updates in rapid succession suggest activity. Open the ticket and verify Marshall's name appears as a responder. If confirmed: log as <span style="color:#27ae60;font-weight:700;">Project (Green)</span> for the applicable client.
-  </td></tr>
-  </table>
-
-  <!-- Candidate 2 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff8e1" style="border:1px solid #f0c040;margin-bottom:8px;">
-  <tr><td style="padding:10px 14px;font-size:12px;">
-    <strong>Candidate 2 — Capital Excavation: HCSS API Investigation</strong><br>
-    Teams discussion at ~17:12–17:18 CDT (Jun 23). Within working hours. If time was actively spent investigating, log as <span style="color:#2980b9;font-weight:700;">On-Going Support (Blue)</span> for Capital Excavation.
-    <div style="font-family:'Courier New',monospace;background:#f5f5f5;padding:8px;margin-top:6px;font-size:11px;white-space:pre;">Subject:  Capital Excavation
-Location: Remote
-Desc:     Investigated unauthorized HCSS API credential generation from Glen's account.
-Category: On-Going Support (Blue)
-Time:     2026-06-23 17:12 - &lt;MISSING: end time&gt;</div>
-  </td></tr>
-  </table>
-
-  <!-- Candidate 3 -->
-  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fff8e1" style="border:1px solid #f0c040;margin-bottom:8px;">
-  <tr><td style="padding:10px 14px;font-size:12px;">
-    <strong>Candidate 3 — Burnett &amp; Turner Law: VPN Access Review</strong><br>
-    Teams discussion at ~15:55 CDT (Jun 23). Marshall identified old VPN access; Michael confirmed cleanup needed. If actionable time was spent, log as <span style="color:#2980b9;font-weight:700;">On-Going Support (Blue)</span> for Burnett &amp; Turner Law.
-    <div style="font-family:'Courier New',monospace;background:#f5f5f5;padding:8px;margin-top:6px;font-size:11px;white-space:pre;">Subject:  Burnett &amp; Turner Law
-Location: Remote
-Desc:     Reviewed and prepared to remove old standing VPN access credentials.
-Category: On-Going Support (Blue)
-Time:     2026-06-23 15:55 - &lt;MISSING: end time&gt;</div>
-  </td></tr>
-  </table>
-
-</td></tr>
-</table>
-
-</td></tr>
-
-<!-- FOOTER -->
-<tr><td bgcolor="#eeeeee" style="padding:12px 32px;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#888;">
-  Generated 2026-06-24 07:30 CDT &nbsp;&middot;&nbsp; gitmarsh/routines &nbsp;&middot;&nbsp; ariat-time-entry skill @ cbb0b7c &nbsp;&middot;&nbsp; Preflight: GitHub + M365 + skill OK
-</td></tr>
-
-</table>
-</td></tr>
-</table>
+  <!-- Footer -->
+  <div class="rfoot">
+    <span>Ariat Systems · Internal</span>
+    <span>Generated 2026-06-24 07:30 CDT · briefs.cloudmarsh.com</span>
+  </div>
+</div>
 </body>
 </html>
