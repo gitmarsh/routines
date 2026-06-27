@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Afternoon Briefing — 2026-06-27</title>
+<style>
+body{margin:0;padding:0;background:#eef0f4;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#222;}
+a{color:#1a5fa8;text-decoration:none;}
+a:hover{text-decoration:underline;}
+.none{color:#888;font-style:italic;font-size:13px;}
+</style>
+</head>
+<body bgcolor="#eef0f4">
+<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#eef0f4">
+<tr><td align="center" style="padding:20px 10px;">
+<table width="860" border="0" cellpadding="0" cellspacing="0" bgcolor="#ffffff" style="max-width:860px;width:100%;font-family:Arial,Helvetica,sans-serif;">
+
+<!-- HEADER -->
+<tr><td style="background:#0D213C;padding:24px 32px;border-bottom:3px solid #ED7A1C;">
+  <div style="color:#ffffff;font-size:22px;font-weight:700;letter-spacing:0.5px;margin:0 0 6px 0;">Ariat Systems &nbsp;&middot;&nbsp; Afternoon Briefing</div>
+  <div style="color:#aab4c4;font-size:12px;">Saturday, June 27, 2026 &nbsp;|&nbsp; Window: 2026-06-27 07:30 CDT &#8594; 13:32 CDT</div>
+  <div style="color:#7e8aa0;font-size:11px;margin-top:3px;">Scanned: 6 inbox &middot; 0 help desk &middot; 0 teams = 6 items &nbsp;&middot;&nbsp; Quiet weekend &mdash; Michael on-call</div>
+</td></tr>
+
+<!-- MAIN CONTENT -->
+<tr><td style="padding:24px 32px 32px 32px;">
+
+<!-- ====== HOT ITEMS ====== -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+<tr><td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#0D213C;text-transform:uppercase;letter-spacing:0.5px;">&#128997; Hot Items</span></td></tr>
+<tr><td style="padding-top:12px;">
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fef9f0" style="border-left:4px solid #E29A12;margin-bottom:10px;">
+  <tr><td style="padding:10px 14px;">
+    <div style="font-weight:700;font-size:13px;color:#222;">MSM (McElroy) &mdash; Barracuda XDR: SentinelOne &ldquo;New Threat Not Mitigated&rdquo;</div>
+    <div style="font-size:11px;color:#888;margin-top:2px;font-family:'Courier New',monospace;">Inbox &middot; soc@barracuda.com &middot; 11:01 AM CDT</div>
+    <div style="font-size:12px;color:#333;margin-top:5px;">Three follow-up tickets (<strong>#127002606 / #127002613 / #127002617</strong>) are awaiting an outcome response via the Barracuda XDR dashboard &mdash; SOC needs a categorization (True Positive / Authorized / False Positive). Security-relevant; on-call should review and respond.</div>
+  </td></tr>
+  </table>
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fef9f0" style="border-left:4px solid #E29A12;margin-bottom:10px;">
+  <tr><td style="padding:10px 14px;">
+    <div style="font-weight:700;font-size:13px;color:#222;">MSM (McElroy) &mdash; Barracuda XDR: Log Monitoring Degradation (Medium)</div>
+    <div style="font-size:11px;color:#888;margin-top:2px;font-family:'Courier New',monospace;">Inbox &middot; soc@barracuda.com &middot; 11:12 AM CDT &middot; #127005246</div>
+    <div style="font-size:12px;color:#333;margin-top:5px;">The MSM Meraki firewall (<strong>192.168.1.66</strong>) stopped forwarding syslog to XDR &mdash; last event received <strong>2026-06-24 15:04 UTC</strong> (~3 days ago). XDR is blind on that device until log forwarding is restored. Needs a config check and reply to SOC.</div>
+  </td></tr>
+  </table>
+
+</td></tr>
+</table>
+
+<!-- ====== A: NEW EMAILS ====== -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+<tr><td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#0D213C;text-transform:uppercase;letter-spacing:0.5px;">A &middot; New Emails</span></td></tr>
+<tr><td style="padding-top:12px;">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:12.5px;">
+  <tr bgcolor="#eef1f6">
+    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;">Subject</th>
+    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;width:160px;">Sender</th>
+    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;">Summary</th>
+    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;width:80px;">Received</th>
+  </tr>
+  <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:6px 10px;">Barracuda SKOUT XDR &mdash; Log Monitoring Degradation</td><td style="padding:6px 10px;">soc@barracuda.com</td><td style="padding:6px 10px;">MSM Meraki firewall (192.168.1.66) stopped forwarding logs since 6/24; config check/reply needed. <span style="color:#777;">(#127005246, Medium)</span></td><td style="padding:6px 10px;color:#777;">11:12 AM</td></tr>
+  <tr style="border-bottom:1px solid #f0f0f0;" bgcolor="#fafbfd"><td style="padding:6px 10px;"><strong>#127002606</strong> SentinelOne New Threat Not Mitigated</td><td style="padding:6px 10px;">soc@barracuda.com</td><td style="padding:6px 10px;">MSM &mdash; XDR follow-up; respond with outcome category via dashboard.</td><td style="padding:6px 10px;color:#777;">11:01 AM</td></tr>
+  <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:6px 10px;"><strong>#127002613</strong> SentinelOne New Threat Not Mitigated</td><td style="padding:6px 10px;">soc@barracuda.com</td><td style="padding:6px 10px;">MSM &mdash; sibling of #127002606; same response needed.</td><td style="padding:6px 10px;color:#777;">11:01 AM</td></tr>
+  <tr style="border-bottom:1px solid #f0f0f0;" bgcolor="#fafbfd"><td style="padding:6px 10px;"><strong>#127002617</strong> SentinelOne New Threat Not Mitigated</td><td style="padding:6px 10px;">soc@barracuda.com</td><td style="padding:6px 10px;">MSM &mdash; third sibling XDR ticket; same response needed.</td><td style="padding:6px 10px;color:#777;">11:01 AM</td></tr>
+  <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:6px 10px;">Alert for Burnett Turner Law &mdash; Uplink status changed</td><td style="padding:6px 10px;">alerts-noreply@meraki.com</td><td style="padding:6px 10px;"><span class="none">BT appliance switched back to primary uplink (Internet 2). Informational; already read. (automated)</span></td><td style="padding:6px 10px;color:#777;">9:05 AM</td></tr>
+  <tr bgcolor="#fafbfd"><td style="padding:6px 10px;">Cisco Meraki Support Feedback &mdash; Case 14338691</td><td style="padding:6px 10px;">noreply@meraki.com</td><td style="padding:6px 10px;"><span class="none">Support-survey request for a closed Meraki case. FYI. (automated)</span></td><td style="padding:6px 10px;color:#777;">1:29 PM</td></tr>
+  </table>
+</td></tr>
+</table>
+
+<!-- ====== B: ACTION ITEMS ====== -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+<tr><td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#0D213C;text-transform:uppercase;letter-spacing:0.5px;">B &middot; Action Items Still Open</span></td></tr>
+<tr><td style="padding-top:12px;">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:13px;">
+  <tr bgcolor="#eef1f6">
+    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;width:90px;">Priority</th>
+    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;">What's needed</th>
+    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;width:140px;">From</th>
+    <th style="text-align:left;padding:6px 10px;font-size:10px;text-transform:uppercase;color:#555;width:150px;">Deadline</th>
+  </tr>
+  <tr style="border-bottom:1px solid #f0f0f0;" bgcolor="#fffdf8"><td style="padding:7px 10px;font-weight:700;color:#E29A12;font-size:11px;">&#128992; High</td><td style="padding:7px 10px;">Respond to XDR &ldquo;SentinelOne &mdash; threat not mitigated&rdquo; tickets (#127002606/613/617) via dashboard with an outcome category</td><td style="padding:7px 10px;color:#777;">SOC &middot; Inbox (MSM)</td><td style="padding:7px 10px;color:#777;">This weekend &mdash; on-call</td></tr>
+  <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:7px 10px;font-weight:700;color:#2E7DF2;font-size:11px;">&#128993; Medium</td><td style="padding:7px 10px;">Restore MSM Meraki firewall (192.168.1.66) log forwarding to XDR; reply to SOC (#127005246)</td><td style="padding:7px 10px;color:#777;">SOC &middot; Inbox (MSM)</td><td style="padding:7px 10px;color:#777;">Early next week</td></tr>
+  <tr><td style="padding:7px 10px;color:#69727F;font-size:11px;">&#128309; Low</td><td style="padding:7px 10px;">Note BT Meraki uplink change &mdash; recovered to primary (Internet 2); no action unless it flaps</td><td style="padding:7px 10px;color:#777;">Meraki &middot; Inbox</td><td style="padding:7px 10px;color:#777;">Monitor</td></tr>
+  </table>
+</td></tr>
+</table>
+
+<!-- ====== C: EOD PLAN ====== -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+<tr><td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#0D213C;text-transform:uppercase;letter-spacing:0.5px;">C &middot; EOD Plan</span></td></tr>
+<tr><td style="padding-top:12px;">
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="50%" style="padding-right:10px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#D93A22;letter-spacing:0.5px;margin-bottom:6px;">Must Finish Today</div>
+      <table width="100%" bgcolor="#fdf0ee" style="border-left:4px solid #D93A22;"><tr><td style="padding:10px 14px;font-size:12.5px;color:#333;">
+        &bull; On-call (Michael): review &amp; respond to the XDR SentinelOne &ldquo;not mitigated&rdquo; tickets for MSM via the dashboard.
+      </td></tr></table>
+    </td>
+    <td width="50%" style="padding-left:10px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;color:#69727F;letter-spacing:0.5px;margin-bottom:6px;">Carry to Next Week</div>
+      <table width="100%" bgcolor="#f6f8fb" style="border-left:4px solid #98A1B0;"><tr><td style="padding:10px 14px;font-size:12.5px;color:#333;">
+        &bull; Restore MSM firewall&#8594;XDR log forwarding (down since 6/24); reply to SOC #127005246.<br>
+        &bull; Keep an eye on the BT uplink in case it flaps again.
+      </td></tr></table>
+    </td>
+  </tr>
+  </table>
+</td></tr>
+</table>
+
+<!-- ====== D: TEAMS ====== -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:28px;">
+<tr><td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#0D213C;text-transform:uppercase;letter-spacing:0.5px;">D &middot; Teams</span></td></tr>
+<tr><td style="padding-top:12px;font-size:12.5px;color:#333;line-height:1.55;">
+  <div style="padding:8px 12px;background:#e6f5ed;border-left:4px solid #1FA463;color:#0F6E40;font-size:12px;">No Teams messages in the window &mdash; nothing unread requiring a reply.</div>
+</td></tr>
+</table>
+
+<!-- ====== E: TIME ENTRIES ====== -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:8px;">
+<tr><td style="border-bottom:2px solid #e0e0e0;padding-bottom:6px;"><span style="font-size:15px;font-weight:700;color:#0D213C;text-transform:uppercase;letter-spacing:0.5px;">E &middot; Time Entries</span></td></tr>
+<tr><td style="padding-top:12px;">
+
+  <table width="100%" bgcolor="#fbe7e2" style="border-left:4px solid #D93A22;margin-bottom:14px;"><tr><td style="padding:10px 14px;font-size:12.5px;color:#97250F;">
+    <strong>&#9888; No calendar writes occurred this run &mdash; failed closed, and nothing to write.</strong> Two independent reasons, either sufficient: <strong>(1) No write capability</strong> &mdash; the Microsoft 365 integration exposes only calendar search/read; there is no create/update/delete-event tool. <strong>(2) No qualifying work today</strong> &mdash; the evidence scan for today (Central, 00:00&#8594;13:32) found no Sent Items, no Help Desk tickets authored by Marshall, and no Teams coordination. Nothing was written, edited, or deleted. Circuit breaker not engaged (0 destructive ops).
+  </td></tr></table>
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;font-size:13px;margin-bottom:14px;border:1px solid #e0e0e0;">
+    <tr style="border-bottom:1px solid #f0f0f0;"><td width="150" style="padding:7px 12px;background:#f6f8fb;font-weight:700;color:#555;">Written</td><td style="padding:7px 12px;color:#777;">none</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:7px 12px;background:#f6f8fb;font-weight:700;color:#555;">Updated</td><td style="padding:7px 12px;color:#777;">none (morning run left no auto-entries to reconcile)</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:7px 12px;background:#f6f8fb;font-weight:700;color:#555;">Deleted</td><td style="padding:7px 12px;color:#777;">none</td></tr>
+    <tr style="border-bottom:1px solid #f0f0f0;"><td style="padding:7px 12px;background:#f6f8fb;font-weight:700;color:#555;">Provisional</td><td style="padding:7px 12px;color:#777;">none</td></tr>
+    <tr><td style="padding:7px 12px;background:#f6f8fb;font-weight:700;color:#555;">Needs review</td><td style="padding:7px 12px;color:#777;">none &mdash; no work evidence to attribute today.</td></tr>
+  </table>
+
+  <div style="font-size:11.5px;color:#888;font-style:italic;">Only calendar event today is &ldquo;Michael On Call&rdquo; (organized by Michael, read-only human entry &mdash; not Marshall's work, not an auto-entry). Marshall is not on call this week. The <code>ariat-time-entry</code> skill loaded successfully; it was simply not exercised because there was no work to log.</div>
+
+</td></tr>
+</table>
+
+</td></tr>
+
+<!-- FOOTER -->
+<tr><td style="background:#0D213C;padding:16px 32px;border-top:3px solid #ED7A1C;">
+  <div style="color:#aab4c4;font-size:11px;">Generated by Claude &middot; 2026-06-27 1:32 PM CDT &nbsp;|&nbsp; <a href="https://briefs.cloudmarsh.com" style="color:#ED7A1C;">briefs.cloudmarsh.com</a></div>
+</td></tr>
+
+</table>
+</td></tr>
+</table>
+</body>
+</html>
